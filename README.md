@@ -1,8 +1,5 @@
 # Online Healing
 
-## Overview
-This is the template that will be used when creating Re:Coded's capstone projects that contain some, or all, of the package used in this project.
-
 ## Used dependencies
 - Create-React-App with all it's dependencies `Front-end`
 - Eslint using Airbnb guideliness `For linting`
