@@ -61,6 +61,7 @@ module.exports = {
         900: '#7b341e',
       },
       yellow: {
+        primary: '#FEE89E',
         100: '#fffff0',
         200: '#fefcbf',
         300: '#faf089',
@@ -94,6 +95,8 @@ module.exports = {
         900: '#234e52',
       },
       blue: {
+        light: '#EAF8F9',
+        dark: '#2DD3E3',
         100: '#ebf8ff',
         200: '#bee3f8',
         300: '#90cdf4',
@@ -291,6 +294,10 @@ module.exports = {
       body: ['Montserrat'],
     },
     fontSize: {
+      title: '50px',
+      subtitle: '24px',
+      paragraph: '20px',
+      btn: '24px',
       xs: '0.75rem',
       sm: '0.875rem',
       base: '1rem',
@@ -706,13 +713,20 @@ module.exports = {
     },
     keyframes: {
       spin: {
-        to: { transform: 'rotate(360deg)' },
+        to: {
+          transform: 'rotate(360deg)',
+        },
       },
       ping: {
-        '75%, 100%': { transform: 'scale(2)', opacity: '0' },
+        '75%, 100%': {
+          transform: 'scale(2)',
+          opacity: '0',
+        },
       },
       pulse: {
-        '50%': { opacity: '.5' },
+        '50%': {
+          opacity: '.5',
+        },
       },
       bounce: {
         '0%, 100%': {
