@@ -1,4 +1,4 @@
-# Re:Coded Capstone Project's Template
+# Online Healing
 
 ## Overview
 This is the template that will be used when creating Re:Coded's capstone projects that contain some, or all, of the package used in this project.
