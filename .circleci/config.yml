@@ -1,0 +1,60 @@
+version: 2.1
+jobs:
+  build-and-test:
+    docker:
+      - image: 'cimg/base:2020.10'
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+      - restore_cache:
+          name: Restore node modules cache
+          key: node_modules-{{ checksum "package.json" }}
+      - run:
+          name: Add all dependencies
+          command: yarn install --immutable
+      - save_cache:
+          name: Save node modules cache
+          key: node_modules-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          command: yarn format
+          name: Format all the files
+      - run:
+          command: yarn test --passWithNoTests
+          name: Run all the tests
+
+  deploy-to-netlify:
+    docker:
+      - image: 'cimg/base:2020.10'
+    steps:
+      - checkout
+      - run: curl -X POST -d {} ${deploy_master}
+
+  deploy-dev-to-netlify:
+    docker:
+      - image: 'cimg/base:2020.10'
+    steps:
+      - checkout
+      - run: curl -X POST -d {} ${deploy_develop}
+
+orbs:
+  node: circleci/node@4.1.0
+
+workflows:
+  test-deploy:
+    jobs:
+      - build-and-test
+      - deploy-to-netlify:
+          filters:
+            branches:
+              only: master
+          requires:
+            - build-and-test
+      - deploy-dev-to-netlify:
+          filters:
+            branches:
+              only: develop
+          requires:
+            - build-and-test
