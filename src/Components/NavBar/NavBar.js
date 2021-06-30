@@ -30,6 +30,7 @@ export default function NavBar() {
         </a>
 
         <div
+          onMouseLeave={() => setOpen(false)}
           onMouseOver={() => setOpen(true)}
           onFocus={() => setOpen(true)}
           className="relative flex-col justify-between place-items-center m-4"
@@ -38,18 +39,11 @@ export default function NavBar() {
             <span>About</span>
             <img className="inline-block m-1" src={Arrow} alt="arrow" />
           </button>
-          {Open ? (
-            <button
-              type="button"
-              onClick={() => setOpen(false)}
-              tabIndex="-1"
-              className="fixed w-full h-full top-0 left-0 bg-black opacity-0"
-            />
-          ) : null}
-          {Open ? (
+
+          {Open && (
             <div
               onMouseLeave={() => setOpen(false)}
-              className="w-48 bg-white rounded-lg py-1 mt-2 shadow-md absolute top-1/2 left-1/2 transform -translate-x-12"
+              className="w-48 bg-white rounded-lg py-1 shadow-md absolute top-1/2 left-1/2 transform -translate-x-12"
             >
               <a
                 onClick={() => window.scrollTo(0, 0)}
@@ -75,7 +69,7 @@ export default function NavBar() {
                 Open Careers
               </a>
             </div>
-          ) : null}
+          )}
         </div>
 
         <a
