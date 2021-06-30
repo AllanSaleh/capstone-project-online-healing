@@ -35,7 +35,10 @@ export default function NavBar() {
           onFocus={() => setOpen(true)}
           className="relative flex-col justify-between place-items-center m-4"
         >
-          <button type="button" className="focus:outline-none text-paragraph">
+          <button
+            type="button"
+            className="hover:text-yellow-primary hover:underline focus:outline-none text-paragraph"
+          >
             <span>About</span>
             <img className="inline-block m-1" src={Arrow} alt="arrow" />
           </button>
@@ -82,7 +85,7 @@ export default function NavBar() {
 
         <button
           type="button"
-          className="m-4 rounded-lg h-12 bg-blue-dark w-32 text-paragraph hover:text-blue-dark hover:bg-white focus:outline-none"
+          className="m-4 rounded-lg h-12 bg-blue-dark w-32 text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent focus:outline-none"
         >
           Log In
         </button>
