@@ -291,7 +291,7 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
-      body: ['Montserrat'],
+      body: ['Poppins'],
     },
     fontSize: {
       title: '50px',
