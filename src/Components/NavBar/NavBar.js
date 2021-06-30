@@ -6,7 +6,7 @@ export default function NavBar() {
   const [Open, setOpen] = useState(false);
 
   return (
-    <div className="fixed inset-x-0 top-0 px-sides flex justify-between items-center bg-blue-light h-24">
+    <div className="fixed inset-x-0 top-0 px-sides flex justify-between items-center bg-blue-light h-navbar">
       <div className="flex justify-between items-center cursor-pointer leading-tight">
         <img src={Logo} alt="logo" />
         <div className="text-title pl-2">Healing</div>

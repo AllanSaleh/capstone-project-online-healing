@@ -162,6 +162,10 @@ module.exports = {
       48: '12rem',
       56: '14rem',
       64: '16rem',
+      navbar: '10vh',
+      firstsection: '100vh',
+      section: '90vh',
+      footer: '24vh',
     },
     backgroundColor: (theme) => theme('colors'),
     backgroundImage: {
