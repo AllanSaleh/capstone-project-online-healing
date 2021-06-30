@@ -142,6 +142,7 @@ module.exports = {
       },
     },
     spacing: {
+      sides: '6%',
       px: '1px',
       0: '0',
       1: '0.25rem',
