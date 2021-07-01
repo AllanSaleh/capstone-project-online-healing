@@ -1,24 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Card1 from './Card1.svg';
+import Card2 from './Card2.svg';
 
 export default function AddNewCard() {
+  const [countryList, setCountries] = useState([
+    'United States',
+    'Iraq',
+    'United Kingdom',
+  ]);
+  const [cityList, setCities] = useState(['Sulaymaniyah', 'Erbil', 'Dohuk']);
+
   return (
-    <div className="flex flex-col justify-around px-sides pt-navbar h-firstsection">
+    <div className="flex flex-col justify-evenly px-sides pt-navbar h-firstsection">
       <div>
         <div className="text-title leading-tight">ADD CARD DETAILS</div>
         <div className="text-subtitle text-gray-700">
-          Please make sure all of the info you enter are the same as your card registration info.
+          Please make sure all of the info you enter are the same as your card
+          registration info.
         </div>
       </div>
-      <div className="flex">
-        <div className="flex flex-col justify-between mr-32">
+
+      <div className="flex justify-between">
+        <div className="flex flex-col justify-between h-full">
           <div className="my-4">
-            <div className="text-paragraph text-gray-700">Supported Card Types</div>
+            <div className="text-paragraph text-gray-700">
+              Supported Card Types
+            </div>
             <div className="flex">
-              <div className="h-12 p-2 text-paragraph text-blue-dark border-2 border-r-0 border-blue-dark w-40 text-center rounded-lg rounded-r-none">
-                Mastercard
+              <div className="leading-snug h-12 px-1 py-2 text-paragraph text-blue-dark border-2 border-r-0 border-blue-dark w-32 text-center rounded-lg rounded-r-none">
+                MasterCard
               </div>
-              <div className="h-12 p-2 text-paragraph text-blue-dark border-2 border-blue-dark w-40 text-center rounded-lg rounded-l-none">
-                Visa
+              <div className="leading-snug h-12 px-1 py-2 text-paragraph text-blue-dark border-2 border-blue-dark w-32 text-center rounded-lg rounded-l-none">
+                VisaCard
               </div>
             </div>
           </div>
@@ -56,19 +69,18 @@ export default function AddNewCard() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between ml-32">
+        <div className="flex flex-col justify-between h-full">
           <div className="my-4">
             <div className="text-paragraph text-gray-700">Country</div>
             <select className="w-64 h-12 p-2 border-gray-700 border-2 rounded-lg">
-              <option className="py-1 text-paragraph text-gray-700">
-                United States
-              </option>
-              <option className="py-1 text-paragraph text-gray-700">
-                Iraq
-              </option>
-              <option className="py-1 text-paragraph text-gray-700">
-                United Kingdom
-              </option>
+              {countryList.map((country) => (
+                <option
+                  value={country}
+                  className="py-1 text-paragraph text-gray-700"
+                >
+                  {country}
+                </option>
+              ))}
             </select>
           </div>
 
@@ -83,15 +95,14 @@ export default function AddNewCard() {
           <div className="my-4">
             <div className="text-paragraph text-gray-700">City</div>
             <select className="w-64 h-12 p-2 border-gray-700 border-2 rounded-lg">
-              <option className="py-1 text-paragraph text-gray-700">
-                Sulaymaniyah
-              </option>
-              <option className="py-1 text-paragraph text-gray-700">
-                Erbil
-              </option>
-              <option className="py-1 text-paragraph text-gray-700">
-                Dohuk
-              </option>
+              {cityList.map((city) => (
+                <option
+                  value={city}
+                  className="py-1 text-paragraph text-gray-700"
+                >
+                  {city}
+                </option>
+              ))}
             </select>
           </div>
 
@@ -102,6 +113,11 @@ export default function AddNewCard() {
               className="w-64 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
             />
           </div>
+        </div>
+
+        <div className="flex flex-col justify-between items-end h-full">
+          <img className="mt-10 h-56" src={Card1} alt="MasterCard" />
+          <img className="mt-10 h-56" src={Card2} alt="VisaCard" />
         </div>
       </div>
 
