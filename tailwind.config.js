@@ -15,6 +15,7 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
     },
+
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -22,11 +23,7 @@ module.exports = {
       black: '#000',
       white: '#fff',
 
-      primary: {
-        default: '#A41F04',
-        100: '#B72507',
-      },
-
+      primary: '#2DD3E3',
       gray: {
         100: '#f7fafc',
         200: '#edf2f7',
@@ -157,7 +154,10 @@ module.exports = {
       40: '10rem',
       48: '12rem',
       56: '14rem',
+      58: '14.5rem',
       64: '16rem',
+      72: '24rem',
+      49: '47%',
     },
     backgroundColor: (theme) => theme('colors'),
     backgroundImage: {
@@ -288,7 +288,7 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
-      body: ['Montserrat'],
+      body: ['Poppins'],
     },
     fontSize: {
       xs: '0.75rem',
@@ -301,6 +301,7 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
+      '8xl': '10.5rem',
     },
     fontWeight: {
       hairline: '100',
