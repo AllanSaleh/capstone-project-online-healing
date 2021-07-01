@@ -88,7 +88,7 @@ export default function NavBar() {
 
         <button
           type="button"
-          className="mx-4 rounded-lg h-12 bg-blue-dark w-32 text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent focus:outline-none"
+          className="mx-4 rounded-lg h-12 bg-blue-dark w-32 text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
         >
           Log In
         </button>

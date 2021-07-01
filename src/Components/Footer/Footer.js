@@ -8,14 +8,23 @@ export default function Footer() {
   return (
     <div className="flex justify-between px-sides items-center h-footer bg-yellow-primary">
       <div className="flex flex-col justify-between items-start h-40">
-        <div className="text-title">Subscribe</div>
-        <div className="text-paragraph text-gray-700">
-          We'll never try to spam you or share your e-mail
+        <div>
+          <div className="text-title leading-tight">Subscribe</div>
+          <div className="text-paragraph text-gray-700">
+            We'll never try to spam you or share your e-mail
+          </div>
         </div>
 
-        <div className="flex border-gr">
-          <input placeholder="Enter your E-Mail" type="email" />
-          <button type="button">
+        <div className="flex border-gray-700 border-2 h-12 rounded-lg">
+          <input
+            className="w-64 p-2 rounded-l-md"
+            placeholder="Enter your E-Mail"
+            type="email"
+          />
+          <button
+            className="border-0 border-l-2 border-gray-700 p-2 bg-blue-dark rounded-r-md"
+            type="button"
+          >
             <img src={Send} alt="Send" />
           </button>
         </div>
