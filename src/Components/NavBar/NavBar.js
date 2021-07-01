@@ -37,12 +37,7 @@ export default function NavBar() {
         >
           <div>
             <a
-              onClick={() =>
-                window.scrollTo({
-                  top: 0,
-                  behavior: 'smooth',
-                })
-              }
+              onClick={() => window.scrollTo(0, 0)}
               className="hover:text-yellow-primary hover:underline text-paragraph"
               href="#"
             >

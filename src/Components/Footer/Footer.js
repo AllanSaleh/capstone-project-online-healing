@@ -23,16 +23,46 @@ export default function Footer() {
 
       <div className="flex flex-col justify-evenly items-center h-40">
         <div className="flex justify-between items-center text-gray-700 text-paragraph">
-          <div className="px-4">Home</div>
-          <div className="px-4">Blogs</div>
-          <div className="px-4">About</div>
-          <div className="px-4">Contact Us</div>
+          <a
+            onClick={() => window.scrollTo(0, 0)}
+            href="#"
+            className="mx-4 hover:underline hover:text-blue-dark"
+          >
+            Home
+          </a>
+          <a
+            onClick={() => window.scrollTo(0, 0)}
+            href="#"
+            className="mx-4 hover:underline hover:text-blue-dark"
+          >
+            Blogs
+          </a>
+          <a
+            onClick={() => window.scrollTo(0, 0)}
+            href="#"
+            className="mx-4 hover:underline hover:text-blue-dark"
+          >
+            About
+          </a>
+          <a
+            onClick={() => window.scrollTo(0, 0)}
+            href="#"
+            className="mx-4 hover:underline hover:text-blue-dark"
+          >
+            Contact Us
+          </a>
         </div>
 
         <div className="flex justify-center items-center">
-          <img className="px-4" src={Twitter} alt="Twitter" />
-          <img className="px-4" src={Facebook} alt="Facebook" />
-          <img className="px-4" src={Google} alt="Google" />
+          <a href="#" target="_blank" className="mx-4">
+            <img src={Twitter} alt="Twitter" />
+          </a>
+          <a href="#" target="_blank" className="mx-4">
+            <img src={Facebook} alt="Facebook" />
+          </a>
+          <a href="#" target="_blank" className="mx-4">
+            <img src={Google} alt="Google" />
+          </a>
         </div>
       </div>
     </div>
