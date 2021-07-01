@@ -33,7 +33,7 @@ export default function NavBar() {
           onMouseLeave={() => setOpen(false)}
           onMouseOver={() => setOpen(true)}
           onFocus={() => setOpen(true)}
-          className="relative flex-col justify-between place-items-center m-4"
+          className="relative justify-between place-items-center m-4"
         >
           <button
             type="button"
@@ -46,7 +46,7 @@ export default function NavBar() {
           {Open && (
             <div
               onMouseLeave={() => setOpen(false)}
-              className="w-48 bg-white rounded-lg py-1 shadow-md absolute top-1/2 left-1/2 transform -translate-x-12"
+              className="w-48 bg-white rounded-lg py-1 shadow-md absolute transform -translate-x-12"
             >
               <a
                 onClick={() => window.scrollTo(0, 0)}
