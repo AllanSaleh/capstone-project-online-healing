@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 import CommunicationSection from './Component/CommunicationSection';
 
+import NavBar from './Components/NavBar/NavBar';
+
 function App() {
   // This controls the direction of the page for RTL languages
   const { i18n } = useTranslation();
