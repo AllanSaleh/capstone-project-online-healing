@@ -142,6 +142,7 @@ module.exports = {
       },
     },
     spacing: {
+      sides: '6%',
       px: '1px',
       0: '0',
       1: '0.25rem',
@@ -161,6 +162,10 @@ module.exports = {
       48: '12rem',
       56: '14rem',
       64: '16rem',
+      navbar: '10vh',
+      firstsection: '100vh',
+      section: '90vh',
+      footer: '24vh',
     },
     backgroundColor: (theme) => theme('colors'),
     backgroundImage: {

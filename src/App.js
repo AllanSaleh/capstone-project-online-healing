@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 
+import NavBar from './Components/NavBar/NavBar';
+
 function App() {
   // This controls the direction of the page for RTL languages
   const { i18n } = useTranslation();
@@ -11,13 +13,12 @@ function App() {
 
   return (
     <div>
-      <div className="bg-blue-dark text-6xl text-yellow-primary">
-        Yellow<span className="text-blue-light"> light blue</span>
+      <NavBar />
+      <div className="text-center pt-navbar bg-blue-dark h-firstsection w-full px-sides">
+        First Section!
       </div>
-      <div className="text-title">Test Title</div>
-      <div className="text-subtitle">Test Subtitle</div>
-      <div className="text-paragraph">Test Paragraph</div>
-      <div className="text-btn">Test Btn</div>
+      <div className="text-center bg-yellow-primary h-section w-full px-sides">Other Sections!</div>
+      <div className="text-center bg-blue-dark h-section w-full px-sides">Other Sections!</div>
     </div>
   );
 }
