@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 import 'tailwindcss/tailwind.css';
-import LandingPage from './components/LandingPage';
+import LandingPage from './components/HeroPage/LandingPage.jsx';
 
 function App() {
   // This controls the direction of the page for RTL languages
