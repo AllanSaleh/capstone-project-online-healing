@@ -28,7 +28,7 @@ export default function WorkingWithHealing() {
             <div className="space-y-6 mt-8">
                <div>
                    <p className="text-title text-gray-700 space-y-6 " >Requirements</p>
-                   <ul className="text-jusfify w-3/4 text-paragraph mt-8">
+                   <ul className="text-jusfify w-3/4 text-paragraph mt-8 list-disc">
                        <li>Licensed by a State Board to provide counseling</li>
                        <li>Experience in counseling for adults, couples, and/or teens</li>
                        <li>Excellent writing skills</li>
