@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
+import Working from './Components/WorkingWithHealling/Working';
 
 import NavBar from './Components/NavBar/NavBar';
 
@@ -14,11 +15,8 @@ function App() {
   return (
     <div>
       <NavBar />
-      <div className="text-center pt-navbar bg-blue-dark h-firstsection w-full px-sides">
-        First Section!
-      </div>
-      <div className="text-center bg-yellow-primary h-section w-full px-sides">Other Sections!</div>
-      <div className="text-center bg-blue-dark h-section w-full px-sides">Other Sections!</div>
+
+      <Working />
     </div>
   );
 }
