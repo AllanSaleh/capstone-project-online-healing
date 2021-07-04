@@ -17,7 +17,7 @@ const CreateAccount = () => {
           placeholder="re-type your password"
         />
       </form>
-      <button className="text-btn bg-blue-dark px-4 py-2 my-16 lg:w-48 rounded-md uppercase">
+      <button className="text-btn bg-blue-dark px-4 py-2 my-16 lg:w-48 border rounded-md uppercase hover:bg-transparent hover:border-blue-dark hover:text-blue-dark hover:shadow-xl transition-all duration-300">
         create
       </button>
     </div>
