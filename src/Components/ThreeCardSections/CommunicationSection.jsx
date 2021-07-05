@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from './Card';
-import PhoneCell from '../Icons/phone-cell.svg';
-import ChatIcon from '../Icons/chat-icon.svg';
-import VideoCallIcon from '../Icons/video-call-icon.svg';
+import PhoneCell from '../../Icons/phone-cell.svg';
+import ChatIcon from '../../Icons/chat-icon.svg';
+import VideoCallIcon from '../../Icons/video-call-icon.svg';
 
 const CommunicationSection = () => (
   <div className="h-section flex flex-col justify-evenly px-sides">
