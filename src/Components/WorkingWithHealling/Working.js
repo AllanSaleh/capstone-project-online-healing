@@ -28,7 +28,7 @@ export default function WorkingWithHealing() {
             <div className="space-y-6 mt-8">
                <div>
                    <p className="text-title text-gray-700 space-y-6 " >Requirements</p>
-                   <ul className="text-jusfify w-3/4 text-paragraph mt-8 list-disc">
+                   <ul className="text-jusfify w-3/4 text-paragraph mt-8 list-disc px pl-12">
                        <li>Licensed by a State Board to provide counseling</li>
                        <li>Experience in counseling for adults, couples, and/or teens</li>
                        <li>Excellent writing skills</li>
@@ -36,7 +36,7 @@ export default function WorkingWithHealing() {
                        <li>Currently residing in the US</li>
                    </ul>
                </div>
-               <button className=" h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hovrr:border-blue-dark px-100">Get Started</button>
+               <button className="w-1/6 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark px-100 uppercase">Get Started</button>
             </div>
 
         </div>
