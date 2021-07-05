@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import CommunicationSection from './Components/ThreeCardSections/CommunicationSection';
+import TicketSection from './Components/ThreeCardSections/TicketSection';
 import './styles/main.css';
-import CommunicationSection from './Components/CommunicationSection';
-import TicketSection from './Components/TicketSection';
 
 function App() {
   // This controls the direction of the page for RTL languages
@@ -12,10 +12,10 @@ function App() {
   }, [i18n, i18n.language]);
 
   return (
-    <>
+    <div>
       <CommunicationSection />
       <TicketSection />
-    </>
+    </div>
   );
 }
 
