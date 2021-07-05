@@ -3,10 +3,6 @@ import { useTranslation } from 'react-i18next';
 import CreateAccount from './Components/CreateAccount/CreateAccount';
 import './styles/main.css';
 
-import NavBar from './Components/NavBar/NavBar';
-import Footer from './Components/Footer/Footer';
-import AddNewCard from './Components/AddNewCard/AddNewCard';
-
 function App() {
   // This controls the direction of the page for RTL languages
   const { i18n } = useTranslation();
@@ -16,11 +12,7 @@ function App() {
 
   return (
     <div>
-      <NavBar />
-      <AddNewCard />
-      <div className="text-center bg-yellow-primary h-section w-full px-sides">Other Sections!</div>
-      <div className="text-center bg-blue-dark h-section w-full px-sides">Other Sections!</div>
-      <Footer />
+      <CreateAccount />
     </div>
   );
 }
