@@ -1,27 +1,56 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import Next from './Next.svg';
 import Prev from './Prev.svg';
 import CreditCard from './CreditCard';
 
-let i = 0;
+let count = 0;
 
 export default function Purchase() {
   const cards = [
-    { date: '04/2025', number: '123456789', name: 'John Doe', type: 'Master' },
-    { date: '04/2025', number: '123456789', name: 'John Doe', type: 'Visa' },
-    { date: '04/2025', number: '123456789', name: 'John Doe', type: 'Master' },
-    { date: '04/2025', number: '123456789', name: 'John Doe', type: 'Visa' },
-    { date: '04/2025', number: '123456789', name: 'John Doe', type: 'Master' },
+    {
+      date: '04/2025',
+      number: '1234 1234 1234 1234',
+      name: 'John Doe',
+      type: 'Master',
+    },
+    {
+      date: '04/2025',
+      number: '1234 1234 1234 1234',
+      name: 'John Doe',
+      type: 'Visa',
+    },
+    {
+      date: '04/2025',
+      number: '1234 1234 1234 1234',
+      name: 'John Doe',
+      type: 'Master',
+    },
+    {
+      date: '04/2025',
+      number: '1234 1234 1234 1234',
+      name: 'John Doe',
+      type: 'Visa',
+    },
+    {
+      date: '04/2025',
+      number: '1234 1234 1234 1234',
+      name: 'John Doe',
+      type: 'Master',
+    },
+    {
+      date: '04/2025',
+      number: '1234 1234 1234 1234',
+      name: 'John Doe',
+      type: 'Master',
+    },
   ];
-
-  const [selected, setSelected] = useState('');
 
   return (
     <div>
       <NavBar />
-      <div className="flex flex-col justify-evenly h-firstsection px-sides">
+      <div className="flex flex-col justify-evenly h-firstsection pt-navbar px-sides">
         <div>
           <div className="text-title">SELECT CARD</div>
           <div className="text-subtitle text-gray-700">
@@ -32,7 +61,7 @@ export default function Purchase() {
         <div className="flex justify-between items-center">
           <button
             onClick={() => {
-              const NewPos = document.getElementById('Menu').scrollLeft - 500;
+              const NewPos = document.getElementById('Menu').scrollLeft - 560;
               document.getElementById('Menu').scrollTo({
                 left: NewPos,
                 behavior: 'smooth',
@@ -50,11 +79,11 @@ export default function Purchase() {
               className="h-96 box-border whitespace-nowrap overflow-x-auto overflow-y-hidden"
             >
               {cards.map((card) => {
-                i += 1;
-                if (i === 4) i = 1;
+                count += 1;
+                if (count === 4) count = 1;
                 return (
                   <CreditCard
-                    background={i}
+                    background={count}
                     logo={card.type}
                     date={card.date}
                     number={card.number}
@@ -67,7 +96,7 @@ export default function Purchase() {
 
           <button
             onClick={() => {
-              const NewPos = document.getElementById('Menu').scrollLeft + 500;
+              const NewPos = document.getElementById('Menu').scrollLeft + 560;
               document.getElementById('Menu').scrollTo({
                 left: NewPos,
                 behavior: 'smooth',
@@ -79,7 +108,20 @@ export default function Purchase() {
             <img src={Next} alt="Previous" />
           </button>
         </div>
+
+        <div className="text-center self-center">
+          <div className="text-subtitle self-center">
+            Click confirm to use the selected card to purchase 5 tickets for 10$
+          </div>
+          <button
+            type="button"
+            className="mt-8 w-72 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+          >
+            CONFIRM PURCHASE
+          </button>
+        </div>
       </div>
+
       <Footer />
     </div>
   );
