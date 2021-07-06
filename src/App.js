@@ -4,6 +4,8 @@ import './styles/main.css';
 import Working from './Components/WorkingWithHealling/Working';
 
 import NavBar from './Components/NavBar/NavBar';
+import Footer from './Components/Footer/Footer';
+import AddNewCard from './Components/AddNewCard/AddNewCard';
 
 function App() {
   // This controls the direction of the page for RTL languages
@@ -15,8 +17,9 @@ function App() {
   return (
     <div>
       <NavBar />
-
       <Working />
+      <AddNewCard />
+      <Footer />
     </div>
   );
 }
