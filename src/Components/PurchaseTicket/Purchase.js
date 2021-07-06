@@ -55,7 +55,7 @@ export default function Purchase() {
       <NavBar />
       <div className="flex flex-col justify-evenly h-firstsection pt-navbar px-sides">
         <div>
-          <div className="text-title">SELECT CARD {selected}</div>
+          <div className="text-title">SELECT CARD</div>
           <div className="text-subtitle text-gray-700">
             Please select the card you want to buy the tickets with
           </div>
@@ -123,6 +123,10 @@ export default function Purchase() {
             Click confirm to use the selected card to purchase 5 tickets for 10$
           </div>
           <button
+            onClick={() => {
+              if (selected === '') alert('Please choose a Credit Card!');
+              else alert(`Used Card ${selected}, Purchase Successful!`);
+            }}
             type="button"
             className="mt-8 w-72 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
           >
