@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import Next from './Next.svg';
 import Prev from './Prev.svg';
-import CreditCard from './CreditCard';
+import CreditCard from '../CreditCard/CreditCard';
 
 let count = 0;
 
@@ -47,12 +48,14 @@ export default function Purchase() {
     },
   ];
 
+  const [selected, setSelected] = useState('');
+
   return (
     <div>
       <NavBar />
       <div className="flex flex-col justify-evenly h-firstsection pt-navbar px-sides">
         <div>
-          <div className="text-title">SELECT CARD</div>
+          <div className="text-title">SELECT CARD {selected}</div>
           <div className="text-subtitle text-gray-700">
             Please select the card you want to buy the tickets with
           </div>
@@ -78,11 +81,17 @@ export default function Purchase() {
               id="Menu"
               className="h-96 box-border whitespace-nowrap overflow-x-auto overflow-y-hidden"
             >
-              {cards.map((card) => {
+              {cards.map((card, i) => {
                 count += 1;
                 if (count === 4) count = 1;
+
                 return (
                   <CreditCard
+                    select={parseInt(selected) === i}
+                    setID={(ID) => {
+                      if (ID !== selected) setSelected(ID);
+                    }}
+                    id={i}
                     background={count}
                     logo={card.type}
                     date={card.date}
