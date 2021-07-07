@@ -3,7 +3,6 @@ import HP_illustration from './HP_illustration.svg';
 import Loginwith from './loginwith.svg';
 function Login(){
     return(
-        <div>
             
             <div className=" flex flex-row items-center justify-evenly h-firstsection">
                 <div className="w-auto">
@@ -28,7 +27,7 @@ function Login(){
                     <img src={HP_illustration} alt="HP_illustration"  />
                 </div>
             </div>
-        </div>
+        
         
     );
 }
