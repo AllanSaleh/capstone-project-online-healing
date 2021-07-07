@@ -28,6 +28,10 @@ const Booking = () => (
 
     <div className="relative h-2/3 max-w-3xl my-16 mx-auto px-8 py-4 shadow-md">
       <QuestionComponent question={questionData.question} choices={questionData.choices} />
+
+      <button className="absolute bottom-4 left-8 uppercase bg-blue-dark px-6 py-3 text-subtitle rounded-md border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition duration-300">
+        next
+      </button>
     </div>
   </div>
 );
