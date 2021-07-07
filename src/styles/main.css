@@ -9559,6 +9559,17 @@ video {
   --tw-translate-x: -66.666667%;
 }
 
+.text-8xl{
+  font-size: 8rem;
+}
+
+.text-10xl{
+  font-size: 10rem;
+}
+
+.leading-3{
+  line-height: .75rem; 
+}
 .focus\:-translate-x-1\/4:focus{
   --tw-translate-x: -25%;
 }
@@ -120720,6 +120731,17 @@ video {
     mix-blend-mode: multiply;
   }
 
+  .sm\:text-8xl{
+    font-size: 8rem;
+  }
+
+  .sm\:text-10xl{
+    font-size: 10rem;
+  }
+
+  .sm\:leading-3{
+    line-height: .75rem;
+  }
   .lg\:mix-blend-screen{
     mix-blend-mode: screen;
   }
@@ -139287,6 +139309,17 @@ video {
     border-color: rgba(67, 56, 202, var(--tw-border-opacity));
   }
 
+  .md\:text-8xl{
+    font-size: 8rem;
+  }
+
+  .md\:text-10xl{
+    font-size: 10rem;
+  }
+
+  .md\:leading-3{
+    line-height: .75rem;
+  }
   .xl\:hover\:border-indigo-800:hover{
     --tw-border-opacity: 1;
     border-color: rgba(55, 48, 163, var(--tw-border-opacity));
@@ -158304,6 +158337,17 @@ video {
     left: -1.5rem;
   }
 
+  .lg\:text-8xl{
+    font-size: 8rem;
+  }
+
+  .lg\:text-10xl{
+    font-size: 10rem;
+  }
+
+  .lg\:leading-3{
+    line-height: .75rem;
+  }
   .\32xl\:-left-7{
     left: -1.75rem;
   }
@@ -176714,6 +176758,17 @@ video {
     --tw-gradient-to: #d97706;
   }
 
+  .xl\:text-8xl{
+    font-size: 8rem;
+  }
+
+  .xl\:text-10xl{
+    font-size: 10rem;
+  }
+
+  .xl\:leading-3{
+    line-height: .75rem;
+  }
   .\32xl\:focus\:to-yellow-700:focus{
     --tw-gradient-to: #b45309;
   }
