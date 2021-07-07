@@ -5,7 +5,7 @@ function Login(){
     return(
         <div>
             
-            <div className="h-firstsection flex flex-row items-center justify-evenly">
+            <div className=" flex flex-row items-center justify-evenly h-firstsection">
                 <div className="w-auto">
                 <div className="text-5xl pb-16">
                  LOGIN
