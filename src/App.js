@@ -5,6 +5,7 @@ import './styles/main.css';
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
 import AddNewCard from './Components/AddNewCard/AddNewCard';
+import Login from './Components/Login/login';
 
 function App() {
   // This controls the direction of the page for RTL languages
@@ -15,11 +16,10 @@ function App() {
 
   return (
     <div>
-      <NavBar />
-      <AddNewCard />
-      <div className="text-center bg-yellow-primary h-section w-full px-sides">Other Sections!</div>
-      <div className="text-center bg-blue-dark h-section w-full px-sides">Other Sections!</div>
-      <Footer />
+      {/* <NavBar />
+      <AddNewCard /> */}
+      <Login />
+      {/* <Footer /> */}
     </div>
   );
 }
