@@ -1,4 +1,5 @@
 import React from 'react';
+import QuestionComponent from './QuestionComponent';
 
 const questionData = {
   question: 'What type of coumseling are you looking for?',
@@ -24,6 +25,10 @@ const Booking = () => (
       about you and the issues you'd like to deal with in online therapy. It would help us match you
       with the most suitable therapist for you.
     </h3>
+
+    <div className="relative h-2/3 max-w-3xl my-16 mx-auto px-8 py-4 shadow-md">
+      <QuestionComponent question={questionData.question} choices={questionData.choices} />
+    </div>
   </div>
 );
 
