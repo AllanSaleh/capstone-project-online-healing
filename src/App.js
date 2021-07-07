@@ -1,9 +1,15 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import CreateAccount from './Components/CreateAccount/CreateAccount';
 import './styles/main.css';
 
 import Purchase from './Components/PurchaseTicket/Purchase';
 import SavedCards from './Components/SavedCards/SavedCards';
+import Description from './Components/Description/Description';
+import LandingPage from './Components/landing page/landingpage';
+import NavBar from './Components/NavBar/NavBar';
+import Footer from './Components/Footer/Footer';
+import AddNewCard from './Components/AddNewCard/AddNewCard';
 
 function App() {
   // This controls the direction of the page for RTL languages
