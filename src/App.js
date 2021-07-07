@@ -16,10 +16,10 @@ function App() {
 
   return (
     <div>
-      {/* <NavBar />
-      <AddNewCard /> */}
+      <NavBar />
+      {/* <AddNewCard /> */}
       <Login />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
