@@ -15,7 +15,7 @@ export default function NavBar() {
       <div className="flex justify-between items-center flex-no-wrap">
         <a
           onClick={() => window.scrollTo(0, 0)}
-          className="m-4 hover:text-yellow-primary hover:underline text-paragraph"
+          className="mx-4 hover:text-yellow-primary hover:underline text-paragraph"
           href="#"
         >
           Home
@@ -23,7 +23,7 @@ export default function NavBar() {
 
         <a
           onClick={() => window.scrollTo(0, 0)}
-          className="m-4 hover:text-yellow-primary hover:underline text-paragraph"
+          className="mx-4 hover:text-yellow-primary hover:underline text-paragraph"
           href="#"
         >
           Blogs
@@ -33,20 +33,23 @@ export default function NavBar() {
           onMouseLeave={() => setOpen(false)}
           onMouseOver={() => setOpen(true)}
           onFocus={() => setOpen(true)}
-          className="relative flex-col justify-between place-items-center m-4"
+          className="relative justify-between place-items-center mx-4"
         >
-          <button
-            type="button"
-            className="hover:text-yellow-primary hover:underline focus:outline-none text-paragraph"
-          >
-            <span>About</span>
-            <img className="inline-block m-1" src={Arrow} alt="arrow" />
-          </button>
+          <div>
+            <a
+              onClick={() => window.scrollTo(0, 0)}
+              className="hover:text-yellow-primary hover:underline text-paragraph"
+              href="#"
+            >
+              About
+            </a>
+            <img className="inline-block m-1 mb-2" src={Arrow} alt="arrow" />
+          </div>
 
           {Open && (
             <div
               onMouseLeave={() => setOpen(false)}
-              className="w-48 bg-white rounded-lg py-1 shadow-md absolute top-1/2 left-1/2 transform -translate-x-12"
+              className="w-48 bg-white rounded-lg py-1 shadow-md absolute transform -translate-x-12"
             >
               <a
                 onClick={() => window.scrollTo(0, 0)}
@@ -77,7 +80,7 @@ export default function NavBar() {
 
         <a
           onClick={() => window.scrollTo(0, 0)}
-          className="m-4 hover:text-yellow-primary hover:underline text-paragraph"
+          className="mx-4 hover:text-yellow-primary hover:underline text-paragraph"
           href="#"
         >
           Contact Us
@@ -85,7 +88,7 @@ export default function NavBar() {
 
         <button
           type="button"
-          className="m-4 rounded-lg h-12 bg-blue-dark w-32 text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent focus:outline-none"
+          className="ml-4 rounded-lg h-12 bg-blue-dark w-32 text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
         >
           Log In
         </button>
