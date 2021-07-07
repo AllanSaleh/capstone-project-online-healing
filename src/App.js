@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 
 import Purchase from './Components/PurchaseTicket/Purchase';
+import SavedCards from './Components/SavedCards/SavedCards';
 
 function App() {
   // This controls the direction of the page for RTL languages
@@ -11,7 +12,7 @@ function App() {
     document.dir = i18n.dir();
   }, [i18n, i18n.language]);
 
-  return <Purchase />;
+  return <SavedCards />;
 }
 
 export default App;
