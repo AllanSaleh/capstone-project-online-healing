@@ -1,5 +1,21 @@
 import React from 'react';
 
+const questionData = {
+  question: 'What type of coumseling are you looking for?',
+  choices: [
+    {
+      id: 1,
+      content: 'Individual counseling',
+      selected: true,
+    },
+    {
+      id: 2,
+      content: 'Teen counseling (for my child)',
+      selected: false,
+    },
+  ],
+};
+
 const Booking = () => (
   <div className="relative h-firstsection px-sides">
     <h1 className="text-title uppercase mb-4"> let’s match you with the right therapist</h1>
