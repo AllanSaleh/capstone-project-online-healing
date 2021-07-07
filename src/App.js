@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import CreateAccount from './Components/CreateAccount/CreateAccount';
 import './styles/main.css';
 import Description from './Components/Description/Description';
 import LandingPage from './Components/landing page/landingpage';
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div>
+      <CreateAccount />
       <NavBar />
       <LandingPage />
       <Description />

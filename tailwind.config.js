@@ -749,4 +749,12 @@ module.exports = {
       plugins: [],
     },
   },
+<<<<<<< HEAD
+  variants: {
+    extend: {},
+  },
+  plugins: [],
 };
+=======
+};
+>>>>>>> master
