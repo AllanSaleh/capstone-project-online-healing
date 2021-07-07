@@ -18,6 +18,7 @@ export default function FirstSection() {
           <div className="flex flex-col justify-between">
             <div className="flex ml-4 my-2 ">
               <input
+                name="ContactRadio"
                 className="my-2 mr-4"
                 type="radio"
                 value="ServiceQuestion"
@@ -28,7 +29,12 @@ export default function FirstSection() {
             </div>
 
             <div className="flex ml-4 my-2">
-              <input className="my-2 mr-4" type="radio" value="ClientSupport" />
+              <input
+                name="ContactRadio"
+                className="my-2 mr-4"
+                type="radio"
+                value="ClientSupport"
+              />
               <div className="text-paragraph">
                 I'm a registered client and I need support.{' '}
               </div>
@@ -36,6 +42,7 @@ export default function FirstSection() {
 
             <div className="flex ml-4 my-2">
               <input
+                name="ContactRadio"
                 className="my-2 mr-4 "
                 type="radio"
                 value="CouncelorInterest"
@@ -47,6 +54,7 @@ export default function FirstSection() {
 
             <div className="flex ml-4 my-2">
               <input
+                name="ContactRadio"
                 className="my-2 mr-4"
                 type="radio"
                 value="CounselorSupport"
@@ -58,6 +66,7 @@ export default function FirstSection() {
 
             <div className="flex ml-4 my-2">
               <input
+                name="ContactRadio"
                 className="my-2 mr-4"
                 type="radio"
                 value="BusinessInquiry"
@@ -69,6 +78,7 @@ export default function FirstSection() {
 
             <div className="flex ml-4 my-2">
               <input
+                name="ContactRadio"
                 className="my-2 mr-4"
                 type="radio"
                 value="OrganizationInterest"
@@ -80,6 +90,7 @@ export default function FirstSection() {
 
             <div className="flex ml-4 my-2">
               <input
+                name="ContactRadio"
                 className="my-2 mr-4"
                 type="radio"
                 value="BillingQuestion"
