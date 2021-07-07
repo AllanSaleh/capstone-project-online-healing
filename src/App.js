@@ -1,7 +1,13 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import CreateAccount from './Components/CreateAccount/CreateAccount';
 import './styles/main.css';
+
 import FirstSection from './Components/Contact Page/FirstSection';
+
+
+import Description from './Components/Description/Description';
+import LandingPage from './Components/landing page/landingpage';
 
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
@@ -16,10 +22,15 @@ function App() {
 
   return (
     <div>
+      <CreateAccount />
       <NavBar />
+
       <FirstSection />
+
+      <LandingPage />
+      <Description />
+
       <AddNewCard />
-      <div className="text-center bg-yellow-primary h-section w-full px-sides">Other Sections!</div>
       <div className="text-center bg-blue-dark h-section w-full px-sides">Other Sections!</div>
       <Footer />
     </div>
