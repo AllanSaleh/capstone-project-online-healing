@@ -30,9 +30,7 @@ export default function CreditCard({
   if (select)
     chosenClass =
       'border-8 border-blue-dark rounded-lg border-dashed absolute w-full cursor-pointer';
-  else
-    chosenClass =
-      'border-8 border-transparent rounded-lg border-dashed absolute w-full cursor-pointer';
+  else chosenClass = 'rounded-lg absolute w-full cursor-pointer';
 
   return (
     <div
