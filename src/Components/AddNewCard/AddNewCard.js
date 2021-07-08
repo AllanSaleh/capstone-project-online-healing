@@ -3,7 +3,11 @@ import Card1 from './Card1.svg';
 import Card2 from './Card2.svg';
 
 export default function AddNewCard() {
-  const [countryList, setCountries] = useState(['United States', 'Iraq', 'United Kingdom']);
+  const [countryList, setCountries] = useState([
+    'United States',
+    'Iraq',
+    'United Kingdom',
+  ]);
   const [cityList, setCities] = useState(['Sulaymaniyah', 'Erbil', 'Dohuk']);
 
   return (
@@ -11,14 +15,17 @@ export default function AddNewCard() {
       <div>
         <div className="text-title leading-tight">ADD CARD DETAILS</div>
         <div className="text-subtitle text-gray-700">
-          Please make sure all of the info you enter are the same as your card registration info.
+          Please make sure all of the info you enter are the same as your card
+          registration info.
         </div>
       </div>
 
       <div className="flex justify-between">
         <div className="flex flex-col justify-start h-full">
           <div className="my-4">
-            <div className="text-paragraph text-gray-700">Supported Card Types</div>
+            <div className="text-paragraph text-gray-700">
+              Supported Card Types
+            </div>
             <div className="flex">
               <div className="leading-snug h-12 px-1 py-2 text-paragraph text-blue-dark border-2 border-r-0 border-blue-dark w-32 text-center rounded-lg rounded-r-none">
                 MasterCard
@@ -52,7 +59,9 @@ export default function AddNewCard() {
             </div>
           </div>
           <div className="my-4">
-            <div className="w-64 text-paragraph text-gray-700">Name on Card</div>
+            <div className="w-64 text-paragraph text-gray-700">
+              Name on Card
+            </div>
             <input
               placeholder="John Doe"
               className="w-64 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
@@ -65,7 +74,10 @@ export default function AddNewCard() {
             <div className="text-paragraph text-gray-700">Country</div>
             <select className="w-64 h-12 p-2 border-gray-700 border-2 rounded-lg">
               {countryList.map((country) => (
-                <option value={country} className="py-1 text-paragraph text-gray-700">
+                <option
+                  value={country}
+                  className="py-1 text-paragraph text-gray-700"
+                >
                   {country}
                 </option>
               ))}
@@ -84,7 +96,10 @@ export default function AddNewCard() {
             <div className="text-paragraph text-gray-700">City</div>
             <select className="w-64 h-12 p-2 border-gray-700 border-2 rounded-lg">
               {cityList.map((city) => (
-                <option value={city} className="py-1 text-paragraph text-gray-700">
+                <option
+                  value={city}
+                  className="py-1 text-paragraph text-gray-700"
+                >
                   {city}
                 </option>
               ))}
