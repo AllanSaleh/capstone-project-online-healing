@@ -1,5 +1,6 @@
 import React from 'react';
 import ProfilePic from '../../Icons/ProfilePic.svg';
+import EditProfileButton from './EditProfileButton';
 import EditProfileSection from './EditProfileSection';
 
 const EditProfile = () => (
@@ -20,6 +21,29 @@ const EditProfile = () => (
       </div>
       <div className="w-3/5 p-4 mx-2">
         <EditProfileSection title="profile info" />
+        <div className="flex justify-between">
+          <EditProfileButton
+            text="save changes"
+            bgColor="bg-green-300"
+            textColor="text-green-800"
+            margin="mr-4"
+            bgOpacity="bg-opacity-70"
+          />
+          <EditProfileButton
+            text="delete account"
+            bgColor="bg-red-400"
+            textColor="text-red-800"
+            margin="mx-4"
+            bgOpacity="bg-opacity-70"
+          />
+          <EditProfileButton
+            text="cancel"
+            bgColor="bg-yellow-300"
+            textColor="text-yellow-800"
+            margin="ml-4"
+            bgOpacity="bg-opacity-70"
+          />
+        </div>
       </div>
     </div>
   </div>
