@@ -7,6 +7,8 @@ import LandingPage from './Components/landing page/landingpage';
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
 import AddNewCard from './Components/AddNewCard/AddNewCard';
+import SecondSection from './Components/Contact Page/SecondSection';
+import FirstSection from './Components/Contact Page/FirstSection';
 
 function App() {
   // This controls the direction of the page for RTL languages
@@ -17,12 +19,9 @@ function App() {
 
   return (
     <div>
-      <CreateAccount />
       <NavBar />
-      <LandingPage />
-      <Description />
-      <AddNewCard />
-      <div className="text-center bg-blue-dark h-section w-full px-sides">Other Sections!</div>
+      <FirstSection />
+      <SecondSection />
       <Footer />
     </div>
   );
