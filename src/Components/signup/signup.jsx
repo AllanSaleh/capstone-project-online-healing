@@ -1,6 +1,8 @@
 import React from 'react';
 import SignupImage from './SignupImage.svg'
-import SocialMedia from './SocialMedia.svg'
+import Facebook from './Facebook.svg'
+import Google from './Google.svg'
+import Or from './or.svg'
 function Signup(){
     return(
             
@@ -37,7 +39,11 @@ function Signup(){
                         </div>
                     </div>
                     <div className="mt-10 ml-12">
-                        <img src={SocialMedia} alt="SocialMedia"  />
+                    <img src={Or} alt="Or"  />
+                        <div className="flex items-center justify-evenly px-16 mt-4">
+                        <button><img src={Facebook} alt="facebook" /></button>
+                        <button><img src={Google} alt="google" /> </button>
+                        </div>
                     </div>
                 </div>
             </div>
