@@ -1,7 +1,7 @@
 import React from 'react';
 import ProfilePic from '../../Icons/ProfilePic.svg';
 import EditProfileButton from './EditProfileButton';
-import EditProfileSection from './EditProfileSection';
+import ProfileInfoSection from './ProfileInfoSection';
 
 const EditProfile = () => (
   <div className="px-sides pt-navbar">
@@ -10,18 +10,13 @@ const EditProfile = () => (
     </h3>
     <div className="flex">
       <div className="w-2/5 p-4 mx-2 text-center">
-        <button
-          className="hover:cursor-pointer"
-          onClick={() => {
-            console.log('profile pic clicked');
-          }}
-        >
+        <button className="hover:cursor-pointer">
           <img src={ProfilePic} alt="profile-pic" />
         </button>
       </div>
       <div className="w-3/5 p-4 mx-2">
-        <EditProfileSection title="profile info" />
-        <div className="flex justify-between">
+        <ProfileInfoSection />
+        <div className="flex justify-between my-8">
           <EditProfileButton
             text="save changes"
             bgColor="bg-green-300"
