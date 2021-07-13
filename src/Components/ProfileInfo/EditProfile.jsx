@@ -2,6 +2,7 @@ import React from 'react';
 import ProfilePic from '../../Icons/ProfilePic.svg';
 import EditProfileButton from './EditProfileButton';
 import ProfileInfoSection from './ProfileInfoSection';
+import SecuritySection from './SecuritySection';
 
 const EditProfile = () => (
   <div className="px-sides pt-navbar">
@@ -16,6 +17,7 @@ const EditProfile = () => (
       </div>
       <div className="w-3/5 p-4 mx-2">
         <ProfileInfoSection />
+        <SecuritySection />
         <div className="flex justify-between my-8">
           <EditProfileButton
             text="save changes"
@@ -38,6 +40,17 @@ const EditProfile = () => (
             margin="ml-4"
             bgOpacity="bg-opacity-70"
           />
+        </div>
+        <div className="my-16">
+          <h1 className="text-title capitalize mb-16">Payment Methods & Tickets</h1>
+          <div className="inline-block mr-4">
+            <h3 className="text-subtitle capitalize mb-2">3 crads added</h3>
+            <EditProfileButton text="show cards" />
+          </div>
+          <div className="inline-block ml-4">
+            <h3 className="text-subtitle capitalize mb-2">10 tickets remaining</h3>
+            <EditProfileButton text="buy tickets" />
+          </div>
         </div>
       </div>
     </div>
