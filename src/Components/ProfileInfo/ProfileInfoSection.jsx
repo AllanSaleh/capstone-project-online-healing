@@ -1,7 +1,6 @@
 import React from 'react';
 import ProfileInputField from './ProfileInputField';
 import BirthDateIcon from '../../Icons/BirthDateIcon.svg';
-import ArrowDown from '../../Icons/ArrowDown.svg';
 import Plus from '../../Icons/Plus.svg';
 
 const ProfileInfoSection = () => (
