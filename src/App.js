@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import CreateAccount from './Components/CreateAccount/CreateAccount';
 import './styles/main.css';
-
+import Description from './Components/Description/Description';
+import LandingPage from './Components/landing page/landingpage';
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
 import AddNewCard from './Components/AddNewCard/AddNewCard';
@@ -16,6 +18,7 @@ function App() {
 
   return (
     <div>
+      <CreateAccount />
       <NavBar />
       <Signup />
       <Footer />
