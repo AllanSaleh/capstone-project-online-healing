@@ -23,7 +23,7 @@ export default function SecondSection() {
         <div className="mb-8">
           <label className="mb-2 block text-paragraph">Details:</label>
           <textarea
-            className="p-2 w-3/4 h-72 text-paragraph text-gray-700 rounded-lg border-2 border-gray-400 shadow-lg"
+            className="p-2 w-3/4 h-52 text-paragraph text-gray-700 rounded-lg border-2 border-gray-400 shadow-lg"
             placeholder="Enter your details here..."
           />
         </div>
