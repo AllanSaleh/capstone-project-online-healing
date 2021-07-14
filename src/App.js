@@ -21,7 +21,6 @@ function App() {
     <div>
       <NavBar />
       <Careers />
-      {/* <Login /> */}
       <Footer />
     </div>
   );
