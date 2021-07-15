@@ -18,13 +18,8 @@ function App() {
 
   return (
     <div>
-      <CreateAccount />
       <NavBar />
-      <LandingPage />
-      <Description />
-      <AddNewCard />
       <Booking />
-      <div className="text-center bg-blue-dark h-section w-full px-sides">Other Sections!</div>
       <Footer />
     </div>
   );
