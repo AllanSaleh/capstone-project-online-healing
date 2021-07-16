@@ -5,6 +5,9 @@ import './styles/main.css';
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
 import Careers from './Components/Careers/Careers';
+import AddNewCard from './Components/AddNewCard/AddNewCard';
+import OpeningSection from './Components/Careers/OpeningSection';
+import WorkingWithHealing from './Components/WorkingWithHealing/WorkingWithHealing';
 
 function App() {
   // This controls the direction of the page for RTL languages
