@@ -7,6 +7,7 @@ import LandingPage from './Components/landing page/landingpage';
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
 import AddNewCard from './Components/AddNewCard/AddNewCard';
+import Recomended from './Components/RecomendedForYou/Recomended';
 
 function App() {
   // This controls the direction of the page for RTL languages
@@ -24,6 +25,7 @@ function App() {
       <AddNewCard />
       <div className="text-center bg-blue-dark h-section w-full px-sides">Other Sections!</div>
       <Footer />
+      <Recomended />
     </div>
   );
 }
