@@ -8,6 +8,7 @@ import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
 import AddNewCard from './Components/AddNewCard/AddNewCard';
 import Recomended from './Components/RecomendedForYou/Recomended';
+import Team from './Components/TeamShowcase/Team';
 
 function App() {
   // This controls the direction of the page for RTL languages
@@ -18,14 +19,15 @@ function App() {
 
   return (
     <div>
-      <CreateAccount />
+      {/* <CreateAccount />
       <NavBar />
       <LandingPage />
       <Description />
       <AddNewCard />
       <div className="text-center bg-blue-dark h-section w-full px-sides">Other Sections!</div>
       <Footer />
-      <Recomended />
+      <Recomended /> */}
+      <Team />
     </div>
   );
 }
