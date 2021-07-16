@@ -2,6 +2,7 @@ import React from 'react';
 
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
+import TeamCard from './TeamCard';
 
 import AllanImg from './AllanImg.svg';
 import PayamImg from './PayamImg.svg';
@@ -54,16 +55,7 @@ export default function Recomended() {
 
           <div className="flex justify-between">
             {Team.map((member) => (
-              <div className="flex flex-col w-52 bg-blue-light rounded-3xl justify-between">
-                <div className="h-60">
-                  <img className="w-full" src={member.img} alt="MemberImage" />
-                  <div className="h-2 w-full bg-green-300" />
-                </div>
-                <div className="h-44 flex flex-col justify-evenly">
-                  <div className="text-gray-700 text-subtitle text-center">{member.name}</div>
-                  <div className="text-gray-700 text-paragraph text-center">{member.position}</div>
-                </div>
-              </div>
+              <TeamCard img={member.img} name={member.name} position={member.position} />
             ))}
           </div>
         </div>
