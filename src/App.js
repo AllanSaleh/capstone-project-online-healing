@@ -8,6 +8,8 @@ import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
 import AddNewCard from './Components/AddNewCard/AddNewCard';
 import Recomended from './Components/RecomendedForYou/Recomended';
+import ThreeCardSection from './Components/ThreeCardSections/ThreeCardSection';
+import threeCardSectionData from './mockdata/data';
 
 function App() {
   // This controls the direction of the page for RTL languages
@@ -18,14 +20,9 @@ function App() {
 
   return (
     <div>
-      <CreateAccount />
       <NavBar />
-      <LandingPage />
-      <Description />
-      <AddNewCard />
-      <div className="text-center bg-blue-dark h-section w-full px-sides">Other Sections!</div>
-      <Footer />
       <Recomended />
+      <Footer />
     </div>
   );
 }
