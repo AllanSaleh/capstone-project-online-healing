@@ -7,6 +7,8 @@ import Description from './Components/Description/Description';
 import LandingPage from './Components/landing page/landingpage';
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
+import AddNewCard from './Components/AddNewCard/AddNewCard';
+import OpeningSection from './Components/Careers/OpeningSection';
 import WorkingWithHealing from './Components/WorkingWithHealing/WorkingWithHealing';
 
 function App() {
@@ -19,7 +21,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <FirstSection />
+
       <Footer />
     </div>
   );
