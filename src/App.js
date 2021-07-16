@@ -8,6 +8,7 @@ import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
 import AddNewCard from './Components/AddNewCard/AddNewCard';
 import EditProfile from './Components/ProfileInfo/EditProfile';
+import TherapistProfileInfo from './Components/TherapistProfile/ThrapistProfileInfo';
 
 function App() {
   // This controls the direction of the page for RTL languages
@@ -22,6 +23,7 @@ function App() {
       <NavBar />
       <LandingPage />
       <EditProfile />
+      <TherapistProfileInfo />
       <Description />
       <AddNewCard />
       <div className="text-center bg-blue-dark h-section w-full px-sides">Other Sections!</div>
