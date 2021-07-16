@@ -5,6 +5,8 @@ import Working from './Components/WorkingWithHealling/Working';
 
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
+import AddNewCard from './Components/AddNewCard/AddNewCard';
+import OpeningSection from './Components/Careers/OpeningSection';
 import WorkingWithHealing from './Components/WorkingWithHealing/WorkingWithHealing';
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
   return (
     <div>
       <NavBar />
+      <div className="text-center bg-blue-dark h-firstsection w-full px-sides">First Section!</div>
+      <OpeningSection />
       <WorkingWithHealing />
       <Footer />
     </div>
