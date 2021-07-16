@@ -4,6 +4,7 @@ import './styles/main.css';
 
 import ContactPage from './Components/Contact Page/ContactPage';
 
+
 function App() {
   // This controls the direction of the page for RTL languages
   const { i18n } = useTranslation();
