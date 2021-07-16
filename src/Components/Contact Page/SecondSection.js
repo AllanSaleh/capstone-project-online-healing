@@ -1,5 +1,5 @@
 import React from 'react';
-​
+
 export default function SecondSection() {
   return (
     <div className="flex  px-sides h-section items-center">
