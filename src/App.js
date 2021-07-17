@@ -7,6 +7,7 @@ import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
 import AddNewCard from './Components/AddNewCard/AddNewCard';
 import Login from './Components/Login/login';
+import OpeningSection from './Components/Careers/OpeningSection';
 import WorkingWithHealing from './Components/WorkingWithHealing/WorkingWithHealing';
 
 function App() {
