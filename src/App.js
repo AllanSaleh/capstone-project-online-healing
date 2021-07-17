@@ -16,13 +16,7 @@ function App() {
     document.dir = i18n.dir();
   }, [i18n, i18n.language]);
 
-  return (
-    <div>
-      <NavBar />
-      <Login />
-      <Footer />
-    </div>
-  );
+  return <Login />;
 }
 
 export default App;
