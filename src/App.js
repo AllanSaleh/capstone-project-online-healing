@@ -1,12 +1,7 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import CreateAccount from './Components/CreateAccount/CreateAccount';
 import './styles/main.css';
-import Description from './Components/Description/Description';
-import LandingPage from './Components/landing page/landingpage';
-import NavBar from './Components/NavBar/NavBar';
-import Footer from './Components/Footer/Footer';
-import AddNewCard from './Components/AddNewCard/AddNewCard';
+
 import Signup from './Components/signup/signup';
 
 function App() {
@@ -16,14 +11,7 @@ function App() {
     document.dir = i18n.dir();
   }, [i18n, i18n.language]);
 
-  return (
-    <div>
-      <CreateAccount />
-      <NavBar />
-      <Signup />
-      <Footer />
-    </div>
-  );
+  return <Signup />;
 }
 
 export default App;

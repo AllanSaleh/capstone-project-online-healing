@@ -1,55 +1,118 @@
 import React from 'react';
-import SignupImage from './SignupImage.svg'
-import Facebook from './Facebook.svg'
-import Google from './Google.svg'
-import Or from './or.svg'
-function Signup(){
-    return(
-            
-            <div className=" h-firstsection mt-16 flex flex-row items-center justify-evenly">
-                 <div>
-                    <img src={SignupImage} alt="SignupImage"  />
-                </div>
-                <div className="w-auto">
-                <div className="text-5xl pb-16">
-                 SIGN UP NOW
-                </div>
-                    <div className=" w-auto h-auto ring-1 bg-white shadow-xl rounded-lg ">
-                        <div className="flex flex-col">
-                            <div>
-                            <input type="text" id="first-name" placeholder="First Name" className="rounded-sm ring-1 pl-2 ml-4 mt-10 mr-2 h-12" />
-                            <input type="text" id="last-name" placeholder="Last Name" className="rounded-sm ring-1 pl-2 ml-4 mt-10 mr-5 h-12" />
-                            </div>
-                            <input type="Email" name="Email" id="email" placeholder="Email" className="rounded-sm ring-1 p-2 ml-4 mt-5 mr-5 h-12" />
-                            <input type="Confirm Email" name="Confirm Email" id="Confirm-email" placeholder="Confirm Email" className="rounded-sm ring-1 p-2 ml-4 mt-5 mr-5 h-12" />
-                            <div>
-                            <input type="password" id="password" placeholder="Password" className="rounded-sm ring-1 pl-2 ml-4 mt-5 mr-2 h-12" />
-                            <input type="password" id="confirm-password" placeholder="Confirm Password" className="rounded-sm ring-1 pl-2 ml-4 mt-5 mr-5 h-12" />
-                            </div>
-                            <div className="flex flex-row items-center mt-10 ml-4">
-                                <p className="mr-6">Birth date</p>
-                                <input type="text" id="DD" placeholder="DD" className="rounded-sm ring-1 pl-2 ml-4  mr-2 h-12 w-16" />
-                                <input type="text" id="MM" placeholder="MM" className="rounded-sm ring-1 pl-2 ml-4  mr-2 h-12 w-24" />
-                                <input type="text" id="YYYY" placeholder="YYYY" className="rounded-sm ring-1 pl-2 ml-4  mr-2 h-12 w-28" />
-                            </div>
-                            <div className="flex flex-row justify-between" >
-                            <button className="mt-10 mb-10 ml-4  pt-2 pb-2  px-16 text-subtitle rounded-md bg-blue-dark border hover:bg-white hover:text-blue-dark hover:border-blue-dark">LOG IN</button>
-                            <button className="mt-10 mb-10 mr-5 border pt-2 pb-2 px-16 text-subtitle rounded-md border-blue-dark border-opacity-100 bg-white text-blue-dark hover:bg-blue-dark hover:text-black hover:border-blue-dark">SIGN UP</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="mt-10 ml-12">
-                    <img src={Or} alt="Or"  />
-                        <div className="flex items-center justify-evenly px-16 mt-4">
-                        <button><img src={Facebook} alt="facebook" /></button>
-                        <button><img src={Google} alt="google" /> </button>
-                        </div>
-                    </div>
-                </div>
+import SignupImage from './SignupImage.svg';
+import Facebook from './Facebook.svg';
+import Google from './Google.svg';
+import Or from './or.svg';
+import NavBar from '../NavBar/NavBar';
+import Footer from '../Footer/Footer';
+
+function Signup() {
+  return (
+    <div>
+      <NavBar />
+      <div className="h-firstsection flex flex-row items-center justify-between px-sides pt-navbar">
+        <div>
+          <img src={SignupImage} alt="SignupImage" />
+        </div>
+        <div className="w-1/3 h-full flex flex-col justify-center">
+          <div className="text-title mb-4">SIGN UP NOW</div>
+          <div className="h-3/5 flex flex-col justify-evenly shadow-xl rounded-lg p-4">
+            <div className="w-full flex justify-between">
+              <input
+                type="text"
+                id="first-name"
+                placeholder="First Name"
+                className="rounded-lg ring-1 h-12 p-2 w-52"
+              />
+              <input
+                type="text"
+                id="last-name"
+                placeholder="Last Name"
+                className="rounded-lg ring-1 h-12 p-2 w-52"
+              />
             </div>
-        
-        
-    );
+            <input
+              type="Email"
+              name="Email"
+              id="email"
+              placeholder="Email"
+              className="rounded-lg ring-1 h-12 p-2"
+            />
+            <input
+              type="Confirm Email"
+              name="Confirm Email"
+              id="Confirm-email"
+              placeholder="Confirm Email"
+              className="rounded-lg ring-1 h-12 p-2"
+            />
+            <div className="w-full flex justify-between">
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                className="rounded-lg ring-1 h-12 p-2 w-52"
+              />
+              <input
+                type="password"
+                id="confirm-password"
+                placeholder="Confirm Password"
+                className="rounded-lg ring-1 h-12 p-2 w-52"
+              />
+            </div>
+            <div className="flex items-center justify-evenly w-full">
+              <p>Birth Date:</p>
+              <div>
+                <input
+                  type="text"
+                  id="DD"
+                  placeholder="DD"
+                  className="text-center rounded-lg ring-1 h-12 w-16 p-2 mr-4"
+                />
+                <input
+                  type="text"
+                  id="MM"
+                  placeholder="MM"
+                  className="text-center rounded-lg ring-1 h-12 w-24 p-2 mr-4"
+                />
+                <input
+                  type="text"
+                  id="YYYY"
+                  placeholder="YYYY"
+                  className="text-center rounded-lg ring-1 h-12 w-28 p-2"
+                />
+              </div>
+            </div>
+            <div className="flex flex-row justify-evenly">
+              <button
+                type="button"
+                className="w-40 h-12 text-subtitle rounded-lg border-2 text-blue-dark border-blue-dark hover:bg-blue-dark hover:text-black hover:border-transparent"
+              >
+                LOG IN
+              </button>
+              <button
+                type="button"
+                className="shadow-2xl w-40 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+              >
+                SIGN UP
+              </button>
+            </div>
+          </div>
+          <div className="flex flex-col mt-10">
+            <img src={Or} alt="Or" />
+            <div className="flex items-center justify-evenly px-16 mt-4">
+              <button type="button">
+                <img src={Facebook} alt="facebook" />
+              </button>
+              <button type="button">
+                <img src={Google} alt="google" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
 export default Signup;
