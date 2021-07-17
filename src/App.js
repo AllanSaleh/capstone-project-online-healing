@@ -12,6 +12,7 @@ function App() {
   }, [i18n, i18n.language]);
 
   return <Signup />;
+
 }
 
 export default App;
