@@ -1,6 +1,6 @@
 import React from 'react';
 import ProfileInputField from './ProfileInputField';
-import LockIcon from '../../Icons/LockIcon.svg';
+import LockIcon from './LockIcon.svg';
 
 const SecuritySection = () => (
   <form className="my-16">

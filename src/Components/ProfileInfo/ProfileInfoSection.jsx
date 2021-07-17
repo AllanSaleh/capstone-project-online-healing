@@ -1,7 +1,7 @@
 import React from 'react';
 import ProfileInputField from './ProfileInputField';
-import BirthDateIcon from '../../Icons/BirthDateIcon.svg';
-import Plus from '../../Icons/Plus.svg';
+import BirthDateIcon from './BirthDateIcon.svg';
+import Plus from './Plus.svg';
 
 const ProfileInfoSection = () => (
   <form className="mb-8">
