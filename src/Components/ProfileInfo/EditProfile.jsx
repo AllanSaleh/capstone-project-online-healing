@@ -26,21 +26,21 @@ const EditProfile = () => (
             <EditProfileButton
               text="save changes"
               bgColor="bg-green-300"
-              textColor="text-green-800"
+              color="green-500"
               margin="mr-4"
               bgOpacity="bg-opacity-70"
             />
             <EditProfileButton
               text="delete account"
               bgColor="bg-red-400"
-              textColor="text-red-800"
+              color="red-500"
               margin="mx-4"
               bgOpacity="bg-opacity-70"
             />
             <EditProfileButton
               text="cancel"
               bgColor="bg-yellow-300"
-              textColor="text-yellow-800"
+              color="yellow-300"
               margin="ml-4"
               bgOpacity="bg-opacity-70"
             />
@@ -49,11 +49,11 @@ const EditProfile = () => (
             <h1 className="text-title capitalize mb-16">Payment Methods & Tickets</h1>
             <div className="inline-block mr-4">
               <h3 className="text-subtitle capitalize mb-2">3 crads added</h3>
-              <EditProfileButton text="show cards" />
+              <EditProfileButton text="show cards" color="blue-dark" />
             </div>
             <div className="inline-block ml-4">
               <h3 className="text-subtitle capitalize mb-2">10 tickets remaining</h3>
-              <EditProfileButton text="buy tickets" />
+              <EditProfileButton text="buy tickets" color="blue-dark" />
             </div>
           </div>
         </div>

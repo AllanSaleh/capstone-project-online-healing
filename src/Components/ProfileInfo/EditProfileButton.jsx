@@ -1,10 +1,12 @@
 import React from 'react';
 
-const EditProfileButton = ({ text, bgColor, textColor, margin, bgOpacity }) => (
+const EditProfileButton = ({ text, bgColor, color, margin }) => (
   <button
-    className={`${bgColor || 'bg-blue-dark'} ${bgOpacity} ${
-      textColor || 'text-black'
-    } ${margin} rounded-lg uppercase px-12 py-3 text-subtitle transition duration-300 hover:bg-opacity-100 hover:shadow-lg`}
+    type="button"
+    className={`${
+      bgColor || 'bg-blue-dark'
+    } text-black ${margin} rounded-lg uppercase px-12 py-3 text-subtitle border transition duration-300 hover:bg-white hover:${`border-${color}`}
+    hover:${`text-${color}`}`}
   >
     {text}
   </button>
