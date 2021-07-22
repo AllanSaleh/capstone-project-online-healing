@@ -4,14 +4,14 @@ import ProfileInputField from '../ProfileInfo/ProfileInputField';
 import BirthDateIcon from './BirthDateIcon.svg';
 
 const TherapistProfile = () => (
-  <div className="flex px-sides pt-navbar h-firstsection">
-    <div className="w-2/5 p-4 mx-2 text-center">
-      <button type="button" className="hover:cursor-pointer">
+  <div className="flex flex-col lg:flex-row px-sides pt-navbar lg:h-firstsection">
+    <div className="w-full lg:w-2/5 p-4 mx-2 text-center">
+      <button type="button" className="hover:cursor-pointer px-20 py-20 lg:py-0 lg:px-10">
         <img src={ProfilePic} alt="profile-pic" />
       </button>
     </div>
-    <div className="w-3/5 p-4 mx-2">
-      <h1 className="text-title uppercase">therapist profile</h1>
+    <div className="w-full lg:w-3/5 p-4 mx-2">
+      <h1 className="text-4xl lg:text-title uppercase">therapist profile</h1>
       <ProfileInputField title="full name" type="text" id="full-name" />
       <div className="flex my-6">
         <div htmlFor="bio" className="text-subtitle capitalize inline-block w-1/3">
