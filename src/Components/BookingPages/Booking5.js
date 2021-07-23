@@ -12,24 +12,26 @@ const Booking5 = () => {
     },
     {
       id: 3,
-      content: 'Relationship issues',
+      content: 'Relationship Issues',
     },
     {
       id: 4,
-      content: 'Family conflicts',
+      content: 'Family Conflicts',
     },
     {
       id: 5,
       content: 'Trauma and Abuse',
     },
     {
-      id: 5,
-      content: 'Eating disorder',
+      id: 6,
+      content: 'Eating Disorders',
     },
   ];
+
   return (
     <div className="h-firstsection px-sides pt-navbar">
       <h1 className="text-title uppercase mb-4">
+        {' '}
         let’s match you with the right therapist
       </h1>
       <h3 className="text-subtitle opacity-50 text-justify">
@@ -40,22 +42,25 @@ const Booking5 = () => {
       </h3>
 
       <div className="flex flex-col justify-evenly h-2/3 max-w-3xl my-16 mx-auto px-8 py-4 shadow-md">
-        <div>Are there any issues you'd like to focus on?</div>
+        <div className="text-subtitle">
+          Are there any issue that you would like to focus on?
+        </div>
 
-        {choices.map((choice) => (
-          <div>
-            <input
-              type="radio"
-              id={choice.id}
-              name="counselor_options"
-              value={choice.content}
-            />
-            <label className="ml-2" htmlFor={choice.id}>
-              {choice.content}
-            </label>
-          </div>
-        ))}
-
+        <div className="h-1/2 flex flex-col justify-around">
+          {choices.map((choice) => (
+            <div className="flex items-center">
+              <input
+                type="radio"
+                id={choice.id}
+                name="counselor_options"
+                value={choice.content}
+              />
+              <label className="text-paragraph ml-2" htmlFor={choice.id}>
+                {choice.content}
+              </label>
+            </div>
+          ))}
+        </div>
         <div className="flex justify-between">
           <button
             type="button"
