@@ -7,7 +7,7 @@ import LandingPage from './Components/landing page/landingpage';
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
 import AddNewCard from './Components/AddNewCard/AddNewCard';
-import Booking1 from './Components/BookingPages/Booking1';
+import Booking8 from './Components/BookingPages/Booking8';
 
 function App() {
   // This controls the direction of the page for RTL languages
@@ -19,7 +19,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Booking1 />
+      <Booking8 />
       <Footer />
     </div>
   );
