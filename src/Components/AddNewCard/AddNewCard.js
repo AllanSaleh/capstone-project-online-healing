@@ -20,7 +20,7 @@ export default function AddNewCard() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-between">
+      <div className="flex flex-col lg:flex-row justify-between items-center  ">
         <div className="flex flex-col justify-start h-full">
           <div className="my-4">
             <div className="text-paragraph text-gray-700">
