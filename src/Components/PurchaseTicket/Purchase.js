@@ -44,7 +44,7 @@ export default function Purchase() {
       date: '04/2025',
       number: '1234 1234 1234 1234',
       name: 'John Doe',
-      type: 'Master',
+      type: 'Visa',
     },
   ];
 
@@ -64,14 +64,14 @@ export default function Purchase() {
         <div className="flex justify-between items-center">
           <button
             onClick={() => {
-              const NewPos = document.getElementById('Menu').scrollLeft - 560;
+              const NewPos = document.getElementById('Menu').scrollLeft - 500;
               document.getElementById('Menu').scrollTo({
                 left: NewPos,
                 behavior: 'smooth',
               });
             }}
             type="button"
-            className="mr-4 h-10 lg:h-12 w-10 lg:w-12 px-3 bg-white rounded-lg border-2 border-black hover:bg-blue-dark"
+            className="mr-2 lg:mr-4 h-10 lg:h-12 w-10 lg:w-12 px-3 bg-white rounded-lg border-2 border-black hover:bg-blue-dark"
           >
             <img src={Prev} alt="Previous" />
           </button>
@@ -105,14 +105,14 @@ export default function Purchase() {
 
           <button
             onClick={() => {
-              const NewPos = document.getElementById('Menu').scrollLeft + 560;
+              const NewPos = document.getElementById('Menu').scrollLeft + 500;
               document.getElementById('Menu').scrollTo({
                 left: NewPos,
                 behavior: 'smooth',
               });
             }}
             type="button"
-            className="ml-4 h-10 lg:h-12 w-10 lg:w-12 px-3 bg-white rounded-lg border-2 border-black hover:bg-blue-dark"
+            className="ml-2 lg:ml-4 h-10 lg:h-12 w-10 lg:w-12 px-3 bg-white rounded-lg border-2 border-black hover:bg-blue-dark"
           >
             <img src={Next} alt="Previous" />
           </button>
