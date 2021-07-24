@@ -17,20 +17,28 @@ export default function CreditCard({ background, logo, date, number, name, id, s
   if (logo === 'Master') selectedLogo = MasterLogo;
   if (logo === 'Visa') selectedLogo = VisaLogo;
 
-  if (select)
-    chosenClass =
-      'border-8 border-blue-dark rounded-lg border-dashed absolute w-full cursor-pointer';
-  else
-    chosenClass =
-      'border-8 border-transparent rounded-lg border-dashed absolute w-full cursor-pointer';
+  // if (select)
+  //   chosenClass =
+  //     'border-8 border-blue-dark rounded-lg border-dashed absolute h-full w-full cursor-pointer';
+  // else
+  //   chosenClass =
+  //     'border-8 border-transparent rounded-lg border-dashed absolute h-full w-full cursor-pointer';
 
   return (
     <div
       onClick={(e) => setID(e.target.closest('.relative').id)}
       id={id}
-      className="relative inline-block w-2/6 h-80 box-border mx-12"
+      className="relative inline-block w-full lg:w-1/3 h-40 lg:h-80 box-border mx-4 lg:mx-12"
     >
-      <img className={chosenClass} src={selectedBackground} alt="Background" />
+      <img
+        className=
+          `border-8 rounded-lg border-dashed absolute h-full w-full cursor-pointer ${select
+            ? border-blue-dark
+            : border-transparent}`
+        
+        src={selectedBackground}
+        alt="Background"
+      />
       <img className="cursor-pointer absolute top-11 right-6" src={selectedLogo} alt="Logo" />
       <div className="cursor-pointer absolute top-12 left-12 text-white text-paragraph">{date}</div>
       <div className="cursor-pointer absolute top-32 left-12 text-white text-paragraph">

@@ -55,8 +55,8 @@ export default function Purchase() {
       <NavBar />
       <div className="flex flex-col justify-evenly h-firstsection pt-navbar px-sides">
         <div>
-          <div className="text-title">SELECT CARD</div>
-          <div className="text-subtitle text-gray-700">
+          <div className="text-3xl lg:text-title">SELECT CARD</div>
+          <div className="text-xl lg:text-subtitle text-gray-700">
             Please select the card you want to buy the tickets with
           </div>
         </div>
@@ -71,15 +71,15 @@ export default function Purchase() {
               });
             }}
             type="button"
-            className="mr-4 h-12 w-12 px-3 text-subtitle bg-white rounded-lg border-2 border-black hover:bg-blue-dark"
+            className="mr-4 h-10 lg:h-12 w-10 lg:w-12 px-3 bg-white rounded-lg border-2 border-black hover:bg-blue-dark"
           >
             <img src={Prev} alt="Previous" />
           </button>
 
-          <div className="relative h-80 w-full overflow-hidden">
+          <div className="relative h-40 lg:h-80 w-full overflow-hidden">
             <div
               id="Menu"
-              className="h-96 box-border whitespace-nowrap overflow-x-auto overflow-y-hidden"
+              className="h-44 lg:h-96 box-border whitespace-nowrap overflow-x-auto overflow-y-hidden"
             >
               {cards.map((card, i) => {
                 count += 1;
@@ -112,14 +112,14 @@ export default function Purchase() {
               });
             }}
             type="button"
-            className="ml-4 h-12 w-12 px-3 text-subtitle bg-white rounded-lg border-2 border-black hover:bg-blue-dark"
+            className="ml-4 h-10 lg:h-12 w-10 lg:w-12 px-3 bg-white rounded-lg border-2 border-black hover:bg-blue-dark"
           >
             <img src={Next} alt="Previous" />
           </button>
         </div>
 
         <div className="text-center self-center">
-          <div className="text-subtitle self-center">
+          <div className="text-xl lg:text-subtitle self-center">
             Click confirm to use the selected card to purchase 5 tickets for 10$
           </div>
           <button
@@ -128,7 +128,7 @@ export default function Purchase() {
               else alert(`Used Card ${selected}, Purchase Successful!`);
             }}
             type="button"
-            className="mt-8 w-72 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+            className="mt-8 w-52 lg:w-72 h-12 text-lg lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
           >
             CONFIRM PURCHASE
           </button>
