@@ -12,7 +12,6 @@ function App() {
   }, [i18n, i18n.language]);
 
   return <BlogPage />;
-
 }
 
 export default App;
