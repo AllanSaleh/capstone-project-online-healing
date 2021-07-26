@@ -20,7 +20,6 @@ function App() {
     <div>
       <NavBar />
       <Booking8 />
-      <Footer />
     </div>
   );
 }
