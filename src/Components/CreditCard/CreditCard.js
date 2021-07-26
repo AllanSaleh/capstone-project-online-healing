@@ -39,20 +39,12 @@ export default function CreditCard({
       className="relative inline-block w-2/6 h-80 box-border mx-12"
     >
       <img className={chosenClass} src={selectedBackground} alt="Background" />
-      <img
-        className="cursor-pointer absolute top-11 right-6"
-        src={selectedLogo}
-        alt="Logo"
-      />
-      <div className="cursor-pointer absolute top-12 left-12 text-white text-paragraph">
-        {date}
-      </div>
+      <img className="cursor-pointer absolute top-11 right-6" src={selectedLogo} alt="Logo" />
+      <div className="cursor-pointer absolute top-12 left-12 text-white text-paragraph">{date}</div>
       <div className="cursor-pointer absolute top-32 left-12 text-white text-paragraph">
         {number}
       </div>
-      <div className="cursor-pointer absolute top-52 left-12 text-white text-paragraph">
-        {name}
-      </div>
+      <div className="cursor-pointer absolute top-52 left-12 text-white text-paragraph">{name}</div>
       {deletable && (
         <button
           type="button"

@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Tech from './Tech.svg';
 import Trauma from './Trauma.svg';
 import Prev from './Prev.svg';
 import Next from './Next.svg';
 
 export default function RecentBlogs() {
-  const [blogs, setBlogs] = useState([
+  const blogs = [
     { title: 'Mental Health & Technology', img: Tech },
     { title: 'Healing Trauma', img: Trauma },
     { title: 'Mental Health & Technology', img: Tech },
     { title: 'Healing Trauma', img: Trauma },
     { title: 'Mental Health & Technology', img: Tech },
     { title: 'Healing Trauma', img: Trauma },
-  ]);
+  ];
 
   return (
     <div className="flex flex-col justify-evenly h-section px-sides bg-blue-light">
