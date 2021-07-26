@@ -17,7 +17,7 @@ function App() {
     <div>
       <NavBar />
       <ThankYou
-        subtitle={`Your Sign Up request has been received, you will soon receive a confirmation email. \nPlease follow the steps in the email to complete and activate your account.`}
+        subtitle={`Your request has been received, you'll soon receive a confirmation email. \nPlease follow the steps in the email to complete and activate your account.`}
       />
       <Footer />
     </div>
