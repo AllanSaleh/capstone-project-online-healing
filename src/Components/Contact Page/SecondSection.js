@@ -3,12 +3,12 @@ import React from 'react';
 export default function SecondSection() {
   return (
     <div className="flex  px-sides h-section items-center">
-      <form className=" flex flex-col w-1/2">
+      <form className="flex flex-col w-1/2">
         <div className="mb-8">
           <label className="mb-2 block text-paragraph">Full Name:</label>
           <input
             className="p-2 w-3/4 text-paragraph text-gray-700 rounded-lg border-2 border-gray-400 shadow-lg"
-            placeholder="Enter your full name"
+            placeholder="Enter your full name"  
           />
         </div>
 ​
