@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 
-import EditProfile from './Components/ProfileInfo/EditProfile';
+import AboutPage from './Components/AboutPage/AboutPage';
+
 
 function App() {
   // This controls the direction of the page for RTL languages
@@ -11,8 +12,7 @@ function App() {
     document.dir = i18n.dir();
   }, [i18n, i18n.language]);
 
-  return <EditProfile />;
-
+  return <AboutPage />;
 }
 
 export default App;
