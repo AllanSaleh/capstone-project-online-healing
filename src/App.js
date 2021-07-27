@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 
-
 import ThankYou from './Components/ThankYou/ThankYou';
 
 function App() {
