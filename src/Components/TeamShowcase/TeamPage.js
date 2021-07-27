@@ -11,7 +11,7 @@ import AbdulmajeedImg from './AbdulmajeedImg.svg';
 import SnoorImg from './SnoorImg.svg';
 import AvrazImg from './AvrazImg.svg';
 
-export default function Recomended() {
+export default function Team() {
   const Team = [
     {
       img: AllanImg,
