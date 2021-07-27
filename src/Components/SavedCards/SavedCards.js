@@ -87,7 +87,7 @@ export default function SavedCards() {
 
                 return (
                   <CreditCard
-                    deletable
+                    deletable={true}
                     select={false}
                     setID={(ID) => {
                       if (ID !== selected) setSelected(ID);
