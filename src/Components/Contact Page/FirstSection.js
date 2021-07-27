@@ -26,14 +26,14 @@ export default function FirstSection() {
     },
     { value: 'BillingQuestion', text: 'I have a billing related question.' },
   ];
-
   return (
     <div className="h-firstsection pt-navbar px-sides flex flex-col justify-evenly">
       <div>
         <div className="text-title">SEND US YOUR REQUEST!</div>
         <div className="text-subtitle text-gray-700">
-          Do you have a question, concern, idea, feedback, or problem? If you need assistance,
-          please fill out the form below and we'd be happy to help!
+          Do you have a question, concern, idea, feedback, or problem? If you
+          need assistance, please fill out the form below and we'd be happy to
+          help!
         </div>
       </div>
 
