@@ -15,11 +15,10 @@ export default function NavBar({ loggedIn }) {
           <div className="text-3xl lg:text-title ml-2">Healing</div>
         </div>
 
+        {/* HamburgerButton */}
         <div className="lg:hidden flex items-center">
           <button
-            onClick={() =>
-              document.getElementById('mobile-menu').classList.toggle('hidden')
-            }
+            onClick={() => document.getElementById('mobile-menu').classList.toggle('hidden')}
             type="button"
             className="outline-none mobile-menu-button"
           >
@@ -119,11 +118,7 @@ export default function NavBar({ loggedIn }) {
               className="ml-8 relative"
             >
               <div className="flex items-center justify-between my-2">
-                <img
-                  className="mr-2 w-10 rounded-full"
-                  src={Avatar}
-                  alt="Profile"
-                />
+                <img className="mr-2 w-10 rounded-full" src={Avatar} alt="Profile" />
                 <a
                   onClick={() => window.scrollTo(0, 0)}
                   className="hover:text-yellow-primary hover:underline text-paragraph"
@@ -168,44 +163,29 @@ export default function NavBar({ loggedIn }) {
         </div>
       </div>
 
-      <div
-        id="mobile-menu"
-        className="hidden relative flex justify-end transition duration-500"
-      >
+      {/* MobileNav */}
+      <div id="mobile-menu" className="hidden flex justify-end transition duration-500">
         <div
-          onClick={() =>
-            document.getElementById('mobile-menu').classList.toggle('hidden')
-          }
-          className="h-screen w-screen absolute opacity-75 bg-black z-10"
+          onClick={() => document.getElementById('mobile-menu').classList.toggle('hidden')}
+          className="fixed inset-0 opacity-75 bg-black z-10"
         />
-        <div className="absolute w-3/4 flex flex-col justify-between items-center flex-no-wrap mt-navbar bg-blue-light py-4 z-20">
+        <div className="fixed w-3/4 h-screen flex flex-col justify-evenly items-center mt-navbar bg-white py-4 z-20">
           {loggedIn ? (
             <div
-              onMouseLeave={() => setOpenProfile(false)}
-              onMouseOver={() => setOpenProfile(true)}
-              onFocus={() => setOpenProfile(true)}
-              className="ml-8 relative"
+              onClick={() => {
+                if (OpenProfile) setOpenProfile(false);
+                else setOpenProfile(true);
+              }}
             >
               <div className="flex items-center justify-between my-2">
-                <img
-                  className="mr-2 w-10 rounded-full"
-                  src={Avatar}
-                  alt="Profile"
-                />
-                <a
-                  onClick={() => window.scrollTo(0, 0)}
-                  className="hover:text-yellow-primary hover:underline text-paragraph"
-                  href="#"
-                >
+                <img className="mr-2 w-10 rounded-full" src={Avatar} alt="Profile" />
+                <a className="hover:text-yellow-primary hover:underline text-paragraph" href="#">
                   Ahmed M.
                 </a>
               </div>
 
               {OpenProfile && (
-                <div
-                  onMouseLeave={() => setOpenProfile(false)}
-                  className="w-36 bg-white rounded-lg py-1 shadow-md absolute transform translate-x-1"
-                >
+                <div className="w-36 bg-white rounded-lg py-1 shadow-md transform translate-x-1">
                   <a
                     onClick={() => window.scrollTo(0, 0)}
                     className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
@@ -227,14 +207,14 @@ export default function NavBar({ loggedIn }) {
           ) : (
             <button
               type="button"
-              className="w-28 ml-8 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
+              className="w-28 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
             >
               Log In
             </button>
           )}
           <a
             onClick={() => window.scrollTo(0, 0)}
-            className="ml-8 hover:text-yellow-primary hover:underline text-paragraph"
+            className="hover:text-yellow-primary hover:underline text-paragraph"
             href="#"
           >
             Home
@@ -242,32 +222,29 @@ export default function NavBar({ loggedIn }) {
 
           <a
             onClick={() => window.scrollTo(0, 0)}
-            className="ml-8 hover:text-yellow-primary hover:underline text-paragraph"
+            className="hover:text-yellow-primary hover:underline text-paragraph"
             href="#"
           >
             Blogs
           </a>
 
-          <div
-            onMouseLeave={() => setOpenAbout(false)}
-            onMouseOver={() => setOpenAbout(true)}
-            onFocus={() => setOpenAbout(true)}
-            className="ml-8 relative"
-          >
-            <div className="my-2">
-              <a
-                onClick={() => window.scrollTo(0, 0)}
-                className="hover:text-yellow-primary hover:underline text-paragraph"
-                href="#"
-              >
-                About ᐅ
+          <div>
+            <div
+              onClick={() => {
+                if (OpenAbout) setOpenAbout(false);
+                else setOpenAbout(true);
+              }}
+              className="my-2 text-center"
+            >
+              <a className="hover:text-yellow-primary hover:underline text-paragraph" href="#">
+                About ᐁ
               </a>
             </div>
 
             {OpenAbout && (
               <div
                 onMouseLeave={() => setOpenAbout(false)}
-                className="w-48 bg-white rounded-lg py-1 shadow-md absolute transform -translate-x-12"
+                className="w-48 bg-white rounded-lg py-1 shadow-md transform -translate-x-1"
               >
                 <a
                   onClick={() => window.scrollTo(0, 0)}
@@ -298,7 +275,7 @@ export default function NavBar({ loggedIn }) {
 
           <a
             onClick={() => window.scrollTo(0, 0)}
-            className="ml-8 hover:text-yellow-primary hover:underline text-paragraph"
+            className="hover:text-yellow-primary hover:underline text-paragraph"
             href="#"
           >
             Contact Us
