@@ -2,9 +2,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 
-import NavBar from './Components/NavBar/NavBar';
-import Footer from './Components/Footer/Footer';
-import Careers from './Components/Careers/Careers';
+import Team from './Components/TeamShowcase/TeamPage';
 
 function App() {
   // This controls the direction of the page for RTL languages
@@ -15,9 +13,7 @@ function App() {
 
   return (
     <div>
-      <NavBar />
-      <Careers />
-      <Footer />
+      <Team />
     </div>
   );
 }
