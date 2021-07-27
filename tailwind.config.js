@@ -18,7 +18,6 @@ module.exports = {
         firstsection: '100vh',
         section: '90vh',
         footer: '24vh',
-        mobileFirstsection: '95vh',
       },
       fontFamily: {
         body: ['Poppins'],
