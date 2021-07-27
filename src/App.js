@@ -4,6 +4,7 @@ import './styles/main.css';
 
 import BlogPage from './Components/Blogs/BlogPage';
 
+
 function App() {
   // This controls the direction of the page for RTL languages
   const { i18n } = useTranslation();
@@ -12,7 +13,6 @@ function App() {
   }, [i18n, i18n.language]);
 
   return <BlogPage />;
-
 }
 
 export default App;
