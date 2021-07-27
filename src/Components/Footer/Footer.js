@@ -69,6 +69,18 @@ export default function Footer() {
             <img src={Google} alt="Google" />
           </a>
         </div>
+
+        <div className="flex justify-center items-center">
+          <label className="w-24">Language:</label>
+          <select className="w-24 p-1 border-gray-700 border-2 rounded-lg">
+            <option value="En" className="py-1 text-paragraph text-gray-700">
+              English
+            </option>
+            <option value="Ku" className="py-1 text-paragraph text-gray-700">
+              كوردى
+            </option>
+          </select>
+        </div>
       </div>
     </div>
   );

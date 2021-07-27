@@ -115,7 +115,7 @@ export default function AddNewCard() {
           </div>
         </div>
 
-        <div className="flex lg:flex-col justify-center h-full w-full lg:w-auto lg:mr-64">
+        <div className="flex lg:flex-col justify-center h-full w-full lg:w-auto lg:mr-56">
           <img className="w-1/2 lg:w-auto lg:mt-3 lg:h-56" src={Card1} alt="MasterCard" />
           <img className="w-1/2 lg:w-auto lg:mt-3 lg:h-56" src={Card2} alt="VisaCard" />
         </div>
