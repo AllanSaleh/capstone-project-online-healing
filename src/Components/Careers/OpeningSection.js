@@ -39,7 +39,6 @@ export default function OpeningSection() {
       subtitle2: 'Application Development',
     },
   ]);
-
   return (
     <div className="h-section flex flex-col justify-around px-sides">
       <div>
