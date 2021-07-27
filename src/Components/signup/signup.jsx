@@ -14,7 +14,7 @@ function Signup() {
         <div>
           <img src={SignupImage} alt="SignupImage" />
         </div>
-        <div className="w- h-full flex flex-col justify-center">
+        <div className="w-min h-full flex flex-col justify-center">
           <div className="text-title mb-4">SIGN UP NOW</div>
           <div className="h-3/5 flex flex-col justify-evenly shadow-xl rounded-lg p-4">
             <div className="w-full flex justify-between">
