@@ -20,8 +20,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <LandingPage />
-      <Description />
+      <Login />
       {/* <Footer /> */}
     </div>
   );
