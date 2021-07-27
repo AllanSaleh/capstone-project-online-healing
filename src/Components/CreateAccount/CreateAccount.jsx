@@ -32,7 +32,7 @@ const CreateAccount = () => (
         placeholder="re-type your password"
       />
     </form>
-    <button className="text-btn bg-blue-dark px-4 py-2 my-16 w-full md:w-48 border rounded-lg uppercase hover:bg-transparent hover:border-blue-dark hover:text-blue-dark hover:shadow-xl transition-all duration-300">
+    <button className="text-subtitle bg-blue-dark px-4 py-2 my-16 w-full md:w-48 border rounded-lg uppercase hover:bg-transparent hover:border-blue-dark hover:text-blue-dark hover:shadow-xl transition-all duration-300">
       create
     </button>
   </div>
