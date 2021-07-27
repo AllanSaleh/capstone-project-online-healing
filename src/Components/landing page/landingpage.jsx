@@ -22,7 +22,7 @@ function LandingPage() {
             HELP
             </div>
             <div>
-            <button className="mt-6 ml-4  py-2 px-6 lg:text-subtitle text-base rounded-md bg-blue-dark border hover:bg-white hover:text-blue-dark hover:border-blue-dark">BOOK AN APPOINTMENT</button>
+            <button className="mt-6 ml-4  py-2 px-6 lg:py-4 lg:px-6 lg:text-subtitle text-base rounded-md bg-blue-dark border hover:bg-white hover:text-blue-dark hover:border-blue-dark">BOOK AN APPOINTMENT</button>
             </div>
             </div>
 

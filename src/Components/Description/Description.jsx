@@ -13,7 +13,7 @@ function Description() {
            Tap into the world's largest network of licensed, accredited, and experienced therapists who can help you with a range of issues including depression, anxiety, relationships, trauma, grief, and more. with our therapists, you get the same professionalism and quality you would expect from an in-office therapist, but with the ability to communicate whenever and however you want.
            </div>
            <div>
-               <button className="mt-6  py-2 px-6 lg:text-subtitle text-base rounded-md bg-blue-dark border hover:bg-white hover:text-blue-dark hover:border-blue-dark">LEARN MORE</button>
+               <button className="mt-6 lg:py-4 lg:px-6  py-2 px-6 lg:text-subtitle text-base rounded-md bg-blue-dark border hover:bg-white hover:text-blue-dark hover:border-blue-dark">LEARN MORE</button>
            </div>
         </div>
     )
