@@ -14,7 +14,7 @@ function Signup() {
         <div>
           <img src={SignupImage} alt="SignupImage" />
         </div>
-        <div className="w-1/3 h-full flex flex-col justify-center">
+        <div className="w- h-full flex flex-col justify-center">
           <div className="text-title mb-4">SIGN UP NOW</div>
           <div className="h-3/5 flex flex-col justify-evenly shadow-xl rounded-lg p-4">
             <div className="w-full flex justify-between">
@@ -22,7 +22,7 @@ function Signup() {
                 type="text"
                 id="first-name"
                 placeholder="First Name"
-                className="rounded-lg ring-1 h-12 p-2 w-52"
+                className="rounded-lg ring-1 h-12 p-2 w-52 mr-4"
               />
               <input
                 type="text"
@@ -50,7 +50,7 @@ function Signup() {
                 type="password"
                 id="password"
                 placeholder="Password"
-                className="rounded-lg ring-1 h-12 p-2 w-52"
+                className="rounded-lg ring-1 h-12 p-2 w-52 mr-4"
               />
               <input
                 type="password"
