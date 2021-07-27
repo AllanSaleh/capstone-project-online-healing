@@ -11,7 +11,7 @@ import AbdulmajeedImg from './AbdulmajeedImg.svg';
 import SnoorImg from './SnoorImg.svg';
 import AvrazImg from './AvrazImg.svg';
 
-export default function Recomended() {
+export default function Team() {
   const Team = [
     {
       img: AllanImg,
@@ -46,7 +46,7 @@ export default function Recomended() {
   ];
   return (
     <div>
-      {/* <NavBar /> */}
+      <NavBar />
       <div className="flex flex-col justify-evenly px-sides pt-navbar lg:h-firstsection">
         <div className="text-3xl lg:text-title uppercase">we are healing, nice to meet you!</div>
 
@@ -60,7 +60,7 @@ export default function Recomended() {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
