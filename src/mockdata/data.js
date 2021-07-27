@@ -1,6 +1,6 @@
-import PhoneCell from '../Icons/phone-cell.svg';
-import ChatIcon from '../Icons/chat-icon.svg';
-import VideoCallIcon from '../Icons/video-call-icon.svg';
+import PhoneCell from '../Components/Home/phone-cell.svg';
+import ChatIcon from '../Components/Home/chat-icon.svg';
+import VideoCallIcon from '../Components/Home/video-call-icon.svg';
 
 export const CommunicationSectionData = {
   title: 'we can communicate through',
