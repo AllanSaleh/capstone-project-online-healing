@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Position from './Position';
 
 export default function OpeningSection() {
@@ -39,8 +39,9 @@ export default function OpeningSection() {
       subtitle2: 'Application Development',
     },
   ];
+
   return (
-    <div className="h-section flex flex-col justify-around px-sides">
+    <div id="Openings" className="h-section flex flex-col justify-around px-sides">
       <div>
         <div className="text-3xl lg:text-title">CURRENT OPEN POSITIONS</div>
         <div className="text-xl lg:text-subtitle text-gray-700">
