@@ -21,6 +21,7 @@ function App() {
     <div>
       <NavBar />
       <LandingPage />
+      <Description />
       {/* <Footer /> */}
     </div>
   );

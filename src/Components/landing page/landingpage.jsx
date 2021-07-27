@@ -4,16 +4,16 @@ import Background from './Group 117.svg'
 function LandingPage() {
 
   return (
-    <div className="h-firstsection lg:-mt-0 mt-32">
+    <div className="h-firstsection  lg:-mt-0 mt-32">
         {/* background pattern */}
-        <div className="absolute lg:top-0 top-16 left-0 z-0" >
+        <div className="absolute lg:top-2 top-16 left-0 z-0" >
             <img src={Background} alt="Background" className="h-auto w-auto" />
         </div>
 
         {/* content */}
       <div className="flex lg:flex-row flex-col lg:justify-between lg:m-56 relative z-40">
 
-          <div className="pt-20 pb-28 flex flex-col lg:transform lg:translate-y-0 transform translate-y-48">
+          <div className="pt-20 pb-28 flex flex-col lg:transform lg:translate-y-0 transform translate-y-56">
 
             <div className="lg:text-4xl text-base pl-4">
             WE ARE HERE TO
@@ -26,7 +26,7 @@ function LandingPage() {
             </div>
             </div>
 
-            <div className="transform -translate-y-80 w-72 lg:transform lg:-translate-y-0 lg:w-auto lg:ml-0 ml-16">
+            <div className="transform -translate-y-72 w-72 lg:transform lg:-translate-y-0 lg:w-auto lg:ml-0 ml-16">
             <img src={HP_illustration} alt="HP_illustration" />
            </div>
     </div>
