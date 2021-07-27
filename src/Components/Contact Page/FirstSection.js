@@ -1,6 +1,31 @@
 import React from 'react';
 import ContactPic from './ContactPic.svg';
+
 export default function FirstSection() {
+  const radios = [
+    { value: 'ServiceQuestion', text: 'I have a question about the service.' },
+    {
+      value: 'ClientSupport',
+      text: "I'm a registered client and I need support.",
+    },
+    {
+      value: 'CouncelorInterest',
+      text: "I'm a counselor interested in joining.",
+    },
+    {
+      value: 'CounselorSupport',
+      text: "I'm a counselor interested in joining.",
+    },
+    {
+      value: 'BusinessInquiry',
+      text: "I'm a registered counselor and I need support.",
+    },
+    {
+      value: 'OrganizationInterest',
+      text: "I'm interested in Healing Online for my organization.",
+    },
+    { value: 'BillingQuestion', text: 'I have a billing related question.' },
+  ];
   return (
     <div className="h-firstsection pt-navbar px-sides flex flex-col justify-evenly">
       <div>
@@ -16,89 +41,12 @@ export default function FirstSection() {
         <div>
           <div className="text-subtitle mb-4">Type of Contact</div>
           <div className="flex flex-col justify-between">
-            <div className="flex ml-4 my-2 ">
-              <input
-                name="ContactRadio"
-                className="my-2 mr-4"
-                type="radio"
-                value="ServiceQuestion"
-              />
-              <div className="text-paragraph">
-                I have a question about the service.
+            {radios.map((radio) => (
+              <div className="flex ml-4 my-2 ">
+                <input name="ContactRadio" className="my-2 mr-4" type="radio" value={radio.vlaue} />
+                <div className="text-paragraph">{radio.text}</div>
               </div>
-            </div>
-
-            <div className="flex ml-4 my-2">
-              <input
-                name="ContactRadio"
-                className="my-2 mr-4"
-                type="radio"
-                value="ClientSupport"
-              />
-              <div className="text-paragraph">
-                I'm a registered client and I need support.{' '}
-              </div>
-            </div>
-
-            <div className="flex ml-4 my-2">
-              <input
-                name="ContactRadio"
-                className="my-2 mr-4 "
-                type="radio"
-                value="CouncelorInterest"
-              />
-              <div className="text-paragraph">
-                I'm a counselor interested in joining.{' '}
-              </div>
-            </div>
-
-            <div className="flex ml-4 my-2">
-              <input
-                name="ContactRadio"
-                className="my-2 mr-4"
-                type="radio"
-                value="CounselorSupport"
-              />
-              <div className="text-paragraph">
-                I'm a registered counselor and I need support.{' '}
-              </div>
-            </div>
-
-            <div className="flex ml-4 my-2">
-              <input
-                name="ContactRadio"
-                className="my-2 mr-4"
-                type="radio"
-                value="BusinessInquiry"
-              />
-              <div className="text-paragraph">
-                I have a business-related inquiry.{' '}
-              </div>
-            </div>
-
-            <div className="flex ml-4 my-2">
-              <input
-                name="ContactRadio"
-                className="my-2 mr-4"
-                type="radio"
-                value="OrganizationInterest"
-              />
-              <div className="text-paragraph">
-                I'm interested in Healing Online for my organization.{' '}
-              </div>
-            </div>
-
-            <div className="flex ml-4 my-2">
-              <input
-                name="ContactRadio"
-                className="my-2 mr-4"
-                type="radio"
-                value="BillingQuestion"
-              />
-              <div className="text-paragraph">
-                I have a billing related question.{' '}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
         <img src={ContactPic} alt="contact pic" />
