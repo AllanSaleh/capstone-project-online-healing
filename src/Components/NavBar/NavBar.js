@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Logo from './Logo.svg';
-import Arrow from './Polygon1.svg';
 import ProfileImage from './Avatar.png';
 
 export default function NavBar({ loggedIn }) {
@@ -18,7 +17,7 @@ export default function NavBar({ loggedIn }) {
       <div className="flex justify-between items-center flex-no-wrap">
         <a
           onClick={() => window.scrollTo(0, 0)}
-          className="ml-4 hover:text-yellow-primary hover:underline text-paragraph"
+          className="ml-8 hover:text-yellow-primary hover:underline text-paragraph"
           href="#"
         >
           Home
@@ -26,7 +25,7 @@ export default function NavBar({ loggedIn }) {
 
         <a
           onClick={() => window.scrollTo(0, 0)}
-          className="ml-4 hover:text-yellow-primary hover:underline text-paragraph"
+          className="ml-8 hover:text-yellow-primary hover:underline text-paragraph"
           href="#"
         >
           Blogs
@@ -36,7 +35,7 @@ export default function NavBar({ loggedIn }) {
           onMouseLeave={() => setOpenAbout(false)}
           onMouseOver={() => setOpenAbout(true)}
           onFocus={() => setOpenAbout(true)}
-          className="ml-4 relative"
+          className="ml-8 relative"
         >
           <div className="my-2">
             <a
@@ -44,9 +43,8 @@ export default function NavBar({ loggedIn }) {
               className="hover:text-yellow-primary hover:underline text-paragraph"
               href="#"
             >
-              About
+              About ᐁ
             </a>
-            <img className="inline-block m-1 mb-2" src={Arrow} alt="arrow" />
           </div>
 
           {OpenAbout && (
@@ -83,7 +81,7 @@ export default function NavBar({ loggedIn }) {
 
         <a
           onClick={() => window.scrollTo(0, 0)}
-          className="ml-4 hover:text-yellow-primary hover:underline text-paragraph"
+          className="ml-8 hover:text-yellow-primary hover:underline text-paragraph"
           href="#"
         >
           Contact Us
@@ -94,14 +92,10 @@ export default function NavBar({ loggedIn }) {
             onMouseLeave={() => setOpenProfile(false)}
             onMouseOver={() => setOpenProfile(true)}
             onFocus={() => setOpenProfile(true)}
-            className="ml-4 relative"
+            className="ml-8 relative"
           >
             <div className="flex items-center justify-between my-2">
-              <img
-                className="mr-2 w-10 rounded-full"
-                src={Avatar}
-                alt="Profile"
-              />
+              <img className="mr-2 w-10 rounded-full" src={Avatar} alt="Profile" />
               <a
                 onClick={() => window.scrollTo(0, 0)}
                 className="hover:text-yellow-primary hover:underline text-paragraph"
@@ -114,7 +108,7 @@ export default function NavBar({ loggedIn }) {
             {OpenProfile && (
               <div
                 onMouseLeave={() => setOpenProfile(false)}
-                className="w-36 bg-white rounded-lg py-1 shadow-md absolute transform translate-x-2"
+                className="w-36 bg-white rounded-lg py-1 shadow-md absolute transform translate-x-1"
               >
                 <a
                   onClick={() => window.scrollTo(0, 0)}
@@ -137,7 +131,7 @@ export default function NavBar({ loggedIn }) {
         ) : (
           <button
             type="button"
-            className="ml-4 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
+            className="w-28 ml-8 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
           >
             Log In
           </button>
