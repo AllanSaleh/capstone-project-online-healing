@@ -20,6 +20,7 @@ export default function CreditCard({
   select,
   deletable,
 }) {
+
   if (background === 1) selectedBackground = C1;
   if (background === 2) selectedBackground = C2;
   if (background === 3) selectedBackground = C3;
