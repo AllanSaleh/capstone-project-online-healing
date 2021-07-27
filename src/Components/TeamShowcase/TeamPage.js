@@ -46,21 +46,21 @@ export default function Recomended() {
   ];
   return (
     <div>
-      <NavBar />
-      <div className="flex flex-col justify-evenly px-sides pt-navbar h-firstsection">
-        <div className="text-title uppercase">we are healing, nice to meet you!</div>
+      {/* <NavBar /> */}
+      <div className="flex flex-col justify-evenly px-sides pt-navbar lg:h-firstsection">
+        <div className="text-3xl lg:text-title uppercase">we are healing, nice to meet you!</div>
 
         <div className="flex flex-col justify-between">
-          <div className="text-subtitle text-gray-700 mb-8">Meet the Team!</div>
+          <div className="text-lg lg:text-subtitle text-gray-700 mb-8">Meet the Team!</div>
 
-          <div className="flex justify-between">
+          <div className="flex justify-between flex-col lg:flex-row">
             {Team.map((member) => (
               <TeamCard img={member.img} name={member.name} position={member.position} />
             ))}
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
