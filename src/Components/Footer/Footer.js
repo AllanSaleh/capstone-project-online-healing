@@ -6,7 +6,7 @@ import Google from './Google.svg';
 
 export default function Footer() {
   return (
-    <div className="flex justify-between px-sides items-center h-footer bg-yellow-primary">
+    <div className="flex justify-between px-sides items-center h-footer bg-yellow-primary md:text-sm">
       <div className="flex flex-col justify-between items-start h-40">
         <div>
           <div className="text-title leading-tight">Subscribe</div>
