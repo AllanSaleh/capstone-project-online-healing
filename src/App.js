@@ -3,6 +3,9 @@ import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 
 import BlogPage from './Components/Blogs/BlogPage';
+import NavBar from './Components/NavBar/NavBar';
+import Footer from './Components/Footer/Footer';
+import AddNewCard from './Components/AddNewCard/AddNewCard';
 import Team from './Components/TeamShowcase/TeamPage';
 
 function App() {
