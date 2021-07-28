@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 
 // import Team from './Components/TeamShowcase/TeamPage';
-import AboutPage from './Components/AboutPage/AboutPage';
+// import AboutPage from './Components/AboutPage/AboutPage';
+import ContactPage from './Components/Contact Page/ContactPage';
 
 function App() {
   // This controls the direction of the page for RTL languages
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <div>
-      <AboutPage />
+      <ContactPage />
     </div>
   );
 }

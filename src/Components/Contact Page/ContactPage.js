@@ -9,10 +9,10 @@ import Footer from '../Footer/Footer';
 export default function ContactPage() {
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <FirstSection />
-      <SecondSection />
-      <Footer />
+      <SecondSection /> 
+      {/* <Footer /> */}
     </div>
   );
 }

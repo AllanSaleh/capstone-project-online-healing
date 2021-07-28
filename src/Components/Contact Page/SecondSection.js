@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function SecondSection() {
   return (
-    <div className="flex  px-sides h-section items-center">
-      <form className="flex flex-col w-1/2">
+    <div className="flex flex-col px-sides sm:mt-0 mt-20 h-section items-center sm:flex-row w-full">
+      <form className="flex flex-col sm:w-1/2 w-full">
         <div className="mb-8">
-          <label className="mb-2 block text-paragraph">Full Name:</label>
+          <label className="mb-2  block text-paragraph">Full Name:</label>
           <input
             className="p-2 w-3/4 text-paragraph text-gray-700 rounded-lg border-2 border-gray-400 shadow-lg"
             placeholder="Enter your full name"  
@@ -36,8 +36,8 @@ export default function SecondSection() {
         </button>
       </form>
 ​
-      <div className="w-1/2 flex justify-center">
-        <div className="bg-blue-light rounded-lg p-6 w-72 h-64">
+      <div className="sm:w-1/2 w-full flex justify-center ">
+        <div className="bg-blue-light rounded-lg p-6 sm:w-72 w-56 h-64  ">
           <div className="text-subtitle mb-4">Find Us At:</div>
           <div className="text-paragraph text-gray-700">Nergiz Plaza</div>
           <div className="text-paragraph text-gray-700">3rd Floor</div>
