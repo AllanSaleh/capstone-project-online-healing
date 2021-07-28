@@ -41,7 +41,7 @@ export default function OpeningSection() {
   ];
 
   return (
-    <div id="Openings" className="h-section flex flex-col justify-around px-sides">
+    <div id="Openings" className="h-section flex flex-col justify-around px-sides py-8">
       <div>
         <div className="text-3xl lg:text-title">CURRENT OPEN POSITIONS</div>
         <div className="text-xl lg:text-subtitle text-gray-700">
@@ -56,7 +56,7 @@ export default function OpeningSection() {
         </a>
       </div>
 
-      <div className="h-3/5 overflow-y-scroll">
+      <div className="h-3/4 overflow-y-scroll my-4 lg:my-0">
         {positions.map((position) => (
           <Position
             title1={position.title1}
