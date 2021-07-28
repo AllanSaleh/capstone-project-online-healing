@@ -4,6 +4,7 @@ import './styles/main.css';
 
 // import Team from './Components/TeamShowcase/TeamPage';
 import AboutPage from './Components/AboutPage/AboutPage';
+import ContactPage from './Components/Contact/ContactPage';
 
 function App() {
   // This controls the direction of the page for RTL languages
