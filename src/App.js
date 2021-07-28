@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 
+import NavBar from './Components/NavBar/NavBar';
+import Footer from './Components/Footer/Footer';
+import AddNewCard from './Components/AddNewCard/AddNewCard';
 import Team from './Components/TeamShowcase/TeamPage';
 
 function App() {
@@ -13,7 +16,9 @@ function App() {
 
   return (
     <div>
-      <Team />
+      <NavBar loggedIn={false} />
+      <AddNewCard />
+      <Footer />
     </div>
   );
 }
