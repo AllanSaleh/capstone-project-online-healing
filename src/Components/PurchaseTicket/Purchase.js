@@ -87,7 +87,7 @@ export default function Purchase() {
 
                 return (
                   <CreditCard
-                    deletabel={false}
+                    deletable={false}
                     select={parseInt(selected) === i}
                     setID={(ID) => {
                       if (ID !== selected) setSelected(ID);

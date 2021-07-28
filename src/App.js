@@ -3,6 +3,10 @@ import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 
 import RecentBlogs from './Components/Home/RecentBlogs';
+import NavBar from './Components/NavBar/NavBar';
+import Footer from './Components/Footer/Footer';
+import AddNewCard from './Components/AddNewCard/AddNewCard';
+import Team from './Components/TeamShowcase/TeamPage';
 
 function App() {
   // This controls the direction of the page for RTL languages
