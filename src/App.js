@@ -6,6 +6,8 @@ import WorkingWithHealing from './Components/WorkingWithHealing/WorkingWithHeali
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
 import AddNewCard from './Components/AddNewCard/AddNewCard';
+import Login from './Components/Login/login';
+import Careers from './Components/Careers/Careers';
 import Team from './Components/TeamShowcase/TeamPage';
 
 function App() {
@@ -15,7 +17,13 @@ function App() {
     document.dir = i18n.dir();
   }, [i18n, i18n.language]);
 
-  return <WorkingWithHealing />;
+  return (
+    <div>
+      <NavBar />
+      <Login />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
