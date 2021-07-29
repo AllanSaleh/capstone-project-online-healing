@@ -2,10 +2,13 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 
+import WorkingWithHealing from './Components/WorkingWithHealing/WorkingWithHealing';
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
 import Careers from './Components/Careers/Careers';
 import AddNewCard from './Components/AddNewCard/AddNewCard';
+import Login from './Components/Login/login';
+import Careers from './Components/Careers/Careers';
 import Team from './Components/TeamShowcase/TeamPage';
 
 function App() {
