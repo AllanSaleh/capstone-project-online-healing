@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 
+import ThankYou from './Components/ThankYou/ThankYou';
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
 import AddNewCard from './Components/AddNewCard/AddNewCard';
@@ -16,8 +17,10 @@ function App() {
 
   return (
     <div>
-      <NavBar loggedIn={false} />
-      <AddNewCard />
+      <NavBar />
+      <ThankYou
+        subtitle={`Your request has been received, you'll soon receive a confirmation email. \nPlease follow the steps in the email to complete and activate your account.`}
+      />
       <Footer />
     </div>
   );
