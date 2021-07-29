@@ -7,10 +7,10 @@ import Healing from './Healing';
 export default function AboutPage() {
   return (
     <div className="h-firstsection">
-      <NavBar />
+      {/* <NavBar /> */}
       <Healing />
       <Founding />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
