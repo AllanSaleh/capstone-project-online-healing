@@ -26,7 +26,7 @@ function LandingPage() {
             </div>
             </div>
 
-            <div className="transform -translate-y-72 w-72 lg:transform lg:-translate-y-0 lg:w-auto lg:ml-0 ml-16">
+            <div className="transform -translate-y-72 w-64 lg:transform lg:-translate-y-0 lg:w-auto lg:ml-0 ml-16">
             <img src={HP_illustration} alt="HP_illustration" />
            </div>
     </div>
