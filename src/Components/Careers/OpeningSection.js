@@ -41,22 +41,22 @@ export default function OpeningSection() {
   ];
 
   return (
-    <div id="Openings" className="h-section flex flex-col justify-around px-sides">
+    <div id="Openings" className="h-section flex flex-col justify-around px-sides py-8">
       <div>
-        <div className="text-title">CURRENT OPEN POSITIONS</div>
-        <div className="text-subtitle text-gray-600">
-          Please send us an email with the application title as the subject with an attached CV in
-          PDF format at:
+        <div className="text-3xl lg:text-title">CURRENT OPEN POSITIONS</div>
+        <div className="text-xl lg:text-subtitle text-gray-700">
+          Please send us an email with the application title as the subject with
+          an attached CV in PDF format at:
         </div>
         <a
-          className="text-subtitle text-blue-dark hover:underline"
+          className="text-xl lg:text-subtitle text-blue-dark hover:underline"
           href="mailto:recruitment@healing.com"
         >
           recruitment@healing.com
         </a>
       </div>
 
-      <div className="h-3/5 overflow-y-scroll">
+      <div className="h-3/4 overflow-y-scroll my-4 lg:my-0">
         {positions.map((position) => (
           <Position
             title1={position.title1}
