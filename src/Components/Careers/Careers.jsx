@@ -1,11 +1,9 @@
 import React from 'react';
+
 import Hiring from './Hiring';
 import OpeningSection from './OpeningSection';
 
-const vh = Math.max(
-  document.documentElement.clientHeight || 0,
-  window.innerHeight || 0
-);
+const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 
 function Careers() {
   return (
@@ -19,13 +17,12 @@ function Careers() {
             </div>
           </div>
           <div className="text-lg lg:text-paragraph text-gray-600 mt-4 text-justify">
-            Our SEO software cuts through mountains of data to surface critical
-            insights. We build and maintain systems that process massive amounts
-            of data (we're talking 36 trillion records per day and multiple
-            petabytes of storage.) We model transparent and empathetic marketing
-            for the world. We educate our community, making every effort to help
-            them improve their skill. And we do it all by fostering a culture
-            that encourages accountability, empathy, and transparency.
+            Our SEO software cuts through mountains of data to surface critical insights. We build
+            and maintain systems that process massive amounts of data (we're talking 36 trillion
+            records per day and multiple petabytes of storage.) We model transparent and empathetic
+            marketing for the world. We educate our community, making every effort to help them
+            improve their skill. And we do it all by fostering a culture that encourages
+            accountability, empathy, and transparency.
           </div>
           <div className="self-center lg:self-auto text-lg lg:text-paragraph text-gray-600 mt-4">
             What role will you play?
@@ -33,8 +30,7 @@ function Careers() {
           <button
             onClick={() => {
               const y =
-                document.getElementById('Openings').getBoundingClientRect()
-                  .top +
+                document.getElementById('Openings').getBoundingClientRect().top +
                 window.pageYOffset -
                 0.1 * vh;
               window.scrollTo({ top: y, behavior: 'smooth' });

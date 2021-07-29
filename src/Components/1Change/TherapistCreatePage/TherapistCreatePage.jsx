@@ -3,9 +3,9 @@ import React from 'react';
 import InputField from './InputField';
 
 const TherapistCreatePage = () => (
-  <div className="px-sides">
-    <h1 className="text-title uppercase">create an account</h1>
-    <form className="flex flex-col md:w-2/5">
+  <div className="px-sides pt-navbar">
+    <h1 className="text-xl md:text-title md:py-4 uppercase">create an account</h1>
+    <form className="flex flex-col md:w-10/12 md:mx-auto lg:w-2/5 lg:m-0">
       <InputField id="user-name" title="user name" inputType="text" placeholder="Exp: John" />
       <InputField
         id="email"
@@ -32,13 +32,13 @@ const TherapistCreatePage = () => (
         inputType="password"
         placeholder="re-type your password"
       />
+      <button
+        type="button"
+        className="text-subtitle bg-blue-dark px-4 py-2 my-16 w-full md:w-48 md:mx-auto border rounded-lg uppercase hover:bg-transparent hover:border-blue-dark hover:text-blue-dark hover:shadow-lg transition-all duration-300"
+      >
+        create
+      </button>
     </form>
-    <button
-      type="button"
-      className="text-subtitle bg-blue-dark px-4 py-2 my-16 w-full md:w-48 border rounded-lg uppercase hover:bg-transparent hover:border-blue-dark hover:text-blue-dark hover:shadow-xl transition-all duration-300"
-    >
-      create
-    </button>
   </div>
 );
 

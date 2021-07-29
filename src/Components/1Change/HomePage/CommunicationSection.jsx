@@ -1,13 +1,17 @@
 import React from 'react';
+
 import Card from './Card';
+
 import PhoneCell from './Images/phone-cell.svg';
 import ChatIcon from './Images/chat-icon.svg';
 import VideoCallIcon from './Images/video-call-icon.svg';
 
 const CommunicationSection = () => (
-  <div className="h-section flex flex-col justify-evenly px-sides">
-    <h1 className="text-title pb-2 uppercase mb-2">we can communicate through</h1>
-    <div className="flex justify-around">
+  <div className=" md:h-section flex flex-col justify-evenly px-sides">
+    <h1 className="sm:text-xl md:text-4xl xl:text-title pb-2 uppercase mb-2">
+      we can communicate through
+    </h1>
+    <div className="flex flex-col md:flex-row items-center md:items-start md:justify-around">
       <Card
         showIcon
         icon={PhoneCell}
