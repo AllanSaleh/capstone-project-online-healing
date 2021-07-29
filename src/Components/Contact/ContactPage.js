@@ -11,7 +11,7 @@ export default function ContactPage() {
     <div>
       {/* <NavBar /> */}
       <FirstSection />
-      <SecondSection /> 
+      <SecondSection />
       {/* <Footer /> */}
     </div>
   );
