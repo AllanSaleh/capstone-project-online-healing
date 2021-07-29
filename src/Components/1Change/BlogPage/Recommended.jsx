@@ -6,11 +6,11 @@ import Blog2 from './Images/Blog2.svg';
 
 export default function Recommended() {
   return (
-    <div className="px-sides h-section flex flex-col justify-around">
-      <div className="flex flex-col justify-between items-start h-40">
+    <div className="px-sides lg:h-section flex flex-col justify-around">
+      <div className="flex flex-col justify-between items-start lg:h-40">
         <div>
-          <div className="text-title leading-tight">Sign Up For The Healing Blog</div>
-          <div className="text-paragraph text-gray-700">
+          <div className="text-3xl lg:text-title leading-tight">Sign Up For The Healing Blog</div>
+          <div className="text-lg lg:text-paragraph text-gray-700">
             Weekly, Ad-Free Blogs That Help You Stay In The Know!
           </div>
         </div>
@@ -27,11 +27,21 @@ export default function Recommended() {
       </div>
 
       <div>
-        <div className="uppercase text-subtitle mb-8">recommended for you</div>
+        <div className="uppercase text-xl lg:text-subtitle mt-8 lg:mt-0 lg:mb-8">
+          recommended for you
+        </div>
 
-        <div className="flex justify-between">
-          <img className="w-full mr-8" src={Blog2} alt="blog2" />
-          <img className="w-full" src={Blog1} alt="blog1" />
+        <div className="h-96 lg:h-auto flex flex-col lg:flex-row justify-evenly lg:justify-between">
+          <img
+            className="cursor-pointer border-4 border-transparent border-dashed hover:border-blue-dark w-full lg:mr-8"
+            src={Blog2}
+            alt="blog2"
+          />
+          <img
+            className="cursor-pointer border-4 border-transparent border-dashed hover:border-blue-dark w-full"
+            src={Blog1}
+            alt="blog1"
+          />
         </div>
       </div>
     </div>
