@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 
-import WorkingWithHealing from './Components/WorkingWithHealing/WorkingWithHealing';
+import Team from './Components/TeamShowcase/TeamPage';
+import AboutPage from './Components/AboutPage/AboutPage';
+import ContactPage from './Components/Contact Page/ContactPage';
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
 import Careers from './Components/Careers/Careers';
@@ -20,9 +22,7 @@ function App() {
 
   return (
     <div>
-      <NavBar />
-      <Careers />
-      <Footer />
+      <ContactPage />
     </div>
   );
 }
