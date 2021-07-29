@@ -6,6 +6,7 @@ import Google from './Google.svg';
 
 export default function Footer() {
   return (
+
     <div className="py-4 flex flex-col lg:flex-row justify-between px-sides items-center lg:h-footer bg-yellow-primary">
       <div className="flex flex-col justify-between items-center text-center lg:text-left lg:items-start h-40">
         <div>
