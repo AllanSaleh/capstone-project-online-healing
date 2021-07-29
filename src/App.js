@@ -2,6 +2,10 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 
+import WorkingWithHealing from './Components/WorkingWithHealing/WorkingWithHealing';
+import NavBar from './Components/NavBar/NavBar';
+import Footer from './Components/Footer/Footer';
+import AddNewCard from './Components/AddNewCard/AddNewCard';
 import Team from './Components/TeamShowcase/TeamPage';
 
 function App() {
@@ -11,11 +15,7 @@ function App() {
     document.dir = i18n.dir();
   }, [i18n, i18n.language]);
 
-  return (
-    <div>
-      <Team />
-    </div>
-  );
+  return <WorkingWithHealing />;
 }
 
 export default App;
