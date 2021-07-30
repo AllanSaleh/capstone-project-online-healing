@@ -3,7 +3,7 @@ import React from 'react';
 import Card from './Card';
 
 const TicketSection = () => (
-  <div className="flex flex-col justify-evenly px-sides lg:h-section py-8">
+  <div id="Tickets" className="flex flex-col justify-evenly px-sides lg:h-section py-8">
     <div className="pb-8">
       <h1 className="text-xl md:text-4xl xl:text-title uppercase">Purchase tickets</h1>
       <h3 className="text-xs md:text-lg lg:text-subtitle text-opacity-75 mb-4 md:my-2">

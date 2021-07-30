@@ -24,6 +24,7 @@ export default function Booking1() {
 
   const NextPage = () => {
     // Put firestore code here!
+    window.scrollTo(0, 0);
     history.push('/Booking2');
   };
 

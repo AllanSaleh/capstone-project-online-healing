@@ -6,10 +6,12 @@ export default function Booking() {
 
   const PrevPage = () => {
     // Put firestore code here!
+    window.scrollTo(0, 0);
     history.push('/Booking6');
   };
   const NextPage = () => {
     // Put firestore code here!
+    window.scrollTo(0, 0);
     history.push('/Booking8');
   };
   return (

@@ -29,10 +29,12 @@ export default function Booking2() {
 
   const PrevPage = () => {
     // Put firestore code here!
+    window.scrollTo(0, 0);
     history.push('/Booking1');
   };
   const NextPage = () => {
     // Put firestore code here!
+    window.scrollTo(0, 0);
     history.push('/Booking3');
   };
 

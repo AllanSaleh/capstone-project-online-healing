@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import ProfilePic from './Images/ProfilePic.svg';
 import EditProfileButton from './EditProfileButton';
@@ -46,11 +47,15 @@ const EditProfilePage = () => (
           <h1 className="text-title capitalize mb-16">Payment Methods & Tickets</h1>
           <div className="inline-block mr-4">
             <h3 className="text-subtitle capitalize mb-2">3 crads added</h3>
-            <EditProfileButton text="show cards" />
+            <Link to="/SavedCards">
+              <EditProfileButton text="show cards" />
+            </Link>
           </div>
           <div className="inline-block ml-4">
             <h3 className="text-subtitle capitalize mb-2">10 tickets remaining</h3>
-            <EditProfileButton text="buy tickets" />
+            <Link to={{ pathname: '/', state: true }}>
+              <EditProfileButton text="buy tickets" />
+            </Link>
           </div>
         </div>
       </div>

@@ -76,12 +76,14 @@ export default function AddNewCardPage() {
 
     let AllVerified = true;
     for (let i = 0; i < verify.length; i += 1) if (!verify[i]) AllVerified = false;
-    if (AllVerified)
+    if (AllVerified) {
+      window.scrollTo(0, 0);
       history.push({
         pathname: '/ThankYou',
         state:
           'Your new payment method is under review, you will receive an email soon when your card is confirmed.\nOtherwise you will get a notification telling you what went wrong and how to add a new card.',
       });
+    }
   };
 
   return (
