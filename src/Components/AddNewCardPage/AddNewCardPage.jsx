@@ -7,9 +7,29 @@ import Card2 from './Images/Card2.svg';
 export default function AddNewCardPage() {
   const history = useHistory();
 
-  const [countryList, setCountries] = useState(['United States', 'Iraq', 'United Kingdom']);
-  const [cityList, setCities] = useState(['Sulaymaniyah', 'Erbil', 'Dohuk']);
+  const [countryList, setCountries] = useState([]);
+  const [cityList, setCities] = useState([]);
 
+  useEffect(() => {
+    fetch('https://countriesnow.space/api/v0.1/countries')
+      .then((response) => response.json())
+      .then((json) => {
+        json.data.forEach((item) => setCountries((prevState) => [...prevState, item.country]));
+        json.data[0].cities.forEach((city) => setCities((prevState) => [...prevState, city]));
+      });
+  }, []);
+
+  const UpdateCities = (country) => {
+    fetch('https://countriesnow.space/api/v0.1/countries')
+      .then((response) => response.json())
+      .then((json) => {
+        setCities([]);
+        json.data.forEach((item) => {
+          if (item.country === country)
+            item.cities.forEach((city) => setCities((prevState) => [...prevState, city]));
+        });
+      });
+  };
   const [inputs, setInputs] = useState({
     number: '',
     date: '',
@@ -124,7 +144,10 @@ export default function AddNewCardPage() {
         <div className="flex flex-col justify-start h-full">
           <div className="my-4">
             <div className="text-paragraph text-gray-700">Country</div>
-            <select className="w-72 h-12 p-2 border-gray-700 border-2 rounded-lg">
+            <select
+              onChange={(e) => UpdateCities(e.target.value)}
+              className="w-72 h-12 p-2 border-gray-700 border-2 rounded-lg"
+            >
               {countryList.map((country) => (
                 <option value={country} className="py-1 text-paragraph text-gray-700">
                   {country}
