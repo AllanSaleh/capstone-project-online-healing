@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 export default function Booking4() {
   const choices = [
@@ -24,9 +25,20 @@ export default function Booking4() {
     },
   ];
 
+  const history = useHistory();
+
+  const PrevPage = () => {
+    // Put firestore code here!
+    history.push('/Booking3');
+  };
+  const NextPage = () => {
+    // Put firestore code here!
+    history.push('/Booking5');
+  };
+
   return (
-    <div className="px-sides pt-navbar">
-      <h1 className="text-3xl lg:text-title uppercase mb-4">
+    <div className="h-firstsection px-sides pt-navbar">
+      <h1 className="text-3xl lg:text-title uppercase my-8">
         let’s match you with the right therapist
       </h1>
       <h3 className="text-md lg:text-subtitle opacity-50 text-justify">
@@ -42,7 +54,7 @@ export default function Booking4() {
 
         <div className="flex flex-col justify-around my-8">
           {choices.map((choice) => (
-            <div className="flex items-center">
+            <div className="flex items-center my-2">
               <input type="radio" id={choice.id} name="counselor_options" value={choice.content} />
               <label className="text-sm lg:text-paragraph ml-2" htmlFor={choice.id}>
                 {choice.content}
@@ -52,14 +64,16 @@ export default function Booking4() {
         </div>
         <div className="flex justify-between">
           <button
+            onClick={() => PrevPage()}
             type="button"
             className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition duration-300"
           >
             back
           </button>
           <button
+            onClick={() => NextPage()}
             type="button"
-            className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition duration-300"
+            className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition-all duration-300"
           >
             next
           </button>

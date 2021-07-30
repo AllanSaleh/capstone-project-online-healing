@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Booking8 = () => (
   <div className="h-firstsection px-sides pt-navbar">
-    <h1 className="text-2xl lg:text-title uppercase mb-4">your request has been submitted!</h1>
+    <h1 className="text-2xl lg:text-title uppercase my-8">your request has been submitted!</h1>
     <h3 className="text-md lg:text-subtitle opacity-50 text-justify">
       You will receive an email guiding you to book a date and time soon.
     </h3>
@@ -13,12 +14,14 @@ const Booking8 = () => (
         <br />
         please keep an eye on your mail.
       </p>
-      <button
-        type="button"
-        className="uppercase bg-blue-dark text-md lg:text-subtitle px-4 py-2 lg:min-w-min lg:w-1/3 rounded-md border hover:border-blue-dark hover:bg-white hover:text-blue-dark transition-all duration-300"
-      >
-        back to home
-      </button>
+      <Link to="/">
+        <button
+          type="button"
+          className="uppercase bg-blue-dark text-md lg:text-subtitle px-4 py-2 lg:w-64 rounded-md border hover:border-blue-dark hover:bg-white hover:text-blue-dark transition-all duration-300"
+        >
+          back to home
+        </button>
+      </Link>
     </div>
   </div>
 );

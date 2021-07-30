@@ -12,12 +12,13 @@ export default function Footer() {
   const [email, setEmail] = useState('');
 
   const subscribe = () => {
-    if (email.match(/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+[.]+[a-zA-Z0-9]/))
+    if (email.match(/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+[.]+[a-zA-Z0-9]/)) {
+      window.scrollTo(0, 0);
       history.push({
         pathname: '/ThankYou',
         state: 'You email has been added to the mailing list successfully!',
       });
-    else alert('Please enter a valid E-Mail!');
+    } else alert('Please enter a valid E-Mail!');
   };
   return (
     <div className="py-4 flex flex-col lg:flex-row justify-between px-sides items-center lg:h-footer bg-yellow-primary">
@@ -37,10 +38,7 @@ export default function Footer() {
             type="email"
           />
           <button
-            onClick={() => {
-              window.scrollTo(0, 0);
-              subscribe();
-            }}
+            onClick={() => subscribe()}
             className="border-0 border-l-2 border-gray-600 p-2 bg-blue-dark rounded-r-md"
             type="button"
           >
