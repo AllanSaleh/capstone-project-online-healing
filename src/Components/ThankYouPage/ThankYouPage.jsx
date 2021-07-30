@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function ThankYouPage() {
   const location = useLocation();
@@ -14,12 +14,14 @@ export default function ThankYouPage() {
             ))}
           </div>
         </div>
-        <button
-          type="button"
-          className="w-64 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
-        >
-          BACK TO HOME
-        </button>
+        <Link to="/">
+          <button
+            type="button"
+            className="w-64 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+          >
+            BACK TO HOME
+          </button>
+        </Link>
       </div>
     </div>
   );
