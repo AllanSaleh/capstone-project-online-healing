@@ -1,11 +1,67 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import Card1 from './Images/Card1.svg';
 import Card2 from './Images/Card2.svg';
 
 export default function AddNewCardPage() {
+  const history = useHistory();
+
   const [countryList, setCountries] = useState(['United States', 'Iraq', 'United Kingdom']);
   const [cityList, setCities] = useState(['Sulaymaniyah', 'Erbil', 'Dohuk']);
+
+  const [inputs, setInputs] = useState({
+    number: '',
+    date: '',
+    cvv: '',
+    name: '',
+    zip: '',
+    address: '',
+  });
+
+  const GoToRoute = () => {
+    const verify = [false, false, false, false, false, false];
+
+    if (inputs.number.match(/[0-9]/) && inputs.number.length === 19) verify[0] = true;
+    else {
+      verify[0] = false;
+      alert('Incorrect Card Number Format');
+    }
+    if (inputs.date.match(/[0-9]+[/]+[0-9]/) && inputs.date.length === 5) verify[1] = true;
+    else {
+      verify[1] = false;
+      alert('Incorrect Card Date Format');
+    }
+    if (inputs.cvv.match(/[0-9]/) && inputs.cvv.length === 3) verify[2] = true;
+    else {
+      verify[2] = false;
+      alert('Incorrect CVV Number Format');
+    }
+    if (inputs.name.match(/[a-zA-Z]/)) verify[3] = true;
+    else {
+      verify[3] = false;
+      alert('Incorrect Card Name Format');
+    }
+    if (inputs.zip.match(/[0-9]+[-]+[0-9]/) || inputs.zip.match(/[0-9]/)) verify[4] = true;
+    else {
+      verify[4] = false;
+      alert('Incorrect Card Number Format');
+    }
+    if (inputs.address.match(/[a-zA-Z0-9.,]/)) verify[5] = true;
+    else {
+      verify[5] = false;
+      alert('Incorrect Address Format');
+    }
+
+    let AllVerified = true;
+    for (let i = 0; i < verify.length; i += 1) if (!verify[i]) AllVerified = false;
+    if (AllVerified)
+      history.push({
+        pathname: '/ThankYou',
+        state:
+          'Your new payment method is under review, you will receive an email soon when your card is confirmed.\nOtherwise you will get a notification telling you what went wrong and how to add a new card.',
+      });
+  };
 
   return (
     <div className="my-4 flex flex-col justify-evenly px-sides pt-navbar lg:h-firstsection">
@@ -32,6 +88,7 @@ export default function AddNewCardPage() {
           <div className="my-4">
             <div className="text-paragraph text-gray-700">Card Number</div>
             <input
+              onBlur={(e) => setInputs({ ...inputs, number: e.target.value })}
               placeholder="XXXX XXXX XXXX XXXX"
               className="w-72 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
             />
@@ -40,6 +97,7 @@ export default function AddNewCardPage() {
             <div>
               <div className="text-paragraph text-gray-700">Expiry Date</div>
               <input
+                onBlur={(e) => setInputs({ ...inputs, date: e.target.value })}
                 placeholder="MM / YY"
                 className="w-36 h-12 mr-1 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
               />
@@ -47,6 +105,7 @@ export default function AddNewCardPage() {
             <div>
               <div className="text-paragraph text-gray-700">CVV Code</div>
               <input
+                onBlur={(e) => setInputs({ ...inputs, cvv: e.target.value })}
                 placeholder="XXX"
                 className="w-36 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
               />
@@ -55,6 +114,7 @@ export default function AddNewCardPage() {
           <div className="my-4">
             <div className="w-72 text-paragraph text-gray-700">Name on Card</div>
             <input
+              onBlur={(e) => setInputs({ ...inputs, name: e.target.value })}
               placeholder="John Doe"
               className="w-72 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
             />
@@ -76,6 +136,7 @@ export default function AddNewCardPage() {
           <div className="my-4">
             <div className="text-paragraph text-gray-700">ZIP Code</div>
             <input
+              onBlur={(e) => setInputs({ ...inputs, zip: e.target.value })}
               placeholder="XXXXX or XXXXX-XXXX"
               className="w-72 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
             />
@@ -95,6 +156,7 @@ export default function AddNewCardPage() {
           <div className="my-4">
             <div className="text-paragraph text-gray-700">Address</div>
             <input
+              onBlur={(e) => setInputs({ ...inputs, address: e.target.value })}
               placeholder="House, Street"
               className="w-72 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
             />
@@ -108,7 +170,8 @@ export default function AddNewCardPage() {
       </div>
 
       <button
-        type="button"
+        onClick={() => GoToRoute()}
+        type="submit"
         className="self-center h-12 w-32 lg:w-48 text-lg lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
       >
         ADD CARD
