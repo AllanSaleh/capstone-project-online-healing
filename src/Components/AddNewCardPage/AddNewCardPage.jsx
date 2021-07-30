@@ -30,6 +30,7 @@ export default function AddNewCardPage() {
         });
       });
   };
+
   const [inputs, setInputs] = useState({
     number: '',
     date: '',

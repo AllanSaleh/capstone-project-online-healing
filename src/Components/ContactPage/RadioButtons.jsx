@@ -2,7 +2,9 @@ import React from 'react';
 
 import ContactPic from './Images/ContactPic.svg';
 
-export default function RadioButtons() {
+export default function RadioButtons({ choiceCheck }) {
+  const choose = (value) => choiceCheck(value);
+
   const radios = [
     { value: 'ServiceQuestion', text: 'I have a question about the service.' },
     {
@@ -42,8 +44,14 @@ export default function RadioButtons() {
           <div className="text-subtitle mb-4 text-sm sm:text-lg">Type of Contact</div>
           <div className="flex flex-col justify-between">
             {radios.map((radio) => (
-              <div className="flex ml-4 my-2 ">
-                <input name="ContactRadio" className="my-2 mr-4" type="radio" value={radio.vlaue} />
+              <div className="flex ml-4 my-2">
+                <input
+                  onChange={(e) => choose(e.target.value)}
+                  name="ContactRadio"
+                  className="my-2 mr-4"
+                  type="radio"
+                  value={radio.value}
+                />
                 <div className="text-paragraph sm:text-lg text-xm">{radio.text}</div>
               </div>
             ))}
