@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Card1 from './Images/Card1.svg';
 import Card2 from './Images/Card2.svg';
 
-export default function AddNewCard() {
+export default function AddNewCardPage() {
   const [countryList, setCountries] = useState(['United States', 'Iraq', 'United Kingdom']);
   const [cityList, setCities] = useState(['Sulaymaniyah', 'Erbil', 'Dohuk']);
 

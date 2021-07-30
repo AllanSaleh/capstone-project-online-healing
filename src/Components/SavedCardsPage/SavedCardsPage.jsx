@@ -6,7 +6,7 @@ import CreditCard from '../CreditCard/CreditCard';
 
 let count = 0;
 
-export default function SavedCards() {
+export default function SavedCardsPage() {
   const cards = [
     {
       date: '04/2025',

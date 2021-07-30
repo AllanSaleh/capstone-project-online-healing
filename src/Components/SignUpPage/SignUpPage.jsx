@@ -5,7 +5,7 @@ import Facebook from './Images/Facebook.svg';
 import Google from './Images/Google.svg';
 import Or from './Images/or.svg';
 
-export default function Signup() {
+export default function SignUpPage() {
   return (
     <div className=" flex flex-col lg:flex lg:flex-row items-center justify-evenly max-h-full lg:-mt-20 mt-20 lg:h-firstsection">
       <div className="lg:w-auto w-48">

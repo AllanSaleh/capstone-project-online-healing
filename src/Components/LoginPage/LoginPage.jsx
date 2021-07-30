@@ -5,7 +5,7 @@ import Facebook from './Images/Facebook.svg';
 import Google from './Images/Google.svg';
 import Or from './Images/or.svg';
 
-function LoginPage() {
+export default function LoginPage() {
   return (
     <div className=" flex flex-col lg:flex lg:flex-row items-center justify-evenly h-firstsection">
       <div className="lg:w-auto transform translate-y-44 w-72 lg:transform lg:translate-y-0">
@@ -59,5 +59,3 @@ function LoginPage() {
     </div>
   );
 }
-
-export default LoginPage;

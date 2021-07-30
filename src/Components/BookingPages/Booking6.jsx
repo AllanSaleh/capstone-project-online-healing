@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Booking4() {
+export default function Booking6() {
   return (
     <div className="flex flex-col justify-evenly h-firstsection px-sides pt-navbar">
       <div>

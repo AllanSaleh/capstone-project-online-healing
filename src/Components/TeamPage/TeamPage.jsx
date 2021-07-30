@@ -9,7 +9,7 @@ import AbdulmajeedImg from './Images/AbdulmajeedImg.svg';
 import SnoorImg from './Images/SnoorImg.svg';
 import AvrazImg from './Images/AvrazImg.svg';
 
-export default function Team() {
+export default function TeamPage() {
   const Team = [
     {
       img: AllanImg,

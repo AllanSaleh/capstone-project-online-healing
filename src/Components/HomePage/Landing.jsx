@@ -3,7 +3,7 @@ import React from 'react';
 import HpIllustration from './Images/HP_illustration.svg';
 import Background from './Images/Background.svg';
 
-function LandingPage() {
+export default function Landing() {
   return (
     <div className="h-firstsection  lg:-mt-0 mt-32">
       {/* background pattern */}
@@ -32,5 +32,3 @@ function LandingPage() {
     </div>
   );
 }
-
-export default LandingPage;

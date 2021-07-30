@@ -4,7 +4,7 @@ import ProfilePic from './Images/ProfilePic.svg';
 import ProfileInputField from '../EditProfilePage/ProfileInputField';
 import BirthDateIcon from './Images/BirthDateIcon.svg';
 
-const TherapistProfile = () => (
+const TherapistProfilePage = () => (
   <div className="flex flex-col lg:flex-row px-sides pt-navbar lg:h-firstsection">
     <div className="w-full lg:w-2/5 p-4 mx-2 text-center">
       <button type="button" className="hover:cursor-pointer px-20 py-20 lg:py-0 lg:px-10">
@@ -28,4 +28,4 @@ const TherapistProfile = () => (
   </div>
 );
 
-export default TherapistProfile;
+export default TherapistProfilePage;

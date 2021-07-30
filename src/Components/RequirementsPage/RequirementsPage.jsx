@@ -2,7 +2,7 @@ import React from 'react';
 
 import Frame from './Images/Frame.svg';
 
-export default function WorkingWithHealing() {
+export default function RequirementsPage() {
   return (
     <div className="pt-navbar px-sides  pb-24">
       <div className="flex flex-col lg:flex-row">

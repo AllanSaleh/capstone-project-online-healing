@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ThankYou({ subtitle }) {
+export default function ThankYouPage({ subtitle }) {
   return (
     <div className="h-firstsection pt-navbar px-sides">
       <div className="text-center lg:text-left flex flex-col justify-evenly items-center lg:items-start h-full lg:h-1/2">
