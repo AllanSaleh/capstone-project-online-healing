@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Blog1 from './Images/Blog1.svg';
 import Send from '../Footer/Images/Send.svg';
@@ -17,12 +18,19 @@ export default function Recommended() {
 
         <div className="flex  border-2 border-gray-600 h-12 rounded-lg">
           <input className="w-64 p-2 rounded-l-md" placeholder="Enter your E-Mail" type="email" />
-          <button
-            className="border-0 border-l-2 border-gray-600 p-2 bg-blue-dark rounded-r-md"
-            type="button"
+          <Link
+            to={{
+              pathname: '/ThankYou',
+              state: 'You email has been added to the mailing list successfully!',
+            }}
           >
-            <img src={Send} alt="Send" />
-          </button>
+            <button
+              className="border-0 border-l-2 border-gray-600 p-2 bg-blue-dark rounded-r-md"
+              type="button"
+            >
+              <img src={Send} alt="Send" />
+            </button>
+          </Link>
         </div>
       </div>
 

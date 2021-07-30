@@ -5,10 +5,10 @@ import Background from './Images/Background.svg';
 
 export default function Landing() {
   return (
-    <div className="h-firstsection  lg:-mt-0 mt-32">
+    <div className="h-firstsection mt-navbar">
       {/* background pattern */}
-      <div className="absolute lg:top-2 top-16 left-0 z-0">
-        <img src={Background} alt="Background" className="h-auto w-auto" />
+      <div className="absolute top-0 left-0 z-0">
+        <img src={Background} alt="Background" className="" />
       </div>
 
       {/* content */}

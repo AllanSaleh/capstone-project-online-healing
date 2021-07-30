@@ -17,7 +17,7 @@ export default function RecentBlogs() {
 
   return (
     <div className="flex flex-col justify-evenly h-64 lg:h-section px-sides bg-blue-light">
-      <div className="text-3xl lg:text-title">RECENT BLOGS</div>
+      <div className="text-2xl lg:text-title">RECENT BLOGS</div>
 
       <div className="flex justify-between items-center">
         <button
