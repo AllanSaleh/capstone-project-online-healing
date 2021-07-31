@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import firebase from '../../firebase';
 
 import Card1 from './Images/Card1.svg';
 import Card2 from './Images/Card2.svg';
@@ -37,8 +38,11 @@ export default function AddNewCardPage() {
     date: '',
     cvv: '',
     name: '',
+    country: '',
     zip: '',
+    city: '',
     address: '',
+    type: 'Master',
   });
 
   const GoToRoute = () => {
@@ -77,12 +81,29 @@ export default function AddNewCardPage() {
 
     let AllVerified = true;
     for (let i = 0; i < verify.length; i += 1) if (!verify[i]) AllVerified = false;
-    if (AllVerified)
+    if (AllVerified) {
+      firebase
+        .firestore()
+        .collection('users')
+        .doc('cUld5Z0ytjTuTrbeu95n')
+        .update({
+          cards: firebase.firestore.FieldValue.arrayUnion({
+            number: inputs.number,
+            date: inputs.date,
+            cvv: inputs.cvv,
+            name: inputs.name,
+            country: inputs.country,
+            zip: inputs.zip,
+            city: inputs.city,
+            address: inputs.address,
+          }),
+        });
       history.push({
         pathname: '/ThankYou',
         state:
           'Your new payment method is under review, you will receive an email soon when your card is confirmed.\nOtherwise you will get a notification telling you what went wrong and how to add a new card.',
       });
+    }
   };
 
   return (
@@ -147,7 +168,10 @@ export default function AddNewCardPage() {
           <div className="my-4">
             <div className="text-paragraph text-gray-700">Country</div>
             <select
-              onChange={(e) => UpdateCities(e.target.value)}
+              onChange={(e) => {
+                UpdateCities(e.target.value);
+                setInputs({ ...inputs, country: e.target.value });
+              }}
               className="w-72 h-12 p-2 border-gray-700 border-2 rounded-lg"
             >
               {countryList.map((country) => (
@@ -169,7 +193,10 @@ export default function AddNewCardPage() {
 
           <div className="my-4">
             <div className="text-paragraph text-gray-700">City</div>
-            <select className="w-72 h-12 p-2 border-gray-700 border-2 rounded-lg">
+            <select
+              onChange={(e) => setInputs({ ...inputs, city: e.target.value })}
+              className="w-72 h-12 p-2 border-gray-700 border-2 rounded-lg"
+            >
               {cityList.map((city) => (
                 <option value={city} className="py-1 text-paragraph text-gray-700">
                   {city}

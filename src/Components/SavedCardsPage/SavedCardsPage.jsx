@@ -1,60 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import firebase from '../../firebase';
 
 import Next from './Images/Next.svg';
 import Prev from './Images/Prev.svg';
 import CreditCard from '../CreditCard/CreditCard';
 
-let count = 0;
-
 export default function SavedCardsPage() {
   window.scrollTo(0, 0);
-  // Grab cards from firebase!
-  const cards = [
+  let count = 0;
+
+  const [cards, setCards] = useState([
     {
-      date: '04/25',
-      number: '1234 1234 1234 1234',
-      name: 'John Doe',
+      date: 'XX/XX',
+      number: 'XXXX XXXX XXXX XXXX',
+      name: 'Loading...',
       type: 'Master',
     },
-    {
-      date: '04/25',
-      number: '1234 1234 1234 1234',
-      name: 'John Doe',
-      type: 'Visa',
-    },
-    {
-      date: '04/25',
-      number: '1234 1234 1234 1234',
-      name: 'John Doe',
-      type: 'Master',
-    },
-    {
-      date: '04/25',
-      number: '1234 1234 1234 1234',
-      name: 'John Doe',
-      type: 'Visa',
-    },
-    {
-      date: '04/25',
-      number: '1234 1234 1234 1234',
-      name: 'John Doe',
-      type: 'Master',
-    },
-    {
-      date: '04/25',
-      number: '1234 1234 1234 1234',
-      name: 'John Doe',
-      type: 'Master',
-    },
-  ];
+  ]);
+
+  useEffect(() => {
+    firebase
+      .firestore()
+      .collection('users')
+      .doc('cUld5Z0ytjTuTrbeu95n')
+      .get()
+      .then((doc) => {
+        setCards(doc.data().cards);
+      });
+  }, []);
 
   const [selected, setSelected] = useState('');
 
   return (
-    <div className="flex flex-col justify-evenly h-firstsection pt-navbar px-sides">
+    <div className="flex flex-col justify-evenly lg:h-firstsection pt-navbar px-sides">
       <div>
-        <div className="text-title">YOUR SAVED CARDS</div>
-        <div className="text-subtitle text-gray-700">
+        <div className="text-3xl lg:text-title">YOUR SAVED CARDS</div>
+        <div className="text-xl lg:text-subtitle text-gray-700">
           We only support cards as a payment method at the moment!
         </div>
       </div>
@@ -62,35 +44,35 @@ export default function SavedCardsPage() {
       <div className="flex justify-between items-center">
         <button
           onClick={() => {
-            const NewPos = document.getElementById('Menu').scrollLeft - 560;
+            const NewPos = document.getElementById('Menu').scrollLeft - 500;
             document.getElementById('Menu').scrollTo({
               left: NewPos,
               behavior: 'smooth',
             });
           }}
           type="button"
-          className="mr-4 h-12 w-12 px-3 text-subtitle bg-white rounded-lg border-2 border-black hover:bg-blue-dark"
+          className="mr-2 lg:mr-4 h-10 lg:h-12 w-10 lg:w-12 px-3 bg-white rounded-lg border-2 border-black hover:bg-blue-dark"
         >
           <img src={Prev} alt="Previous" />
         </button>
 
-        <div className="relative h-80 w-full overflow-hidden">
+        <div className="relative h-40 lg:h-80 w-full overflow-hidden">
           <div
             id="Menu"
-            className="h-96 box-border whitespace-nowrap overflow-x-auto overflow-y-hidden"
+            className="h-44 lg:h-96 box-border whitespace-nowrap overflow-x-auto overflow-y-hidden"
           >
-            {cards.map((card, i) => {
+            {cards.map((card) => {
               count += 1;
               if (count === 4) count = 1;
 
               return (
                 <CreditCard
                   deletable
-                  select={false}
+                  select={selected === card.number}
                   setID={(ID) => {
                     if (ID !== selected) setSelected(ID);
                   }}
-                  id={i}
+                  id={card.number}
                   background={count}
                   logo={card.type}
                   date={card.date}
@@ -104,25 +86,27 @@ export default function SavedCardsPage() {
 
         <button
           onClick={() => {
-            const NewPos = document.getElementById('Menu').scrollLeft + 560;
+            const NewPos = document.getElementById('Menu').scrollLeft + 500;
             document.getElementById('Menu').scrollTo({
               left: NewPos,
               behavior: 'smooth',
             });
           }}
           type="button"
-          className="ml-4 h-12 w-12 px-3 text-subtitle bg-white rounded-lg border-2 border-black hover:bg-blue-dark"
+          className="ml-2 lg:ml-4 h-10 lg:h-12 w-10 lg:w-12 px-3 bg-white rounded-lg border-2 border-black hover:bg-blue-dark"
         >
           <img src={Next} alt="Previous" />
         </button>
       </div>
 
-      <button
-        type="button"
-        className="mt-8 w-64 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
-      >
-        ADD NEW CARD+
-      </button>
+      <Link to="/AddNewCard">
+        <button
+          type="button"
+          className="mt-8 w-64 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+        >
+          ADD NEW CARD+
+        </button>
+      </Link>
     </div>
   );
 }

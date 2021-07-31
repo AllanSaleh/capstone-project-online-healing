@@ -9,13 +9,15 @@ export default function AboutPage() {
       <div className="h-1/2 px-sides flex flex-col justify-evenly">
         <div>
           <div className="sm:text-title text-3xl">HEALING</div>
-          <div className="sm:text-subtitle mt-4 text-gray-700 mb-8 text-xl">A Cool One Liner!</div>
+          <div className="sm:text-subtitle mt-4 text-gray-700 mb-8 text-xl">
+            We are here to HELP!
+          </div>
         </div>
         <div className="sm:text-paragraph text-lg text-justify">
           At Healing, wedd believe there is a better way to do things. A more valuable way where
           customers are earned rather than bought. We're obsessively passionate about it, and our
           mission is to help people achieve it. We focus on search engine optimization. It's one of
-          least understood and least transparent aspects of great marketing, and we see that as an
+          understood and least transparent aspects of great marketing, and we see that as an
           opportunity. We're excited to simplify SEO for everyone through our software, education,
           and community.
         </div>

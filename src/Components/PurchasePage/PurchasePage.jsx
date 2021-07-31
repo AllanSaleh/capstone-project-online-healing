@@ -5,12 +5,11 @@ import Next from './Images/Next.svg';
 import Prev from './Images/Prev.svg';
 import CreditCard from '../CreditCard/CreditCard';
 
-let count = 0;
-
 export default function PurchasePage() {
   const location = useLocation();
   const history = useHistory();
 
+  let count = 0;
   const cards = [
     {
       date: '04/25',
