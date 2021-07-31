@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import Logo from './Images/Logo.svg';
 import ProfileImage from './Images/Avatar.png';
@@ -13,6 +14,8 @@ export default function NavBar({ loggedIn }) {
     // Firebase code to LogOut!
     alert('You Logged Out!');
   };
+
+  const { t } = useTranslation();
   return (
     <div>
       <div className="fixed inset-x-0 top-0 px-sides flex justify-between items-center bg-blue-light h-navbar z-50">
@@ -47,14 +50,14 @@ export default function NavBar({ loggedIn }) {
 
         <div className="hidden lg:flex justify-between items-center flex-no-wrap">
           <Link to="/" className="ml-8 hover:text-yellow-primary hover:underline text-paragraph">
-            Home
+            {t('Home')}
           </Link>
 
           <Link
             to="/Blog"
             className="ml-8 hover:text-yellow-primary hover:underline text-paragraph"
           >
-            Blogs
+            {t('Blogs')}
           </Link>
 
           <div
@@ -69,7 +72,7 @@ export default function NavBar({ loggedIn }) {
                 className="hover:text-yellow-primary hover:underline text-paragraph"
                 href="#"
               >
-                About ᐁ
+                {t('About')} ᐁ
               </Link>
             </div>
 
@@ -82,21 +85,21 @@ export default function NavBar({ loggedIn }) {
                   to="/About"
                   className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
                 >
-                  Our Story
+                  {t('Story')}
                 </Link>
 
                 <Link
                   to="/Team"
                   className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
                 >
-                  Our Team
+                  {t('Team')}
                 </Link>
 
                 <Link
                   to="/Careers"
                   className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
                 >
-                  Open Careers
+                  {t('Careers')}
                 </Link>
               </div>
             )}
@@ -106,7 +109,7 @@ export default function NavBar({ loggedIn }) {
             to="/Contact"
             className="ml-8 hover:text-yellow-primary hover:underline text-paragraph"
           >
-            Contact Us
+            {t('Contact')}
           </Link>
 
           {loggedIn ? (
@@ -135,14 +138,14 @@ export default function NavBar({ loggedIn }) {
                     to="/EditProfile"
                     className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
                   >
-                    Settings
+                    {t('Settings')}
                   </Link>
 
                   <div
                     onClick={() => LogOut()}
                     className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph cursor-pointer"
                   >
-                    Log Out!
+                    {t('Logout')}
                   </div>
                 </div>
               )}
@@ -153,7 +156,7 @@ export default function NavBar({ loggedIn }) {
                 type="button"
                 className="w-28 ml-8 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
               >
-                Log In
+                {t('Login')}
               </button>
             </Link>
           )}
@@ -191,14 +194,14 @@ export default function NavBar({ loggedIn }) {
                     to="/EditProfile"
                     className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
                   >
-                    Settings
+                    {t('Settings')}
                   </Link>
 
                   <div
                     onClick={() => LogOut()}
                     className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph cursor-pointer"
                   >
-                    Log Out!
+                    {t('Logout')}
                   </div>
                 </div>
               )}
@@ -209,16 +212,16 @@ export default function NavBar({ loggedIn }) {
                 type="button"
                 className="w-28 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
               >
-                Log In
+                {t('Login')}
               </button>
             </Link>
           )}
           <Link to="/" className="hover:text-yellow-primary hover:underline text-paragraph">
-            Home
+            {t('Home')}
           </Link>
 
           <Link to="/Blog" className="hover:text-yellow-primary hover:underline text-paragraph">
-            Blogs
+            {t('Blog')}
           </Link>
 
           <div>
@@ -233,7 +236,7 @@ export default function NavBar({ loggedIn }) {
                 to="/About"
                 className="hover:text-yellow-primary hover:underline text-paragraph"
               >
-                About ᐁ
+                {t('About')} ᐁ
               </Link>
             </div>
 
@@ -246,28 +249,28 @@ export default function NavBar({ loggedIn }) {
                   to="/About"
                   className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
                 >
-                  Our Story
+                  {t('Story')}
                 </Link>
 
                 <Link
                   to="/Team"
                   className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
                 >
-                  Our Team
+                  {t('Team')}
                 </Link>
 
                 <Link
                   to="/Careers"
                   className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
                 >
-                  Open Careers
+                  {t('Careers')}
                 </Link>
               </div>
             )}
           </div>
 
           <Link to="/Contact" className="hover:text-yellow-primary hover:underline text-paragraph">
-            Contact Us
+            {t('Contact')}
           </Link>
           <div />
         </div>
