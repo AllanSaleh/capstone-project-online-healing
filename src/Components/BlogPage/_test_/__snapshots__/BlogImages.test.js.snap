@@ -2,11 +2,11 @@
 
 exports[`Blog Images renders correctly 1`] = `
 <div
-  className="flex items-center lg:h-firstsection px-sides pt-24 lg:pt-navbar"
+  className="flex items-center lg:h-firstsection px-sides pt-24 lg:pt-32"
 >
   <img
     alt="Blog"
-    className="w-full"
+    className="h-full"
   />
 </div>
 `;
