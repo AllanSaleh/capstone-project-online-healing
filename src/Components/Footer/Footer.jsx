@@ -19,6 +19,12 @@ export default function Footer() {
       });
     else alert('Please enter a valid E-Mail!');
   };
+
+  const { t, i18n } = useTranslation();
+  function changeLang(lang) {
+    i18n.changeLanguage(lang);
+  }
+
   return (
     <div className="py-4 flex flex-col lg:flex-row justify-between px-sides items-center lg:h-footer bg-yellow-primary">
       <div className="flex flex-col justify-between items-center text-center lg:text-left lg:items-start h-40">
@@ -93,12 +99,8 @@ export default function Footer() {
         <div className="flex justify-center items-center">
           <label className="w-24">Language:</label>
           <select className="w-24 p-1 border-gray-700 border-2 rounded-lg">
-            <option value="En" className="py-1 text-paragraph text-gray-700">
-              English
-            </option>
-            <option value="Ku" className="py-1 text-paragraph text-gray-700">
-              كوردى
-            </option>
+            <option value="en" className="py-1 text-paragraph text-gray-700">English</option>
+            <option value="tr" className="py-1 text-paragraph text-gray-700">Türkçe</option>
           </select>
         </div>
       </div>

@@ -10,7 +10,7 @@ i18next
   .use(HttpApi)
   .use(LanguageDetector)
   .init({
-    supportedLngs: ['en', 'ar'],
+    supportedLngs: ['en', 'tr'],
     interpolation: {
       escapeValue: false,
     },
