@@ -20,11 +20,11 @@ const questionData = {
 };
 
 export default function Booking1() {
+  window.scrollTo(0, 0);
   const history = useHistory();
 
   const NextPage = () => {
     // Put firestore code here!
-    window.scrollTo(0, 0);
     history.push('/Booking2');
   };
 

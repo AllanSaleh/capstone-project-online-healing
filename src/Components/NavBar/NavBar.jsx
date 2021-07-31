@@ -16,10 +16,12 @@ export default function NavBar({ loggedIn }) {
   return (
     <div>
       <div className="fixed inset-x-0 top-0 px-sides flex justify-between items-center bg-blue-light h-navbar z-50">
-        <div className="flex justify-between items-center cursor-pointer leading-tight">
-          <img className="w-8 lg:w-12" src={Logo} alt="logo" />
-          <div className="text-3xl lg:text-title ml-2">Healing</div>
-        </div>
+        <Link to="/">
+          <div className="flex justify-between items-center cursor-pointer leading-tight">
+            <img className="w-8 lg:w-12" src={Logo} alt="logo" />
+            <div className="text-3xl lg:text-title ml-2">Healing</div>
+          </div>
+        </Link>
 
         {/* HamburgerButton */}
         <div className="lg:hidden flex items-center">

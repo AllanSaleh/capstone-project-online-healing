@@ -4,13 +4,11 @@ import { useHistory } from 'react-router-dom';
 export default function Card({ title, content, showIcon, icon, buttonText, showButton }) {
   const history = useHistory();
 
-  const GoToRoute = () => {
-    window.scroll(0, 0);
+  const GoToRoute = () =>
     history.push({
       pathname: '/Purchase',
       state: { ticket: title, price: content },
     });
-  };
 
   return (
     <div className="h-full w-full my-4 flex flex-col items-center justify-evenly shadow-lg rounded-lg md:w-1/4 p-4">

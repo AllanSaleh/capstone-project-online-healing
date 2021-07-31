@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Frame from './Images/Frame.svg';
 
 export default function RequirementsPage() {
+  window.scrollTo(0, 0);
   return (
     <div className="pt-navbar px-sides  pb-24">
       <div className="flex flex-col lg:flex-row">
@@ -39,12 +41,14 @@ export default function RequirementsPage() {
             <li>Currently residing in the US</li>
           </ul>
         </div>
-        <button
-          type="button"
-          className="self-center lg:w-1/6 h-12 text-lg lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark px-100 uppercase"
-        >
-          Get Started
-        </button>
+        <Link to="/TherapistCreate">
+          <button
+            type="button"
+            className="self-center lg:w-1/6 h-12 text-lg lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark px-100 uppercase"
+          >
+            Get Started
+          </button>
+        </Link>
       </div>
     </div>
   );

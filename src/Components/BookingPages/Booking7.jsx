@@ -2,16 +2,15 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 export default function Booking() {
+  window.scrollTo(0, 0);
   const history = useHistory();
 
   const PrevPage = () => {
     // Put firestore code here!
-    window.scrollTo(0, 0);
     history.push('/Booking6');
   };
   const NextPage = () => {
     // Put firestore code here!
-    window.scrollTo(0, 0);
     history.push('/Booking8');
   };
   return (

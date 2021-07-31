@@ -52,12 +52,13 @@ export default function PurchasePage() {
 
   const [selected, setSelected] = useState('');
 
-  const GoToThankYou = () =>
+  const GoToThankYou = () => {
     // Firebase code to add tickets to the user!
     history.push({
       pathname: '/ThankYou',
       state: 'You purchase has been submitted, you should receive an email with the receipt soon.',
     });
+  };
 
   return (
     <div className="flex flex-col justify-evenly h-firstsection pt-navbar px-sides">

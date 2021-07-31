@@ -3,6 +3,7 @@ import React from 'react';
 import Payam from './Images/Payam.svg';
 
 export default function AboutPage() {
+  window.scrollTo(0, 0);
   return (
     <div className="lg:h-firstsection pt-navbar">
       <div className="h-1/2 px-sides flex flex-col justify-evenly">

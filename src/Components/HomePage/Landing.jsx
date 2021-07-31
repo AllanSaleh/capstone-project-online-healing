@@ -8,10 +8,8 @@ export default function Landing({ user }) {
   const history = useHistory();
 
   const GoToRoute = () => {
-    if (user.login && user.complete) {
-      window.scrollTo(0, 0);
-      history.push('/Booking1');
-    } else if (!user.login) alert('Please LogIn First!');
+    if (user.login && user.complete) history.push('/Booking1');
+    else if (!user.login) alert('Please LogIn First!');
     else alert('Please Complete Your Profile in Profile Settings First!');
   };
 

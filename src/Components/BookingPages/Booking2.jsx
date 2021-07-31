@@ -25,16 +25,15 @@ const questionData = {
 };
 
 export default function Booking2() {
+  window.scrollTo(0, 0);
   const history = useHistory();
 
   const PrevPage = () => {
     // Put firestore code here!
-    window.scrollTo(0, 0);
     history.push('/Booking1');
   };
   const NextPage = () => {
     // Put firestore code here!
-    window.scrollTo(0, 0);
     history.push('/Booking3');
   };
 

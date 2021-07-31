@@ -10,10 +10,12 @@ import Img2 from './Images/Blog2.svg';
 import Recommended from './Recommended';
 
 export default function BlogPage() {
+  window.scrollTo(0, 0);
   const location = useLocation();
 
   let blogInfo = {};
   if (location.state === undefined)
+    // Grab the most recent blog from firebase
     blogInfo = {
       img: Img,
       title: 'Mental Health and Technology',

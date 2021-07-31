@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 const Booking5 = () => {
+  window.scrollTo(0, 0);
   const choices = [
     {
       id: 1,
@@ -33,12 +34,10 @@ const Booking5 = () => {
 
   const PrevPage = () => {
     // Put firestore code here!
-    window.scrollTo(0, 0);
     history.push('/Booking4');
   };
   const NextPage = () => {
     // Put firestore code here!
-    window.scrollTo(0, 0);
     history.push('/Booking6');
   };
 

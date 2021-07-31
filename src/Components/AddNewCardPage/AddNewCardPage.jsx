@@ -5,6 +5,7 @@ import Card1 from './Images/Card1.svg';
 import Card2 from './Images/Card2.svg';
 
 export default function AddNewCardPage() {
+  window.scrollTo(0, 0);
   const history = useHistory();
 
   const [countryList, setCountries] = useState([]);
@@ -76,14 +77,12 @@ export default function AddNewCardPage() {
 
     let AllVerified = true;
     for (let i = 0; i < verify.length; i += 1) if (!verify[i]) AllVerified = false;
-    if (AllVerified) {
-      window.scrollTo(0, 0);
+    if (AllVerified)
       history.push({
         pathname: '/ThankYou',
         state:
           'Your new payment method is under review, you will receive an email soon when your card is confirmed.\nOtherwise you will get a notification telling you what went wrong and how to add a new card.',
       });
-    }
   };
 
   return (

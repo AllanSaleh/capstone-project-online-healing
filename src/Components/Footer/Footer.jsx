@@ -12,13 +12,12 @@ export default function Footer() {
   const [email, setEmail] = useState('');
 
   const subscribe = () => {
-    if (email.match(/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+[.]+[a-zA-Z0-9]/)) {
-      window.scrollTo(0, 0);
+    if (email.match(/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+[.]+[a-zA-Z0-9]/))
       history.push({
         pathname: '/ThankYou',
         state: 'You email has been added to the mailing list successfully!',
       });
-    } else alert('Please enter a valid E-Mail!');
+    else alert('Please enter a valid E-Mail!');
   };
   return (
     <div className="py-4 flex flex-col lg:flex-row justify-between px-sides items-center lg:h-footer bg-yellow-primary">
@@ -80,13 +79,13 @@ export default function Footer() {
         </div>
 
         <div className="flex justify-center items-center">
-          <a href="#" target="_blank" className="mx-4">
+          <a href="https://twitter.com/" target="_blank" className="mx-4">
             <img src={Twitter} alt="Twitter" />
           </a>
-          <a href="#" target="_blank" className="mx-4">
+          <a href="https://www.facebook.com/" target="_blank" className="mx-4">
             <img src={Facebook} alt="Facebook" />
           </a>
-          <a href="#" target="_blank" className="mx-4">
+          <a href="https://www.google.com/" target="_blank" className="mx-4">
             <img src={Google} alt="Google" />
           </a>
         </div>
