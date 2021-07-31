@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Card from './Card';
 
@@ -11,11 +12,11 @@ const TicketSection = () => (
       </h3>
     </div>
     <div className="flex flex-col md:flex-row items-center justify-around w-full lg:h-1/3">
-      <Card showIcon={false} title="5 Tickets" content="10$" showButton buttonText="Purchase" />
+      <Card showIcon={false} title="5" content="10" showButton buttonText="Purchase" />
 
-      <Card showIcon={false} title="25 Tickets" content="40$" showButton buttonText="Purchase" />
+      <Card showIcon={false} title="25" content="40" showButton buttonText="Purchase" />
 
-      <Card showIcon={false} title="50 Tickets" content="70$" showButton buttonText="Purchase" />
+      <Card showIcon={false} title="50" content="70" showButton buttonText="Purchase" />
     </div>
     <div
       className="flex flex-col justify-around items-center p-4 rounded-lg h-1/3 lg:mx-16"
@@ -28,12 +29,14 @@ const TicketSection = () => (
       </p>
 
       <div className="text-center my-8">
-        <button
-          type="button"
-          className="bg-blue-dark py-2 px-4 uppercase text-paragraph border text-black hover:bg-transparent hover:border-blue-dark hover:text-blue-dark  transition-all duration-200 rounded-md"
-        >
-          learn more
-        </button>
+        <Link to="/Requirements">
+          <button
+            type="button"
+            className="bg-blue-dark py-2 px-4 uppercase text-paragraph border text-black hover:bg-transparent hover:border-blue-dark hover:text-blue-dark  transition-all duration-200 rounded-md"
+          >
+            learn more
+          </button>
+        </Link>
       </div>
     </div>
   </div>

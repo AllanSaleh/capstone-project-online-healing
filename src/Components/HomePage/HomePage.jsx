@@ -11,6 +11,8 @@ const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeig
 
 export default function HomePage() {
   const location = useLocation();
+  // Grabbed User status from Firebase
+  const ProfileVerify = { login: true, complete: true };
 
   useEffect(() => {
     if (location.state === true) {
@@ -24,11 +26,11 @@ export default function HomePage() {
 
   return (
     <>
-      <Landing />
-      <Description />
+      <Landing user={ProfileVerify} />
+      <Description user={ProfileVerify} />
       <CommunicationSection />
       <RecentBlogs />
-      <TicketSection />
+      <TicketSection user={ProfileVerify} />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import HpIllustration from './Images/HP_illustration.svg';
 import Facebook from './Images/Facebook.svg';
@@ -32,12 +33,14 @@ export default function LoginPage() {
               >
                 LOG IN
               </button>
-              <button
-                type="button"
-                className="mt-4 lg:mt-6 lg:mx-0 mx-5 lg:py-4 lg:px-10  py-2 px-6 lg:text-subtitle text-base rounded-md text-blue-dark bg-white border hover:bg-blue-dark hover:text-black hover:border-blue-dark"
-              >
-                SIGN UP
-              </button>
+              <Link to="/SignUp">
+                <button
+                  type="button"
+                  className="mt-4 lg:mt-6 lg:mx-0 mx-5 lg:py-4 lg:px-10  py-2 px-6 lg:text-subtitle text-base rounded-md text-blue-dark bg-white border hover:bg-blue-dark hover:text-black hover:border-blue-dark"
+                >
+                  SIGN UP
+                </button>
+              </Link>
             </div>
           </div>
         </div>

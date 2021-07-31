@@ -19,8 +19,8 @@ export default function Recommended({ blog1, blog2 }) {
     } else alert('Please enter a valid E-Mail!');
   };
 
-  const chooseBlog = (title) => {
-    // Firebase code to grab the wanted blog!
+  const OpenBlog = (title) => {
+    // Firebase code to grab the wanted blog from title!
     const grabbedBlog = {
       img: Img,
       title: 'Mental Health and Whatever',
@@ -36,6 +36,7 @@ export default function Recommended({ blog1, blog2 }) {
       history.push({ pathname: '/Blog', state: grabbedBlog });
     }
   };
+
   return (
     <div className="px-sides lg:h-section flex flex-col justify-around">
       <div className="flex flex-col justify-between items-start lg:h-40">
@@ -70,13 +71,13 @@ export default function Recommended({ blog1, blog2 }) {
 
         <div className="h-96 lg:h-auto flex flex-col lg:flex-row justify-evenly lg:justify-between">
           <img
-            onClick={() => chooseBlog(blog1.title)}
+            onClick={() => OpenBlog(blog1.title)}
             className="cursor-pointer border-4 border-transparent border-dashed hover:border-blue-dark w-full lg:mr-8"
             src={blog1.img}
             alt="blog2"
           />
           <img
-            onClick={() => chooseBlog(blog2.title)}
+            onClick={() => OpenBlog(blog2.title)}
             className="cursor-pointer border-4 border-transparent border-dashed hover:border-blue-dark w-full"
             src={blog2.img}
             alt="blog1"

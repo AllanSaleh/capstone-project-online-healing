@@ -53,6 +53,7 @@ export default function PurchasePage() {
   const [selected, setSelected] = useState('');
 
   const GoToThankYou = () =>
+    // Firebase code to add tickets to the user!
     history.push({
       pathname: '/ThankYou',
       state: 'You purchase has been submitted, you should receive an email with the receipt soon.',
@@ -127,8 +128,8 @@ export default function PurchasePage() {
 
       <div className="text-center self-center">
         <div className="text-xl lg:text-subtitle self-center">
-          Click confirm to use the selected card to purchase
-          {location.state.ticket} tickets for {location.state.price}$
+          Click confirm to use the selected card to purchase {location.state.ticket} tickets for{' '}
+          {location.state.price}$
         </div>
 
         <button
