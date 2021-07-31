@@ -37,9 +37,12 @@ function App() {
     document.dir = i18n.dir();
   }, [i18n, i18n.language]);
 
+  // Grab this from firebase!
+  const userLogin = false;
+
   return (
     <Router>
-      <NavBar />
+      <NavBar loggedIn={userLogin} />
       <Switch>
         <Route exact path="/">
           <HomePage />

@@ -9,6 +9,10 @@ export default function NavBar({ loggedIn }) {
   const [OpenAbout, setOpenAbout] = useState(false);
   const [OpenProfile, setOpenProfile] = useState(false);
 
+  const LogOut = () => {
+    // Firebase code to LogOut!
+    alert('You Logged Out!');
+  };
   return (
     <div>
       <div className="fixed inset-x-0 top-0 px-sides flex justify-between items-center bg-blue-light h-navbar z-50">
@@ -40,21 +44,16 @@ export default function NavBar({ loggedIn }) {
         </div>
 
         <div className="hidden lg:flex justify-between items-center flex-no-wrap">
-          <a
-            onClick={() => window.scrollTo(0, 0)}
-            className="ml-8 hover:text-yellow-primary hover:underline text-paragraph"
-            href="#"
-          >
+          <Link to="/" className="ml-8 hover:text-yellow-primary hover:underline text-paragraph">
             Home
-          </a>
+          </Link>
 
-          <a
-            onClick={() => window.scrollTo(0, 0)}
+          <Link
+            to="/Blog"
             className="ml-8 hover:text-yellow-primary hover:underline text-paragraph"
-            href="#"
           >
             Blogs
-          </a>
+          </Link>
 
           <div
             onMouseLeave={() => setOpenAbout(false)}
@@ -63,13 +62,13 @@ export default function NavBar({ loggedIn }) {
             className="ml-8 relative"
           >
             <div className="my-2">
-              <a
-                onClick={() => window.scrollTo(0, 0)}
+              <Link
+                to="/About"
                 className="hover:text-yellow-primary hover:underline text-paragraph"
                 href="#"
               >
                 About ᐁ
-              </a>
+              </Link>
             </div>
 
             {OpenAbout && (
@@ -77,40 +76,36 @@ export default function NavBar({ loggedIn }) {
                 onMouseLeave={() => setOpenAbout(false)}
                 className="w-48 bg-white rounded-lg py-1 shadow-md absolute transform -translate-x-12"
               >
-                <a
-                  onClick={() => window.scrollTo(0, 0)}
+                <Link
+                  to="/About"
                   className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
-                  href="#"
                 >
                   Our Story
-                </a>
+                </Link>
 
-                <a
-                  onClick={() => window.scrollTo(0, 0)}
+                <Link
+                  to="/Team"
                   className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
-                  href="#"
                 >
-                  Our Founding
-                </a>
+                  Our Team
+                </Link>
 
-                <a
-                  onClick={() => window.scrollTo(0, 0)}
+                <Link
+                  to="/Careers"
                   className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
-                  href="#"
                 >
                   Open Careers
-                </a>
+                </Link>
               </div>
             )}
           </div>
 
-          <a
-            onClick={() => window.scrollTo(0, 0)}
+          <Link
+            to="/Contact"
             className="ml-8 hover:text-yellow-primary hover:underline text-paragraph"
-            href="#"
           >
             Contact Us
-          </a>
+          </Link>
 
           {loggedIn ? (
             <div
@@ -121,13 +116,12 @@ export default function NavBar({ loggedIn }) {
             >
               <div className="flex items-center justify-between my-2">
                 <img className="mr-2 w-10 rounded-full" src={Avatar} alt="Profile" />
-                <a
-                  onClick={() => window.scrollTo(0, 0)}
+                <Link
+                  to="/EditProfile"
                   className="hover:text-yellow-primary hover:underline text-paragraph"
-                  href="#"
                 >
                   Ahmed M.
-                </a>
+                </Link>
               </div>
 
               {OpenProfile && (
@@ -135,31 +129,31 @@ export default function NavBar({ loggedIn }) {
                   onMouseLeave={() => setOpenProfile(false)}
                   className="w-36 bg-white rounded-lg py-1 shadow-md absolute transform translate-x-1"
                 >
-                  <a
-                    onClick={() => window.scrollTo(0, 0)}
+                  <Link
+                    to="/EditProfile"
                     className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
-                    href="#"
                   >
                     Settings
-                  </a>
+                  </Link>
 
-                  <a
-                    onClick={() => window.scrollTo(0, 0)}
-                    className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
-                    href="#"
+                  <div
+                    onClick={() => LogOut()}
+                    className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph cursor-pointer"
                   >
                     Log Out!
-                  </a>
+                  </div>
                 </div>
               )}
             </div>
           ) : (
-            <button
-              type="button"
-              className="w-28 ml-8 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
-            >
-              Log In
-            </button>
+            <Link to="/Login">
+              <button
+                type="button"
+                className="w-28 ml-8 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
+              >
+                Log In
+              </button>
+            </Link>
           )}
           <div />
         </div>
@@ -181,54 +175,49 @@ export default function NavBar({ loggedIn }) {
             >
               <div className="flex items-center justify-between my-2">
                 <img className="mr-2 w-10 rounded-full" src={Avatar} alt="Profile" />
-                <a className="hover:text-yellow-primary hover:underline text-paragraph" href="#">
+                <Link
+                  to="/EditProfile"
+                  className="hover:text-yellow-primary hover:underline text-paragraph"
+                >
                   Ahmed M.
-                </a>
+                </Link>
               </div>
 
               {OpenProfile && (
                 <div className="w-36 bg-white rounded-lg py-1 shadow-md transform translate-x-1">
-                  <a
-                    onClick={() => window.scrollTo(0, 0)}
+                  <Link
+                    to="/EditProfile"
                     className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
-                    href="#"
                   >
                     Settings
-                  </a>
+                  </Link>
 
-                  <a
-                    onClick={() => window.scrollTo(0, 0)}
-                    className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
-                    href="#"
+                  <div
+                    onClick={() => LogOut()}
+                    className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph cursor-pointer"
                   >
                     Log Out!
-                  </a>
+                  </div>
                 </div>
               )}
             </div>
           ) : (
-            <button
-              type="button"
-              className="w-28 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
-            >
-              Log In
-            </button>
+            <Link to="Login">
+              <button
+                type="button"
+                className="w-28 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
+              >
+                Log In
+              </button>
+            </Link>
           )}
-          <a
-            onClick={() => window.scrollTo(0, 0)}
-            className="hover:text-yellow-primary hover:underline text-paragraph"
-            href="#"
-          >
+          <Link to="/" className="hover:text-yellow-primary hover:underline text-paragraph">
             Home
-          </a>
+          </Link>
 
-          <a
-            onClick={() => window.scrollTo(0, 0)}
-            className="hover:text-yellow-primary hover:underline text-paragraph"
-            href="#"
-          >
+          <Link to="/Blog" className="hover:text-yellow-primary hover:underline text-paragraph">
             Blogs
-          </a>
+          </Link>
 
           <div>
             <div
@@ -238,9 +227,12 @@ export default function NavBar({ loggedIn }) {
               }}
               className="my-2 text-center"
             >
-              <a className="hover:text-yellow-primary hover:underline text-paragraph" href="#">
+              <Link
+                to="/About"
+                className="hover:text-yellow-primary hover:underline text-paragraph"
+              >
                 About ᐁ
-              </a>
+              </Link>
             </div>
 
             {OpenAbout && (
@@ -248,40 +240,33 @@ export default function NavBar({ loggedIn }) {
                 onMouseLeave={() => setOpenAbout(false)}
                 className="w-48 bg-white rounded-lg py-1 shadow-md transform -translate-x-1"
               >
-                <a
-                  onClick={() => window.scrollTo(0, 0)}
+                <Link
+                  to="/About"
                   className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
-                  href="#"
                 >
                   Our Story
-                </a>
+                </Link>
 
-                <a
-                  onClick={() => window.scrollTo(0, 0)}
+                <Link
+                  to="/Team"
                   className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
-                  href="#"
                 >
-                  Our Founding
-                </a>
+                  Our Team
+                </Link>
 
-                <a
-                  onClick={() => window.scrollTo(0, 0)}
+                <Link
+                  to="/Careers"
                   className="block px-4 my-2 hover:text-yellow-primary hover:underline text-center text-paragraph"
-                  href="#"
                 >
                   Open Careers
-                </a>
+                </Link>
               </div>
             )}
           </div>
 
-          <a
-            onClick={() => window.scrollTo(0, 0)}
-            className="hover:text-yellow-primary hover:underline text-paragraph"
-            href="#"
-          >
+          <Link to="/Contact" className="hover:text-yellow-primary hover:underline text-paragraph">
             Contact Us
-          </a>
+          </Link>
           <div />
         </div>
       </div>
