@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className=" md:h-section flex flex-col justify-evenly px-sides"
+>
+  <h1
+    className="sm:text-xl md:text-4xl xl:text-title pb-2 uppercase mb-2"
+  >
+    we can communicate through
+  </h1>
+  <div
+    className="flex flex-col md:flex-row items-center md:items-start md:justify-around"
+  >
+    <div
+      className="flex flex-col max-w-sm items-center shadow-lg rounded-lg h-full w-11/12 md:w-1/3 my-6 md:my-0 md:mx-2 p-2 lg:py-6 lg:px-12"
+    >
+      <img
+        alt=""
+        className="flex-initial mb-4"
+        src="phone-cell.svg"
+      />
+      <h3
+        className="text-center text-xl  lg:text-3xl 2xl:text-title pb-1 capitalize"
+      >
+        voice call
+      </h3>
+      <p
+        className="text-opacity-50 text-black text-center text-sm md:text-md lg:text-paragraph py-4"
+      >
+        Feeling ready to start a conversation? Give your therapist a voice call and talk your heart out!
+      </p>
+    </div>
+    <div
+      className="flex flex-col max-w-sm items-center shadow-lg rounded-lg h-full w-11/12 md:w-1/3 my-6 md:my-0 md:mx-2 p-2 lg:py-6 lg:px-12"
+    >
+      <img
+        alt=""
+        className="flex-initial mb-4"
+        src="chat-icon.svg"
+      />
+      <h3
+        className="text-center text-xl  lg:text-3xl 2xl:text-title pb-1 capitalize"
+      >
+        chat
+      </h3>
+      <p
+        className="text-opacity-50 text-black text-center text-sm md:text-md lg:text-paragraph py-4"
+      >
+        Need to talk to someone?Come have a chat with your therapist!
+      </p>
+    </div>
+    <div
+      className="flex flex-col max-w-sm items-center shadow-lg rounded-lg h-full w-11/12 md:w-1/3 my-6 md:my-0 md:mx-2 p-2 lg:py-6 lg:px-12"
+    >
+      <img
+        alt=""
+        className="flex-initial mb-4"
+        src="video-call-icon.svg"
+      />
+      <h3
+        className="text-center text-xl  lg:text-3xl 2xl:text-title pb-1 capitalize"
+      >
+        video call
+      </h3>
+      <p
+        className="text-opacity-50 text-black text-center text-sm md:text-md lg:text-paragraph py-4"
+      >
+        For better experience therapists recommend video calls, but always remember that its a choice!
+      </p>
+    </div>
+  </div>
+</div>
+`;

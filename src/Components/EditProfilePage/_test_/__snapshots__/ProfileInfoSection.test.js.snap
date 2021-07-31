@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<form
+  className="mb-8"
+>
+  <h1
+    className="text-title uppercase"
+  >
+    Profile Info
+  </h1>
+  <div
+    className="flex items-center my-6"
+  >
+    <label
+      className="text-subtitle capitalize inline-block w-1/3"
+      htmlFor="full-name"
+    >
+      full name
+    </label>
+    <div
+      className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg pl-4"
+    >
+      <input
+        className="w-11/12 h-full outline-none py-3"
+        id="full-name"
+        name="full-name"
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="flex items-center my-6"
+  >
+    <label
+      className="text-subtitle capitalize inline-block w-1/3"
+      htmlFor="education-level"
+    >
+      education level
+    </label>
+    <div
+      className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg px-6 py-2"
+    >
+      <select
+        className="w-full h-full outline-none py-1"
+        id="education-level"
+        name="education-level"
+      >
+        <option
+          value="1"
+        >
+          bachelor
+        </option>
+        <option
+          value="2"
+        >
+          bachelor
+        </option>
+        <option
+          value="3"
+        >
+          bachelor
+        </option>
+        <option
+          value="4"
+        >
+          bachelor
+        </option>
+      </select>
+    </div>
+  </div>
+  <div
+    className="flex items-center my-6"
+  >
+    <label
+      className="text-subtitle capitalize inline-block w-1/3"
+      htmlFor="hobbies"
+    >
+      hobbies
+    </label>
+    <div
+      className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg pl-4"
+    >
+      <input
+        className="w-11/12 h-full outline-none py-3"
+        id="hobbies"
+        name="hobbies"
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="flex items-center my-6"
+  >
+    <label
+      className="text-subtitle capitalize inline-block w-1/3"
+      htmlFor="family-members"
+    >
+      family members
+    </label>
+    <div
+      className="w-1/12 inline-flex items-center border border-black border-opacity-20 rounded-lg px-4"
+    >
+      <input
+        className="w-full h-full outline-none py-3"
+        id="family-members"
+        name="family-members"
+        type="text"
+      />
+    </div>
+    <span
+      className="text-subtitle capitalize mx-4"
+    >
+      member(s)
+    </span>
+  </div>
+  <div
+    className="flex items-center my-6"
+  >
+    <label
+      className="text-subtitle capitalize inline-block w-1/3"
+      htmlFor="gender"
+    >
+      gender
+    </label>
+    <div
+      className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg px-6 py-2"
+    >
+      <select
+        className="w-full h-full outline-none py-1"
+        id="gender"
+        name="gender"
+      >
+        <option
+          value="1"
+        >
+          Male
+        </option>
+        <option
+          value="2"
+        >
+          Female
+        </option>
+      </select>
+    </div>
+  </div>
+  <div
+    className="flex items-center my-6"
+  >
+    <label
+      className="text-subtitle capitalize inline-block w-1/3"
+      htmlFor="birth-date"
+    >
+      birth date
+    </label>
+    <div
+      className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg pl-4"
+    >
+      <input
+        className="w-11/12 h-full outline-none py-3"
+        id="birth-date"
+        name="birth-date"
+        type="text"
+      />
+      <button
+        type="button"
+      >
+        <img
+          alt="profileIcon"
+          src="BirthDateIcon.svg"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="flex items-center my-6"
+  >
+    <label
+      className="text-subtitle capitalize inline-block w-1/3"
+      htmlFor="email"
+    >
+      email
+    </label>
+    <div
+      className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg pl-4"
+    >
+      <input
+        className="w-11/12 h-full outline-none py-3"
+        id="email"
+        name="email"
+        type="email"
+      />
+    </div>
+  </div>
+  <div
+    className="flex items-center my-6"
+  >
+    <label
+      className="text-subtitle capitalize inline-block w-1/3"
+      htmlFor="phone-number"
+    >
+      phone number
+    </label>
+    <div
+      className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg pl-4"
+    >
+      <input
+        className="w-11/12 h-full outline-none py-3"
+        id="phone-number"
+        name="phone-number"
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="flex items-center my-6"
+  >
+    <label
+      className="text-subtitle capitalize inline-block w-1/3"
+      htmlFor="upload-id"
+    >
+      upload ID
+    </label>
+    <div
+      className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg pl-4"
+    >
+      <input
+        className="w-11/12 h-full outline-none py-3"
+        id="upload-id"
+        name="upload-id"
+        type="file"
+      />
+      <button
+        type="button"
+      >
+        <img
+          alt="profileIcon"
+          src="Plus.svg"
+        />
+      </button>
+    </div>
+  </div>
+</form>
+`;

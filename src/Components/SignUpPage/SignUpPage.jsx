@@ -5,16 +5,37 @@ import SignupImage from './Images/SignupImage.svg';
 import Facebook from './Images/Facebook.svg';
 import Google from './Images/Google.svg';
 import Or from './Images/or.svg';
+import firebase from '../../firebase';
 
 export default function SignUpPage() {
   window.scrollTo(0, 0);
+  
+  const [users, setUsers] = useState([]);
+  const usersRef = firebase.firestore().collection('users');
+
+  const getUsers = () => {
+    usersRef.onSnapshot((querySnapshot) => {
+      const items = [];
+      querySnapshot.forEach((doc) => {
+        items.push(doc.data());
+      });
+      setUsers(items);
+    });
+  };
+
+  useEffect(() => {
+    getUsers();
+  }, []);
+
   return (
     <div className=" flex flex-col lg:flex lg:flex-row items-center justify-evenly max-h-full lg:-mt-20 mt-20 lg:h-firstsection">
       <div className="lg:w-auto w-48">
         <img src={SignupImage} alt="SignupImage" />
       </div>
       <div className="lg:w-auto transform translate-y-9 w-72 lg:transform lg:translate-y-0">
-        <div className="lg:text-5xl text-3xl lg:text-left text-center lg:pb-16 ">SIGN UP NOW</div>
+        <div className="lg:text-5xl text-3xl lg:text-left text-center lg:pb-16 ">
+          SIGN UP NOW
+        </div>
 
         <div className="lg:h-3/5  h-auto flex flex-col justify-evenly shadow-xl rounded-lg p-4 ">
           <div className="lg:w-full flex flex-col lg:flex lg:flex-row lg:justify-between">

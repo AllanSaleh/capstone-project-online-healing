@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="flex flex-col justify-evenly px-sides pt-navbar lg:h-firstsection"
+>
+  <div
+    className="text-3xl lg:text-title uppercase"
+  >
+    we are healing, nice to meet you!
+  </div>
+  <div
+    className="flex flex-col justify-between"
+  >
+    <div
+      className="text-lg lg:text-subtitle text-gray-700 mb-8"
+    >
+      Meet the Team!
+    </div>
+    <div
+      className="flex justify-between flex-col lg:flex-row"
+    >
+      <div
+        className="flex flex-col w-40 mt-2 lg:w-52 bg-blue-light rounded-3xl justify-between mx-2"
+      >
+        <div
+          className="lg:h-60"
+        >
+          <img
+            alt="MemberImage"
+            className="lg:w-full"
+            src="AllanImg.svg"
+          />
+          <div
+            className="h-2 w-full bg-green-300"
+          />
+        </div>
+        <div
+          className="h-48 flex flex-col justify-around"
+        >
+          <div
+            className="text-gray-700 text-lg lg:text-subtitle text-center"
+          >
+            Allan Saleh
+          </div>
+          <div
+            className="text-gray-700 text-lg lg:text-paragraph text-center"
+          >
+            Lead Engineer & Web Developer
+          </div>
+        </div>
+      </div>
+      <div
+        className="flex flex-col w-40 mt-2 lg:w-52 bg-blue-light rounded-3xl justify-between mx-2"
+      >
+        <div
+          className="lg:h-60"
+        >
+          <img
+            alt="MemberImage"
+            className="lg:w-full"
+            src="PayamImg.svg"
+          />
+          <div
+            className="h-2 w-full bg-green-300"
+          />
+        </div>
+        <div
+          className="h-48 flex flex-col justify-around"
+        >
+          <div
+            className="text-gray-700 text-lg lg:text-subtitle text-center"
+          >
+            Payam Abubakr
+          </div>
+          <div
+            className="text-gray-700 text-lg lg:text-paragraph text-center"
+          >
+            Lead Engineer & Web Developer
+          </div>
+        </div>
+      </div>
+      <div
+        className="flex flex-col w-40 mt-2 lg:w-52 bg-blue-light rounded-3xl justify-between mx-2"
+      >
+        <div
+          className="lg:h-60"
+        >
+          <img
+            alt="MemberImage"
+            className="lg:w-full"
+            src="AhmedImg.svg"
+          />
+          <div
+            className="h-2 w-full bg-green-300"
+          />
+        </div>
+        <div
+          className="h-48 flex flex-col justify-around"
+        >
+          <div
+            className="text-gray-700 text-lg lg:text-subtitle text-center"
+          >
+            Ahmed Mohammed
+          </div>
+          <div
+            className="text-gray-700 text-lg lg:text-paragraph text-center"
+          >
+            Lead Engineer & Web Developer
+          </div>
+        </div>
+      </div>
+      <div
+        className="flex flex-col w-40 mt-2 lg:w-52 bg-blue-light rounded-3xl justify-between mx-2"
+      >
+        <div
+          className="lg:h-60"
+        >
+          <img
+            alt="MemberImage"
+            className="lg:w-full"
+            src="AbdulmajeedImg.svg"
+          />
+          <div
+            className="h-2 w-full bg-green-300"
+          />
+        </div>
+        <div
+          className="h-48 flex flex-col justify-around"
+        >
+          <div
+            className="text-gray-700 text-lg lg:text-subtitle text-center"
+          >
+            Abdulmajeed Jaafer
+          </div>
+          <div
+            className="text-gray-700 text-lg lg:text-paragraph text-center"
+          >
+            Lead Engineer & Web Developer
+          </div>
+        </div>
+      </div>
+      <div
+        className="flex flex-col w-40 mt-2 lg:w-52 bg-blue-light rounded-3xl justify-between mx-2"
+      >
+        <div
+          className="lg:h-60"
+        >
+          <img
+            alt="MemberImage"
+            className="lg:w-full"
+            src="SnoorImg.svg"
+          />
+          <div
+            className="h-2 w-full bg-green-300"
+          />
+        </div>
+        <div
+          className="h-48 flex flex-col justify-around"
+        >
+          <div
+            className="text-gray-700 text-lg lg:text-subtitle text-center"
+          >
+            Snoor Madih
+          </div>
+          <div
+            className="text-gray-700 text-lg lg:text-paragraph text-center"
+          >
+            Lead Engineer & Web Developer
+          </div>
+        </div>
+      </div>
+      <div
+        className="flex flex-col w-40 mt-2 lg:w-52 bg-blue-light rounded-3xl justify-between mx-2"
+      >
+        <div
+          className="lg:h-60"
+        >
+          <img
+            alt="MemberImage"
+            className="lg:w-full"
+            src="AvrazImg.svg"
+          />
+          <div
+            className="h-2 w-full bg-green-300"
+          />
+        </div>
+        <div
+          className="h-48 flex flex-col justify-around"
+        >
+          <div
+            className="text-gray-700 text-lg lg:text-subtitle text-center"
+          >
+            Avraz Zebary
+          </div>
+          <div
+            className="text-gray-700 text-lg lg:text-paragraph text-center"
+          >
+            Lead Engineer & Web Developer
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
