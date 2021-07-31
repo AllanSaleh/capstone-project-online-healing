@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="px-sides pt-navbar"
+>
+  <h1
+    className="text-xl md:text-title md:py-4 uppercase"
+  >
+    create an account
+  </h1>
+  <form
+    className="flex flex-col md:w-10/12 md:mx-auto lg:w-2/5 lg:m-0"
+  >
+    <div
+      className="my-4"
+    >
+      <label
+        className="text-md md:text-subtitle capitalize text-black text-opacity-50"
+        htmlFor="user-name"
+      >
+        user name
+      </label>
+      <br />
+      <input
+        className="text-sm md:text-md lg:text-xl max-h-8 py-3 px-2 md:py-6 md:px-4 mt-2 w-full border border-black border-opacity-20 rounded-lg outline-none focus:border-blue-dark transition duration-200"
+        id="user-name"
+        name="user-name"
+        placeholder="Exp: John"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="my-4"
+    >
+      <label
+        className="text-md md:text-subtitle capitalize text-black text-opacity-50"
+        htmlFor="email"
+      >
+        email
+      </label>
+      <br />
+      <input
+        className="text-sm md:text-md lg:text-xl max-h-8 py-3 px-2 md:py-6 md:px-4 mt-2 w-full border border-black border-opacity-20 rounded-lg outline-none focus:border-blue-dark transition duration-200"
+        id="email"
+        name="email"
+        placeholder="Exp: someone@something.com"
+        required={true}
+        type="email"
+      />
+    </div>
+    <div
+      className="my-4"
+    >
+      <label
+        className="text-md md:text-subtitle capitalize text-black text-opacity-50"
+        htmlFor="city"
+      >
+        city
+      </label>
+      <br />
+      <input
+        className="text-sm md:text-md lg:text-xl max-h-8 py-3 px-2 md:py-6 md:px-4 mt-2 w-full border border-black border-opacity-20 rounded-lg outline-none focus:border-blue-dark transition duration-200"
+        id="city"
+        name="city"
+        placeholder="Exp: Erbil"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="my-4"
+    >
+      <label
+        className="text-md md:text-subtitle capitalize text-black text-opacity-50"
+        htmlFor="license"
+      >
+        license number
+      </label>
+      <br />
+      <input
+        className="text-sm md:text-md lg:text-xl max-h-8 py-3 px-2 md:py-6 md:px-4 mt-2 w-full border border-black border-opacity-20 rounded-lg outline-none focus:border-blue-dark transition duration-200"
+        id="license"
+        name="license"
+        placeholder="Exp: 123456789"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="my-4"
+    >
+      <label
+        className="text-md md:text-subtitle capitalize text-black text-opacity-50"
+        htmlFor="password"
+      >
+        password
+      </label>
+      <br />
+      <input
+        className="text-sm md:text-md lg:text-xl max-h-8 py-3 px-2 md:py-6 md:px-4 mt-2 w-full border border-black border-opacity-20 rounded-lg outline-none focus:border-blue-dark transition duration-200"
+        id="password"
+        name="password"
+        placeholder="type your password"
+        required={true}
+        type="password"
+      />
+    </div>
+    <div
+      className="my-4"
+    >
+      <label
+        className="text-md md:text-subtitle capitalize text-black text-opacity-50"
+        htmlFor="confirm-password"
+      >
+        confirm password
+      </label>
+      <br />
+      <input
+        className="text-sm md:text-md lg:text-xl max-h-8 py-3 px-2 md:py-6 md:px-4 mt-2 w-full border border-black border-opacity-20 rounded-lg outline-none focus:border-blue-dark transition duration-200"
+        id="confirm-password"
+        name="confirm-password"
+        placeholder="re-type your password"
+        required={true}
+        type="password"
+      />
+    </div>
+    <button
+      className="text-subtitle bg-blue-dark px-4 py-2 my-16 w-full md:w-48 md:mx-auto border rounded-lg uppercase hover:bg-transparent hover:border-blue-dark hover:text-blue-dark hover:shadow-lg transition-all duration-300"
+      type="button"
+    >
+      create
+    </button>
+  </form>
+</div>
+`;
