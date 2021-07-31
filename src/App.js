@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
-import SignUpPage from './Components/SignUpPage/SignUpPage';
 
 import AboutPage from './Components/AboutPage/AboutPage';
 import AddNewCardPage from './Components/AddNewCardPage/AddNewCardPage';
