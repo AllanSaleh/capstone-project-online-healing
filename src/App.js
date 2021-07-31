@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
+import SignUpPage from './Components/SignUpPage/SignUpPage';
 
 function App() {
   // This controls the direction of the page for RTL languages
@@ -9,7 +10,11 @@ function App() {
     document.dir = i18n.dir();
   }, [i18n, i18n.language]);
 
-  return <div>Test</div>;
+  return (
+    <div>
+      <SignUpPage />
+    </div>
+  );
 }
 
 export default App;
