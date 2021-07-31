@@ -30,12 +30,14 @@ Array [
           className="flex flex-col justify-between"
         >
           <div
-            className="flex ml-4 my-2 "
+            className="flex ml-4 my-2"
           >
             <input
               className="my-2 mr-4"
               name="ContactRadio"
+              onChange={[Function]}
               type="radio"
+              value="ServiceQuestion"
             />
             <div
               className="text-paragraph sm:text-lg text-xm"
@@ -44,12 +46,14 @@ Array [
             </div>
           </div>
           <div
-            className="flex ml-4 my-2 "
+            className="flex ml-4 my-2"
           >
             <input
               className="my-2 mr-4"
               name="ContactRadio"
+              onChange={[Function]}
               type="radio"
+              value="ClientSupport"
             />
             <div
               className="text-paragraph sm:text-lg text-xm"
@@ -58,12 +62,14 @@ Array [
             </div>
           </div>
           <div
-            className="flex ml-4 my-2 "
+            className="flex ml-4 my-2"
           >
             <input
               className="my-2 mr-4"
               name="ContactRadio"
+              onChange={[Function]}
               type="radio"
+              value="CouncelorInterest"
             />
             <div
               className="text-paragraph sm:text-lg text-xm"
@@ -72,12 +78,14 @@ Array [
             </div>
           </div>
           <div
-            className="flex ml-4 my-2 "
+            className="flex ml-4 my-2"
           >
             <input
               className="my-2 mr-4"
               name="ContactRadio"
+              onChange={[Function]}
               type="radio"
+              value="CounselorSupport"
             />
             <div
               className="text-paragraph sm:text-lg text-xm"
@@ -86,12 +94,14 @@ Array [
             </div>
           </div>
           <div
-            className="flex ml-4 my-2 "
+            className="flex ml-4 my-2"
           >
             <input
               className="my-2 mr-4"
               name="ContactRadio"
+              onChange={[Function]}
               type="radio"
+              value="BusinessInquiry"
             />
             <div
               className="text-paragraph sm:text-lg text-xm"
@@ -100,12 +110,14 @@ Array [
             </div>
           </div>
           <div
-            className="flex ml-4 my-2 "
+            className="flex ml-4 my-2"
           >
             <input
               className="my-2 mr-4"
               name="ContactRadio"
+              onChange={[Function]}
               type="radio"
+              value="OrganizationInterest"
             />
             <div
               className="text-paragraph sm:text-lg text-xm"
@@ -114,12 +126,14 @@ Array [
             </div>
           </div>
           <div
-            className="flex ml-4 my-2 "
+            className="flex ml-4 my-2"
           >
             <input
               className="my-2 mr-4"
               name="ContactRadio"
+              onChange={[Function]}
               type="radio"
+              value="BillingQuestion"
             />
             <div
               className="text-paragraph sm:text-lg text-xm"
@@ -152,6 +166,7 @@ Array [
         </label>
         <input
           className="p-2 w-3/4 text-paragraph text-gray-700 rounded-lg border-2 border-gray-400 shadow-lg"
+          onBlur={[Function]}
           placeholder="Enter your full name"
         />
       </div>
@@ -165,6 +180,7 @@ Array [
         </label>
         <input
           className="p-2 w-3/4 text-paragraph text-gray-700 rounded-lg border-2 border-gray-400 shadow-lg"
+          onBlur={[Function]}
           placeholder="Enter your email address"
         />
       </div>
@@ -178,12 +194,14 @@ Array [
         </label>
         <textarea
           className="p-2 w-3/4 h-52 text-paragraph text-gray-700 rounded-lg border-2 border-gray-400 shadow-lg"
+          onBlur={[Function]}
           placeholder="Enter your details here..."
         />
       </div>
       <button
         className="w-32 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
-        type="submit"
+        onClick={[Function]}
+        type="button"
       >
         Submit
       </button>

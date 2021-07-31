@@ -1,10 +1,8 @@
 import * as React from 'react';
-import QuestionComponent from "../QuestionComponent";
-import * as renderer from "react-test-renderer";
+import * as renderer from 'react-test-renderer';
+import QuestionComponent from '../QuestionComponent';
 
 it('Question Componenet renders correctly', () => {
-  const tree = renderer
-    .create(<QuestionComponent/>)
-    .toJSON();
+  const tree = renderer.create(<QuestionComponent />).toJSON();
   expect(tree).toMatchSnapshot();
 });

@@ -6,7 +6,22 @@ import C3 from './Images/C3.svg';
 import MasterLogo from './Images/MasterLogo.svg';
 import VisaLogo from './Images/VisaLogo.svg';
 
-export default function CreditCard({ background, logo, date, number, name, id, setID, select }) {
+export default function CreditCard({
+  background,
+  logo,
+  date,
+  number,
+  name,
+  id,
+  setID,
+  select,
+  deletable,
+}) {
+  const DeleteCard = (cardID) => {
+    // Firebase code to delete the "cardID"th card!
+    alert('Card ' + cardID + ' was deleted!');
+  };
+
   return (
     <div
       onClick={(e) => setID(e.target.closest('.relative').id)}
@@ -34,12 +49,15 @@ export default function CreditCard({ background, logo, date, number, name, id, s
       <div className="cursor-pointer absolute top-24 left-4 lg:top-52 lg:left-12 text-white text-sm lg:text-paragraph">
         {name}
       </div>
-      <button
-        type="button"
-        className="absolute bottom-7 right-4 h-6 w-12 lg:bottom-9 lg:right-4 lg:h-12 lg:w-28 text-xs lg:text-subtitle text-white bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
-      >
-        DELETE
-      </button>
+      {deletable && (
+        <button
+          onClick={(e) => DeleteCard(e.target.closest('.relative').id)}
+          type="button"
+          className="absolute bottom-7 right-4 h-6 w-12 lg:bottom-9 lg:right-4 lg:h-12 lg:w-28 text-xs lg:text-subtitle text-white bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+        >
+          DELETE
+        </button>
+      )}
     </div>
   );
 }

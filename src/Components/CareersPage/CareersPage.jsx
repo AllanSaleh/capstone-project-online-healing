@@ -6,6 +6,7 @@ import OpeningSection from './OpeningSection';
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 
 export default function CareersPage() {
+  window.scrollTo(0, 0);
   return (
     <div>
       <div className="lg:h-firstsection pt-navbar">

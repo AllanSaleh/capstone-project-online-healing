@@ -1,8 +1,17 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import Therapists from './Images/therapists.svg';
 
-export default function Description() {
+export default function Description({ user }) {
+  const history = useHistory();
+
+  const GoToRoute = () => {
+    if (user.login && user.complete) history.push('/Booking1');
+    else if (!user.login) alert('Please LogIn First!');
+    else alert('Please Complete Your Profile in Profile Settings First!');
+  };
+
   return (
     <div className="text-left bg-yellow-primary h-section w-full px-sides m-">
       <div className="lg:text-5xl text-lg font-bold lg:w-7/12 lg:font-normal lg:pt-20 pt-20 uppercase">
@@ -20,10 +29,11 @@ export default function Description() {
       </div>
       <div>
         <button
+          onClick={() => GoToRoute()}
           type="button"
-          className="mt-6 lg:py-4 lg:px-6  py-2 px-6 lg:text-subtitle text-base rounded-md bg-blue-dark border hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+          className="mt-6 ml-4 py-2 px-6 lg:py-4 lg:px-6 lg:text-subtitle text-base rounded-md bg-blue-dark border hover:bg-white hover:text-blue-dark hover:border-blue-dark"
         >
-          LEARN MORE
+          BOOK AN APPOINTMENT
         </button>
       </div>
     </div>

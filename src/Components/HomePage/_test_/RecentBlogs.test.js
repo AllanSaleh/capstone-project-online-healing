@@ -1,10 +1,8 @@
 import * as React from 'react';
-import RecentBlogs from "../RecentBlogs";
-import * as renderer from "react-test-renderer";
+import * as renderer from 'react-test-renderer';
+import RecentBlogs from '../RecentBlogs';
 
 it('Recent Blog renders correctly', () => {
-  const tree = renderer
-    .create(<RecentBlogs/>)
-    .toJSON();
+  const tree = renderer.create(<RecentBlogs />).toJSON();
   expect(tree).toMatchSnapshot();
 });

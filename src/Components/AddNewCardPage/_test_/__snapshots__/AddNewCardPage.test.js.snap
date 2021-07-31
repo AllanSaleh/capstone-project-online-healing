@@ -55,6 +55,7 @@ exports[`Add New Card renders correctly 1`] = `
         </div>
         <input
           className="w-72 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
+          onBlur={[Function]}
           placeholder="XXXX XXXX XXXX XXXX"
         />
       </div>
@@ -69,6 +70,7 @@ exports[`Add New Card renders correctly 1`] = `
           </div>
           <input
             className="w-36 h-12 mr-1 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
+            onBlur={[Function]}
             placeholder="MM / YY"
           />
         </div>
@@ -80,6 +82,7 @@ exports[`Add New Card renders correctly 1`] = `
           </div>
           <input
             className="w-36 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
+            onBlur={[Function]}
             placeholder="XXX"
           />
         </div>
@@ -94,6 +97,7 @@ exports[`Add New Card renders correctly 1`] = `
         </div>
         <input
           className="w-72 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
+          onBlur={[Function]}
           placeholder="John Doe"
         />
       </div>
@@ -111,26 +115,8 @@ exports[`Add New Card renders correctly 1`] = `
         </div>
         <select
           className="w-72 h-12 p-2 border-gray-700 border-2 rounded-lg"
-        >
-          <option
-            className="py-1 text-paragraph text-gray-700"
-            value="United States"
-          >
-            United States
-          </option>
-          <option
-            className="py-1 text-paragraph text-gray-700"
-            value="Iraq"
-          >
-            Iraq
-          </option>
-          <option
-            className="py-1 text-paragraph text-gray-700"
-            value="United Kingdom"
-          >
-            United Kingdom
-          </option>
-        </select>
+          onChange={[Function]}
+        />
       </div>
       <div
         className="my-4"
@@ -142,6 +128,7 @@ exports[`Add New Card renders correctly 1`] = `
         </div>
         <input
           className="w-72 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
+          onBlur={[Function]}
           placeholder="XXXXX or XXXXX-XXXX"
         />
       </div>
@@ -155,26 +142,7 @@ exports[`Add New Card renders correctly 1`] = `
         </div>
         <select
           className="w-72 h-12 p-2 border-gray-700 border-2 rounded-lg"
-        >
-          <option
-            className="py-1 text-paragraph text-gray-700"
-            value="Sulaymaniyah"
-          >
-            Sulaymaniyah
-          </option>
-          <option
-            className="py-1 text-paragraph text-gray-700"
-            value="Erbil"
-          >
-            Erbil
-          </option>
-          <option
-            className="py-1 text-paragraph text-gray-700"
-            value="Dohuk"
-          >
-            Dohuk
-          </option>
-        </select>
+        />
       </div>
       <div
         className="my-4"
@@ -186,6 +154,7 @@ exports[`Add New Card renders correctly 1`] = `
         </div>
         <input
           className="w-72 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
+          onBlur={[Function]}
           placeholder="House, Street"
         />
       </div>
@@ -207,7 +176,8 @@ exports[`Add New Card renders correctly 1`] = `
   </div>
   <button
     className="self-center h-12 w-32 lg:w-48 text-lg lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
-    type="button"
+    onClick={[Function]}
+    type="submit"
   >
     ADD CARD
   </button>

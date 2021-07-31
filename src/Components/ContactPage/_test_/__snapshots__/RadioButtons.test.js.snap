@@ -29,12 +29,14 @@ exports[`Radio Buttons renders correctly 1`] = `
         className="flex flex-col justify-between"
       >
         <div
-          className="flex ml-4 my-2 "
+          className="flex ml-4 my-2"
         >
           <input
             className="my-2 mr-4"
             name="ContactRadio"
+            onChange={[Function]}
             type="radio"
+            value="ServiceQuestion"
           />
           <div
             className="text-paragraph sm:text-lg text-xm"
@@ -43,12 +45,14 @@ exports[`Radio Buttons renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="flex ml-4 my-2 "
+          className="flex ml-4 my-2"
         >
           <input
             className="my-2 mr-4"
             name="ContactRadio"
+            onChange={[Function]}
             type="radio"
+            value="ClientSupport"
           />
           <div
             className="text-paragraph sm:text-lg text-xm"
@@ -57,12 +61,14 @@ exports[`Radio Buttons renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="flex ml-4 my-2 "
+          className="flex ml-4 my-2"
         >
           <input
             className="my-2 mr-4"
             name="ContactRadio"
+            onChange={[Function]}
             type="radio"
+            value="CouncelorInterest"
           />
           <div
             className="text-paragraph sm:text-lg text-xm"
@@ -71,12 +77,14 @@ exports[`Radio Buttons renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="flex ml-4 my-2 "
+          className="flex ml-4 my-2"
         >
           <input
             className="my-2 mr-4"
             name="ContactRadio"
+            onChange={[Function]}
             type="radio"
+            value="CounselorSupport"
           />
           <div
             className="text-paragraph sm:text-lg text-xm"
@@ -85,12 +93,14 @@ exports[`Radio Buttons renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="flex ml-4 my-2 "
+          className="flex ml-4 my-2"
         >
           <input
             className="my-2 mr-4"
             name="ContactRadio"
+            onChange={[Function]}
             type="radio"
+            value="BusinessInquiry"
           />
           <div
             className="text-paragraph sm:text-lg text-xm"
@@ -99,12 +109,14 @@ exports[`Radio Buttons renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="flex ml-4 my-2 "
+          className="flex ml-4 my-2"
         >
           <input
             className="my-2 mr-4"
             name="ContactRadio"
+            onChange={[Function]}
             type="radio"
+            value="OrganizationInterest"
           />
           <div
             className="text-paragraph sm:text-lg text-xm"
@@ -113,12 +125,14 @@ exports[`Radio Buttons renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="flex ml-4 my-2 "
+          className="flex ml-4 my-2"
         >
           <input
             className="my-2 mr-4"
             name="ContactRadio"
+            onChange={[Function]}
             type="radio"
+            value="BillingQuestion"
           />
           <div
             className="text-paragraph sm:text-lg text-xm"

@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import SignupImage from './Images/SignupImage.svg';
 import Facebook from './Images/Facebook.svg';
@@ -7,6 +8,8 @@ import Or from './Images/or.svg';
 import firebase from '../../firebase';
 
 export default function SignUpPage() {
+  window.scrollTo(0, 0);
+
   const [users, setUsers] = useState([]);
   const usersRef = firebase.firestore().collection('users');
 
@@ -101,12 +104,14 @@ export default function SignUpPage() {
             </div>
           </div>
           <div className="lg:flex lg:flex-row lg:justify-evenly flex flex-col">
-            <button
-              type="button"
-              className="lg:w-40 w-auto h-12 text-subtitle rounded-lg border-2 text-blue-dark border-blue-dark hover:bg-blue-dark hover:text-black hover:border-transparent mt-4"
-            >
-              LOG IN
-            </button>
+            <Link to="/Login">
+              <button
+                type="button"
+                className="lg:w-40 w-auto h-12 text-subtitle rounded-lg border-2 text-blue-dark border-blue-dark hover:bg-blue-dark hover:text-black hover:border-transparent mt-4"
+              >
+                LOG IN
+              </button>
+            </Link>
             <button
               type="button"
               className="shadow-2xl lg:w-40 w-auto h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark mt-4"

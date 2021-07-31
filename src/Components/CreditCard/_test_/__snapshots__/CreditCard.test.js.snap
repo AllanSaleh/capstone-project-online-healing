@@ -24,11 +24,5 @@ exports[`Credit Card renders correctly 1`] = `
   <div
     className="cursor-pointer absolute top-24 left-4 lg:top-52 lg:left-12 text-white text-sm lg:text-paragraph"
   />
-  <button
-    className="absolute bottom-7 right-4 h-6 w-12 lg:bottom-9 lg:right-4 lg:h-12 lg:w-28 text-xs lg:text-subtitle text-white bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
-    type="button"
-  >
-    DELETE
-  </button>
 </div>
 `;

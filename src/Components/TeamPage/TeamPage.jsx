@@ -10,6 +10,7 @@ import SnoorImg from './Images/SnoorImg.svg';
 import AvrazImg from './Images/AvrazImg.svg';
 
 export default function TeamPage() {
+  window.scrollTo(0, 0);
   const Team = [
     {
       img: AllanImg,

@@ -7,39 +7,41 @@ import CreditCard from '../CreditCard/CreditCard';
 let count = 0;
 
 export default function SavedCardsPage() {
+  window.scrollTo(0, 0);
+  // Grab cards from firebase!
   const cards = [
     {
-      date: '04/2025',
+      date: '04/25',
       number: '1234 1234 1234 1234',
       name: 'John Doe',
       type: 'Master',
     },
     {
-      date: '04/2025',
+      date: '04/25',
       number: '1234 1234 1234 1234',
       name: 'John Doe',
       type: 'Visa',
     },
     {
-      date: '04/2025',
+      date: '04/25',
       number: '1234 1234 1234 1234',
       name: 'John Doe',
       type: 'Master',
     },
     {
-      date: '04/2025',
+      date: '04/25',
       number: '1234 1234 1234 1234',
       name: 'John Doe',
       type: 'Visa',
     },
     {
-      date: '04/2025',
+      date: '04/25',
       number: '1234 1234 1234 1234',
       name: 'John Doe',
       type: 'Master',
     },
     {
-      date: '04/2025',
+      date: '04/25',
       number: '1234 1234 1234 1234',
       name: 'John Doe',
       type: 'Master',

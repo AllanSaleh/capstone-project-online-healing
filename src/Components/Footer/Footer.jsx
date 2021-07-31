@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 
 import Send from './Images/Send.svg';
 import Twitter from './Images/Twitter.svg';
@@ -6,6 +7,18 @@ import Facebook from './Images/Facebook.svg';
 import Google from './Images/Google.svg';
 
 export default function Footer() {
+  const history = useHistory();
+
+  const [email, setEmail] = useState('');
+
+  const subscribe = () => {
+    if (email.match(/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+[.]+[a-zA-Z0-9]/))
+      history.push({
+        pathname: '/ThankYou',
+        state: 'You email has been added to the mailing list successfully!',
+      });
+    else alert('Please enter a valid E-Mail!');
+  };
   return (
     <div className="py-4 flex flex-col lg:flex-row justify-between px-sides items-center lg:h-footer bg-yellow-primary">
       <div className="flex flex-col justify-between items-center text-center lg:text-left lg:items-start h-40">
@@ -17,9 +30,15 @@ export default function Footer() {
         </div>
 
         <div className="flex border-gray-700 border-2 h-12 rounded-lg">
-          <input className="w-64 p-2 rounded-l-md" placeholder="Enter your E-Mail" type="email" />
+          <input
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-64 p-2 rounded-l-md"
+            placeholder="Enter your E-Mail"
+            type="email"
+          />
           <button
-            className="w-12 border-0 border-l-2 border-gray-700 p-2 bg-blue-dark rounded-r-md"
+            onClick={() => subscribe()}
+            className="border-0 border-l-2 border-gray-600 p-2 bg-blue-dark rounded-r-md"
             type="button"
           >
             <img src={Send} alt="Send" />
@@ -29,44 +48,44 @@ export default function Footer() {
 
       <div className="flex flex-col justify-evenly items-center h-40">
         <div className="w-72 lg:w-96 flex justify-between items-center text-gray-700 text-lg lg:text-paragraph">
-          <a
+          <Link
+            to="/"
             onClick={() => window.scrollTo(0, 0)}
-            href="#"
             className="hover:underline hover:text-blue-dark"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
+            to="/Blog"
             onClick={() => window.scrollTo(0, 0)}
-            href="#"
             className="hover:underline hover:text-blue-dark"
           >
             Blogs
-          </a>
-          <a
+          </Link>
+          <Link
+            to="/About"
             onClick={() => window.scrollTo(0, 0)}
-            href="#"
             className="hover:underline hover:text-blue-dark"
           >
             About
-          </a>
-          <a
+          </Link>
+          <Link
+            to="/Contact"
             onClick={() => window.scrollTo(0, 0)}
-            href="#"
             className="hover:underline hover:text-blue-dark"
           >
             Contact Us
-          </a>
+          </Link>
         </div>
 
         <div className="flex justify-center items-center">
-          <a href="#" target="_blank" className="mx-4">
+          <a href="https://twitter.com/" target="_blank" className="mx-4">
             <img src={Twitter} alt="Twitter" />
           </a>
-          <a href="#" target="_blank" className="mx-4">
+          <a href="https://www.facebook.com/" target="_blank" className="mx-4">
             <img src={Facebook} alt="Facebook" />
           </a>
-          <a href="#" target="_blank" className="mx-4">
+          <a href="https://www.google.com/" target="_blank" className="mx-4">
             <img src={Google} alt="Google" />
           </a>
         </div>

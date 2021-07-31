@@ -17,6 +17,7 @@ exports[`Form renders correctly 1`] = `
       </label>
       <input
         className="p-2 w-3/4 text-paragraph text-gray-700 rounded-lg border-2 border-gray-400 shadow-lg"
+        onBlur={[Function]}
         placeholder="Enter your full name"
       />
     </div>
@@ -30,6 +31,7 @@ exports[`Form renders correctly 1`] = `
       </label>
       <input
         className="p-2 w-3/4 text-paragraph text-gray-700 rounded-lg border-2 border-gray-400 shadow-lg"
+        onBlur={[Function]}
         placeholder="Enter your email address"
       />
     </div>
@@ -43,12 +45,14 @@ exports[`Form renders correctly 1`] = `
       </label>
       <textarea
         className="p-2 w-3/4 h-52 text-paragraph text-gray-700 rounded-lg border-2 border-gray-400 shadow-lg"
+        onBlur={[Function]}
         placeholder="Enter your details here..."
       />
     </div>
     <button
       className="w-32 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
-      type="submit"
+      onClick={[Function]}
+      type="button"
     >
       Submit
     </button>
