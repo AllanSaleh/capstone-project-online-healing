@@ -1,11 +1,18 @@
 {
-  "word_key": "Word",
-  "complex": {
-    "page1": {
-      "title": "Title"
-    },
-    "page2": {
-      "title": "Title"
-    }
-  }
+  "Home": "Home",
+  "Blogs": "Blogs",
+  "About": "About",
+  "Conact": "Contact Us",
+  "Login": "Login",
+  "Story": "Our Story",
+  "Team": "Our Team",
+  "Careers": "Open Careers",
+  "Settings": "Settings",
+  "Logout": "Log Out!",
+	"Footer": {
+		"Subscribe": "Subscribe",
+		"Spam": "We'll never try to spam you or share your e-mail",
+    "Enter": "Enter your e-mail",
+    "Language": "Language"
+	}
 }
