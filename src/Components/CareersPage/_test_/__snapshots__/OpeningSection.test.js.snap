@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[` Opening renders correctly 1`] = `
 <div
   className="h-section flex flex-col justify-around px-sides py-8"
   id="Openings"

@@ -1,10 +1,8 @@
 import * as React from 'react';
-import Card from "../Card";
-import * as renderer from "react-test-renderer";
+import * as renderer from 'react-test-renderer';
+import Card from '../Card';
 
 it(' Card renders correctly', () => {
-  const tree = renderer
-    .create(<Card/>)
-    .toJSON();
+  const tree = renderer.create(<Card />).toJSON();
   expect(tree).toMatchSnapshot();
 });

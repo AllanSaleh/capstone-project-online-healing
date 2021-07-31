@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Hiring renders correctly 1`] = `
 <div
   className="bg-yellow-primary px-sides h-2/5 flex flex-col justify-evenly py-4"
 >

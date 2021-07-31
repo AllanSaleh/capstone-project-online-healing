@@ -1,10 +1,8 @@
 import * as React from 'react';
-import RequirementsPage from "../RequirementsPage";
-import * as renderer from "react-test-renderer";
+import * as renderer from 'react-test-renderer';
+import RequirementsPage from '../RequirementsPage';
 
 it('Requirement Page renders correctly', () => {
-  const tree = renderer
-    .create(<RequirementsPage/>)
-    .toJSON();
+  const tree = renderer.create(<RequirementsPage />).toJSON();
   expect(tree).toMatchSnapshot();
 });

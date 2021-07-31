@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Profile Input Field renders correctly 1`] = `
 <div
   className="flex items-center my-6"
 >

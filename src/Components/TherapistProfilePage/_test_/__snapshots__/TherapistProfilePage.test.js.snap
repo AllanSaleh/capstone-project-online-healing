@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Therapist Profile Page renders correctly 1`] = `
 <div
   className="flex flex-col lg:flex-row px-sides pt-navbar lg:h-firstsection"
 >

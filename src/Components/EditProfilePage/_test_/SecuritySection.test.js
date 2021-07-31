@@ -1,10 +1,8 @@
 import * as React from 'react';
-import SecuritySection from "../SecuritySection";
-import * as renderer from "react-test-renderer";
+import * as renderer from 'react-test-renderer';
+import SecuritySection from '../SecuritySection';
 
 it('Security Section renders correctly', () => {
-  const tree = renderer
-    .create(<SecuritySection/>)
-    .toJSON();
+  const tree = renderer.create(<SecuritySection />).toJSON();
   expect(tree).toMatchSnapshot();
 });

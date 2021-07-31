@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Landing renders correctly 1`] = `
 <div
-  className="h-firstsection  lg:-mt-0 mt-32"
+  className="h-firstsection mt-navbar"
 >
   <div
-    className="absolute lg:top-2 top-16 left-0 z-0"
+    className="absolute top-0 left-0 z-0"
   >
     <img
       alt="Background"
-      className="h-auto w-auto"
+      className=""
       src="Background.svg"
     />
   </div>
@@ -32,6 +32,7 @@ exports[`renders correctly 1`] = `
       <div>
         <button
           className="mt-6 ml-4 py-2 px-6 lg:py-4 lg:px-6 lg:text-subtitle text-base rounded-md bg-blue-dark border hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+          onClick={[Function]}
           type="button"
         >
           BOOK AN APPOINTMENT

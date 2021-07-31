@@ -1,46 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[` About Page renders correctly 1`] = `
 <div
-  className="h-firstsection"
+  className="lg:h-firstsection pt-navbar"
 >
   <div
-    className="h-1/2 px-sides pt-navbar md:text-sm lg:text-lg md:h-1/2 md:mb-10 sm:text-sm	mb-20"
+    className="h-1/2 px-sides flex flex-col justify-evenly"
   >
-    <div
-      className="sm:text-title mt-8 text-sm 	"
-    >
-      HEALING
+    <div>
+      <div
+        className="sm:text-title text-3xl"
+      >
+        HEALING
+      </div>
+      <div
+        className="sm:text-subtitle mt-4 text-gray-700 mb-8 text-xl"
+      >
+        A Cool One Liner!
+      </div>
     </div>
     <div
-      className="sm:text-subtitle  text-gray-700 mb-8  text-sm mt-5	"
+      className="sm:text-paragraph text-lg text-justify"
     >
-      A Cool One Liner!
-    </div>
-    <div
-      className="sm:text-paragraph  text-sm leading-snug 	"
-    >
-      At Healing, wedd believe there is a better way to do things. A more valuable way where customers are earned rather than bought. We're obsessively passionate about it, and our mission is to help people achieve it. We focus on search engine optimization. It's one of the least understood and least transparent aspects of great marketing, and we see that as an opportunity. We're excited to simplify SEO for everyone through our software, education, and community.
+      At Healing, wedd believe there is a better way to do things. A more valuable way where customers are earned rather than bought. We're obsessively passionate about it, and our mission is to help people achieve it. We focus on search engine optimization. It's one of least understood and least transparent aspects of great marketing, and we see that as an opportunity. We're excited to simplify SEO for everyone through our software, education, and community.
     </div>
   </div>
   <div
-    className="sm:h-1/2 h-3/4 flex justify-around  items-center bg-blue-light px-sides relative py-56 sm:flex-row flex-col  "
+    className="py-8 lg:py-0 px-sides h-1/2 flex justify-evenly items-center bg-blue-light sm:flex-row flex-col"
   >
     <img
       alt="Payam"
-      className="w-full sm:w-1/3"
+      className="lg:w-1/4 mb-4"
       src="Payam.svg"
     />
     <div
-      className="w-full sm:1/2 sm:mb-10 sm:mt-10	 md:bg-blue-light sm:ml-10  "
+      className="lg:w-3/5 md:bg-blue-light"
     >
       <div
-        className=" sm:text-title text-sm 	my-8	"
+        className="sm:text-title text-3xl mb-8"
       >
         Our Founding
       </div>
       <div
-        className="  sm:text-subtitle text-sm leading-snug	"
+        className="sm:text-subtitle text-lg text-justify"
       >
         Healing was founded by Payam Abubakr in 2021. It was called Healing Online, and started as a blog and an online community where some of the world's therapists shared their research and ideas. We launched the Beginner's Guide to Therapy and our first study, and that hub of industry expertise transformed into a small consulting firm and led us to create the Online Therapist of today!
       </div>

@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Booking3 renders correctly 1`] = `
 <div
-  className="px-sides pt-navbar"
+  className="h-firstsection px-sides pt-navbar"
 >
   <h1
-    className="text-3xl lg:text-title uppercase mb-4"
+    className="text-3xl lg:text-title uppercase my-8"
   >
     let’s match you with the right therapist
   </h1>
@@ -41,12 +41,14 @@ exports[`renders correctly 1`] = `
     >
       <button
         className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition duration-300"
+        onClick={[Function]}
         type="button"
       >
         back
       </button>
       <button
-        className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition duration-300"
+        className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition-all duration-300"
+        onClick={[Function]}
         type="button"
       >
         next

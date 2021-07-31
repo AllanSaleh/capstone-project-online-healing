@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Edit Profile Button renders correctly 1`] = `
 <button
   className="bg-blue-dark undefined text-black undefined rounded-lg uppercase px-12 py-3 text-subtitle transition duration-300 hover:bg-opacity-100 hover:shadow-lg"
   type="button"
