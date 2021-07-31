@@ -10,7 +10,7 @@ export default function ThankYouPage() {
         <div>
           <div className="text-4xl lg:text-title">THANK YOU!</div>
           <div className="text-xl mt-4 lg:text-subtitle text-gray-700">
-            {location.state.split('\n').map((str) => (
+            {location.state.map((str) => (
               <p>{str}</p>
             ))}
           </div>

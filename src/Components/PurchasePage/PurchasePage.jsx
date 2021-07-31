@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
+import firebase from '../../firebase';
 
 import Next from './Images/Next.svg';
 import Prev from './Images/Prev.svg';
@@ -10,52 +11,51 @@ export default function PurchasePage() {
   const history = useHistory();
 
   let count = 0;
-  const cards = [
+
+  const [tickets, setTickets] = useState(0);
+  const [cards, setCards] = useState([
     {
-      date: '04/25',
-      number: '1234 1234 1234 1234',
-      name: 'John Doe',
+      date: 'XX/XX',
+      number: 'XXXX XXXX XXXX XXXX',
+      name: 'Loading...',
       type: 'Master',
     },
-    {
-      date: '04/25',
-      number: '1234 1234 1234 1234',
-      name: 'John Doe',
-      type: 'Visa',
-    },
-    {
-      date: '04/25',
-      number: '1234 1234 1234 1234',
-      name: 'John Doe',
-      type: 'Master',
-    },
-    {
-      date: '04/25',
-      number: '1234 1234 1234 1234',
-      name: 'John Doe',
-      type: 'Visa',
-    },
-    {
-      date: '04/25',
-      number: '1234 1234 1234 1234',
-      name: 'John Doe',
-      type: 'Master',
-    },
-    {
-      date: '04/25',
-      number: '1234 1234 1234 1234',
-      name: 'John Doe',
-      type: 'Visa',
-    },
-  ];
+  ]);
+
+  useEffect(() => {
+    firebase
+      .firestore()
+      .collection('users')
+      .doc('cUld5Z0ytjTuTrbeu95n')
+      .get()
+      .then((doc) => {
+        setCards(doc.data().cards);
+      });
+    firebase
+      .firestore()
+      .collection('users')
+      .doc('cUld5Z0ytjTuTrbeu95n')
+      .get()
+      .then((doc) => {
+        setTickets(parseInt(doc.data().tickets));
+      });
+  }, []);
 
   const [selected, setSelected] = useState('');
 
-  const GoToThankYou = () => {
-    // Firebase code to add tickets to the user!
+  const GoToThankYou = (ticketsBought) => {
+    firebase
+      .firestore()
+      .collection('users')
+      .doc('cUld5Z0ytjTuTrbeu95n')
+      .update({ tickets: tickets + ticketsBought });
+
     history.push({
       pathname: '/ThankYou',
-      state: 'You purchase has been submitted, you should receive an email with the receipt soon.',
+      state: [
+        `Your purchase has been submitted, You just bought ${ticketsBought} Tickets with card number ${selected}`,
+        'you should receive an email with the receipt soon.',
+      ],
     });
   };
 
@@ -88,18 +88,18 @@ export default function PurchasePage() {
             id="Menu"
             className="h-44 lg:h-96 box-border whitespace-nowrap overflow-x-auto overflow-y-hidden"
           >
-            {cards.map((card, i) => {
+            {cards.map((card) => {
               count += 1;
               if (count === 4) count = 1;
 
               return (
                 <CreditCard
                   deletable={false}
-                  select={parseInt(selected) === i}
+                  select={selected === card.number}
                   setID={(ID) => {
                     if (ID !== selected) setSelected(ID);
                   }}
-                  id={i}
+                  id={card.number}
                   background={count}
                   logo={card.type}
                   date={card.date}
@@ -135,7 +135,7 @@ export default function PurchasePage() {
         <button
           onClick={() => {
             if (selected === '') alert('Please choose a Credit Card First!');
-            else GoToThankYou();
+            else GoToThankYou(parseInt(location.state.ticket));
           }}
           type="button"
           className="mt-8 w-52 lg:w-72 h-12 text-lg lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
