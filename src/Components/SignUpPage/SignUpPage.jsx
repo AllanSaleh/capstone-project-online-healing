@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import SignupImage from './Images/SignupImage.svg';
 import Facebook from './Images/Facebook.svg';
 import Google from './Images/Google.svg';
 import Or from './Images/or.svg';
-import { Link } from 'react-router-dom';
 
 export default function SignUpPage() {
+  window.scrollTo(0, 0);
   return (
     <div className=" flex flex-col lg:flex lg:flex-row items-center justify-evenly max-h-full lg:-mt-20 mt-20 lg:h-firstsection">
       <div className="lg:w-auto w-48">
