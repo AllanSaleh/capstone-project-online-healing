@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Communication Section renders correctly 1`] = `
 <div
   className=" md:h-section flex flex-col justify-evenly px-sides"
 >

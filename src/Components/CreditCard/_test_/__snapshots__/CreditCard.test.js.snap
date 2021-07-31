@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Credit Card renders correctly 1`] = `
 <div
   className="relative inline-block w-full lg:w-1/3 h-40 lg:h-80 box-border mx-2 lg:mx-12"
   onClick={[Function]}

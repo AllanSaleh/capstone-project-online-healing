@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Recent Blog renders correctly 1`] = `
 <div
   className="flex flex-col justify-evenly h-64 lg:h-section px-sides bg-blue-light"
 >

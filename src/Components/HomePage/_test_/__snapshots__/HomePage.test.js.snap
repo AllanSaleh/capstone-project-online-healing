@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Home Page renders correctly 1`] = `
 Array [
   <div
     className="h-firstsection  lg:-mt-0 mt-32"

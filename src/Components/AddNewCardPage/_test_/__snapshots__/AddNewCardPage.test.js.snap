@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Add New Card renders correctly 1`] = `
 <div
   className="my-4 flex flex-col justify-evenly px-sides pt-navbar lg:h-firstsection"
 >

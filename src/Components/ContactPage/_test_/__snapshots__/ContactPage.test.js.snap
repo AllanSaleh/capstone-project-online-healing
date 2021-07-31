@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[` Contact Page renders correctly 1`] = `
 Array [
   <div
     className="h-firstsection pt-navbar px-sides flex flex-col justify-evenly w-full"

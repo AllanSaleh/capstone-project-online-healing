@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Sign Up Page renders correctly 1`] = `
 <div
   className=" flex flex-col lg:flex lg:flex-row items-center justify-evenly max-h-full lg:-mt-20 mt-20 lg:h-firstsection"
 >

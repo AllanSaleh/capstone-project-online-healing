@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Blog Page renders correctly 1`] = `
 Array [
   <div
     className="flex items-center lg:h-firstsection px-sides pt-24 lg:pt-navbar"

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Team Card renders correctly 1`] = `
 <div
   className="flex flex-col w-40 mt-2 lg:w-52 bg-blue-light rounded-3xl justify-between mx-2"
 >

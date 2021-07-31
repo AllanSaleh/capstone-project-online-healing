@@ -1,10 +1,8 @@
 import * as React from 'react';
-import TeamPage from "../TeamPage";
-import * as renderer from "react-test-renderer";
+import * as renderer from 'react-test-renderer';
+import TeamPage from '../TeamPage';
 
 it('Team Page renders correctly', () => {
-  const tree = renderer
-    .create(<TeamPage/>)
-    .toJSON();
+  const tree = renderer.create(<TeamPage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
