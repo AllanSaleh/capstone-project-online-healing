@@ -61,10 +61,10 @@ export default function SignUpPage() {
     // regular expression for validation
     const emailReg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
     const nameReg = /^[a-zA-Z]+$/;
-    const passwordReg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,}$/;
-    if (nameReg.test(signupInfo.first_name)) setValid(true);
+    const passwordReg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,}$/;
+    if (nameReg.test(fullName.first_name)) setValid(true);
     else setValid(false);
-    if (nameReg.test(signupInfo.last_name)) setValid(true);
+    if (nameReg.test(fullName.last_name)) setValid(true);
     else setValid(false);
     if (emailReg.test(signupInfo.email)) setValid(true);
     else setValid(false);
