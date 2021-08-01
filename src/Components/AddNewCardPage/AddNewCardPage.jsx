@@ -5,7 +5,7 @@ import firebase from '../../firebase';
 import Card1 from './Images/Card1.svg';
 import Card2 from './Images/Card2.svg';
 
-export default function AddNewCardPage() {
+export default function AddNewCardPage({ loginStatus }) {
   window.scrollTo(0, 0);
   const history = useHistory();
 
@@ -85,7 +85,7 @@ export default function AddNewCardPage() {
       firebase
         .firestore()
         .collection('users')
-        .doc('cUld5Z0ytjTuTrbeu95n')
+        .doc(loginStatus.id)
         .update({
           cards: firebase.firestore.FieldValue.arrayUnion({
             number: inputs.number,
