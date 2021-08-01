@@ -12,9 +12,13 @@ export default function SignUpPage() {
   window.scrollTo(0, 0);
   const history = useHistory();
 
-  // const [users, setUsers] = useState([]);
+  // states to hold data for signup process
   const [valid, setValid] = useState(false);
   const usersRef = firebase.firestore().collection('users');
+  const [birthDateStatus, setBirthDateStatus] = useState(false);
+  const [birthDay, setBirthDay] = useState('0');
+  const [birthMonth, setBirthMonth] = useState('0');
+  const [birthYear, setBirthYear] = useState('0');
 
   const signupInfo = {
     user_id: '',
@@ -30,19 +34,53 @@ export default function SignUpPage() {
     confirm_password: '',
   };
 
+  // handles the entered info by user from input fields
   const handleChange = (event) => {
     signupInfo[event.target.id] = event.target.value;
   };
 
+  // handles only confirm fields info entered by user
   const handleChangeConfirmation = (event) => {
     signupConfirmation[event.target.id] = event.target.value;
+  };
+
+  // validate and handle the birthDate of the user
+  const validateBirthDate = () => {
+    const birthDayReg = /[0-3]{2}/;
+    const birthMonthReg = /[0-9]{2}/;
+    const birthYearReg = /[0-9]{4}/;
+    if (birthDayReg.test(birthDay) && parseInt(birthDay) <= 31) setValid(true);
+    else {
+      setValid(false);
+      alert('please enter a valid birth DAY');
+      return;
+    }
+
+    if (birthMonthReg.test(birthMonth) && parseInt(birthMonth) <= 12)
+      setValid(true);
+    else {
+      setValid(false);
+      alert('please enter a valid birth MONTH');
+      return;
+    }
+
+    if (birthYearReg.test(birthYear)) setValid(true);
+    else {
+      setValid(false);
+      alert('please enter a valid birth YEAR');
+      return;
+    }
+
+    return valid;
   };
 
   const validInfo = () => {
     // regular expression for validation
     const emailReg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const nameReg = /^[a-zA-Z]+$/;
-    const passwordReg = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
+    const passwordReg = new RegExp(
+      '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})'
+    );
     if (nameReg.test(signupInfo.first_name)) setValid(true);
     else setValid(false);
     if (nameReg.test(signupInfo.last_name)) setValid(true);
@@ -53,7 +91,10 @@ export default function SignUpPage() {
     else setValid(false);
     if (passwordReg.test(signupInfo.password)) setValid(true);
     else setValid(false);
-    if (signupConfirmation.confirm_password === signupInfo.password) setValid(true);
+    if (signupConfirmation.confirm_password === signupInfo.password)
+      setValid(true);
+    else setValid(false);
+    if (validateBirthDate()) setValid(true);
     else setValid(false);
     return valid;
   };
@@ -74,7 +115,9 @@ export default function SignUpPage() {
         <img src={SignupImage} alt="SignupImage" />
       </div>
       <div className="lg:w-auto w-72">
-        <div className="lg:text-5xl text-3xl lg:text-left text-center lg:pb-16 ">SIGN UP NOW</div>
+        <div className="lg:text-5xl text-3xl lg:text-left text-center lg:pb-16 ">
+          SIGN UP NOW
+        </div>
 
         <div className="lg:h-3/5  h-auto flex flex-col justify-evenly shadow-xl rounded-lg p-4 ">
           <div className="lg:w-full flex flex-col lg:flex lg:flex-row lg:justify-between">
@@ -136,16 +179,25 @@ export default function SignUpPage() {
                 id="DD"
                 placeholder="DD"
                 className="text-center rounded-lg ring-1 h-12 lg:w-16 w-14 p-2 mr-4 mt-4 appearance-none"
+                onChange={(event) => {
+                  setBirthDay(event.target.value);
+                }}
               />
               <input
                 id="MM"
                 placeholder="MM"
                 className="text-center rounded-lg ring-1 h-12 lg:w-24 w-16 p-2 mr-4 mt-4 appearance-none"
+                onChange={(event) => {
+                  setBirthMonth(event.target.value);
+                }}
               />
               <input
                 id="YYYY"
                 placeholder="YYYY"
                 className="text-center rounded-lg ring-1 h-12 lg:w-28 w-16 p-2 mt-4 appearance-none"
+                onChange={(event) => {
+                  setBirthYear(event.target.value);
+                }}
               />
             </div>
           </div>
@@ -153,14 +205,14 @@ export default function SignUpPage() {
             <Link to="/Login">
               <button
                 type="button"
-                className="lg:w-40 w-auto h-12 text-subtitle rounded-lg border-2 text-blue-dark border-blue-dark hover:bg-blue-dark hover:text-black hover:border-transparent mt-4 transition-all duration-300"
+                className="lg:w-40 w-auto h-12 text-subtitle rounded-lg border text-blue-dark border-blue-dark hover:bg-blue-dark hover:text-black hover:border-transparent mt-4 transition-all duration-300"
               >
                 LOG IN
               </button>
             </Link>
             <button
               type="button"
-              className="shadow-xl lg:w-40 w-auto h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark mt-4
+              className="shadow-xl lg:w-40 w-auto h-12 text-subtitle bg-blue-dark rounded-lg border border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark mt-4
               transition-all duration-300"
               onClick={handleSignup}
             >
