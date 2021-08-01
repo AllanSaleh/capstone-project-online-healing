@@ -42,9 +42,7 @@ export default function SignUpPage() {
     // regular expression for validation
     const emailReg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const nameReg = /^[a-zA-Z]+$/;
-    const passwordReg = new RegExp(
-      '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})'
-    );
+    const passwordReg = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
     if (nameReg.test(signupInfo.first_name)) setValid(true);
     else setValid(false);
     if (nameReg.test(signupInfo.last_name)) setValid(true);
@@ -55,8 +53,7 @@ export default function SignUpPage() {
     else setValid(false);
     if (passwordReg.test(signupInfo.password)) setValid(true);
     else setValid(false);
-    if (signupConfirmation.confirm_password === signupInfo.password)
-      setValid(true);
+    if (signupConfirmation.confirm_password === signupInfo.password) setValid(true);
     else setValid(false);
     return valid;
   };
@@ -77,9 +74,7 @@ export default function SignUpPage() {
         <img src={SignupImage} alt="SignupImage" />
       </div>
       <div className="lg:w-auto w-72">
-        <div className="lg:text-5xl text-3xl lg:text-left text-center lg:pb-16 ">
-          SIGN UP NOW
-        </div>
+        <div className="lg:text-5xl text-3xl lg:text-left text-center lg:pb-16 ">SIGN UP NOW</div>
 
         <div className="lg:h-3/5  h-auto flex flex-col justify-evenly shadow-xl rounded-lg p-4 ">
           <div className="lg:w-full flex flex-col lg:flex lg:flex-row lg:justify-between">
@@ -138,19 +133,16 @@ export default function SignUpPage() {
             <p>Birth Date:</p>
             <div>
               <input
-                type="number"
                 id="DD"
                 placeholder="DD"
                 className="text-center rounded-lg ring-1 h-12 lg:w-16 w-14 p-2 mr-4 mt-4 appearance-none"
               />
               <input
-                type="number"
                 id="MM"
                 placeholder="MM"
                 className="text-center rounded-lg ring-1 h-12 lg:w-24 w-16 p-2 mr-4 mt-4 appearance-none"
               />
               <input
-                type="number"
                 id="YYYY"
                 placeholder="YYYY"
                 className="text-center rounded-lg ring-1 h-12 lg:w-28 w-16 p-2 mt-4 appearance-none"

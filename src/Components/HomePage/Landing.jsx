@@ -17,11 +17,11 @@ export default function Landing({ user }) {
     <div className="h-firstsection mt-navbar">
       {/* background pattern */}
       <div className="absolute top-0 left-0 z-0">
-        <img src={Background} alt="Background" className="" />
+        <img src={Background} alt="Background" />
       </div>
 
       {/* content */}
-      <div className="flex lg:flex-row flex-col lg:justify-between lg:m-56 relative z-40">
+      <div className="flex lg:flex-row flex-col lg:justify-between lg:m-56 relative z-0">
         <div className="pt-20 pb-28 flex flex-col lg:transform lg:translate-y-0 transform translate-y-56">
           <div className="lg:text-4xl text-base pl-4">WE ARE HERE TO</div>
           <div className="lg:text-9xl  text-6xl pl-4">HELP</div>

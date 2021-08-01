@@ -38,20 +38,24 @@ function App() {
   }, [i18n, i18n.language]);
 
   // Grab this from firebase!
-  const [userLogin, setLogin] = useState({ login: false, user_id: '' });
+  const [loginStatus, setLoginStatus] = useState({
+    login: false,
+    complete: false,
+    user_id: '',
+  });
 
   return (
     <Router>
-      <NavBar userLogin={userLogin} />
+      <NavBar loginStatus={loginStatus} />
       <Switch>
         <Route exact path="/">
-          <HomePage />
+          <HomePage loginStatus={loginStatus} />
         </Route>
         <Route path="/About">
           <AboutPage />
         </Route>
         <Route path="/AddNewCard">
-          <AddNewCardPage />
+          <AddNewCardPage loginStatus={loginStatus} />
         </Route>
         <Route path="/Blog">
           <BlogPage />
@@ -90,7 +94,7 @@ function App() {
           <EditProfilePage />
         </Route>
         <Route path="/Login">
-          <LoginPage setLogin={(data) => setLogin(data)} />
+          <LoginPage setLoginStatus={(data) => setLoginStatus(data)} />
         </Route>
         <Route path="/Purchase">
           <PurchasePage />
