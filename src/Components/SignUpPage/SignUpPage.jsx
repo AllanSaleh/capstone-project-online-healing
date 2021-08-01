@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
 import SignupImage from './Images/SignupImage.svg';
@@ -10,6 +10,7 @@ import firebase from '../../firebase';
 
 export default function SignUpPage() {
   window.scrollTo(0, 0);
+  const history = useHistory();
 
   // const [users, setUsers] = useState([]);
   const [valid, setValid] = useState(false);
@@ -69,13 +70,6 @@ export default function SignUpPage() {
       setValid(true);
     else setValid(false);
     return valid;
-  };
-  const handleSignup = () => {
-    if (validInfo()) {
-      signupInfo.user_id = uuidv4();
-      usersRef.doc(signupInfo.user_id).set(signupInfo);
-      alert('sign up completed');
-    } else alert('Please provide valid information and try again');
   };
 
   // useEffect(() => {
@@ -150,22 +144,22 @@ export default function SignUpPage() {
             <p>Birth Date:</p>
             <div>
               <input
-                type="text"
+                type="number"
                 id="DD"
                 placeholder="DD"
-                className="text-center rounded-lg ring-1 h-12 lg:w-16 w-14 p-2 mr-4 mt-4"
+                className="text-center rounded-lg ring-1 h-12 lg:w-16 w-14 p-2 mr-4 mt-4 appearance-none"
               />
               <input
-                type="text"
+                type="number"
                 id="MM"
                 placeholder="MM"
-                className="text-center rounded-lg ring-1 h-12 lg:w-24 w-16 p-2 mr-4 mt-4"
+                className="text-center rounded-lg ring-1 h-12 lg:w-24 w-16 p-2 mr-4 mt-4 appearance-none"
               />
               <input
-                type="text"
+                type="number"
                 id="YYYY"
                 placeholder="YYYY"
-                className="text-center rounded-lg ring-1 h-12 lg:w-28 w-16 p-2 mt-4"
+                className="text-center rounded-lg ring-1 h-12 lg:w-28 w-16 p-2 mt-4 appearance-none"
               />
             </div>
           </div>
@@ -182,7 +176,7 @@ export default function SignUpPage() {
               type="button"
               className="shadow-xl lg:w-40 w-auto h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark mt-4
               transition-all duration-300"
-              onClick={handleSignup}
+              // onClick={handleSignup}
             >
               SIGN UP
             </button>
