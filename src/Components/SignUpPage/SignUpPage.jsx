@@ -46,17 +46,18 @@ export default function SignUpPage() {
 
   // validate and handle the birthDate of the user
   const validateBirthDate = () => {
-    const birthDayReg = /[0-3]{2}/;
-    const birthMonthReg = /[0-9]{2}/;
+    const birthDayReg = /[0-9]/;
+    const birthMonthReg = /[0-9]/;
     const birthYearReg = /[0-9]{4}/;
-    if (birthDayReg.test(birthDay) && parseInt(birthDay) <= 31) setValid(true);
+    if (birthDayReg.test(birthDay) && parseInt(birthDay, 10) <= 31)
+      setValid(true);
     else {
       setValid(false);
       alert('please enter a valid birth DAY');
       return;
     }
 
-    if (birthMonthReg.test(birthMonth) && parseInt(birthMonth) <= 12)
+    if (birthMonthReg.test(birthMonth) && parseInt(birthMonth, 10) <= 12)
       setValid(true);
     else {
       setValid(false);
@@ -74,6 +75,7 @@ export default function SignUpPage() {
     return valid;
   };
 
+  // validate signupInfo for registration
   const validInfo = () => {
     // regular expression for validation
     const emailReg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -97,8 +99,9 @@ export default function SignUpPage() {
     if (validateBirthDate()) setValid(true);
     else setValid(false);
     return valid;
-  };
+  }; // end of function validateInfo()
 
+  // handle onClick() for Sign Up button
   const handleSignup = () => {
     if (validInfo()) {
       signupInfo.user_id = uuidv4();
@@ -106,7 +109,7 @@ export default function SignUpPage() {
       alert('sign up completed');
       history.push({ pathname: '/Login' });
     } else alert('Please provide valid information and try again');
-  };
+  }; // end of function handleSignup()
 
   // return the component
   return (
