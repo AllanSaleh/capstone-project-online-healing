@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -29,17 +29,6 @@ export default function SignUpPage() {
     confirm_email: '',
     confirm_password: '',
   };
-
-  // gets all users from firebase
-  // const getUsers = () => {
-  //   usersRef.onSnapshot((querySnapshot) => {
-  //     const items = [];
-  //     querySnapshot.forEach((doc) => {
-  //       items.push(doc.data());
-  //     });
-  //     setUsers(items);
-  //   });
-  // };
 
   const handleChange = (event) => {
     signupInfo[event.target.id] = event.target.value;
@@ -80,10 +69,6 @@ export default function SignUpPage() {
       history.push({ pathname: '/Login' });
     } else alert('Please provide valid information and try again');
   };
-
-  // useEffect(() => {
-  //   getUsers();
-  // }, []);
 
   // return the component
   return (
