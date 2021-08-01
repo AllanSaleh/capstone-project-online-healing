@@ -6,7 +6,7 @@ import Next from './Images/Next.svg';
 import Prev from './Images/Prev.svg';
 import CreditCard from '../CreditCard/CreditCard';
 
-export default function PurchasePage() {
+export default function PurchasePage({ loginStatus }) {
   const location = useLocation();
   const history = useHistory();
 
@@ -26,7 +26,7 @@ export default function PurchasePage() {
     firebase
       .firestore()
       .collection('users')
-      .doc('cUld5Z0ytjTuTrbeu95n')
+      .doc(loginStatus.user_id)
       .get()
       .then((doc) => {
         setCards(doc.data().cards);
@@ -34,7 +34,7 @@ export default function PurchasePage() {
     firebase
       .firestore()
       .collection('users')
-      .doc('cUld5Z0ytjTuTrbeu95n')
+      .doc(loginStatus.user_id)
       .get()
       .then((doc) => {
         setTickets(parseInt(doc.data().tickets));
@@ -96,7 +96,9 @@ export default function PurchasePage() {
                 <CreditCard
                   deletable={false}
                   select={selected === card.number}
-                  
+                  setID={(ID) => {
+                    if (ID !== selected) setSelected(ID);
+                  }}
                   id={card.number}
                   background={count}
                   logo={card.type}
@@ -127,7 +129,7 @@ export default function PurchasePage() {
       <div className="text-center self-center">
         <div className="text-xl lg:text-subtitle self-center">
           Click confirm to use the selected card to purchase {location.state.ticket} tickets for{' '}
-          {location.state.price}$
+          {location.state.price}
         </div>
 
         <button

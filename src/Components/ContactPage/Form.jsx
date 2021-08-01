@@ -37,12 +37,14 @@ export default function Form({ selectedChoice }) {
 
     let AllVerified = true;
     for (let i = 0; i < verify.length; i += 1) if (!verify[i]) AllVerified = false;
-    if (AllVerified)
+    if (AllVerified) {
+      // Firebase contact submit code
       history.push({
         pathname: '/ThankYou',
         state:
           'Your request has been sent, a member of the support team will get in contact with you through the email you provided as soon as possible.',
       });
+    }
   };
 
   return (

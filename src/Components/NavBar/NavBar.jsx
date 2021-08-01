@@ -151,9 +151,9 @@ export default function NavBar({ loginStatus }) {
             <Link to="/Login">
               <button
                 type="button"
-                className="w-28 ml-8 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
+                className="transition-all duration-300 w-28 ml-8 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border border-transparent"
               >
-                Log In
+                LOG IN
               </button>
             </Link>
           )}
@@ -207,9 +207,9 @@ export default function NavBar({ loginStatus }) {
             <Link to="Login">
               <button
                 type="button"
-                className="w-28 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
+                className="transition-all duration-300 w-28 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border border-transparent"
               >
-                Log In
+                LOG IN
               </button>
             </Link>
           )}

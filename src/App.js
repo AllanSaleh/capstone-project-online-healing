@@ -39,9 +39,9 @@ function App() {
 
   // Grab this from firebase!
   const [loginStatus, setLoginStatus] = useState({
-    login: false,
-    complete: false,
-    user_id: '',
+    login: true,
+    complete: true,
+    user_id: 'cUld5Z0ytjTuTrbeu95n',
   });
 
   return (
@@ -61,28 +61,28 @@ function App() {
           <BlogPage />
         </Route>
         <Route path="/Booking1">
-          <BookingPage1 />
+          <BookingPage1 loginStatus={loginStatus} />
         </Route>
         <Route path="/Booking2">
-          <BookingPage2 />
+          <BookingPage2 loginStatus={loginStatus} />
         </Route>
         <Route path="/Booking3">
-          <BookingPage3 />
+          <BookingPage3 loginStatus={loginStatus} />
         </Route>
         <Route path="/Booking4">
-          <BookingPage4 />
+          <BookingPage4 loginStatus={loginStatus} />
         </Route>
         <Route path="/Booking5">
-          <BookingPage5 />
+          <BookingPage5 loginStatus={loginStatus} />
         </Route>
         <Route path="/Booking6">
-          <BookingPage6 />
+          <BookingPage6 loginStatus={loginStatus} />
         </Route>
         <Route path="/Booking7">
-          <BookingPage7 />
+          <BookingPage7 loginStatus={loginStatus} />
         </Route>
         <Route path="/Booking8">
-          <BookingPage8 />
+          <BookingPage8 loginStatus={loginStatus} />
         </Route>
         <Route path="/Careers">
           <CareersPage />
@@ -97,7 +97,7 @@ function App() {
           <LoginPage setLoginStatus={(data) => setLoginStatus(data)} />
         </Route>
         <Route path="/Purchase">
-          <PurchasePage />
+          <PurchasePage loginStatus={loginStatus} />
         </Route>
         <Route path="/Requirements">
           <RequirementsPage />
