@@ -72,6 +72,15 @@ export default function SignUpPage() {
     return valid;
   };
 
+  const handleSignup = () => {
+    if (validInfo()) {
+      signupInfo.user_id = uuidv4();
+      usersRef.doc(signupInfo.user_id).set(signupInfo);
+      alert('sign up completed');
+      history.push({ pathname: '/Login' });
+    } else alert('Please provide valid information and try again');
+  };
+
   // useEffect(() => {
   //   getUsers();
   // }, []);
@@ -176,7 +185,7 @@ export default function SignUpPage() {
               type="button"
               className="shadow-xl lg:w-40 w-auto h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark mt-4
               transition-all duration-300"
-              // onClick={handleSignup}
+              onClick={handleSignup}
             >
               SIGN UP
             </button>
