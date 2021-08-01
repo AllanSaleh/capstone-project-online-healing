@@ -9,11 +9,7 @@ export default function RequirementsPage() {
     <div className="pt-navbar px-sides  pb-24">
       <div className="flex flex-col lg:flex-row">
         <div className="flex flex-col">
-          <div className="uppercase text-2xl lg:text-title mt-8 whitespace-nowrap">
-            Why work
-            <br />
-            with Healing?
-          </div>
+          <div className="uppercase text-2xl lg:text-title mt-8">Why work with Healing?</div>
           <div className="text-jusfify space-y-6 w-3/4 mt-8">
             <p className="lg:text-subtitle text-lg">Reliable Income</p>
             <p className="lg:text-paragraph text-justify text-gray-700">

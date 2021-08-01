@@ -11,8 +11,7 @@ export default function EditProfilePage() {
   return (
     <div className="px-sides pt-navbar">
       <h3 className="text-lg lg:text-subtitle text-red-500 w-full text-center">
-        Please fill all the fields with correct and valid details to complete
-        your profile.
+        Please fill all the fields with correct and valid details to complete your profile.
       </h3>
       <div className="flex flex-col lg:flex-row">
         <div className="w-full p-8 lg:w-2/5 lg:p-4 lg:mx-2 text-center">
@@ -58,9 +57,7 @@ export default function EditProfilePage() {
               </Link>
             </div>
             <div className="text-center lg:text-left lg:inline-block mx-0 lg:ml-4">
-              <h3 className="text-subtitle capitalize mb-2">
-                10 tickets remaining
-              </h3>
+              <h3 className="text-subtitle capitalize mb-2">10 tickets remaining</h3>
               <Link to={{ pathname: '/', state: true }}>
                 <EditProfileButton text="buy tickets" color="blue-dark" />
               </Link>
