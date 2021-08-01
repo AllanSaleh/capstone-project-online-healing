@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { v4 as uuidv4 } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
 
 import SignupImage from './Images/SignupImage.svg';
 import Facebook from './Images/Facebook.svg';
@@ -11,10 +11,12 @@ import firebase from '../../firebase';
 export default function SignUpPage() {
   window.scrollTo(0, 0);
 
-  const [users, setUsers] = useState([]);
+  // const [users, setUsers] = useState([]);
+  const [valid, setValid] = useState(false);
   const usersRef = firebase.firestore().collection('users');
 
   const signupInfo = {
+    user_id: '',
     first_name: '',
     last_name: '',
     email: '',
@@ -28,15 +30,15 @@ export default function SignUpPage() {
   };
 
   // gets all users from firebase
-  const getUsers = () => {
-    usersRef.onSnapshot((querySnapshot) => {
-      const items = [];
-      querySnapshot.forEach((doc) => {
-        items.push(doc.data());
-      });
-      setUsers(items);
-    });
-  };
+  // const getUsers = () => {
+  //   usersRef.onSnapshot((querySnapshot) => {
+  //     const items = [];
+  //     querySnapshot.forEach((doc) => {
+  //       items.push(doc.data());
+  //     });
+  //     setUsers(items);
+  //   });
+  // };
 
   const handleChange = (event) => {
     signupInfo[event.target.id] = event.target.value;
@@ -46,13 +48,41 @@ export default function SignUpPage() {
     signupConfirmation[event.target.id] = event.target.value;
   };
 
-  const handleSignup = (event) => {
-    console.log('signed up');
+  const validInfo = () => {
+    // regular expression for validation
+    const emailReg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const nameReg = /^[a-zA-Z]+$/;
+    const passwordReg = new RegExp(
+      '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})'
+    );
+    if (nameReg.test(signupInfo.first_name)) setValid(true);
+    else setValid(false);
+    if (nameReg.test(signupInfo.last_name)) setValid(true);
+    else setValid(false);
+    if (emailReg.test(signupInfo.email)) setValid(true);
+    else setValid(false);
+    if (signupConfirmation.confirm_email === signupInfo.email) setValid(true);
+    else setValid(false);
+    if (passwordReg.test(signupInfo.password)) setValid(true);
+    else setValid(false);
+    if (signupConfirmation.confirm_password === signupInfo.password)
+      setValid(true);
+    else setValid(false);
+    return valid;
+  };
+  const handleSignup = () => {
+    if (validInfo()) {
+      signupInfo.user_id = uuidv4();
+      usersRef.doc(signupInfo.user_id).set(signupInfo);
+      alert('sign up completed');
+    } else alert('Please provide valid information and try again');
   };
 
-  useEffect(() => {
-    getUsers();
-  }, []);
+  // useEffect(() => {
+  //   getUsers();
+  // }, []);
+
+  // return the component
   return (
     <div className=" flex flex-col lg:flex lg:flex-row items-center justify-evenly max-h-full lg:h-firstsection mt-navbar lg:m-0">
       <div className="lg:w-auto w-48">
