@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import HpIllustration from './Images/HP_illustration.svg';
@@ -6,7 +6,14 @@ import Facebook from './Images/Facebook.svg';
 import Google from './Images/Google.svg';
 import Or from './Images/or.svg';
 
-export default function LoginPage() {
+export default function LoginPage({ setLogin }) {
+  window.scroll(0, 0);
+  const [fields, setFields] = useState({ email: '', password: '' });
+
+  const Login = () => {
+    setLogin()
+  }
+
   return (
     <div className=" flex flex-col lg:flex lg:flex-row items-center justify-evenly h-firstsection">
       <div className="lg:w-auto transform translate-y-44 w-72 lg:transform lg:translate-y-0">
@@ -14,12 +21,14 @@ export default function LoginPage() {
         <div className=" lg:w-96 lg:h-72 h-72 bg-white shadow-xl rounded-lg ">
           <div className="flex flex-col">
             <input
+              onChange={(e) => setFields({ ...fields, email: e.target.value })}
               type="email"
               id="email"
               placeholder="email"
               className="border border-black border-opacity-40 rounded-sm pl-4 ml-4 mt-10 mr-5 h-12"
             />
             <input
+              onChange={(e) => setFields({ ...fields, password: e.target.value })}
               type="password"
               name="password"
               id="password"
@@ -28,6 +37,7 @@ export default function LoginPage() {
             />
             <div className="lg:flex lg:flex-row lg:justify-evenly flex flex-col">
               <button
+                onClick={Login}
                 type="button"
                 className="mt-6 lg:mt-6 lg:mx-0 mx-5 lg:py-4 lg:px-10  py-2 px-6 lg:text-subtitle text-base rounded-md bg-blue-dark border hover:bg-white hover:text-blue-dark hover:border-blue-dark"
               >

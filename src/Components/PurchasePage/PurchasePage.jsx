@@ -96,9 +96,7 @@ export default function PurchasePage() {
                 <CreditCard
                   deletable={false}
                   select={selected === card.number}
-                  setID={(ID) => {
-                    if (ID !== selected) setSelected(ID);
-                  }}
+                  
                   id={card.number}
                   background={count}
                   logo={card.type}

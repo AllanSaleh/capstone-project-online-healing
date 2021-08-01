@@ -36,7 +36,6 @@ export default function CreditCard({
           .update({
             cards: firebase.firestore.FieldValue.arrayRemove(selectedCard),
           });
-        alert('The card has been deleted!');
         window.location.reload();
       });
   };

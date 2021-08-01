@@ -100,8 +100,10 @@ export default function AddNewCardPage() {
         });
       history.push({
         pathname: '/ThankYou',
-        state:
-          'Your new payment method is under review, you will receive an email soon when your card is confirmed.\nOtherwise you will get a notification telling you what went wrong and how to add a new card.',
+        state: [
+          'Your new payment method is under review, you will receive an email soon when your card is confirmed.',
+          'Otherwise you will get a notification telling you what went wrong and how to add a new card.',
+        ],
       });
     }
   };

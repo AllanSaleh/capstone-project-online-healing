@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Logo from './Images/Logo.svg';
 import ProfileImage from './Images/Avatar.png';
 
-export default function NavBar({ loggedIn }) {
+export default function NavBar({ userLogin }) {
   const Avatar = ProfileImage;
   const [OpenAbout, setOpenAbout] = useState(false);
   const [OpenProfile, setOpenProfile] = useState(false);
@@ -109,7 +109,7 @@ export default function NavBar({ loggedIn }) {
             Contact Us
           </Link>
 
-          {loggedIn ? (
+          {userLogin.login ? (
             <div
               onMouseLeave={() => setOpenProfile(false)}
               onMouseOver={() => setOpenProfile(true)}
@@ -168,7 +168,7 @@ export default function NavBar({ loggedIn }) {
           className="fixed inset-0 opacity-75 bg-black z-10"
         />
         <div className="fixed w-3/4 h-screen flex flex-col justify-evenly items-center mt-navbar bg-white py-4 z-20">
-          {loggedIn ? (
+          {userLogin.login ? (
             <div
               onClick={() => {
                 if (OpenProfile) setOpenProfile(false);

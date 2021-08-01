@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
@@ -38,11 +38,11 @@ function App() {
   }, [i18n, i18n.language]);
 
   // Grab this from firebase!
-  const userLogin = false;
+  const [userLogin, setLogin] = useState({ login: false, user_id: '' });
 
   return (
     <Router>
-      <NavBar loggedIn={userLogin} />
+      <NavBar userLogin={userLogin} />
       <Switch>
         <Route exact path="/">
           <HomePage />
@@ -90,7 +90,7 @@ function App() {
           <EditProfilePage />
         </Route>
         <Route path="/Login">
-          <LoginPage />
+          <LoginPage setLogin={(data) => setLogin(data)} />
         </Route>
         <Route path="/Purchase">
           <PurchasePage />
