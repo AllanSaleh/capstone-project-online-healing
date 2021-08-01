@@ -91,17 +91,29 @@ Array [
         >
           Contact Us
         </a>
-        <a
-          href="/Login"
-          onClick={[Function]}
+        <div
+          className="ml-8 relative"
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
         >
-          <button
-            className="w-28 ml-8 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
-            type="button"
+          <div
+            className="flex items-center justify-between my-2"
           >
-            Log In
-          </button>
-        </a>
+            <img
+              alt="Profile"
+              className="mr-2 w-10 rounded-full"
+              src="Avatar.png"
+            />
+            <a
+              className="hover:text-yellow-primary hover:underline text-paragraph"
+              href="/EditProfile"
+              onClick={[Function]}
+            >
+              Ahmed M.
+            </a>
+          </div>
+        </div>
         <div />
       </div>
     </div>
@@ -116,17 +128,26 @@ Array [
       <div
         className="fixed w-3/4 h-screen flex flex-col justify-evenly items-center mt-navbar bg-white py-4 z-20"
       >
-        <a
-          href="/Login"
+        <div
           onClick={[Function]}
         >
-          <button
-            className="w-28 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
-            type="button"
+          <div
+            className="flex items-center justify-between my-2"
           >
-            Log In
-          </button>
-        </a>
+            <img
+              alt="Profile"
+              className="mr-2 w-10 rounded-full"
+              src="Avatar.png"
+            />
+            <a
+              className="hover:text-yellow-primary hover:underline text-paragraph"
+              href="/EditProfile"
+              onClick={[Function]}
+            >
+              Ahmed M.
+            </a>
+          </div>
+        </div>
         <a
           className="hover:text-yellow-primary hover:underline text-paragraph"
           href="/"
@@ -174,15 +195,14 @@ Array [
     >
       <img
         alt="Background"
-        className=""
         src="Background.svg"
       />
     </div>
     <div
-      className="flex lg:flex-row flex-col lg:justify-between lg:m-56 relative z-40"
+      className="flex lg:flex-row flex-col lg:justify-between lg:m-56 relative z-0"
     >
       <div
-        className="pt-20 pb-28 flex flex-col lg:transform lg:translate-y-0 transform translate-y-56"
+        className="pt-20 pb-28 flex flex-col lg:translate-y-0 transform translate-y-56"
       >
         <div
           className="lg:text-4xl text-base pl-4"
@@ -196,7 +216,7 @@ Array [
         </div>
         <div>
           <button
-            className="mt-6 ml-4 py-2 px-6 lg:py-4 lg:px-6 lg:text-subtitle text-base rounded-md bg-blue-dark border hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+            className="transition-all duration-300 mt-6 ml-4 py-2 px-6 lg:py-4 lg:px-6 lg:text-subtitle text-base rounded-md bg-blue-dark border hover:bg-white hover:text-blue-dark hover:border-blue-dark"
             onClick={[Function]}
             type="button"
           >
@@ -205,7 +225,7 @@ Array [
         </div>
       </div>
       <div
-        className="transform -translate-y-72 w-64 lg:transform lg:-translate-y-0 lg:w-auto lg:ml-0 ml-16"
+        className="transform -translate-y-72 w-64 lg:-translate-y-0 lg:w-auto lg:ml-0 ml-16"
       >
         <img
           alt="HP_illustration"
@@ -265,16 +285,15 @@ Array [
           src="phone-cell.svg"
         />
         <h3
-          className="text-center text-xl  lg:text-3xl 2xl:text-title pb-1 capitalize"
+          className="text-center text-xl lg:text-3xl 2xl:text-title pb-1 capitalize"
         >
           voice call
-           Tickets
+           
         </h3>
         <p
           className="text-opacity-50 text-black text-center text-sm md:text-md lg:text-paragraph py-4"
         >
           Feeling ready to start a conversation? Give your therapist a voice call and talk your heart out!
-          $
         </p>
       </div>
       <div
@@ -286,16 +305,15 @@ Array [
           src="chat-icon.svg"
         />
         <h3
-          className="text-center text-xl  lg:text-3xl 2xl:text-title pb-1 capitalize"
+          className="text-center text-xl lg:text-3xl 2xl:text-title pb-1 capitalize"
         >
           chat
-           Tickets
+           
         </h3>
         <p
           className="text-opacity-50 text-black text-center text-sm md:text-md lg:text-paragraph py-4"
         >
           Need to talk to someone?Come have a chat with your therapist!
-          $
         </p>
       </div>
       <div
@@ -307,16 +325,15 @@ Array [
           src="video-call-icon.svg"
         />
         <h3
-          className="text-center text-xl  lg:text-3xl 2xl:text-title pb-1 capitalize"
+          className="text-center text-xl lg:text-3xl 2xl:text-title pb-1 capitalize"
         >
           video call
-           Tickets
+           
         </h3>
         <p
           className="text-opacity-50 text-black text-center text-sm md:text-md lg:text-paragraph py-4"
         >
           For better experience therapists recommend video calls, but always remember that its a choice!
-          $
         </p>
       </div>
     </div>
@@ -484,16 +501,16 @@ Array [
         className="h-full w-full my-4 flex flex-col items-center justify-evenly shadow-lg rounded-lg md:w-1/4 p-4"
       >
         <h3
-          className="text-center text-xl  lg:text-3xl 2xl:text-title pb-1 capitalize"
+          className="text-center text-xl lg:text-3xl 2xl:text-title pb-1 capitalize"
         >
           5
-           Tickets
+           
+          Tickets
         </h3>
         <p
           className="text-opacity-50 text-black text-center text-sm md:text-md lg:text-paragraph py-4"
         >
-          10
-          $
+          10$
         </p>
         <button
           className="bg-blue-dark py-2 px-4 uppercase text-paragraph border text-black hover:bg-transparent hover:border-blue-dark hover:text-blue-dark  transition-all duration-200 rounded-md"
@@ -507,16 +524,16 @@ Array [
         className="h-full w-full my-4 flex flex-col items-center justify-evenly shadow-lg rounded-lg md:w-1/4 p-4"
       >
         <h3
-          className="text-center text-xl  lg:text-3xl 2xl:text-title pb-1 capitalize"
+          className="text-center text-xl lg:text-3xl 2xl:text-title pb-1 capitalize"
         >
           25
-           Tickets
+           
+          Tickets
         </h3>
         <p
           className="text-opacity-50 text-black text-center text-sm md:text-md lg:text-paragraph py-4"
         >
-          40
-          $
+          40$
         </p>
         <button
           className="bg-blue-dark py-2 px-4 uppercase text-paragraph border text-black hover:bg-transparent hover:border-blue-dark hover:text-blue-dark  transition-all duration-200 rounded-md"
@@ -530,16 +547,16 @@ Array [
         className="h-full w-full my-4 flex flex-col items-center justify-evenly shadow-lg rounded-lg md:w-1/4 p-4"
       >
         <h3
-          className="text-center text-xl  lg:text-3xl 2xl:text-title pb-1 capitalize"
+          className="text-center text-xl lg:text-3xl 2xl:text-title pb-1 capitalize"
         >
           50
-           Tickets
+           
+          Tickets
         </h3>
         <p
           className="text-opacity-50 text-black text-center text-sm md:text-md lg:text-paragraph py-4"
         >
-          70
-          $
+          70$
         </p>
         <button
           className="bg-blue-dark py-2 px-4 uppercase text-paragraph border text-black hover:bg-transparent hover:border-blue-dark hover:text-blue-dark  transition-all duration-200 rounded-md"
