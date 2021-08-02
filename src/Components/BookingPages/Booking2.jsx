@@ -7,19 +7,13 @@ const questionData = {
   question: 'What is your relationship status?',
   choices: [
     {
-      id: 1,
       content: 'Single',
-      selected: true,
     },
     {
-      id: 2,
       content: 'Married',
-      selected: false,
     },
     {
-      id: 3,
       content: 'Divorced',
-      selected: false,
     },
   ],
 };

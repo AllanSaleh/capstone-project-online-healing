@@ -7,14 +7,10 @@ const questionData = {
   question: 'Have you ever been in therapy before?',
   choices: [
     {
-      id: 1,
       content: 'Yes',
-      selected: true,
     },
     {
-      id: 2,
       content: 'No',
-      selected: false,
     },
   ],
 };
