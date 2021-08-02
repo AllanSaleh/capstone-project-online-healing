@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 export default function Booking6() {
   window.scrollTo(0, 0);
   const history = useHistory();
-
+  const [answer, setAnswer] = useState('');
+  console.log(answer);
   const PrevPage = () => {
     // Put firestore code here!
     history.push('/Booking5');
@@ -27,6 +28,9 @@ export default function Booking6() {
       <textarea
         placeholder="Please explain here..."
         className="text-md lg:text-paragraph outline-none resize-none w-full lg:w-4/5 lg:mx-auto flex flex-col justify-evenly h-1/2 p-8 shadow-lg"
+        onChange={(event) => {
+          setAnswer(event.target.value);
+        }}
       />
       <div className="mx-auto w-full lg:w-1/2 flex justify-between mt-8">
         <button

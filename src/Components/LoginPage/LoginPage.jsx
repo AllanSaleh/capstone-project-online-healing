@@ -18,16 +18,16 @@ export default function LoginPage({ setLoginStatus }) {
       querySnapshot.forEach((doc) => {
         users.push(doc.data());
       });
-      const loggedUser = users.filter(
+      const loggedInUser = users.find(
         (user) => user.email === fields.email && user.password === fields.password
       );
-      if (loggedUser.length > 0) {
+      if (loggedInUser) {
         setLoginStatus({
           login: true,
-          complete: loggedUser[0].complete,
-          user_id: loggedUser[0].user_id,
+          complete: loggedInUser.complete,
+          user_id: loggedInUser.user_id,
         });
-        console.log(`user: ${loggedUser[0].fullname} is found`);
+        console.log(`user: ${loggedInUser.fullname} is found`);
       } else {
         console.log('no user found');
       }
