@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
 import SignupImage from './Images/SignupImage.svg';
@@ -10,11 +10,10 @@ import firebase from '../../firebase';
 
 export default function SignUpPage() {
   window.scrollTo(0, 0);
-  const history = useHistory();
 
   // states to hold data for signup process
-  const [valid, setValid] = useState(false);
   const usersRef = firebase.firestore().collection('users');
+  const [valid, setValid] = useState(false);
   const [brithDateObj, setBirthDateObj] = useState({
     day: '0',
     month: '0',
@@ -24,8 +23,7 @@ export default function SignUpPage() {
     first_name: '',
     last_name: '',
   });
-
-  const signupInfo = {
+  const [signupInfo, setSignupInfo] = useState({
     user_id: '',
     fullname: '',
     complete: false,
@@ -39,55 +37,82 @@ export default function SignUpPage() {
     email: '',
     password: '',
     birthdate: '',
-  };
+  });
 
-  const signupConfirmation = {
+  const [signupConfirmation, setSignupConfirmation] = useState({
     confirm_email: '',
     confirm_password: '',
-  };
-
-  // handles the entered info by user from input fields
-  const handleChange = (event) => {
-    signupInfo[event.target.id] = event.target.value;
-  };
-
-  // handles only confirm fields info entered by user
-  const handleChangeConfirmation = (event) => {
-    signupConfirmation[event.target.id] = event.target.value;
-  };
+  });
 
   // validate signupInfo for registration
   const validInfo = () => {
     // regular expression for validation
     const emailReg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
     const nameReg = /^[a-zA-Z]+$/;
-    const passwordReg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,}$/;
+    const passwordReg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
     if (nameReg.test(fullName.first_name)) setValid(true);
-    else setValid(false);
+    else {
+      setValid(false);
+      alert(`${fullName.first_name} is not valid it should only be letters, please try again`);
+      return valid;
+    }
     if (nameReg.test(fullName.last_name)) setValid(true);
-    else setValid(false);
+    else {
+      setValid(false);
+      alert(`${fullName.last_name} is not valid it should only be letters, please try again`);
+      return valid;
+    }
     if (emailReg.test(signupInfo.email)) setValid(true);
-    else setValid(false);
+    else {
+      setValid(false);
+      alert(
+        `${signupInfo.email} is not valid, it should follow this pattern 'someone@something.something'`
+      );
+      return valid;
+    }
     if (signupConfirmation.confirm_email === signupInfo.email) setValid(true);
-    else setValid(false);
+    else {
+      setValid(false);
+      alert(
+        `your confirm email:${signupConfirmation.confirm_email} does not match your email, please try again!`
+      );
+      return valid;
+    }
     if (passwordReg.test(signupInfo.password)) setValid(true);
-    else setValid(false);
-    if (signupConfirmation.confirm_password === signupInfo.password)
-      setValid(true);
-    else setValid(false);
+    else {
+      setValid(false);
+      alert(
+        `${signupInfo.password} is not valid, it should contain at least one capital letter and one number, please try again!`
+      );
+      return valid;
+    }
+    if (signupConfirmation.confirm_password === signupInfo.password) setValid(true);
+    else {
+      setValid(false);
+      alert(
+        `your confirm password: ${signupConfirmation.confirm_password} does not match your password, please try again!`
+      );
+      return valid;
+    }
     return valid;
   }; // end of function validateInfo()
 
+  const registerUserToFirebase = () => {
+    signupInfo.user_id = uuidv4();
+    signupInfo.fullname = `${fullName.first_name} ${fullName.last_name}`;
+    signupInfo.birthdate = `${brithDateObj.day}/${brithDateObj.month}/${brithDateObj.year}`;
+    usersRef.doc(signupInfo.user_id).set(signupInfo);
+    alert('Sign Up Completed');
+  };
   // handle onClick() for Sign Up button
   const handleSignup = () => {
     if (validInfo()) {
-      signupInfo.user_id = uuidv4();
-      usersRef.doc(signupInfo.user_id).set(signupInfo);
-      alert('sign up completed');
-      history.push({ pathname: '/Login' });
-    } else {
+      registerUserToFirebase();
+      return;
+    }
+    if (!validInfo()) {
       alert('Please provide valid information and try again');
-      // window.location.reload();
+      window.location.reload();
     }
   }; // end of function handleSignup()
 
@@ -98,9 +123,7 @@ export default function SignUpPage() {
         <img src={SignupImage} alt="SignupImage" />
       </div>
       <div className="lg:w-auto w-72">
-        <div className="lg:text-5xl text-3xl lg:text-left text-center lg:pb-16 ">
-          SIGN UP NOW
-        </div>
+        <div className="lg:text-5xl text-3xl lg:text-left text-center lg:pb-16 ">SIGN UP NOW</div>
 
         <div className="lg:h-3/5  h-auto flex flex-col justify-evenly shadow-xl rounded-lg p-4 ">
           <div className="lg:w-full flex flex-col lg:flex lg:flex-row lg:justify-between">
@@ -131,7 +154,9 @@ export default function SignUpPage() {
             id="email"
             placeholder="Email"
             className="rounded-lg ring-1 h-12 p-2 mt-4"
-            onChange={handleChange}
+            onChange={(event) => {
+              setSignupInfo({ ...signupInfo, email: event.target.value });
+            }}
           />
           <input
             type="email"
@@ -139,7 +164,12 @@ export default function SignUpPage() {
             id="confirm_email"
             placeholder="Confirm Email"
             className="rounded-lg ring-1 h-12 p-2 mt-4"
-            onChange={handleChangeConfirmation}
+            onChange={(event) => {
+              setSignupConfirmation({
+                ...signupConfirmation,
+                confirm_email: event.target.value,
+              });
+            }}
           />
           <div className="w-full lg:flex flex flex-col lg:flex-row justify-between">
             <input
@@ -148,7 +178,9 @@ export default function SignUpPage() {
               id="password"
               placeholder="Password"
               className="rounded-lg ring-1 h-12 p-2 lg:w-52 lg:mr-4 mt-4"
-              onChange={handleChange}
+              onChange={(event) => {
+                setSignupInfo({ ...signupInfo, password: event.target.value });
+              }}
             />
             <input
               type="password"
@@ -156,7 +188,12 @@ export default function SignUpPage() {
               id="confirm_password"
               placeholder="Confirm Password"
               className="rounded-lg ring-1 h-12 p-2 lg:w-52 mt-4"
-              onChange={handleChangeConfirmation}
+              onChange={(event) => {
+                setSignupConfirmation({
+                  ...signupConfirmation,
+                  confirm_password: event.target.value,
+                });
+              }}
             />
           </div>
           <div className="flex flex-col lg:flex lg:flex-row lg:items-center justify-evenly w-full mt-6">

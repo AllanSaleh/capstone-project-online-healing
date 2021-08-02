@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 const Booking5 = () => {
@@ -31,7 +31,11 @@ const Booking5 = () => {
   ];
 
   const history = useHistory();
-
+  const [answer, setAnswer] = useState('');
+  const handleRadioChange = (event) => {
+    setAnswer(event.target.value);
+  };
+  console.log(answer);
   const PrevPage = () => {
     // Put firestore code here!
     history.push('/Booking4');
@@ -59,8 +63,14 @@ const Booking5 = () => {
 
         <div className="h-1/2 flex flex-col justify-around my-8">
           {choices.map((choice) => (
-            <div className="flex items-center">
-              <input type="radio" id={choice.id} name="counselor_options" value={choice.content} />
+            <div className="flex items-center" key={choice.id}>
+              <input
+                type="radio"
+                id={choice.id}
+                name="counselor_options"
+                value={choice.content}
+                onChange={handleRadioChange}
+              />
               <label className="text-md lg:text-paragraph ml-2" htmlFor={choice.id}>
                 {choice.content}
               </label>

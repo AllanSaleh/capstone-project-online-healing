@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 export default function Booking4() {
@@ -27,6 +27,11 @@ export default function Booking4() {
   ];
 
   const history = useHistory();
+  const [answer, setAnswer] = useState('');
+  const handleRadioChange = (event) => {
+    setAnswer(event.target.value);
+  };
+  console.log(answer);
 
   const PrevPage = () => {
     // Put firestore code here!
@@ -54,9 +59,15 @@ export default function Booking4() {
         </div>
 
         <div className="flex flex-col justify-around my-8">
-          {choices.map((choice) => (
-            <div className="flex items-center my-2">
-              <input type="radio" id={choice.id} name="counselor_options" value={choice.content} />
+          {choices.map((choice, index) => (
+            <div className="flex items-center my-2" key={index}>
+              <input
+                type="radio"
+                id={choice.id}
+                name="counselor_options"
+                value={choice.content}
+                onChange={handleRadioChange}
+              />
               <label className="text-sm lg:text-paragraph ml-2" htmlFor={choice.id}>
                 {choice.content}
               </label>

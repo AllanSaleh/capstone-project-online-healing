@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import QuestionComponent from './QuestionComponent';
@@ -7,14 +7,10 @@ const questionData = {
   question: 'Have you ever been in therapy before?',
   choices: [
     {
-      id: 1,
       content: 'Yes',
-      selected: true,
     },
     {
-      id: 2,
       content: 'No',
-      selected: false,
     },
   ],
 };
@@ -22,6 +18,11 @@ const questionData = {
 export default function Booking2() {
   window.scrollTo(0, 0);
   const history = useHistory();
+  const [answer, setAnswer] = useState('');
+  const handleSetAnswer = (childAnswer) => {
+    setAnswer(childAnswer);
+    console.log(answer);
+  };
 
   const PrevPage = () => {
     // Put firestore code here!
@@ -44,7 +45,11 @@ export default function Booking2() {
       </h3>
 
       <div className="flex flex-col justify-between w-full md:max-w-md lg:max-w-2xl my-16 mx-auto px-8 py-4 shadow-md">
-        <QuestionComponent question={questionData.question} choices={questionData.choices} />
+        <QuestionComponent
+          question={questionData.question}
+          choices={questionData.choices}
+          setParentAnswer={handleSetAnswer}
+        />
 
         <div className="flex justify-between mt-16">
           <button

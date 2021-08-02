@@ -1,17 +1,37 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import firebase from '../../firebase';
 
 import HpIllustration from './Images/HP_illustration.svg';
 import Facebook from './Images/Facebook.svg';
 import Google from './Images/Google.svg';
 import Or from './Images/or.svg';
 
-export default function LoginPage({ setLogin }) {
+export default function LoginPage({ setLoginStatus }) {
   window.scroll(0, 0);
+  const usersRef = firebase.firestore().collection('users');
   const [fields, setFields] = useState({ email: '', password: '' });
 
   const Login = () => {
-    setLogin();
+    usersRef.get().then((querySnapshot) => {
+      const users = [];
+      querySnapshot.forEach((doc) => {
+        users.push(doc.data());
+      });
+      const loggedInUser = users.find(
+        (user) => user.email === fields.email && user.password === fields.password
+      );
+      if (loggedInUser) {
+        setLoginStatus({
+          login: true,
+          complete: loggedInUser.complete,
+          user_id: loggedInUser.user_id,
+        });
+        console.log(`user: ${loggedInUser.fullname} is found`);
+      } else {
+        console.log('no user found');
+      }
+    });
   };
 
   return (
