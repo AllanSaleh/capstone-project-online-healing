@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
 import SignupImage from './Images/SignupImage.svg';
@@ -10,7 +10,6 @@ import firebase from '../../firebase';
 
 export default function SignUpPage() {
   window.scrollTo(0, 0);
-  const history = useHistory();
 
   // states to hold data for signup process
   const usersRef = firebase.firestore().collection('users');
@@ -54,17 +53,13 @@ export default function SignUpPage() {
     if (nameReg.test(fullName.first_name)) setValid(true);
     else {
       setValid(false);
-      alert(
-        `${fullName.first_name} is not valid it should only be letters, please try again`
-      );
+      alert(`${fullName.first_name} is not valid it should only be letters, please try again`);
       return valid;
     }
     if (nameReg.test(fullName.last_name)) setValid(true);
     else {
       setValid(false);
-      alert(
-        `${fullName.last_name} is not valid it should only be letters, please try again`
-      );
+      alert(`${fullName.last_name} is not valid it should only be letters, please try again`);
       return valid;
     }
     if (emailReg.test(signupInfo.email)) setValid(true);
@@ -91,8 +86,7 @@ export default function SignUpPage() {
       );
       return valid;
     }
-    if (signupConfirmation.confirm_password === signupInfo.password)
-      setValid(true);
+    if (signupConfirmation.confirm_password === signupInfo.password) setValid(true);
     else {
       setValid(false);
       alert(
@@ -129,9 +123,7 @@ export default function SignUpPage() {
         <img src={SignupImage} alt="SignupImage" />
       </div>
       <div className="lg:w-auto w-72">
-        <div className="lg:text-5xl text-3xl lg:text-left text-center lg:pb-16 ">
-          SIGN UP NOW
-        </div>
+        <div className="lg:text-5xl text-3xl lg:text-left text-center lg:pb-16 ">SIGN UP NOW</div>
 
         <div className="lg:h-3/5  h-auto flex flex-col justify-evenly shadow-xl rounded-lg p-4 ">
           <div className="lg:w-full flex flex-col lg:flex lg:flex-row lg:justify-between">
