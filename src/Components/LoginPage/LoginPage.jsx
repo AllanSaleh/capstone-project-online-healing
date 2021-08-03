@@ -9,29 +9,40 @@ import Or from './Images/or.svg';
 
 export default function LoginPage({ setLoginStatus }) {
   window.scroll(0, 0);
+
+  const history = useHistory();
+
   const usersRef = firebase.firestore().collection('users');
   const [fields, setFields] = useState({ email: '', password: '' });
 
   const Login = () => {
-    usersRef.get().then((querySnapshot) => {
-      const users = [];
-      querySnapshot.forEach((doc) => {
-        users.push(doc.data());
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(fields.email, fields.password)
+      .then((userCredential) => {
+        // Signed in
+        const authUser = userCredential.user;
+        usersRef
+          .get()
+          .then((querySnapshot) => {
+            const users = [];
+            querySnapshot.forEach((doc) => {
+              users.push(doc.data());
+            });
+            const foundUser = users.find((user) => user.user_id === authUser.uid);
+            setLoginStatus({
+              login: true,
+              complete: foundUser.complete,
+              user_id: authUser.uid,
+            });
+            history.push('./');
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorMessage);
+          });
       });
-      const loggedInUser = users.find(
-        (user) => user.email === fields.email && user.password === fields.password
-      );
-      if (loggedInUser) {
-        setLoginStatus({
-          login: true,
-          complete: loggedInUser.complete,
-          user_id: loggedInUser.user_id,
-        });
-        console.log(`user: ${loggedInUser.fullname} is found`);
-      } else {
-        console.log('no user found');
-      }
-    });
   };
 
   return (
