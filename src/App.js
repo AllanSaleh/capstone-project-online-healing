@@ -43,8 +43,6 @@ function App() {
     user_id: '',
   });
 
-  const [trigger, setTrigger] = useState();
-
   useEffect(() => {
     const loggedIn = JSON.parse(localStorage.getItem('loginStatus'));
     if (loggedIn !== null) setLoginStatus(loggedIn);
@@ -52,7 +50,7 @@ function App() {
 
   return (
     <Router>
-      <NavBar key={trigger} loginStatus={loginStatus} />
+      <NavBar loginStatus={loginStatus} />
       <Switch>
         <Route exact path="/">
           <HomePage loginStatus={loginStatus} />
