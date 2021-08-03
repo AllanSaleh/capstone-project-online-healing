@@ -17,6 +17,7 @@ export default function CreditCard({
   setID,
   select,
   deletable,
+  loginStatus,
 }) {
   const DeleteCard = (cardID) => {
     let selectedCard;
@@ -32,7 +33,7 @@ export default function CreditCard({
         firebase
           .firestore()
           .collection('users')
-          .doc('cUld5Z0ytjTuTrbeu95n')
+          .doc(loginStatus.user_id)
           .update({
             cards: firebase.firestore.FieldValue.arrayRemove(selectedCard),
           });

@@ -122,7 +122,7 @@ export default function NavBar({ loginStatus }) {
                   to="/EditProfile"
                   className="hover:text-yellow-primary hover:underline text-paragraph"
                 >
-                  Ahmed M.
+                  {loginStatus.name}
                 </Link>
               </div>
 
@@ -181,7 +181,7 @@ export default function NavBar({ loginStatus }) {
                   to="/EditProfile"
                   className="hover:text-yellow-primary hover:underline text-paragraph"
                 >
-                  Ahmed M.
+                  {loginStatus.name}
                 </Link>
               </div>
 

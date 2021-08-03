@@ -6,7 +6,7 @@ import Next from './Images/Next.svg';
 import Prev from './Images/Prev.svg';
 import CreditCard from '../CreditCard/CreditCard';
 
-export default function SavedCardsPage() {
+export default function SavedCardsPage({ loginStatus }) {
   window.scrollTo(0, 0);
   let count = 0;
 
@@ -23,7 +23,7 @@ export default function SavedCardsPage() {
     firebase
       .firestore()
       .collection('users')
-      .doc('cUld5Z0ytjTuTrbeu95n')
+      .doc(loginStatus.user_id)
       .get()
       .then((doc) => {
         setCards(doc.data().cards);
@@ -78,6 +78,7 @@ export default function SavedCardsPage() {
                   date={card.date}
                   number={card.number}
                   name={card.name}
+                  loginStatus={loginStatus}
                 />
               );
             })}

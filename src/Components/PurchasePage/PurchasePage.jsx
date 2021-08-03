@@ -105,6 +105,7 @@ export default function PurchasePage({ loginStatus }) {
                   date={card.date}
                   number={card.number}
                   name={card.name}
+                  loginStatus={loginStatus}
                 />
               );
             })}

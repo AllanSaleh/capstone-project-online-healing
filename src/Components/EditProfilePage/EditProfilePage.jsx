@@ -17,13 +17,12 @@ export default function EditProfilePage() {
     const loginStatus = JSON.parse(localStorage.getItem('loginStatus'));
     usersRef.get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        if (loginStatus === null) history.replace('/')
+        if (loginStatus === null) history.replace('/');
         else if (doc.data().user_id === loginStatus.user_id) setCurrentUser(doc.data());
       });
     });
   }, []);
 
-  console.log(currentUser);
   return (
     <div className="px-sides pt-navbar">
       <h3 className="text-lg lg:text-subtitle text-red-500 w-full text-center">

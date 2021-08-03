@@ -85,7 +85,7 @@ export default function AddNewCardPage({ loginStatus }) {
       firebase
         .firestore()
         .collection('users')
-        .doc(loginStatus.id)
+        .doc(loginStatus.user_id)
         .update({
           cards: firebase.firestore.FieldValue.arrayUnion({
             number: inputs.number,

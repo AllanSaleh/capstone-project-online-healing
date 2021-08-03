@@ -43,20 +43,16 @@ function App() {
     user_id: '',
   });
 
+  const [trigger, setTrigger] = useState();
+
   useEffect(() => {
     const loggedIn = JSON.parse(localStorage.getItem('loginStatus'));
-    if (loggedIn !== null) {
-      setLoginStatus({
-        login: loggedIn.login,
-        complete: loggedIn.complete,
-        user_id: loggedIn.user_id,
-      });
-    }
+    if (loggedIn !== null) setLoginStatus(loggedIn);
   }, []);
 
   return (
     <Router>
-      <NavBar loginStatus={loginStatus} />
+      <NavBar key={trigger} loginStatus={loginStatus} />
       <Switch>
         <Route exact path="/">
           <HomePage loginStatus={loginStatus} />
@@ -104,7 +100,7 @@ function App() {
           <EditProfilePage loginStatus={loginStatus} />
         </Route>
         <Route path="/Login">
-          <LoginPage />
+          <LoginPage setLoginStatus={(status) => setLoginStatus(status)} />
         </Route>
         <Route path="/Purchase">
           <PurchasePage loginStatus={loginStatus} />
@@ -113,7 +109,7 @@ function App() {
           <RequirementsPage />
         </Route>
         <Route path="/SavedCards">
-          <SavedCardsPage />
+          <SavedCardsPage loginStatus={loginStatus} />
         </Route>
         <Route path="/SignUp">
           <SignUpPage />

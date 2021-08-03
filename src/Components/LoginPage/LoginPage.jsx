@@ -7,7 +7,7 @@ import Facebook from './Images/Facebook.svg';
 import Google from './Images/Google.svg';
 import Or from './Images/or.svg';
 
-export default function LoginPage() {
+export default function LoginPage({ setLoginStatus }) {
   window.scroll(0, 0);
 
   const history = useHistory();
@@ -33,11 +33,18 @@ export default function LoginPage() {
             localStorage.setItem(
               'loginStatus',
               JSON.stringify({
+                name: foundUser.fullname,
                 login: true,
                 complete: foundUser.complete,
                 user_id: foundUser.user_id,
               })
             );
+            setLoginStatus({
+              name: foundUser.fullname,
+              login: true,
+              complete: foundUser.complete,
+              user_id: foundUser.user_id,
+            });
             history.push('./');
           })
           .catch((error) => {
