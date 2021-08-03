@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import firebase from '../../firebase';
 
 import ProfilePic from './Images/ProfilePic.svg';
@@ -7,22 +7,28 @@ import EditProfileButton from './EditProfileButton';
 import ProfileInfoSection from './ProfileInfoSection';
 import SecuritySection from './SecuritySection';
 
-export default function EditProfilePage({ loginStatus }) {
+export default function EditProfilePage() {
   window.scrollTo(0, 0);
+  const history = useHistory();
   const usersRef = firebase.firestore().collection('users');
   const [currentUser, setCurrentUser] = useState({});
 
   useEffect(() => {
-    usersRef
-      .doc(loginStatus.user_id)
-      .get()
-      .then((user) => setCurrentUser(user));
+    const loginStatus = JSON.parse(localStorage.getItem('loginStatus'));
+    usersRef.get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        if (loginStatus === null) history.replace('/')
+        else if (doc.data().user_id === loginStatus.user_id) setCurrentUser(doc.data());
+      });
+    });
   }, []);
 
+  console.log(currentUser);
   return (
     <div className="px-sides pt-navbar">
       <h3 className="text-lg lg:text-subtitle text-red-500 w-full text-center">
-        Please fill all the fields with correct and valid details to complete your profile.
+        {!currentUser.complete &&
+          'Please fill all the fields with correct and valid details to complete your profile.'}
       </h3>
       <div className="flex flex-col lg:flex-row">
         <div className="w-full p-8 lg:w-2/5 lg:p-4 lg:mx-2 text-center">

@@ -44,8 +44,8 @@ const ProfileInfoSection = ({ userProfile }) => (
           type="text"
           id="family-members"
           name="family-members"
-          className="w-full h-full outline-none py-3"
-          value={userProfile?.family_size}
+          className="w-full h-full outline-none py-3 placeholder-black text-center"
+          placeholder={userProfile?.family_size}
         />
       </div>
       <span className="text-sm md:text-lg lg:text-subtitle capitalize mx-4">member(s)</span>

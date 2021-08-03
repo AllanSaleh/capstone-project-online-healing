@@ -59,8 +59,9 @@ export default function RecentBlogs() {
             id="Menu"
             className="h-44 lg:h-96 box-border whitespace-nowrap overflow-x-auto overflow-y-hidden"
           >
-            {blogs.map((blog) => (
+            {blogs.map((blog, index) => (
               <div
+                key={index}
                 onClick={(e) => OpenBlog(e.target.id)}
                 id={blog.title}
                 className="relative inline-block w-11/12 lg:w-2/6 h-40 lg:h-80 box-border mx-2 lg:mx-12"
