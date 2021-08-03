@@ -108,7 +108,7 @@ function App() {
           <ContactPage />
         </Route>
         <Route path="/EditProfile">
-          <EditProfilePage />
+          <EditProfilePage loginStatus={loginStatus} />
         </Route>
         <Route path="/Login">
           <LoginPage setLoginStatus={(data) => setLoginStatus(data)} />

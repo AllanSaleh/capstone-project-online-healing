@@ -4,11 +4,11 @@ import ProfileInputField from './ProfileInputField';
 import BirthDateIcon from './Images/BirthDateIcon.svg';
 import Plus from './Images/Plus.svg';
 
-const ProfileInfoSection = () => (
+const ProfileInfoSection = ({ userProfile }) => (
   <form className="mb-8">
     <h1 className="text-3xl lg:text-title uppercase">Profile Info</h1>
 
-    <ProfileInputField title="full name" type="text" id="full-name" />
+    <ProfileInputField title="full name" type="text" id="full-name" value={userProfile?.fullname} />
 
     <div className="flex items-center my-6">
       <label
@@ -30,7 +30,7 @@ const ProfileInfoSection = () => (
         </select>
       </div>
     </div>
-    <ProfileInputField title="hobbies" type="text" id="hobbies" />
+    <ProfileInputField title="hobbies" type="text" id="hobbies" value={userProfile?.hobbies} />
 
     <div className="flex items-center my-6">
       <label
@@ -45,11 +45,10 @@ const ProfileInfoSection = () => (
           id="family-members"
           name="family-members"
           className="w-full h-full outline-none py-3"
+          value={userProfile?.family_size}
         />
       </div>
-      <span className="text-sm md:text-lg lg:text-subtitle capitalize mx-4">
-        member(s)
-      </span>
+      <span className="text-sm md:text-lg lg:text-subtitle capitalize mx-4">member(s)</span>
     </div>
 
     <div className="flex items-center my-6">
@@ -60,11 +59,7 @@ const ProfileInfoSection = () => (
         gender
       </label>
       <div className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg px-6 py-2">
-        <select
-          id="gender"
-          name="gender"
-          className="w-full h-full outline-none py-1"
-        >
+        <select id="gender" name="gender" className="w-full h-full outline-none py-1">
           <option value="1">Male</option>
           <option value="2">Female</option>
         </select>
@@ -76,15 +71,16 @@ const ProfileInfoSection = () => (
       type="text"
       id="birth-date"
       icon={BirthDateIcon}
+      value={userProfile?.birthdate}
     />
-    <ProfileInputField title="email" type="email" id="email" />
-    <ProfileInputField title="phone number" type="text" id="phone-number" />
+    <ProfileInputField title="email" type="email" id="email" value={userProfile?.email} />
     <ProfileInputField
-      title="upload ID"
-      type="file"
-      id="upload-id"
-      icon={Plus}
+      title="phone number"
+      type="text"
+      id="phone-number"
+      value={userProfile?.phone_number}
     />
+    <ProfileInputField title="upload ID" type="file" id="upload-id" icon={Plus} />
   </form>
 );
 
