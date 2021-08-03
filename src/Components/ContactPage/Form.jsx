@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import firebase from 'firebase';
 
 export default function Form({ selectedChoice, loginStatus }) {
   const history = useHistory();
@@ -38,19 +39,22 @@ export default function Form({ selectedChoice, loginStatus }) {
     let AllVerified = true;
     for (let i = 0; i < verify.length; i += 1) if (!verify[i]) AllVerified = false;
     if (AllVerified) {
+      firebase.firestore().collection('Contacts').doc(loginStatus.user_id).set({
+        user_id: loginStatus.user_id,
+        choice: selectedChoice,
+        name: inputs.name,
+        email: inputs.email,
+        details: inputs.details,
+      });
+
       // Firebase contact submit code
       // push this object into a collection named "Contacts"
-      // {
-      //   user_id: loginStatus.user_id,
-      //   choice: selectedChoice,
-      //   name: inputs.name,
-      //   email: inputs.email,
-      //   details: inputs.details,
-      // }
+
       history.push({
         pathname: '/ThankYou',
-        state:
+        state: [
           'Your request has been sent, a member of the support team will get in contact with you through the email you provided as soon as possible.',
+        ],
       });
     }
   };
