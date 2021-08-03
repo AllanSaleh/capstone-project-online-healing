@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { v4 as uuidv4 } from 'uuid';
+import { Link, useHistory } from 'react-router-dom';
 
 import SignupImage from './Images/SignupImage.svg';
 import Facebook from './Images/Facebook.svg';
@@ -11,6 +10,7 @@ import firebase from '../../firebase';
 export default function SignUpPage() {
   window.scrollTo(0, 0);
 
+  const history = useHistory();
   // states to hold data for signup process
   const usersRef = firebase.firestore().collection('users');
   const [valid, setValid] = useState(false);
@@ -98,11 +98,29 @@ export default function SignUpPage() {
   }; // end of function validateInfo()
 
   const registerUserToFirebase = () => {
-    signupInfo.user_id = uuidv4();
-    signupInfo.fullname = `${fullName.first_name} ${fullName.last_name}`;
-    signupInfo.birthdate = `${brithDateObj.day}/${brithDateObj.month}/${brithDateObj.year}`;
-    usersRef.doc(signupInfo.user_id).set(signupInfo);
-    alert('Sign Up Completed');
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(signupInfo.email, signupInfo.password)
+      .then((userCredential) => {
+        // Signed in
+        const { user } = userCredential;
+        signupInfo.user_id = user.uid;
+        signupInfo.fullname = `${fullName.first_name} ${fullName.last_name}`;
+        signupInfo.birthdate = `${brithDateObj.day}/${brithDateObj.month}/${brithDateObj.year}`;
+        usersRef.doc(signupInfo.user_id).set(signupInfo);
+        history.push({
+          pathname: '/ThankYou',
+          state: [
+            'Your Sign Up request has been received, you will soon receive a confirmation email.',
+            'Please follow the steps in the email to complete and activate your account.',
+          ],
+        });
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+      });
   };
   // handle onClick() for Sign Up button
   const handleSignup = () => {

@@ -7,31 +7,43 @@ import Facebook from './Images/Facebook.svg';
 import Google from './Images/Google.svg';
 import Or from './Images/or.svg';
 
-export default function LoginPage({ setLoginStatus }) {
+export default function LoginPage() {
   window.scroll(0, 0);
+
   const usersRef = firebase.firestore().collection('users');
   const [fields, setFields] = useState({ email: '', password: '' });
 
   const Login = () => {
-    usersRef.get().then((querySnapshot) => {
-      const users = [];
-      querySnapshot.forEach((doc) => {
-        users.push(doc.data());
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Signed in
+        var authUser = userCredential.user;
+        usersRef
+          .get()
+          .then((querySnapshot) => {
+            const users = [];
+            querySnapshot.forEach((doc) => {
+              users.push(doc.data());
+            });
+            const foundUser = users.find((user) => user.user_id === authUser.uid);
+            localStorage.setItem(
+              'loginStatus',
+              JSON.stringify({
+                login: true,
+                complete: foundUser.complete,
+                user_id: foundUser.user_id,
+              })
+            );
+            history.push('./');
+          })
+          .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorMessage);
+          });
       });
-      const loggedInUser = users.find(
-        (user) => user.email === fields.email && user.password === fields.password
-      );
-      if (loggedInUser) {
-        setLoginStatus({
-          login: true,
-          complete: loggedInUser.complete,
-          user_id: loggedInUser.user_id,
-        });
-        console.log(`user: ${loggedInUser.fullname} is found`);
-      } else {
-        console.log('no user found');
-      }
-    });
   };
 
   return (

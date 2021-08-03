@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import firebase from 'firebase';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 
@@ -37,12 +38,30 @@ function App() {
     document.dir = i18n.dir();
   }, [i18n, i18n.language]);
 
-  // Grab this from firebase!
   const [loginStatus, setLoginStatus] = useState({
-    login: true,
-    complete: true,
-    user_id: 'cUld5Z0ytjTuTrbeu95n',
+    login: false,
+    complete: false,
+    user_id: '',
   });
+
+  const usersRef = firebase.firestore().collection('users');
+
+  const authUser = firebase.auth().currentUser;
+
+  if (authUser) {
+    usersRef.get().then((querySnapshot) => {
+      const users = [];
+      querySnapshot.forEach((doc) => {
+        users.push(doc.data());
+      });
+      const foundUser = users.find((user) => user.user_id === authUser.uid);
+      setLoginStatus({
+        login: true,
+        complete: foundUser.complete,
+        user_id: authUser.uid,
+      });
+    });
+  }
 
   return (
     <Router>
