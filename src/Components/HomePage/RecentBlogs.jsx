@@ -63,6 +63,7 @@ export default function RecentBlogs() {
               <div
                 key={index}
                 onClick={(e) => OpenBlog(e.target.id)}
+                aria-hidden="true"
                 id={blog.title}
                 className="relative inline-block w-11/12 lg:w-2/6 h-40 lg:h-80 box-border mx-2 lg:mx-12"
               >
