@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import firebase from 'firebase';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
 
@@ -43,22 +42,17 @@ function App() {
     complete: false,
     user_id: '',
   });
-  const usersRef = firebase.firestore().collection('users');
-  const authUser = firebase.auth().currentUser;
-  if (authUser) {
-    usersRef.get().then((querySnapshot) => {
-      const users = [];
-      querySnapshot.forEach((doc) => {
-        users.push(doc.data());
-      });
-      const foundUser = users.find((user) => user.user_id === authUser.uid);
+
+  useEffect(() => {
+    const loggedIn = JSON.parse(localStorage.getItem('loginStatus'));
+    if (loggedIn !== null) {
       setLoginStatus({
-        login: true,
-        complete: foundUser.complete,
-        user_id: authUser.uid,
+        login: loggedIn.login,
+        complete: loggedIn.complete,
+        user_id: loggedIn.user_id,
       });
-    });
-  }
+    }
+  }, []);
 
   return (
     <Router>
@@ -110,7 +104,7 @@ function App() {
           <EditProfilePage loginStatus={loginStatus} />
         </Route>
         <Route path="/Login">
-          <LoginPage setLoginStatus={(data) => setLoginStatus(data)} />
+          <LoginPage />
         </Route>
         <Route path="/Purchase">
           <PurchasePage loginStatus={loginStatus} />

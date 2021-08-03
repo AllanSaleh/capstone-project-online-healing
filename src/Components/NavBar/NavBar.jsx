@@ -10,8 +10,8 @@ export default function NavBar({ loginStatus }) {
   const [OpenProfile, setOpenProfile] = useState(false);
 
   const LogOut = () => {
-    // Firebase code to LogOut!
-    alert('You Logged Out!');
+    localStorage.clear();
+    window.location.reload();
   };
   return (
     <div>

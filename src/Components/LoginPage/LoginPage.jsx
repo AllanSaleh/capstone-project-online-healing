@@ -41,9 +41,7 @@ export default function LoginPage() {
             history.push('./');
           })
           .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            console.log(errorMessage);
+            alert(error.message);
           });
       });
   };
