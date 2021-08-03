@@ -92,7 +92,7 @@ function App() {
           <CareersPage />
         </Route>
         <Route path="/Contact">
-          <ContactPage />
+          <ContactPage loginStatus={loginStatus} />
         </Route>
         <Route path="/EditProfile">
           <EditProfilePage loginStatus={loginStatus} />

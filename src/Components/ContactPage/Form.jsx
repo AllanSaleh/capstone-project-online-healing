@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-export default function Form({ selectedChoice }) {
+export default function Form({ selectedChoice, loginStatus }) {
   const history = useHistory();
 
   const [inputs, setInputs] = useState({
@@ -39,6 +39,14 @@ export default function Form({ selectedChoice }) {
     for (let i = 0; i < verify.length; i += 1) if (!verify[i]) AllVerified = false;
     if (AllVerified) {
       // Firebase contact submit code
+      // push this object into a collection named "Contacts"
+      // {
+      //   user_id: loginStatus.user_id,
+      //   choice: selectedChoice,
+      //   name: inputs.name,
+      //   email: inputs.email,
+      //   details: inputs.details,
+      // }
       history.push({
         pathname: '/ThankYou',
         state:
