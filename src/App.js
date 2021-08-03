@@ -43,11 +43,8 @@ function App() {
     complete: false,
     user_id: '',
   });
-
   const usersRef = firebase.firestore().collection('users');
-
   const authUser = firebase.auth().currentUser;
-
   if (authUser) {
     usersRef.get().then((querySnapshot) => {
       const users = [];
@@ -110,7 +107,7 @@ function App() {
           <ContactPage />
         </Route>
         <Route path="/EditProfile">
-          <EditProfilePage />
+          <EditProfilePage loginStatus={loginStatus} />
         </Route>
         <Route path="/Login">
           <LoginPage setLoginStatus={(data) => setLoginStatus(data)} />

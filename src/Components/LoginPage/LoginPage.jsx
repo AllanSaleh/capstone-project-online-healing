@@ -10,16 +10,18 @@ import Or from './Images/or.svg';
 export default function LoginPage() {
   window.scroll(0, 0);
 
+  const history = useHistory();
+
   const usersRef = firebase.firestore().collection('users');
   const [fields, setFields] = useState({ email: '', password: '' });
 
   const Login = () => {
     firebase
       .auth()
-      .signInWithEmailAndPassword(email, password)
+      .signInWithEmailAndPassword(fields.email, fields.password)
       .then((userCredential) => {
         // Signed in
-        var authUser = userCredential.user;
+        const authUser = userCredential.user;
         usersRef
           .get()
           .then((querySnapshot) => {

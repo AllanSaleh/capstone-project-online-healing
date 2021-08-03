@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProfileInputField = ({ title, id, type, icon }) => (
+const ProfileInputField = ({ title, id, type, icon, userValue }) => (
   <div className="flex items-center my-6">
     <label
       htmlFor={id}
@@ -14,6 +14,7 @@ const ProfileInputField = ({ title, id, type, icon }) => (
         id={id}
         name={id}
         className="w-11/12 h-full outline-none py-3"
+        value={userValue}
       />
       {icon && (
         <button className="w-5 h-5 mr-2">

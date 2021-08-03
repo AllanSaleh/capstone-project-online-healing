@@ -9,8 +9,8 @@ import firebase from '../../firebase';
 
 export default function SignUpPage() {
   window.scrollTo(0, 0);
-
   const history = useHistory();
+
   // states to hold data for signup process
   const usersRef = firebase.firestore().collection('users');
   const [valid, setValid] = useState(false);
@@ -117,8 +117,7 @@ export default function SignUpPage() {
         });
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+        alert(error.message);
         // ..
       });
   };
@@ -126,11 +125,6 @@ export default function SignUpPage() {
   const handleSignup = () => {
     if (validInfo()) {
       registerUserToFirebase();
-      return;
-    }
-    if (!validInfo()) {
-      alert('Please provide valid information and try again');
-      window.location.reload();
     }
   }; // end of function handleSignup()
 
