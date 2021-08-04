@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Card from './Card';
 
-const TicketSection = () => (
+const TicketSection = ({ user }) => (
   <div id="Tickets" className="flex flex-col justify-evenly px-sides lg:h-section py-8">
     <div className="pb-8">
       <h1 className="text-xl md:text-4xl xl:text-title uppercase">Purchase tickets</h1>
@@ -12,11 +12,25 @@ const TicketSection = () => (
       </h3>
     </div>
     <div className="flex flex-col md:flex-row items-center justify-around w-full lg:h-1/3">
-      <Card showIcon={false} title="5" content="10" showButton buttonText="Purchase" />
+      <Card showIcon={false} title="5" content="10$" showButton buttonText="Purchase" user={user} />
 
-      <Card showIcon={false} title="25" content="40" showButton buttonText="Purchase" />
+      <Card
+        showIcon={false}
+        title="25"
+        content="40$"
+        showButton
+        buttonText="Purchase"
+        user={user}
+      />
 
-      <Card showIcon={false} title="50" content="70" showButton buttonText="Purchase" />
+      <Card
+        showIcon={false}
+        title="50"
+        content="70$"
+        showButton
+        buttonText="Purchase"
+        user={user}
+      />
     </div>
     <div
       className="flex flex-col justify-around items-center p-4 rounded-lg h-1/3 lg:mx-16"

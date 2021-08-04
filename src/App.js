@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './styles/main.css';
@@ -37,69 +37,77 @@ function App() {
     document.dir = i18n.dir();
   }, [i18n, i18n.language]);
 
-  // Grab this from firebase!
-  const userLogin = false;
+  const [loginStatus, setLoginStatus] = useState({
+    login: false,
+    complete: false,
+    user_id: '',
+  });
+
+  useEffect(() => {
+    const loggedIn = JSON.parse(localStorage.getItem('loginStatus'));
+    if (loggedIn !== null) setLoginStatus(loggedIn);
+  }, []);
 
   return (
     <Router>
-      <NavBar loggedIn={userLogin} />
+      <NavBar loginStatus={loginStatus} />
       <Switch>
         <Route exact path="/">
-          <HomePage />
+          <HomePage loginStatus={loginStatus} />
         </Route>
         <Route path="/About">
           <AboutPage />
         </Route>
         <Route path="/AddNewCard">
-          <AddNewCardPage />
+          <AddNewCardPage loginStatus={loginStatus} />
         </Route>
         <Route path="/Blog">
           <BlogPage />
         </Route>
         <Route path="/Booking1">
-          <BookingPage1 />
+          <BookingPage1 loginStatus={loginStatus} />
         </Route>
         <Route path="/Booking2">
-          <BookingPage2 />
+          <BookingPage2 loginStatus={loginStatus} />
         </Route>
         <Route path="/Booking3">
-          <BookingPage3 />
+          <BookingPage3 loginStatus={loginStatus} />
         </Route>
         <Route path="/Booking4">
-          <BookingPage4 />
+          <BookingPage4 loginStatus={loginStatus} />
         </Route>
         <Route path="/Booking5">
-          <BookingPage5 />
+          <BookingPage5 loginStatus={loginStatus} />
         </Route>
         <Route path="/Booking6">
-          <BookingPage6 />
+          <BookingPage6 loginStatus={loginStatus} />
         </Route>
         <Route path="/Booking7">
-          <BookingPage7 />
+          <BookingPage7 loginStatus={loginStatus} />
         </Route>
         <Route path="/Booking8">
-          <BookingPage8 />
+          <BookingPage8 loginStatus={loginStatus} />
         </Route>
         <Route path="/Careers">
           <CareersPage />
         </Route>
         <Route path="/Contact">
-          <ContactPage />
+          <ContactPage loginStatus={loginStatus} />
         </Route>
         <Route path="/EditProfile">
-          <EditProfilePage />
+          <EditProfilePage loginStatus={loginStatus} />
         </Route>
         <Route path="/Login">
-          <LoginPage />
+          <LoginPage setLoginStatus={(status) => setLoginStatus(status)} />
         </Route>
         <Route path="/Purchase">
-          <PurchasePage />
+          <PurchasePage loginStatus={loginStatus} />
         </Route>
         <Route path="/Requirements">
           <RequirementsPage />
         </Route>
         <Route path="/SavedCards">
-          <SavedCardsPage />
+          <SavedCardsPage loginStatus={loginStatus} />
         </Route>
         <Route path="/SignUp">
           <SignUpPage />

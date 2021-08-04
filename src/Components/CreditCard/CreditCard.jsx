@@ -1,4 +1,5 @@
 import React from 'react';
+import firebase from 'firebase';
 
 import C1 from './Images/C1.svg';
 import C2 from './Images/C2.svg';
@@ -16,10 +17,28 @@ export default function CreditCard({
   setID,
   select,
   deletable,
+  loginStatus,
 }) {
   const DeleteCard = (cardID) => {
-    // Firebase code to delete the "cardID"th card!
-    alert('Card ' + cardID + ' was deleted!');
+    let selectedCard;
+    firebase
+      .firestore()
+      .collection('users')
+      .doc('cUld5Z0ytjTuTrbeu95n')
+      .get()
+      .then((doc) => {
+        doc.data().cards.forEach((card) => {
+          if (card.number === cardID) selectedCard = card;
+        });
+        firebase
+          .firestore()
+          .collection('users')
+          .doc(loginStatus.user_id)
+          .update({
+            cards: firebase.firestore.FieldValue.arrayRemove(selectedCard),
+          });
+        window.location.reload();
+      });
   };
 
   return (

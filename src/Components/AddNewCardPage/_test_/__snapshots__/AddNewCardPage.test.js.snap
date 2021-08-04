@@ -142,6 +142,7 @@ exports[`Add New Card renders correctly 1`] = `
         </div>
         <select
           className="w-72 h-12 p-2 border-gray-700 border-2 rounded-lg"
+          onChange={[Function]}
         />
       </div>
       <div

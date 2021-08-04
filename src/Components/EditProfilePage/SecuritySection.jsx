@@ -5,8 +5,13 @@ import LockIcon from './Images/LockIcon.svg';
 
 const SecuritySection = () => (
   <form className="my-16">
-    <h1 className="text-title uppercase">security</h1>
-    <ProfileInputField title="password" type="password" id="password" icon={LockIcon} />
+    <h1 className="text-3xl lg:text-title uppercase">security</h1>
+    <ProfileInputField
+      title="password"
+      type="password"
+      id="password"
+      icon={LockIcon}
+    />
     <ProfileInputField
       title="confirm password"
       type="password"

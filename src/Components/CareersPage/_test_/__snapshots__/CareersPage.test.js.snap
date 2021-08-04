@@ -31,7 +31,7 @@ exports[`Careers renders correctly 1`] = `
         What role will you play?
       </div>
       <button
-        className="self-center lg:self-auto w-52 lg:w-64 h-12 text-xl lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+        className="transition-all duration-300 self-center lg:self-auto w-52 lg:w-64 h-12 text-xl lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
         onClick={[Function]}
         type="button"
       >

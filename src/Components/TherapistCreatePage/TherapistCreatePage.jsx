@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import InputField from './InputField';
@@ -8,11 +8,16 @@ export default function TherapistCreatePage() {
   const history = useHistory();
 
   const GoToThankYou = () => {
+    // Code to validate inputs
+
     // Firebase stuff to send new therapist request
+
     history.push({
       pathname: '/ThankYou',
-      state:
-        'Thank you for your interest in working with Healing, we have recieved your application.\nYou will receive an email guiding you for the next steps soon after your information is reviewed.',
+      state: [
+        'Thank you for your interest in working with Healing, we have recieved your application.',
+        'You will receive an email guiding you for the next steps soon after your information is reviewed.',
+      ],
     });
   };
 
