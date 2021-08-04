@@ -5,14 +5,14 @@ import { useTranslation } from 'react-i18next';
 import Logo from './Images/Logo.svg';
 import ProfileImage from './Images/Avatar.png';
 
-export default function NavBar({ loggedIn }) {
+export default function NavBar({ loginStatus }) {
   const Avatar = ProfileImage;
   const [OpenAbout, setOpenAbout] = useState(false);
   const [OpenProfile, setOpenProfile] = useState(false);
 
   const LogOut = () => {
-    // Firebase code to LogOut!
-    alert('You Logged Out!');
+    localStorage.clear();
+    window.location.reload();
   };
 
   const { t } = useTranslation();
@@ -112,7 +112,7 @@ export default function NavBar({ loggedIn }) {
             {t('Contact')}
           </Link>
 
-          {loggedIn ? (
+          {loginStatus.login ? (
             <div
               onMouseLeave={() => setOpenProfile(false)}
               onMouseOver={() => setOpenProfile(true)}
@@ -125,7 +125,7 @@ export default function NavBar({ loggedIn }) {
                   to="/EditProfile"
                   className="hover:text-yellow-primary hover:underline text-paragraph"
                 >
-                  Ahmed M.
+                  {loginStatus.name}
                 </Link>
               </div>
 
@@ -154,7 +154,7 @@ export default function NavBar({ loggedIn }) {
             <Link to="/Login">
               <button
                 type="button"
-                className="w-28 ml-8 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
+                className="transition-all duration-300 w-28 ml-8 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border border-transparent"
               >
                 {t('Login')}
               </button>
@@ -171,7 +171,7 @@ export default function NavBar({ loggedIn }) {
           className="fixed inset-0 opacity-75 bg-black z-10"
         />
         <div className="fixed w-3/4 h-screen flex flex-col justify-evenly items-center mt-navbar bg-white py-4 z-20">
-          {loggedIn ? (
+          {loginStatus.login ? (
             <div
               onClick={() => {
                 if (OpenProfile) setOpenProfile(false);
@@ -184,7 +184,7 @@ export default function NavBar({ loggedIn }) {
                   to="/EditProfile"
                   className="hover:text-yellow-primary hover:underline text-paragraph"
                 >
-                  Ahmed M.
+                  {loginStatus.name}
                 </Link>
               </div>
 
@@ -210,7 +210,7 @@ export default function NavBar({ loggedIn }) {
             <Link to="Login">
               <button
                 type="button"
-                className="w-28 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border-2 border-transparent"
+                className="transition-all duration-300 w-28 rounded-lg h-12 bg-blue-dark text-paragraph hover:text-blue-dark hover:bg-white hover:border-blue-dark border border-transparent"
               >
                 {t('Login')}
               </button>

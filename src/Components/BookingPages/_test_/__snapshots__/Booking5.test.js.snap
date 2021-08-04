@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Booking5 renders correctly 1`] = `
+<div
+  className="h-firstsection px-sides pt-navbar"
+>
+  <h1
+    className="text-3xl lg:text-title uppercase my-8"
+  >
+    let’s match you with the right therapist
+  </h1>
+  <h3
+    className="text-md lg:text-subtitle opacity-50 text-justify"
+  >
+    Please fill out this short questionnaire to provide some general and anonymous background about you and the issues you'd like to deal with in online therapy. It would help us match you with the most suitable therapist for you.
+  </h3>
+  <div
+    className="flex flex-col justify-evenly w-full md:max-w-md lg:max-w-2xl my-16 mx-auto px-8 py-4 shadow-md"
+  >
+    <div
+      className="text-md lg:text-subtitle"
+    >
+      Are there any issue that you would like to focus on?
+    </div>
+    <div
+      className="h-1/2 flex flex-col justify-around my-8"
+    >
+      <div
+        className="flex items-center"
+      >
+        <input
+          id={1}
+          name="counselor_options"
+          type="radio"
+          value="Depression"
+        />
+        <label
+          className="text-md lg:text-paragraph ml-2"
+          htmlFor={1}
+        >
+          Depression
+        </label>
+      </div>
+      <div
+        className="flex items-center"
+      >
+        <input
+          id={2}
+          name="counselor_options"
+          type="radio"
+          value="Stress and Anxiety"
+        />
+        <label
+          className="text-md lg:text-paragraph ml-2"
+          htmlFor={2}
+        >
+          Stress and Anxiety
+        </label>
+      </div>
+      <div
+        className="flex items-center"
+      >
+        <input
+          id={3}
+          name="counselor_options"
+          type="radio"
+          value="Relationship Issues"
+        />
+        <label
+          className="text-md lg:text-paragraph ml-2"
+          htmlFor={3}
+        >
+          Relationship Issues
+        </label>
+      </div>
+      <div
+        className="flex items-center"
+      >
+        <input
+          id={4}
+          name="counselor_options"
+          type="radio"
+          value="Family Conflicts"
+        />
+        <label
+          className="text-md lg:text-paragraph ml-2"
+          htmlFor={4}
+        >
+          Family Conflicts
+        </label>
+      </div>
+      <div
+        className="flex items-center"
+      >
+        <input
+          id={5}
+          name="counselor_options"
+          type="radio"
+          value="Trauma and Abuse"
+        />
+        <label
+          className="text-md lg:text-paragraph ml-2"
+          htmlFor={5}
+        >
+          Trauma and Abuse
+        </label>
+      </div>
+      <div
+        className="flex items-center"
+      >
+        <input
+          id={6}
+          name="counselor_options"
+          type="radio"
+          value="Eating Disorders"
+        />
+        <label
+          className="text-md lg:text-paragraph ml-2"
+          htmlFor={6}
+        >
+          Eating Disorders
+        </label>
+      </div>
+    </div>
+    <div
+      className="flex justify-between"
+    >
+      <button
+        className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition duration-300"
+        onClick={[Function]}
+        type="button"
+      >
+        back
+      </button>
+      <button
+        className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition-all duration-300"
+        onClick={[Function]}
+        type="button"
+      >
+        next
+      </button>
+    </div>
+  </div>
+</div>
+`;

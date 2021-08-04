@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Therapist Profile Page renders correctly 1`] = `
+<div
+  className="flex flex-col lg:flex-row px-sides pt-navbar lg:h-firstsection"
+>
+  <div
+    className="w-full lg:w-2/5 p-4 mx-2 text-center"
+  >
+    <button
+      className="hover:cursor-pointer px-20 py-20 lg:py-0 lg:px-10"
+      type="button"
+    >
+      <img
+        alt="profile-pic"
+        src="ProfilePic.svg"
+      />
+    </button>
+  </div>
+  <div
+    className="w-full lg:w-3/5 p-4 mx-2"
+  >
+    <h1
+      className="text-4xl lg:text-title uppercase"
+    >
+      therapist profile
+    </h1>
+    <div
+      className="flex items-center my-6"
+    >
+      <label
+        className="text-sm md:text-lg lg:text-subtitle capitalize inline-block w-1/3"
+        htmlFor="full-name"
+      >
+        full name
+      </label>
+      <div
+        className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg pl-4"
+      >
+        <input
+          className="w-11/12 h-full outline-none py-3"
+          id="full-name"
+          name="full-name"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="flex my-6"
+    >
+      <div
+        className="text-subtitle capitalize inline-block w-1/3"
+        htmlFor="bio"
+      >
+        bio
+      </div>
+      <div
+        className="w-2/3 h-64 inline-flex items-center border border-black border-opacity-20 rounded-lg pl-4"
+      >
+        <textarea
+          className="w-11/12 h-full outline-none py-3 resize-none"
+          id="bio"
+          name="bio"
+        />
+      </div>
+    </div>
+    <div
+      className="flex items-center my-6"
+    >
+      <label
+        className="text-sm md:text-lg lg:text-subtitle capitalize inline-block w-1/3"
+        htmlFor="birth-date"
+      >
+        birth date
+      </label>
+      <div
+        className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg pl-4"
+      >
+        <input
+          className="w-11/12 h-full outline-none py-3"
+          id="birth-date"
+          name="birth-date"
+          type="text"
+        />
+        <button
+          className="w-5 h-5 mr-2"
+        >
+          <img
+            alt="icon"
+            src="BirthDateIcon.svg"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="flex items-center my-6"
+    >
+      <label
+        className="text-sm md:text-lg lg:text-subtitle capitalize inline-block w-1/3"
+        htmlFor="phone-number"
+      >
+        phone number
+      </label>
+      <div
+        className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg pl-4"
+      >
+        <input
+          className="w-11/12 h-full outline-none py-3"
+          id="phone-number"
+          name="phone-number"
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

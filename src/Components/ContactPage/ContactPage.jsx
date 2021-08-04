@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import RadioButtons from './RadioButtons';
 import Form from './Form';
 
-export default function ContactPage() {
+export default function ContactPage({ loginStatus }) {
   window.scrollTo(0, 0);
   const [selectedChoice, setChoice] = useState('');
 
@@ -14,7 +14,7 @@ export default function ContactPage() {
           if (choice !== selectedChoice) setChoice(choice);
         }}
       />
-      <Form selectedChoice={selectedChoice} />
+      <Form selectedChoice={selectedChoice} loginStatus={loginStatus} />
     </>
   );
 }

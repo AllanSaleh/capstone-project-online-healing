@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Careers renders correctly 1`] = `
+<div>
+  <div
+    className="lg:h-firstsection pt-navbar"
+  >
+    <div
+      className="px-sides flex flex-col justify-evenly h-3/5 py-4"
+    >
+      <div>
+        <div
+          className="text-3xl lg:text-title"
+        >
+          CAREERS AT HEALING
+        </div>
+        <div
+          className="text-xl lg:text-subtitle text-gray-600 mt-4"
+        >
+          Be a part of making people feel better.
+        </div>
+      </div>
+      <div
+        className="text-lg lg:text-paragraph text-gray-600 mt-4 text-justify"
+      >
+        Our SEO software cuts through mountains of data to surface critical insights. We build and maintain systems that process massive amounts of data (we're talking 36 trillion records per day and multiple petabytes of storage.) We model transparent and empathetic marketing for the world. We educate our community, making every effort to help them improve their skill. And we do it all by fostering a culture that encourages accountability, empathy, and transparency.
+      </div>
+      <div
+        className="self-center lg:self-auto text-lg lg:text-paragraph text-gray-600 mt-4"
+      >
+        What role will you play?
+      </div>
+      <button
+        className="transition-all duration-300 self-center lg:self-auto w-52 lg:w-64 h-12 text-xl lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+        onClick={[Function]}
+        type="button"
+      >
+        SEE OUR OPEN LIST
+      </button>
+    </div>
+    <div
+      className="bg-yellow-primary px-sides h-2/5 flex flex-col justify-evenly py-4"
+    >
+      <div
+        className="text-3xl lg:text-title"
+      >
+        OUR HIRING PHILOSOPHY
+      </div>
+      <div
+        className="text-xl lg:text-subtitle text-gray-600 mt-4 text-justify"
+      >
+        To build the very best SEO tools, we need a workforce that reflects the diversity of our communities and customers. We want Online Therapy to be a place where everyone feels welcome and engaged, bar none. It's our mission and promise to interview a diverse and representative slate of candidates before making an offer for our open roles.
+      </div>
+    </div>
+  </div>
+  <div
+    className="h-section flex flex-col justify-around px-sides py-8"
+    id="Openings"
+  >
+    <div>
+      <div
+        className="text-3xl lg:text-title"
+      >
+        CURRENT OPEN POSITIONS
+      </div>
+      <div
+        className="text-xl lg:text-subtitle text-gray-700"
+      >
+        Please send us an email with the application title as the subject with an attached CV in PDF format at:
+      </div>
+      <a
+        className="text-xl lg:text-subtitle text-blue-dark hover:underline"
+        href="mailto:recruitment@healing.com"
+      >
+        recruitment@healing.com
+      </a>
+    </div>
+    <div
+      className="h-3/4 overflow-y-scroll my-4 lg:my-0"
+    >
+      <div
+        className="flex flex-col justify-between w-11/12 border-b-2 border-gray-700 mb-6 py-4"
+      >
+        <div>
+          <div
+            className="text-blue-dark text-lg lg:text-subtitle"
+          >
+            Senior Software Developer | Backend | Remote in the USA
+          </div>
+          <div
+            className="text-gray-700 text-base lg:text-paragraph"
+          >
+            Healing is looking for a Senior Software Developer to join our Application Development team.
+          </div>
+        </div>
+        <div
+          className="flex flex-col"
+        >
+          <div
+            className="text-lg lg:text-subtitle text-blue-dark"
+          >
+            Engineering
+          </div>
+          <div
+            className="text-gray-700 text-base lg:text-paragraph"
+          >
+            Application Development
+          </div>
+        </div>
+      </div>
+      <div
+        className="flex flex-col justify-between w-11/12 border-b-2 border-gray-700 mb-6 py-4"
+      >
+        <div>
+          <div
+            className="text-blue-dark text-lg lg:text-subtitle"
+          >
+            Senior Software Developer | Backend | Remote in the USA
+          </div>
+          <div
+            className="text-gray-700 text-base lg:text-paragraph"
+          >
+            Healing is looking for a Senior Software Developer to join our Application Development team.
+          </div>
+        </div>
+        <div
+          className="flex flex-col"
+        >
+          <div
+            className="text-lg lg:text-subtitle text-blue-dark"
+          >
+            Engineering
+          </div>
+          <div
+            className="text-gray-700 text-base lg:text-paragraph"
+          >
+            Application Development
+          </div>
+        </div>
+      </div>
+      <div
+        className="flex flex-col justify-between w-11/12 border-b-2 border-gray-700 mb-6 py-4"
+      >
+        <div>
+          <div
+            className="text-blue-dark text-lg lg:text-subtitle"
+          >
+            Senior Software Developer | Backend | Remote in the USA
+          </div>
+          <div
+            className="text-gray-700 text-base lg:text-paragraph"
+          >
+            Healing is looking for a Senior Software Developer to join our Application Development team.
+          </div>
+        </div>
+        <div
+          className="flex flex-col"
+        >
+          <div
+            className="text-lg lg:text-subtitle text-blue-dark"
+          >
+            Engineering
+          </div>
+          <div
+            className="text-gray-700 text-base lg:text-paragraph"
+          >
+            Application Development
+          </div>
+        </div>
+      </div>
+      <div
+        className="flex flex-col justify-between w-11/12 border-b-2 border-gray-700 mb-6 py-4"
+      >
+        <div>
+          <div
+            className="text-blue-dark text-lg lg:text-subtitle"
+          >
+            Senior Software Developer | Backend | Remote in the USA
+          </div>
+          <div
+            className="text-gray-700 text-base lg:text-paragraph"
+          >
+            Healing is looking for a Senior Software Developer to join our Application Development team.
+          </div>
+        </div>
+        <div
+          className="flex flex-col"
+        >
+          <div
+            className="text-lg lg:text-subtitle text-blue-dark"
+          >
+            Engineering
+          </div>
+          <div
+            className="text-gray-700 text-base lg:text-paragraph"
+          >
+            Application Development
+          </div>
+        </div>
+      </div>
+      <div
+        className="flex flex-col justify-between w-11/12 border-b-2 border-gray-700 mb-6 py-4"
+      >
+        <div>
+          <div
+            className="text-blue-dark text-lg lg:text-subtitle"
+          >
+            Senior Software Developer | Backend | Remote in the USA
+          </div>
+          <div
+            className="text-gray-700 text-base lg:text-paragraph"
+          >
+            Healing is looking for a Senior Software Developer to join our Application Development team.
+          </div>
+        </div>
+        <div
+          className="flex flex-col"
+        >
+          <div
+            className="text-lg lg:text-subtitle text-blue-dark"
+          >
+            Engineering
+          </div>
+          <div
+            className="text-gray-700 text-base lg:text-paragraph"
+          >
+            Application Development
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

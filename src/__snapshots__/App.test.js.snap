@@ -1,0 +1,741 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div>
+    <div
+      className="fixed inset-x-0 top-0 px-sides flex justify-between items-center bg-blue-light h-navbar z-50"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <div
+          className="flex justify-between items-center cursor-pointer leading-tight"
+        >
+          <img
+            alt="logo"
+            className="w-8 lg:w-12"
+            src="Logo.svg"
+          />
+          <div
+            className="text-3xl lg:text-title ml-2"
+          >
+            Healing
+          </div>
+        </div>
+      </a>
+      <div
+        className="lg:hidden flex items-center"
+      >
+        <button
+          className="outline-none mobile-menu-button"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className=" w-6 h-6 hover:text-blue-dark "
+            fill="none"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            x-show="!showMenu"
+          >
+            <path
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        className="hidden lg:flex justify-between items-center flex-no-wrap"
+      >
+        <a
+          className="ml-8 hover:text-yellow-primary hover:underline text-paragraph"
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+        <a
+          className="ml-8 hover:text-yellow-primary hover:underline text-paragraph"
+          href="/Blog"
+          onClick={[Function]}
+        >
+          Blogs
+        </a>
+        <div
+          className="ml-8 relative"
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+        >
+          <div
+            className="my-2"
+          >
+            <a
+              className="hover:text-yellow-primary hover:underline text-paragraph"
+              href="/About"
+              onClick={[Function]}
+            >
+              About ᐁ
+            </a>
+          </div>
+        </div>
+        <a
+          className="ml-8 hover:text-yellow-primary hover:underline text-paragraph"
+          href="/Contact"
+          onClick={[Function]}
+        >
+          Contact Us
+        </a>
+        <div
+          className="ml-8 relative"
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+        >
+          <div
+            className="flex items-center justify-between my-2"
+          >
+            <img
+              alt="Profile"
+              className="mr-2 w-10 rounded-full"
+              src="Avatar.png"
+            />
+            <a
+              className="hover:text-yellow-primary hover:underline text-paragraph"
+              href="/EditProfile"
+              onClick={[Function]}
+            >
+              Ahmed M.
+            </a>
+          </div>
+        </div>
+        <div />
+      </div>
+    </div>
+    <div
+      className="hidden flex justify-end transition duration-500"
+      id="mobile-menu"
+    >
+      <div
+        className="fixed inset-0 opacity-75 bg-black z-10"
+        onClick={[Function]}
+      />
+      <div
+        className="fixed w-3/4 h-screen flex flex-col justify-evenly items-center mt-navbar bg-white py-4 z-20"
+      >
+        <div
+          onClick={[Function]}
+        >
+          <div
+            className="flex items-center justify-between my-2"
+          >
+            <img
+              alt="Profile"
+              className="mr-2 w-10 rounded-full"
+              src="Avatar.png"
+            />
+            <a
+              className="hover:text-yellow-primary hover:underline text-paragraph"
+              href="/EditProfile"
+              onClick={[Function]}
+            >
+              Ahmed M.
+            </a>
+          </div>
+        </div>
+        <a
+          className="hover:text-yellow-primary hover:underline text-paragraph"
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+        <a
+          className="hover:text-yellow-primary hover:underline text-paragraph"
+          href="/Blog"
+          onClick={[Function]}
+        >
+          Blogs
+        </a>
+        <div>
+          <div
+            className="my-2 text-center"
+            onClick={[Function]}
+          >
+            <a
+              className="hover:text-yellow-primary hover:underline text-paragraph"
+              href="/About"
+              onClick={[Function]}
+            >
+              About ᐁ
+            </a>
+          </div>
+        </div>
+        <a
+          className="hover:text-yellow-primary hover:underline text-paragraph"
+          href="/Contact"
+          onClick={[Function]}
+        >
+          Contact Us
+        </a>
+        <div />
+      </div>
+    </div>
+  </div>,
+  <div
+    className="h-firstsection mt-navbar"
+  >
+    <div
+      className="absolute top-0 left-0 z-0"
+    >
+      <img
+        alt="Background"
+        src="Background.svg"
+      />
+    </div>
+    <div
+      className="flex lg:flex-row flex-col lg:justify-between lg:m-56 relative z-0"
+    >
+      <div
+        className="pt-20 pb-28 flex flex-col lg:translate-y-0 transform translate-y-56"
+      >
+        <div
+          className="lg:text-4xl text-base pl-4"
+        >
+          WE ARE HERE TO
+        </div>
+        <div
+          className="lg:text-9xl  text-6xl pl-4"
+        >
+          HELP
+        </div>
+        <div>
+          <button
+            className="transition-all duration-300 mt-6 ml-4 py-2 px-6 lg:py-4 lg:px-6 lg:text-subtitle text-base rounded-md bg-blue-dark border hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+            onClick={[Function]}
+            type="button"
+          >
+            BOOK AN APPOINTMENT
+          </button>
+        </div>
+      </div>
+      <div
+        className="transform -translate-y-72 w-64 lg:-translate-y-0 lg:w-auto lg:ml-0 ml-16"
+      >
+        <img
+          alt="HP_illustration"
+          src="HP_illustration.svg"
+        />
+      </div>
+    </div>
+  </div>,
+  <div
+    className="text-left bg-yellow-primary h-section w-full px-sides m-"
+  >
+    <div
+      className="lg:text-5xl text-lg font-bold lg:w-7/12 lg:font-normal lg:pt-20 pt-20 uppercase"
+    >
+      Professional, licensed, and vetted therapists that you can trust
+    </div>
+    <div
+      className="pt-12 pb-16"
+    >
+      <img
+        alt="therapists"
+        src="therapists.svg"
+      />
+    </div>
+    <div
+      className="lg:text-lg text-sm lg:w-8/12 lg:pb-20"
+    >
+      Tap into the world's largest network of licensed, accredited, and experienced therapists who can help you with a range of issues including depression, anxiety, relationships, trauma, grief, and more. with our therapists, you get the same professionalism and quality you would expect from an in-office therapist, but with the ability to communicate whenever and however you want.
+    </div>
+    <div>
+      <button
+        className="mt-6 ml-4 py-2 px-6 lg:py-4 lg:px-6 lg:text-subtitle text-base rounded-md bg-blue-dark border hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+        onClick={[Function]}
+        type="button"
+      >
+        BOOK AN APPOINTMENT
+      </button>
+    </div>
+  </div>,
+  <div
+    className=" md:h-section flex flex-col justify-evenly px-sides"
+  >
+    <h1
+      className="sm:text-xl md:text-4xl xl:text-title pb-2 uppercase mb-2"
+    >
+      we can communicate through
+    </h1>
+    <div
+      className="flex flex-col md:flex-row items-center md:items-start md:justify-around"
+    >
+      <div
+        className="h-full w-full my-4 flex flex-col items-center justify-evenly shadow-lg rounded-lg md:w-1/4 p-4"
+      >
+        <img
+          alt=""
+          className="flex-initial mb-4"
+          src="phone-cell.svg"
+        />
+        <h3
+          className="text-center text-xl lg:text-3xl 2xl:text-title pb-1 capitalize"
+        >
+          voice call
+           
+        </h3>
+        <p
+          className="text-opacity-50 text-black text-center text-sm md:text-md lg:text-paragraph py-4"
+        >
+          Feeling ready to start a conversation? Give your therapist a voice call and talk your heart out!
+        </p>
+      </div>
+      <div
+        className="h-full w-full my-4 flex flex-col items-center justify-evenly shadow-lg rounded-lg md:w-1/4 p-4"
+      >
+        <img
+          alt=""
+          className="flex-initial mb-4"
+          src="chat-icon.svg"
+        />
+        <h3
+          className="text-center text-xl lg:text-3xl 2xl:text-title pb-1 capitalize"
+        >
+          chat
+           
+        </h3>
+        <p
+          className="text-opacity-50 text-black text-center text-sm md:text-md lg:text-paragraph py-4"
+        >
+          Need to talk to someone?Come have a chat with your therapist!
+        </p>
+      </div>
+      <div
+        className="h-full w-full my-4 flex flex-col items-center justify-evenly shadow-lg rounded-lg md:w-1/4 p-4"
+      >
+        <img
+          alt=""
+          className="flex-initial mb-4"
+          src="video-call-icon.svg"
+        />
+        <h3
+          className="text-center text-xl lg:text-3xl 2xl:text-title pb-1 capitalize"
+        >
+          video call
+           
+        </h3>
+        <p
+          className="text-opacity-50 text-black text-center text-sm md:text-md lg:text-paragraph py-4"
+        >
+          For better experience therapists recommend video calls, but always remember that its a choice!
+        </p>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="flex flex-col justify-evenly h-64 lg:h-section px-sides bg-blue-light"
+  >
+    <div
+      className="text-2xl lg:text-title"
+    >
+      RECENT BLOGS
+    </div>
+    <div
+      className="flex justify-between items-center"
+    >
+      <button
+        className="mr-2 lg:mr-4 h-10 lg:h-12 w-10 lg:w-12 px-3 bg-white rounded-lg border-2 border-black hover:bg-blue-dark"
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="Previous"
+          src="Prev.svg"
+        />
+      </button>
+      <div
+        className="relative h-40 lg:h-80 w-full overflow-hidden"
+      >
+        <div
+          className="h-44 lg:h-96 box-border whitespace-nowrap overflow-x-auto overflow-y-hidden"
+          id="Menu"
+        >
+          <div
+            className="relative inline-block w-11/12 lg:w-2/6 h-40 lg:h-80 box-border mx-2 lg:mx-12"
+            id="Mental Health & Technology"
+            onClick={[Function]}
+          >
+            <img
+              alt="Background"
+              className="rounded-lg absolute h-full w-full cursor-pointer"
+              src="Tech.svg"
+            />
+            <div
+              className="w-24 lg:w-44 p-2 rounded-lg text-center whitespace-normal cursor-pointer absolute bottom-6 left-2 lg:bottom-8 lg:left-4 text-white text-xs lg:text-paragraph bg-black bg-opacity-50"
+            >
+              Mental Health & Technology
+            </div>
+          </div>
+          <div
+            className="relative inline-block w-11/12 lg:w-2/6 h-40 lg:h-80 box-border mx-2 lg:mx-12"
+            id="Healing Trauma"
+            onClick={[Function]}
+          >
+            <img
+              alt="Background"
+              className="rounded-lg absolute h-full w-full cursor-pointer"
+              src="Trauma.svg"
+            />
+            <div
+              className="w-24 lg:w-44 p-2 rounded-lg text-center whitespace-normal cursor-pointer absolute bottom-6 left-2 lg:bottom-8 lg:left-4 text-white text-xs lg:text-paragraph bg-black bg-opacity-50"
+            >
+              Healing Trauma
+            </div>
+          </div>
+          <div
+            className="relative inline-block w-11/12 lg:w-2/6 h-40 lg:h-80 box-border mx-2 lg:mx-12"
+            id="Mental Health & Technology"
+            onClick={[Function]}
+          >
+            <img
+              alt="Background"
+              className="rounded-lg absolute h-full w-full cursor-pointer"
+              src="Tech.svg"
+            />
+            <div
+              className="w-24 lg:w-44 p-2 rounded-lg text-center whitespace-normal cursor-pointer absolute bottom-6 left-2 lg:bottom-8 lg:left-4 text-white text-xs lg:text-paragraph bg-black bg-opacity-50"
+            >
+              Mental Health & Technology
+            </div>
+          </div>
+          <div
+            className="relative inline-block w-11/12 lg:w-2/6 h-40 lg:h-80 box-border mx-2 lg:mx-12"
+            id="Healing Trauma"
+            onClick={[Function]}
+          >
+            <img
+              alt="Background"
+              className="rounded-lg absolute h-full w-full cursor-pointer"
+              src="Trauma.svg"
+            />
+            <div
+              className="w-24 lg:w-44 p-2 rounded-lg text-center whitespace-normal cursor-pointer absolute bottom-6 left-2 lg:bottom-8 lg:left-4 text-white text-xs lg:text-paragraph bg-black bg-opacity-50"
+            >
+              Healing Trauma
+            </div>
+          </div>
+          <div
+            className="relative inline-block w-11/12 lg:w-2/6 h-40 lg:h-80 box-border mx-2 lg:mx-12"
+            id="Mental Health & Technology"
+            onClick={[Function]}
+          >
+            <img
+              alt="Background"
+              className="rounded-lg absolute h-full w-full cursor-pointer"
+              src="Tech.svg"
+            />
+            <div
+              className="w-24 lg:w-44 p-2 rounded-lg text-center whitespace-normal cursor-pointer absolute bottom-6 left-2 lg:bottom-8 lg:left-4 text-white text-xs lg:text-paragraph bg-black bg-opacity-50"
+            >
+              Mental Health & Technology
+            </div>
+          </div>
+          <div
+            className="relative inline-block w-11/12 lg:w-2/6 h-40 lg:h-80 box-border mx-2 lg:mx-12"
+            id="Healing Trauma"
+            onClick={[Function]}
+          >
+            <img
+              alt="Background"
+              className="rounded-lg absolute h-full w-full cursor-pointer"
+              src="Trauma.svg"
+            />
+            <div
+              className="w-24 lg:w-44 p-2 rounded-lg text-center whitespace-normal cursor-pointer absolute bottom-6 left-2 lg:bottom-8 lg:left-4 text-white text-xs lg:text-paragraph bg-black bg-opacity-50"
+            >
+              Healing Trauma
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        className="ml-2 lg:ml-4 h-10 lg:h-12 w-10 lg:w-12 px-3 bg-white rounded-lg border-2 border-black hover:bg-blue-dark"
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="Previous"
+          src="Next.svg"
+        />
+      </button>
+    </div>
+  </div>,
+  <div
+    className="flex flex-col justify-evenly px-sides lg:h-section py-8"
+    id="Tickets"
+  >
+    <div
+      className="pb-8"
+    >
+      <h1
+        className="text-xl md:text-4xl xl:text-title uppercase"
+      >
+        Purchase tickets
+      </h1>
+      <h3
+        className="text-xs md:text-lg lg:text-subtitle text-opacity-75 mb-4 md:my-2"
+      >
+        purchase tickets that can be used to book appointments!
+      </h3>
+    </div>
+    <div
+      className="flex flex-col md:flex-row items-center justify-around w-full lg:h-1/3"
+    >
+      <div
+        className="h-full w-full my-4 flex flex-col items-center justify-evenly shadow-lg rounded-lg md:w-1/4 p-4"
+      >
+        <h3
+          className="text-center text-xl lg:text-3xl 2xl:text-title pb-1 capitalize"
+        >
+          5
+           
+          Tickets
+        </h3>
+        <p
+          className="text-opacity-50 text-black text-center text-sm md:text-md lg:text-paragraph py-4"
+        >
+          10$
+        </p>
+        <button
+          className="bg-blue-dark py-2 px-4 uppercase text-paragraph border text-black hover:bg-transparent hover:border-blue-dark hover:text-blue-dark  transition-all duration-200 rounded-md"
+          onClick={[Function]}
+          type="button"
+        >
+          Purchase
+        </button>
+      </div>
+      <div
+        className="h-full w-full my-4 flex flex-col items-center justify-evenly shadow-lg rounded-lg md:w-1/4 p-4"
+      >
+        <h3
+          className="text-center text-xl lg:text-3xl 2xl:text-title pb-1 capitalize"
+        >
+          25
+           
+          Tickets
+        </h3>
+        <p
+          className="text-opacity-50 text-black text-center text-sm md:text-md lg:text-paragraph py-4"
+        >
+          40$
+        </p>
+        <button
+          className="bg-blue-dark py-2 px-4 uppercase text-paragraph border text-black hover:bg-transparent hover:border-blue-dark hover:text-blue-dark  transition-all duration-200 rounded-md"
+          onClick={[Function]}
+          type="button"
+        >
+          Purchase
+        </button>
+      </div>
+      <div
+        className="h-full w-full my-4 flex flex-col items-center justify-evenly shadow-lg rounded-lg md:w-1/4 p-4"
+      >
+        <h3
+          className="text-center text-xl lg:text-3xl 2xl:text-title pb-1 capitalize"
+        >
+          50
+           
+          Tickets
+        </h3>
+        <p
+          className="text-opacity-50 text-black text-center text-sm md:text-md lg:text-paragraph py-4"
+        >
+          70$
+        </p>
+        <button
+          className="bg-blue-dark py-2 px-4 uppercase text-paragraph border text-black hover:bg-transparent hover:border-blue-dark hover:text-blue-dark  transition-all duration-200 rounded-md"
+          onClick={[Function]}
+          type="button"
+        >
+          Purchase
+        </button>
+      </div>
+    </div>
+    <div
+      className="flex flex-col justify-around items-center p-4 rounded-lg h-1/3 lg:mx-16"
+      style={
+        Object {
+          "boxShadow": "0px 4px 12px 4px rgba(178, 171, 171, 0.25)",
+        }
+      }
+    >
+      <h1
+        className="text-2xl lg:text-3xl uppercase text-center py-4"
+      >
+        are you a counselor?
+      </h1>
+      <p
+        className="w-3/4 text-base md:text-md lg:text-subtitle text-justify md:text-center text-opacity-50"
+      >
+        Interested in joining our mental health platform? You decide your schedule and how much you want to work, we’ll take care of the client referrals and billing details!
+      </p>
+      <div
+        className="text-center my-8"
+      >
+        <a
+          href="/Requirements"
+          onClick={[Function]}
+        >
+          <button
+            className="bg-blue-dark py-2 px-4 uppercase text-paragraph border text-black hover:bg-transparent hover:border-blue-dark hover:text-blue-dark  transition-all duration-200 rounded-md"
+            type="button"
+          >
+            learn more
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="py-4 flex flex-col lg:flex-row justify-between px-sides items-center lg:h-footer bg-yellow-primary"
+  >
+    <div
+      className="flex flex-col justify-between items-center text-center lg:text-left lg:items-start h-40"
+    >
+      <div>
+        <div
+          className="text-3xl lg:text-title"
+        >
+          Subscribe
+        </div>
+        <div
+          className="text-xl lg:text-paragraph lg:mt-4 text-gray-700"
+        >
+          We'll never try to spam you or share your e-mail
+        </div>
+      </div>
+      <div
+        className="flex border-gray-700 border-2 h-12 rounded-lg"
+      >
+        <input
+          className="w-64 p-2 rounded-l-md"
+          onChange={[Function]}
+          placeholder="Enter your E-Mail"
+          type="email"
+        />
+        <button
+          className="border-0 border-l-2 border-gray-600 p-2 bg-blue-dark rounded-r-md"
+          onClick={[Function]}
+          type="button"
+        >
+          <img
+            alt="Send"
+            src="Send.svg"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="flex flex-col justify-evenly items-center h-40"
+    >
+      <div
+        className="w-72 lg:w-96 flex justify-between items-center text-gray-700 text-lg lg:text-paragraph"
+      >
+        <a
+          className="hover:underline hover:text-blue-dark"
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+        <a
+          className="hover:underline hover:text-blue-dark"
+          href="/Blog"
+          onClick={[Function]}
+        >
+          Blogs
+        </a>
+        <a
+          className="hover:underline hover:text-blue-dark"
+          href="/About"
+          onClick={[Function]}
+        >
+          About
+        </a>
+        <a
+          className="hover:underline hover:text-blue-dark"
+          href="/Contact"
+          onClick={[Function]}
+        >
+          Contact Us
+        </a>
+      </div>
+      <div
+        className="flex justify-center items-center"
+      >
+        <a
+          className="mx-4"
+          href="https://twitter.com/"
+          target="_blank"
+        >
+          <img
+            alt="Twitter"
+            src="Twitter.svg"
+          />
+        </a>
+        <a
+          className="mx-4"
+          href="https://www.facebook.com/"
+          target="_blank"
+        >
+          <img
+            alt="Facebook"
+            src="Facebook.svg"
+          />
+        </a>
+        <a
+          className="mx-4"
+          href="https://www.google.com/"
+          target="_blank"
+        >
+          <img
+            alt="Google"
+            src="Google.svg"
+          />
+        </a>
+      </div>
+      <div
+        className="flex justify-center items-center"
+      >
+        <label
+          className="w-24"
+        >
+          Language:
+        </label>
+        <select
+          className="w-24 p-1 border-gray-700 border-2 rounded-lg"
+        >
+          <option
+            className="py-1 text-paragraph text-gray-700"
+            value="En"
+          >
+            English
+          </option>
+          <option
+            className="py-1 text-paragraph text-gray-700"
+            value="Ku"
+          >
+            كوردى
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>,
+]
+`;

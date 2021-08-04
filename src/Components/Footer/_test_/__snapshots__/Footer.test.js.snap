@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<div
+  className="py-4 flex flex-col lg:flex-row justify-between px-sides items-center lg:h-footer bg-yellow-primary"
+>
+  <div
+    className="flex flex-col justify-between items-center text-center lg:text-left lg:items-start h-40"
+  >
+    <div>
+      <div
+        className="text-3xl lg:text-title"
+      >
+        Subscribe
+      </div>
+      <div
+        className="text-xl lg:text-paragraph lg:mt-4 text-gray-700"
+      >
+        We'll never try to spam you or share your e-mail
+      </div>
+    </div>
+    <div
+      className="flex border-gray-700 border-2 h-12 rounded-lg"
+    >
+      <input
+        className="w-64 p-2 rounded-l-md"
+        placeholder="Enter your E-Mail"
+        type="email"
+      />
+      <button
+        className="w-12 border-0 border-l-2 border-gray-700 p-2 bg-blue-dark rounded-r-md"
+        type="button"
+      >
+        <img
+          alt="Send"
+          src="Send.svg"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="flex flex-col justify-evenly items-center h-40"
+  >
+    <div
+      className="w-72 lg:w-96 flex justify-between items-center text-gray-700 text-lg lg:text-paragraph"
+    >
+      <a
+        className="hover:underline hover:text-blue-dark"
+        href="#"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+      <a
+        className="hover:underline hover:text-blue-dark"
+        href="#"
+        onClick={[Function]}
+      >
+        Blogs
+      </a>
+      <a
+        className="hover:underline hover:text-blue-dark"
+        href="#"
+        onClick={[Function]}
+      >
+        About
+      </a>
+      <a
+        className="hover:underline hover:text-blue-dark"
+        href="#"
+        onClick={[Function]}
+      >
+        Contact Us
+      </a>
+    </div>
+    <div
+      className="flex justify-center items-center"
+    >
+      <a
+        className="mx-4"
+        href="#"
+        target="_blank"
+      >
+        <img
+          alt="Twitter"
+          src="Twitter.svg"
+        />
+      </a>
+      <a
+        className="mx-4"
+        href="#"
+        target="_blank"
+      >
+        <img
+          alt="Facebook"
+          src="Facebook.svg"
+        />
+      </a>
+      <a
+        className="mx-4"
+        href="#"
+        target="_blank"
+      >
+        <img
+          alt="Google"
+          src="Google.svg"
+        />
+      </a>
+    </div>
+    <div
+      className="flex justify-center items-center"
+    >
+      <label
+        className="w-24"
+      >
+        Language:
+      </label>
+      <select
+        className="w-24 p-1 border-gray-700 border-2 rounded-lg"
+      >
+        <option
+          className="py-1 text-paragraph text-gray-700"
+          value="En"
+        >
+          English
+        </option>
+        <option
+          className="py-1 text-paragraph text-gray-700"
+          value="Ku"
+        >
+          كوردى
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+`;

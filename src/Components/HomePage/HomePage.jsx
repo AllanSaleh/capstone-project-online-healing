@@ -9,10 +9,8 @@ import TicketSection from './TicketSection';
 
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 
-export default function HomePage() {
+export default function HomePage({ loginStatus }) {
   const location = useLocation();
-  // Grabbed User status from Firebase
-  const ProfileVerify = { login: true, complete: true };
 
   useEffect(() => {
     if (location.state === true) {
@@ -26,11 +24,11 @@ export default function HomePage() {
 
   return (
     <>
-      <Landing user={ProfileVerify} />
-      <Description user={ProfileVerify} />
+      <Landing user={loginStatus} />
+      <Description user={loginStatus} />
       <CommunicationSection />
       <RecentBlogs />
-      <TicketSection user={ProfileVerify} />
+      <TicketSection user={loginStatus} />
     </>
   );
 }

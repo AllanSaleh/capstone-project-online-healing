@@ -17,7 +17,8 @@
     "react-i18next": "^11.7.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^2.2.4",
+    "uuid": "^8.3.2"
   },
   "scripts": {
     "start": "concurrently \"yarn watch:css\" \"yarn react-scripts start\"",
