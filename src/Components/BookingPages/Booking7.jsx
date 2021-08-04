@@ -14,7 +14,7 @@ export default function Booking() {
     history.push('/Booking8');
   };
   return (
-    <div className="h-firstsection px-sides pt-navbar">
+    <div className="lg:h-firstsection px-sides pt-navbar">
       <h1 className="text-2xl lg:text-title uppercase my-8">Submit your appointment</h1>
       <h3 className="text-md lg:text-subtitle opacity-50 text-justify">
         Click Submit if you are sure of all your choices.

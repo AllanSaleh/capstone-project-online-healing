@@ -24,7 +24,7 @@ export default function CreditCard({
     firebase
       .firestore()
       .collection('users')
-      .doc('cUld5Z0ytjTuTrbeu95n')
+      .doc(loginStatus.user_id)
       .get()
       .then((doc) => {
         doc.data().cards.forEach((card) => {

@@ -15,7 +15,7 @@ export default function Booking6() {
     history.push('/Booking7');
   };
   return (
-    <div className="flex flex-col justify-evenly h-firstsection px-sides pt-navbar">
+    <div className="flex flex-col justify-evenly lg:h-firstsection px-sides pt-navbar">
       <div>
         <h1 className="text-3xl lg:text-title uppercase my-8">What brings you here?</h1>
         <h3 className="text-md lg:text-subtitle opacity-50 text-justify">
@@ -32,7 +32,7 @@ export default function Booking6() {
           setAnswer(event.target.value);
         }}
       />
-      <div className="mx-auto w-full lg:w-1/2 flex justify-between mt-8">
+      <div className="mx-auto w-full lg:w-1/2 flex justify-between mt-8 mb-4">
         <button
           onClick={() => PrevPage()}
           type="button"

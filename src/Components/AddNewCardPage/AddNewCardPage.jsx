@@ -96,6 +96,7 @@ export default function AddNewCardPage({ loginStatus }) {
             zip: inputs.zip,
             city: inputs.city,
             address: inputs.address,
+            type: inputs.type,
           }),
         });
       history.push({
