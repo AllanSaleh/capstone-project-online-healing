@@ -79,7 +79,7 @@ export default function Footer() {
             onClick={() => window.scrollTo(0, 0)}
             className="hover:underline hover:text-blue-dark"
           >
-            {t('Contact')}
+            {t('ContactUs')}
           </Link>
         </div>
 

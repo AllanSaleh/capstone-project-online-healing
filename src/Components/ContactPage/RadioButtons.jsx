@@ -1,47 +1,46 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import ContactPic from './Images/ContactPic.svg';
 
 export default function RadioButtons({ choiceCheck }) {
+  const { t } = useTranslation();
   const choose = (value) => choiceCheck(value);
 
   const radios = [
-    { value: 'ServiceQuestion', text: 'I have a question about the service.' },
+    { value: 'ServiceQuestion', text: t('Contact.Choice1') },
     {
       value: 'ClientSupport',
-      text: "I'm a registered client and I need support.",
+      text: t('Contact.Choice2'),
     },
     {
       value: 'CouncelorInterest',
-      text: "I'm a counselor interested in joining.",
+      text: t('Contact.Choice3'),
     },
     {
       value: 'CounselorSupport',
-      text: "I'm a counselor interested in joining.",
+      text: t('Contact.Choice4'),
     },
     {
       value: 'BusinessInquiry',
-      text: "I'm a registered counselor and I need support.",
+      text: t('Contact.Choice5'),
     },
     {
       value: 'OrganizationInterest',
-      text: "I'm interested in Healing Online for my organization.",
+      text: t('Contact.Choice6'),
     },
-    { value: 'BillingQuestion', text: 'I have a billing related question.' },
+    { value: 'BillingQuestion', text: t('Contact.Choice7') },
   ];
   return (
     <div className="h-firstsection pt-navbar px-sides flex flex-col justify-evenly w-full">
       <div>
-        <div className="text-2xl sm:text-title sm:mb-0 mb-3">SEND US YOUR REQUEST!</div>
-        <div className="sm:text-subtitle sm:mb-0 mb-10  text-gray-700 md:text-sm lg:text-xl lg:text-gray-700 lg:text-subtitle md:mt-5 md:flex-col md:justify-evenly md:flex">
-          Do you have a question, concern, idea, feedback, or problem? If you need assistance,
-          please fill out the form below and we'd be happy to help!
-        </div>
+        <div className="text-2xl sm:text-title sm:mb-0 mb-3">{t('Contact.Title')}</div>
+        <div className="sm:text-subtitle sm:mb-0 mb-10  text-gray-700 md:text-sm lg:text-xl lg:text-gray-700 lg:text-subtitle md:mt-5 md:flex-col md:justify-evenly md:flex">{t('Contact.Subtitle')}</div>
       </div>
 
       <div className="flex justify-between sm:flex-row flex-col">
         <div>
-          <div className="text-subtitle mb-4 text-sm sm:text-lg">Type of Contact</div>
+          <div className="text-subtitle mb-4 text-sm sm:text-lg">{t('Contact.Type')}</div>
           <div className="flex flex-col justify-between">
             {radios.map((radio) => (
               <div className="flex ml-4 my-2">

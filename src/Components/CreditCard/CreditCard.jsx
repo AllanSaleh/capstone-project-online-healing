@@ -6,6 +6,7 @@ import C2 from './Images/C2.svg';
 import C3 from './Images/C3.svg';
 import MasterLogo from './Images/MasterLogo.svg';
 import VisaLogo from './Images/VisaLogo.svg';
+import { useTranslation } from 'react-i18next';
 
 export default function CreditCard({
   background,
@@ -19,6 +20,8 @@ export default function CreditCard({
   deletable,
   loginStatus,
 }) {
+  const { t } = useTranslation();
+
   const DeleteCard = (cardID) => {
     let selectedCard;
     firebase
@@ -73,9 +76,7 @@ export default function CreditCard({
           onClick={(e) => DeleteCard(e.target.closest('.relative').id)}
           type="button"
           className="absolute bottom-7 right-4 h-6 w-12 lg:bottom-9 lg:right-4 lg:h-12 lg:w-28 text-xs lg:text-subtitle text-white bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
-        >
-          DELETE
-        </button>
+        >{t('Delete')}</button>
       )}
     </div>
   );
