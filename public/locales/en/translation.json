@@ -57,5 +57,58 @@
     "ForYou": "recommended for you"
   },
 
-  
+  "Booking": {
+    "Title1": "let’s match you with the right therapist",
+    "Subtitle1": "Please fill out this short questionnaire to provide some general and anonymous background about you and the issues you'd like to deal with in online therapy. It would help us match you with the most suitable therapist for you.",
+
+    "Title2": "What brings you here?",
+    "Subtitle2": "Please specify (in a few sentences) why you'd like counseling. This will give your counselor a good understanding of where to start.",
+
+    "Title3": "Submit your appointment",
+    "Subtitle3": "Click Submit if you are sure of all your choices.",
+
+    "Title4": "your request has been submitted!",
+    "Subtitle4": "You will receive an email guiding you to book a date and time soon.",
+
+    "Next": "Next",
+    "Back": "Back",
+
+    "Q1": "What type of counseling are you looking for?",
+    "Choice11": "Individual counseling",
+    "Choice12": "Teen counseling (for my child)",
+
+    "Q2": "What is your relationship status?",
+    "Choice21": "Single",
+    "Choice22": "Married",
+    "Choice23": "Divorced",
+
+    "Q3": "Have you ever been in therapy before?",
+    "Choice31": "Yes",
+    "Choice32": "No",
+
+    "Q4": "Are there any specific quality that you would prefer in a counselor?",
+    "Choice41": "I prefer a Male counselor",
+    "Choice42": "I prefer a Female counselor",
+    "Choice43": "I prefer an Older(45+) counselor",
+    "Choice44": "I prefer a Non-Religious counselor",
+    "Choice45": "I prefer a Younger(30-) counselor",
+
+    "Q5": "Are there any issue that you would like to focus on?",
+    "Choice51": "Depression",
+    "Choice52": "Stress and Anxiety",
+    "Choice53": "Relationship Issues",
+    "Choice54": "Family Conflicts",
+    "Choice55": "Trauma and Abuse",
+    "Choice56": "Eating Disorders",
+
+    "Explain": "Please explain here...",
+
+    "Submit": "submit appointment?",
+    "Aware": "Please be aware that this action will cost you a ticket!",
+    "SubmitBtn": "Submit",
+
+    "Submitted": "reqeuest submitted",
+    "Notice": "you will receive a confirmation email soon. please keep an eye on your mail.",
+    "BackHome": "back to home"
+  }
 }

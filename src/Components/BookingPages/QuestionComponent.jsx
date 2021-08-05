@@ -1,18 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const QuestionComponent = ({ question, choices, setParentAnswer }) => {
   // const [selected, setSelected] = useState(false);
 
   const handleChoiceClick = (event) => {
-    // if (!selected) {
-    //   setSelected(true);
-    //   event.target.className =
-    //     'inline-block my-4 p-4 lg:p-6 text-md lg:text-paragraph hover:cursor-pointer text-white bg-blue-dark border rounded-lg';
-    // } else {
-    //   setSelected(false)
-    //   event.target.className =
-    //     'inline-block my-4 p-4 lg:p-6 text-md lg:text-paragraph hover:cursor-pointer bg-white border border-black border-opacity-20 rounded-lg';
-    // }
     setParentAnswer(event.target.innerText);
   };
   return (
