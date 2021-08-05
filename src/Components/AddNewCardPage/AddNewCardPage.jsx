@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
 import firebase from '../../firebase';
 
@@ -8,6 +9,7 @@ import Card2 from './Images/Card2.svg';
 export default function AddNewCardPage({ loginStatus }) {
   window.scrollTo(0, 0);
   const history = useHistory();
+  const { t } = useTranslation();
 
   const [countryList, setCountries] = useState([]);
   const [cityList, setCities] = useState([]);
@@ -51,32 +53,32 @@ export default function AddNewCardPage({ loginStatus }) {
     if (inputs.number.match(/[0-9]/) && inputs.number.length === 19) verify[0] = true;
     else {
       verify[0] = false;
-      alert('Incorrect Card Number Format');
+      alert(t('AddNewCard.NumberAlert'));
     }
     if (inputs.date.match(/[0-9]+[/]+[0-9]/) && inputs.date.length === 5) verify[1] = true;
     else {
       verify[1] = false;
-      alert('Incorrect Card Date Format');
+      alert(t('AddNewCard.DateAlert'));
     }
     if (inputs.cvv.match(/[0-9]/) && inputs.cvv.length === 3) verify[2] = true;
     else {
       verify[2] = false;
-      alert('Incorrect CVV Number Format');
+      alert(t('AddNewCard.CvvAlert'));
     }
     if (inputs.name.match(/[a-zA-Z]/)) verify[3] = true;
     else {
       verify[3] = false;
-      alert('Incorrect Card Name Format');
+      alert(t('AddNewCard.NameAlert'));
     }
     if (inputs.zip.match(/[0-9]+[-]+[0-9]/) || inputs.zip.match(/[0-9]/)) verify[4] = true;
     else {
       verify[4] = false;
-      alert('Incorrect Card Number Format');
+      alert(t('AddNewCard.ZipAlert'));
     }
     if (inputs.address.match(/[a-zA-Z0-9.,]/)) verify[5] = true;
     else {
       verify[5] = false;
-      alert('Incorrect Address Format');
+      alert(t('AddNewCard.AddressAlert'));
     }
 
     let AllVerified = true;
@@ -101,10 +103,7 @@ export default function AddNewCardPage({ loginStatus }) {
         });
       history.push({
         pathname: '/ThankYou',
-        state: [
-          'Your new payment method is under review, you will receive an email soon when your card is confirmed.',
-          'Otherwise you will get a notification telling you what went wrong and how to add a new card.',
-        ],
+        state: [t('AddNewCard.ThankYou1'), t('AddNewCard.ThankYou1')],
       });
     }
   };
@@ -112,16 +111,16 @@ export default function AddNewCardPage({ loginStatus }) {
   return (
     <div className="my-4 flex flex-col justify-evenly px-sides pt-navbar lg:h-firstsection">
       <div>
-        <div className="text-3xl lg:text-title">ADD CARD DETAILS</div>
+        <div className="text-3xl lg:text-title uppercase">{t('AddNewCard.Title')}</div>
         <div className="text-lg lg:text-subtitle lg:mt-4 text-gray-700">
-          Please make sure all of the info you enter are the same as your card registration info.
+          {t('AddNewCard.Subtitle')}
         </div>
       </div>
 
       <div className="flex flex-col lg:flex-row justify-between items-center  ">
         <div className="flex flex-col justify-start h-full">
           <div className="my-4">
-            <div className="text-paragraph text-gray-700">Supported Card Types</div>
+            <div className="text-paragraph text-gray-700">{t('AddNewCard.Supported')}</div>
             <div className="flex">
               <div className="leading-snug h-12 px-1 py-2 text-paragraph text-blue-dark border-2 border-r-0 border-blue-dark w-36 text-center rounded-lg rounded-r-none">
                 MasterCard
@@ -132,7 +131,7 @@ export default function AddNewCardPage({ loginStatus }) {
             </div>
           </div>
           <div className="my-4">
-            <div className="text-paragraph text-gray-700">Card Number</div>
+            <div className="text-paragraph text-gray-700">{t('AddNewCard.Number')}</div>
             <input
               onBlur={(e) => setInputs({ ...inputs, number: e.target.value })}
               placeholder="XXXX XXXX XXXX XXXX"
@@ -141,7 +140,7 @@ export default function AddNewCardPage({ loginStatus }) {
           </div>
           <div className="flex justify-between w-64 my-4">
             <div>
-              <div className="text-paragraph text-gray-700">Expiry Date</div>
+              <div className="text-paragraph text-gray-700">{t('AddNewCard.Date')}</div>
               <input
                 onBlur={(e) => setInputs({ ...inputs, date: e.target.value })}
                 placeholder="MM / YY"
@@ -149,7 +148,7 @@ export default function AddNewCardPage({ loginStatus }) {
               />
             </div>
             <div>
-              <div className="text-paragraph text-gray-700">CVV Code</div>
+              <div className="text-paragraph text-gray-700">{t('AddNewCard.Cvv')}</div>
               <input
                 onBlur={(e) => setInputs({ ...inputs, cvv: e.target.value })}
                 placeholder="XXX"
@@ -158,7 +157,7 @@ export default function AddNewCardPage({ loginStatus }) {
             </div>
           </div>
           <div className="my-4">
-            <div className="w-72 text-paragraph text-gray-700">Name on Card</div>
+            <div className="w-72 text-paragraph text-gray-700">{t('AddNewCard.Name')}</div>
             <input
               onBlur={(e) => setInputs({ ...inputs, name: e.target.value })}
               placeholder="John Doe"
@@ -169,7 +168,7 @@ export default function AddNewCardPage({ loginStatus }) {
 
         <div className="flex flex-col justify-start h-full">
           <div className="my-4">
-            <div className="text-paragraph text-gray-700">Country</div>
+            <div className="text-paragraph text-gray-700">{t('AddNewCard.Country')}</div>
             <select
               onChange={(e) => {
                 UpdateCities(e.target.value);
@@ -186,7 +185,7 @@ export default function AddNewCardPage({ loginStatus }) {
           </div>
 
           <div className="my-4">
-            <div className="text-paragraph text-gray-700">ZIP Code</div>
+            <div className="text-paragraph text-gray-700">{t('AddNewCard.Zip')}</div>
             <input
               onBlur={(e) => setInputs({ ...inputs, zip: e.target.value })}
               placeholder="XXXXX or XXXXX-XXXX"
@@ -195,7 +194,7 @@ export default function AddNewCardPage({ loginStatus }) {
           </div>
 
           <div className="my-4">
-            <div className="text-paragraph text-gray-700">City</div>
+            <div className="text-paragraph text-gray-700">{t('AddNewCard.City')}</div>
             <select
               onChange={(e) => setInputs({ ...inputs, city: e.target.value })}
               className="w-72 h-12 p-2 border-gray-700 border-2 rounded-lg"
@@ -209,7 +208,7 @@ export default function AddNewCardPage({ loginStatus }) {
           </div>
 
           <div className="my-4">
-            <div className="text-paragraph text-gray-700">Address</div>
+            <div className="text-paragraph text-gray-700">{t('AddNewCard.Address')}</div>
             <input
               onBlur={(e) => setInputs({ ...inputs, address: e.target.value })}
               placeholder="House, Street"
@@ -227,9 +226,9 @@ export default function AddNewCardPage({ loginStatus }) {
       <button
         onClick={() => GoToRoute()}
         type="submit"
-        className="self-center h-12 w-32 lg:w-48 text-lg lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+        className="uppercase self-center h-12 w-32 lg:w-48 text-lg lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
       >
-        ADD CARD
+        {t('AddNewCard.Add')}
       </button>
     </div>
   );
