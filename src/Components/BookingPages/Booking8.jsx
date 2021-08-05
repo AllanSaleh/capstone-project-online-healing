@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Booking8() {
   window.scrollTo(0, 0);
   return (
-    <div className="h-firstsection px-sides pt-navbar">
+    <div className="lg:h-firstsection px-sides pt-navbar">
       <h1 className="text-2xl lg:text-title uppercase my-8">your request has been submitted!</h1>
       <h3 className="text-md lg:text-subtitle opacity-50 text-justify">
         You will receive an email guiding you to book a date and time soon.

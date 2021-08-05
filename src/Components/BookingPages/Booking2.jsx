@@ -36,7 +36,7 @@ export default function Booking2() {
   };
 
   return (
-    <div className="h-firstsection px-sides pt-navbar">
+    <div className="lg:h-firstsection px-sides pt-navbar">
       <h1 className="text-3xl lg:text-title uppercase my-8">
         {' '}
         let’s match you with the right therapist

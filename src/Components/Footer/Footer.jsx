@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import Send from './Images/Send.svg';
 import Twitter from './Images/Twitter.svg';
@@ -19,21 +20,25 @@ export default function Footer() {
       });
     else alert('Please enter a valid E-Mail!');
   };
+
+  const { t, i18n } = useTranslation();
+  function changeLang(lang) {
+    i18n.changeLanguage(lang);
+  }
+
   return (
     <div className="py-4 flex flex-col lg:flex-row justify-between px-sides items-center lg:h-footer bg-yellow-primary">
       <div className="flex flex-col justify-between items-center text-center lg:text-left lg:items-start h-40">
         <div>
-          <div className="text-3xl lg:text-title">Subscribe</div>
-          <div className="text-xl lg:text-paragraph lg:mt-4 text-gray-700">
-            We'll never try to spam you or share your e-mail
-          </div>
+          <div className="text-3xl lg:text-title">{t('Footer.Subscribe')}</div>
+          <div className="text-lg lg:text-paragraph lg:mt-4 text-gray-700">{t('Footer.Spam')}</div>
         </div>
 
         <div className="flex border-gray-700 border-2 h-12 rounded-lg">
           <input
             onChange={(e) => setEmail(e.target.value)}
             className="w-64 p-2 rounded-l-md"
-            placeholder="Enter your E-Mail"
+            placeholder={t('Footer.Enter')}
             type="email"
           />
           <button
@@ -46,35 +51,35 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-evenly items-center h-40">
-        <div className="w-72 lg:w-96 flex justify-between items-center text-gray-700 text-lg lg:text-paragraph">
+      <div className="lg:w-1/3 lg:px-8 flex flex-col justify-evenly items-center h-40">
+        <div className="w-72 lg:w-full flex justify-between items-center text-gray-700 text-xs lg:text-paragraph">
           <Link
             to="/"
             onClick={() => window.scrollTo(0, 0)}
             className="hover:underline hover:text-blue-dark"
           >
-            Home
+            {t('Home')}
           </Link>
           <Link
             to="/Blog"
             onClick={() => window.scrollTo(0, 0)}
             className="hover:underline hover:text-blue-dark"
           >
-            Blogs
+            {t('Blogs')}
           </Link>
           <Link
             to="/About"
             onClick={() => window.scrollTo(0, 0)}
             className="hover:underline hover:text-blue-dark"
           >
-            About
+            {t('About')}
           </Link>
           <Link
             to="/Contact"
             onClick={() => window.scrollTo(0, 0)}
             className="hover:underline hover:text-blue-dark"
           >
-            Contact Us
+            {t('Contact')}
           </Link>
         </div>
 
@@ -91,13 +96,19 @@ export default function Footer() {
         </div>
 
         <div className="flex justify-center items-center">
-          <label className="w-24">Language:</label>
-          <select className="w-24 p-1 border-gray-700 border-2 rounded-lg">
-            <option value="En" className="py-1 text-paragraph text-gray-700">
+          <label className="w-24">{t('Footer.Language')}:</label>
+          <select
+            onChange={(e) => changeLang(e.target.value)}
+            className="w-24 p-1 border-gray-700 border-2 rounded-lg"
+          >
+            <option value="" className="py-1 text-paragraph text-gray-700" selected>
+              {t('Footer.Select')}
+            </option>
+            <option value="en" className="py-1 text-paragraph text-gray-700">
               English
             </option>
-            <option value="Ku" className="py-1 text-paragraph text-gray-700">
-              كوردى
+            <option value="tr" className="py-1 text-paragraph text-gray-700">
+              Türkçe
             </option>
           </select>
         </div>

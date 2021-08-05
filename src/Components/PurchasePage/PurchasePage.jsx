@@ -47,7 +47,7 @@ export default function PurchasePage({ loginStatus }) {
     firebase
       .firestore()
       .collection('users')
-      .doc('cUld5Z0ytjTuTrbeu95n')
+      .doc(loginStatus.user_id)
       .update({ tickets: tickets + ticketsBought });
 
     history.push({

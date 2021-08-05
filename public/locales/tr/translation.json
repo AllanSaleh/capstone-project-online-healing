@@ -1,0 +1,19 @@
+{
+  "Home": "Ana Sayfa",
+  "Blogs": "Bloglar",
+  "About": "Hakkımızda",
+  "Contact": "Bize Ulaşın",
+  "Login": "Giriş Yap",
+  "Story": "Hikayemiz",
+  "Team": "Takımımız",
+  "Careers": "Açık Meslekler",
+  "Settings": "Ayarlar",
+  "Logout": "Çıkış Yap!",
+	"Footer": {
+		"Subscribe": "Katılmak",
+		"Spam": "Size spam göndermeye veya e-postanızı paylaşmaya çalışmayacağız",
+    "Enter": "E-postanızı giriniz",
+    "Language": "Diller",
+    "Select": "Seç"
+	}
+}
