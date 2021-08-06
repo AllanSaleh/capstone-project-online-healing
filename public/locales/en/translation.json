@@ -2,18 +2,265 @@
   "Home": "Home",
   "Blogs": "Blogs",
   "About": "About",
-  "Conact": "Contact Us",
-  "Login": "Login",
+  "ContactUs": "Contact Us",
+  "Login": "LogIn",
+  "SignUp": "SignUp",
   "Story": "Our Story",
   "Team": "Our Team",
   "Careers": "Open Careers",
   "Settings": "Settings",
   "Logout": "Log Out!",
-	"Footer": {
-		"Subscribe": "Subscribe",
-		"Spam": "We'll never try to spam you or share your e-mail",
+  "Delete": "Delete",
+  "ThankYou": "Thank You!",
+
+  "Footer": {
+    "Subscribe": "Subscribe",
+    "Spam": "We'll never try to spam you or share your e-mail",
     "Enter": "Enter your e-mail",
-    "Language": "Language",
-    "Select": "Select"
-	}
+    "Language": "Language"
+  },
+
+  "AboutPage": {
+    "WeAreHere": "We are here to HELP!",
+    "Description": "At Healing, wedd believe there is a better way to do things. A more valuable way where customers are earned rather than bought. We're obsessively passionate about it, and our mission is to help people achieve it. We focus on search engine optimization. It's one of understood and least transparent aspects of great marketing, and we see that as an opportunity. We're excited to simplify SEO for everyone through our software, education, and community.",
+    "Our": "Our Founding",
+    "Founding": "Healing was founded by Payam Abubakr in 2021. It was called Healing Online, and started as a blog and an online community where some of the world's therapists shared their research and ideas. We launched the Beginner's Guide to Therapy and our first study, and that hub of industry expertise transformed into a small consulting firm and led us to create the Online Therapist of today!"
+  },
+
+  "AddNewCard": {
+    "NumberAlert": "Incorrect Card Number Format",
+    "DateAlert": "Incorrect Card Date Format",
+    "CvvAlert": "Incorrect CVV Number Format",
+    "NameAlert": "Incorrect Card Name Format",
+    "ZipAlert": "Incorrect ZIP Code Format",
+    "AddressAlert": "Incorrect Address Format",
+    "CardThankYou1": "Your new payment method is under review, you will receive an email soon when your card is confirmed.",
+    "CardThankYou2": "Otherwise you will get a notification telling you what went wrong and how to add a new card.",
+    "AddNew": "ADD CARD DETAILS",
+    "CardSure": "Please make sure all of the info you enter are the same as your card registration info.",
+    "Supported": "Supported Card Types",
+    "Number": "Card Number",
+    "Date": "Expiry Date",
+    "Cvv": "CVV Code",
+    "Name": "Name on Card",
+    "Country": "Country",
+    "Zip": "ZIP Code",
+    "City": "City",
+    "Address": "Address",
+    "AddCard": "Add Card"
+  },
+
+  "Recommend": {
+    "ThankYouSub": "You email has been added to the mailing list successfully!",
+    "SubEmailAlert": "Please enter a valid E-Mail!",
+    "BlogApology": "Sorry, seems like the blog can't be found!",
+    "SubSign": "Sign Up For The Healing Blog",
+    "Weekly": "Weekly, Ad-Free Blogs That Help You Stay In The Know!",
+    "ForYou": "recommended for you"
+  },
+
+  "Booking": {
+    "Title1": "let’s match you with the right therapist",
+    "Subtitle1": "Please fill out this short questionnaire to provide some general and anonymous background about you and the issues you'd like to deal with in online therapy. It would help us match you with the most suitable therapist for you.",
+
+    "Title2": "What brings you here?",
+    "Subtitle2": "Please specify (in a few sentences) why you'd like counseling. This will give your counselor a good understanding of where to start.",
+
+    "Title3": "Submit your appointment",
+    "Subtitle3": "Click Submit if you are sure of all your choices.",
+
+    "Title4": "your request has been submitted!",
+    "Subtitle4": "You will receive an email guiding you to book a date and time soon.",
+
+    "Next": "Next",
+    "Back": "Back",
+
+    "Q1": "What type of counseling are you looking for?",
+    "Choice11": "Individual counseling",
+    "Choice12": "Teen counseling (for my child)",
+
+    "Q2": "What is your relationship status?",
+    "Choice21": "Single",
+    "Choice22": "Married",
+    "Choice23": "Divorced",
+
+    "Q3": "Have you ever been in therapy before?",
+    "Choice31": "Yes",
+    "Choice32": "No",
+
+    "Q4": "Are there any specific quality that you would prefer in a counselor?",
+    "Choice41": "I prefer a Male counselor",
+    "Choice42": "I prefer a Female counselor",
+    "Choice43": "I prefer an Older(45+) counselor",
+    "Choice44": "I prefer a Non-Religious counselor",
+    "Choice45": "I prefer a Younger(30-) counselor",
+
+    "Q5": "Are there any issue that you would like to focus on?",
+    "Choice51": "Depression",
+    "Choice52": "Stress and Anxiety",
+    "Choice53": "Relationship Issues",
+    "Choice54": "Family Conflicts",
+    "Choice55": "Trauma and Abuse",
+    "Choice56": "Eating Disorders",
+
+    "Explain": "Please explain here...",
+
+    "Submit": "submit appointment?",
+    "Aware": "Please be aware that this action will cost you a ticket!",
+    "SubmitBtn": "Submit",
+
+    "Submitted": "reqeuest submitted",
+    "Notice": "you will receive a confirmation email soon. please keep an eye on your mail.",
+    "BackHome": "back to home"
+  },
+
+  "Open": {
+    "Title": "CAREERS AT HEALING",
+    "Subtitle": "Be a part of making people feel better.",
+    "Intro": "Our SEO software cuts through mountains of data to surface critical insights. We build and maintain systems that process massive amounts of data (we're talking 36 trillion records per day and multiple petabytes of storage.) We model transparent and empathetic marketing for the world. We educate our community, making every effort to help them improve their skill. And we do it all by fostering a culture that encourages accountability, empathy, and transparency.",
+    "Question": "What role will you play?",
+    "Btn": "SEE OUR OPEN LIST",
+
+    "Hiring": "OUR HIRING PHILOSOPHY",
+    "HiringIntro": "To build the very best SEO tools, we need a workforce that reflects the diversity of our communities and customers. We want Online Therapy to be a place where everyone feels welcome and engaged, bar none. It's our mission and promise to interview a diverse and representative slate of candidates before making an offer for our open roles.",
+
+    "Positions": "CURRENT OPEN POSITIONS",
+    "Instruct": "Please send us an email with the application title as the subject with an attached CV in PDF format at:"
+  },
+
+  "Contact": {
+    "ChioceAlert": "Please choose a type of contact!",
+    "NameAlert": "Incorrect Name Format",
+    "EmailAlert": "Incorrect E-Mail Format",
+    "DetailsAlert": "Please provide details!",
+
+    "ThankYou": "Your request has been sent, a member of the support team will get in contact with you through the email you provided as soon as possible.",
+
+    "Name": "Full Name:",
+    "Email": "E-Mail:",
+    "Details": "Details:",
+    "Find": "Find Us At:",
+
+    "Title": "SEND US YOUR REQUEST!",
+    "Subtitle": "Do you have a question, concern, idea, feedback, or problem? If you need assistance, please fill out the form below and we'd be happy to help!",
+    "Type": "Type of Contact",
+
+    "Choice1": "I have a question about the service.",
+    "Choice2": "I'm a registered client and I need support.",
+    "Choice3": "I'm a counselor interested in joining.",
+    "Choice4": "I'm a counselor interested in joining.",
+    "Choice5": "I'm a registered counselor and I need support.",
+    "Choice6": "I'm interested in Healing Online for my organization.",
+    "Choice7": "I have a billing related question."
+  },
+
+  "Edit": {
+    "Alert": "Please fill all the fields with correct and valid details to complete your profile.",
+    "Payment": "Payment Methods & Tickets",
+    "Cards": "crads added",
+    "Tickets": "tickets remaining",
+    "Save": "save changes",
+    "Delete": "delete account",
+    "Cancel": "cancel",
+    "Show": "show cards",
+    "Buy": "buy tickets",
+    "Info": "Profile Info",
+    "FullName": "full name",
+    "Education": "education level",
+    "Members": "family members",
+    "Gender": "gender",
+    "Male": "Male",
+    "Female": "Female",
+    "Other": "Other",
+    "Birth": "birth date",
+    "Phone": "phone number",
+    "Security": "security",
+    "Pass": "password",
+    "confirm": "confirm"
+  },
+
+  "HomePage": {
+    "Tickets": "Tickets",
+    "LoginAlert": "Please Login First!",
+    "CardAlert": "Please Add a Payment Method in Profile Settings First!",
+    "CompleteAlert": "Please Complete Your Profile in Profile Settings First!",
+
+    "Comm": "we can communicate through",
+    "Call": "voice call",
+    "CallText": "Feeling ready to start a conversation? Give your therapist a voice call and talk your heart out!",
+    "Chat": "chat",
+    "ChatText": "Need to talk to someone? Come have a chat with your therapist!",
+    "Video": "video call",
+    "VideoText": "For better experience therapists recommend video calls, but always remember that its a choice!",
+
+    "Therapist": "Professional, licensed, and vetted therapists that you can trust",
+    "TherapistInfo": "Tap into the world's largest network of licensed, accredited, and experienced therapists who can help you with a range of issues including depression, anxiety, relationships, trauma, grief, and more. with our therapists, you get the same professionalism and quality you would expect from an in-office therapist, but with the ability to communicate whenever and however you want.",
+    "Book": "BOOK AN APPOINTMENT",
+    "Recent": "Recent Blogs",
+
+    "Buy": "Purchase tickets",
+    "Explain": "purchase tickets that can be used to book appointments!",
+    "Purchase": "Purchase",
+    "Counselor": "are you a counselor?",
+    "Interest": "Interested in joining our mental health platform? You decide your schedule and how much you want to work, we’ll take care of the client referrals and billing details!",
+    "Learn": "learn more"
+  },
+
+  "Purchase": {
+    "Select": "SELECT CARD",
+    "Subtitle": "Please select the card you want to buy the tickets with",
+    "Confirm1": "Click confirm to use the selected card to purchase",
+    "Confirm2": "tickets for",
+    "ConfirmBtn": "CONFIRM PURCHASE"
+  },
+
+  "Require": {
+    "Why": "Why work with Healing?",
+    "Income": "Reliable Income",
+    "Explain": "Over 10,000 people sign up on Healing every day looking for a counselor to help with life’s challenges. Healing can be your main source of income (full time) or a supplement to your current work.",
+    "Focus": "Focus on Counseling",
+    "Worry": "No need to worry about costs from acquiring clients, billing, support or operations. Let us handle the fees and paperwork so you can focus on what you do best!",
+    "Require": "Requirements",
+    "License": "Licensed by a State Board to provide counseling",
+    "Exp": "Experience in counseling for adults, couples, and/or teens",
+    "Skill": "Excellent writing skills",
+    "Internet": "Reliable Internet connection",
+    "Irq": "Currently residing in Iraq",
+    "Start": "Get Started"
+  },
+
+  "Cards": {
+    "Saved": "YOUR SAVED CARDS",
+    "Support": "We only support cards as a payment method at the moment!",
+    "Add": "ADD NEW CARD+"
+  },
+
+  "SignUpPage": {
+    "SignUp": "SIGN UP NOW",
+    "FName": "First Name",
+    "LName": "Last Name",
+    "Confirm": "Confirm",
+    "Birth": "Birth Date:",
+
+    "NameAlert": "is not valid it should only be letters, please try again",
+    "EmailAlert": "is not valid, it should follow this pattern 'someone@something.something",
+    "ConfirmEAlert": "does not match your email, please try again!",
+    "PassAlert": "is not valid, it should contain at least one capital letter and one number, please try again!",
+    "ConfirmPAlert": "does not match your password, please try again!",
+
+    "Thanks1": "Your Sign Up request has been received, you will soon receive a confirmation email.",
+    "Thanks2": "Please follow the steps in the email to complete and activate your account."
+  },
+
+  "TeamPage": {
+    "Title": "we are healing, nice to meet you!",
+    "Subtitle": "Meet the Team!"
+  },
+
+  "Create": {
+    "Title": "Open An Account",
+    "Create": "submit",
+    "Thanks1": "Thank you for your interest in working with Healing, we have recieved your application.",
+    "Thanks2": "You will receive an email guiding you for the next steps soon after your information is reviewed."
+  }
 }

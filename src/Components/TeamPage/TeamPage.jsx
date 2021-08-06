@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { useTranslation } from 'react-i18next';
 import TeamCard from './TeamCard';
 
 import AllanImg from './Images/AllanImg.svg';
@@ -11,6 +12,8 @@ import AvrazImg from './Images/AvrazImg.svg';
 
 export default function TeamPage() {
   window.scrollTo(0, 0);
+  const { t } = useTranslation();
+
   const Team = [
     {
       img: AllanImg,
@@ -45,10 +48,10 @@ export default function TeamPage() {
   ];
   return (
     <div className="flex flex-col justify-evenly px-sides pt-navbar lg:h-firstsection">
-      <div className="text-3xl lg:text-title uppercase">we are healing, nice to meet you!</div>
+      <div className="text-3xl lg:text-title uppercase">{t('TeamPage.Title')}</div>
 
       <div className="flex flex-col justify-between">
-        <div className="text-lg lg:text-subtitle text-gray-700 mb-8">Meet the Team!</div>
+        <div className="text-lg lg:text-subtitle text-gray-700 mb-8">{t('TeamPage.Subtitle')}</div>
 
         <div className="flex justify-between flex-col lg:flex-row">
           {Team.map((member) => (

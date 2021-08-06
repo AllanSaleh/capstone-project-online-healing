@@ -1,11 +1,13 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
+import { useTranslation } from 'react-i18next';
 import HpIllustration from './Images/HP_illustration.svg';
 import Background from './Images/Background.svg';
 
 export default function Landing({ user }) {
   const history = useHistory();
+  const { t } = useTranslation();
 
   const GoToRoute = () => {
     if (user.login && user.complete) history.push('/Booking1');
@@ -31,7 +33,7 @@ export default function Landing({ user }) {
               type="button"
               className="transition-all duration-300 mt-6 ml-4 py-2 px-6 lg:py-4 lg:px-6 lg:text-subtitle text-base rounded-md bg-blue-dark border hover:bg-white hover:text-blue-dark hover:border-blue-dark"
             >
-              BOOK AN APPOINTMENT
+              {t('HomePage.Book')}
             </button>
           </div>
         </div>

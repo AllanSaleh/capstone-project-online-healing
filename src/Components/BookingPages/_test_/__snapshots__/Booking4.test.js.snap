@@ -2,17 +2,17 @@
 
 exports[`Booking4 renders correctly 1`] = `
 <div
-  className="h-firstsection px-sides pt-navbar"
+  className="lg:h-firstsection px-sides pt-navbar"
 >
   <h1
     className="text-3xl lg:text-title uppercase my-8"
   >
-    let’s match you with the right therapist
+    Booking.Title1
   </h1>
   <h3
     className="text-md lg:text-subtitle opacity-50 text-justify"
   >
-    Please fill out this short questionnaire to provide some general and anonymous background about you and the issues you'd like to deal with in online therapy. It would help us match you with the most suitable therapist for you.
+    Booking.Subtitle1
   </h3>
   <div
     className="flex flex-col justify-evenly w-full md:max-w-md lg:max-w-2xl my-16 mx-auto px-8 py-4 shadow-md"
@@ -20,7 +20,7 @@ exports[`Booking4 renders correctly 1`] = `
     <div
       className="text-md lg:text-subtitle"
     >
-      Are there any specific quality that you would prefer in a counselor?
+      Booking.Q4
     </div>
     <div
       className="flex flex-col justify-around my-8"
@@ -31,14 +31,15 @@ exports[`Booking4 renders correctly 1`] = `
         <input
           id={1}
           name="counselor_options"
+          onChange={[Function]}
           type="radio"
-          value="I prefer a Male counselor"
+          value="Booking.Choice41"
         />
         <label
           className="text-sm lg:text-paragraph ml-2"
           htmlFor={1}
         >
-          I prefer a Male counselor
+          Booking.Choice41
         </label>
       </div>
       <div
@@ -47,14 +48,15 @@ exports[`Booking4 renders correctly 1`] = `
         <input
           id={2}
           name="counselor_options"
+          onChange={[Function]}
           type="radio"
-          value="I prefer a Female counselor"
+          value="Booking.Choice42"
         />
         <label
           className="text-sm lg:text-paragraph ml-2"
           htmlFor={2}
         >
-          I prefer a Female counselor
+          Booking.Choice42
         </label>
       </div>
       <div
@@ -63,14 +65,15 @@ exports[`Booking4 renders correctly 1`] = `
         <input
           id={3}
           name="counselor_options"
+          onChange={[Function]}
           type="radio"
-          value="I prefer an Older(45+) counselor"
+          value="Booking.Choice43"
         />
         <label
           className="text-sm lg:text-paragraph ml-2"
           htmlFor={3}
         >
-          I prefer an Older(45+) counselor
+          Booking.Choice43
         </label>
       </div>
       <div
@@ -79,14 +82,15 @@ exports[`Booking4 renders correctly 1`] = `
         <input
           id={4}
           name="counselor_options"
+          onChange={[Function]}
           type="radio"
-          value="I prefer a Non-Religious counselor"
+          value="Booking.Choice44"
         />
         <label
           className="text-sm lg:text-paragraph ml-2"
           htmlFor={4}
         >
-          I prefer a Non-Religious counselor
+          Booking.Choice44
         </label>
       </div>
       <div
@@ -95,14 +99,15 @@ exports[`Booking4 renders correctly 1`] = `
         <input
           id={5}
           name="counselor_options"
+          onChange={[Function]}
           type="radio"
-          value="I prefer a Younger(30-) counselor"
+          value="Booking.Choice45"
         />
         <label
           className="text-sm lg:text-paragraph ml-2"
           htmlFor={5}
         >
-          I prefer a Younger(30-) counselor
+          Booking.Choice45
         </label>
       </div>
     </div>
@@ -114,14 +119,14 @@ exports[`Booking4 renders correctly 1`] = `
         onClick={[Function]}
         type="button"
       >
-        back
+        Booking.Back
       </button>
       <button
         className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition-all duration-300"
         onClick={[Function]}
         type="button"
       >
-        next
+        Booking.Next
       </button>
     </div>
   </div>

@@ -7,7 +7,6 @@ import BirthDateIcon from './Images/BirthDateIcon.svg';
 export default function TherapistProfilePage({ therapistID }) {
   // Grab the therapist data from firebase
   alert(`Chosen therapist is: ${therapistID}`);
-  const therapistData = [];
 
   return (
     <div className="flex flex-col lg:flex-row px-sides pt-navbar lg:h-firstsection">

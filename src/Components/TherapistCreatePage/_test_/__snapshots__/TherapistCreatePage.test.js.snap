@@ -7,7 +7,7 @@ exports[`Therapist Create Page renders correctly 1`] = `
   <h1
     className="text-xl md:text-title md:py-4 uppercase"
   >
-    create an account
+    Create.title
   </h1>
   <form
     className="flex flex-col md:w-10/12 md:mx-auto lg:w-2/5 lg:m-0"
@@ -102,7 +102,7 @@ exports[`Therapist Create Page renders correctly 1`] = `
         className="text-sm md:text-md lg:text-xl max-h-8 py-3 px-2 md:py-6 md:px-4 mt-2 w-full border border-black border-opacity-20 rounded-lg outline-none focus:border-blue-dark transition duration-200"
         id="password"
         name="password"
-        placeholder="type your password"
+        placeholder="Password"
         required={true}
         type="password"
       />
@@ -131,7 +131,7 @@ exports[`Therapist Create Page renders correctly 1`] = `
       onClick={[Function]}
       type="button"
     >
-      create
+      Create.Create
     </button>
   </form>
 </div>

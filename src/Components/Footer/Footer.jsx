@@ -9,6 +9,10 @@ import Google from './Images/Google.svg';
 
 export default function Footer() {
   const history = useHistory();
+  const { t, i18n } = useTranslation();
+  function changeLang(lang) {
+    i18n.changeLanguage(lang);
+  }
 
   const [email, setEmail] = useState('');
 
@@ -16,15 +20,10 @@ export default function Footer() {
     if (email.match(/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+[.]+[a-zA-Z0-9]/))
       history.push({
         pathname: '/ThankYou',
-        state: 'You email has been added to the mailing list successfully!',
+        state: t('Recommend.ThankYouSub'),
       });
-    else alert('Please enter a valid E-Mail!');
+    else alert(t('Recommend.SubEmailAlert'));
   };
-
-  const { t, i18n } = useTranslation();
-  function changeLang(lang) {
-    i18n.changeLanguage(lang);
-  }
 
   return (
     <div className="py-4 flex flex-col lg:flex-row justify-between px-sides items-center lg:h-footer bg-yellow-primary">
@@ -79,7 +78,7 @@ export default function Footer() {
             onClick={() => window.scrollTo(0, 0)}
             className="hover:underline hover:text-blue-dark"
           >
-            {t('Contact')}
+            {t('ContactUs')}
           </Link>
         </div>
 
@@ -101,8 +100,8 @@ export default function Footer() {
             onChange={(e) => changeLang(e.target.value)}
             className="w-24 p-1 border-gray-700 border-2 rounded-lg"
           >
-            <option value="" className="py-1 text-paragraph text-gray-700" selected>
-              {t('Footer.Select')}
+            <option value="en" className="py-1 text-paragraph text-gray-700" selected>
+              Default
             </option>
             <option value="en" className="py-1 text-paragraph text-gray-700">
               English

@@ -2,17 +2,17 @@
 
 exports[`Booking7 renders correctly 1`] = `
 <div
-  className="h-firstsection px-sides pt-navbar"
+  className="lg:h-firstsection px-sides pt-navbar"
 >
   <h1
     className="text-2xl lg:text-title uppercase my-8"
   >
-    Submit your appointment
+    Booking.Title3
   </h1>
   <h3
     className="text-md lg:text-subtitle opacity-50 text-justify"
   >
-    Click Submit if you are sure of all your choices.
+    Booking.Subtitle3
   </h3>
   <div
     className="flex flex-col justify-evenly items-center h-1/2 lg:h-2/3 w-full lg:max-w-3xl my-16 mx-auto p-8 shadow-md"
@@ -20,12 +20,12 @@ exports[`Booking7 renders correctly 1`] = `
     <h3
       className="text-xl lg:text-3xl capitalize"
     >
-      submit appointment?
+      Booking.Submit
     </h3>
     <p
       className="text-sm lg:text-subtitle text-center"
     >
-      Please be aware that this action will cost you a ticket!
+      Booking.Aware
     </p>
     <div
       className="flex justify-evenly mt-16 w-full"
@@ -35,14 +35,14 @@ exports[`Booking7 renders correctly 1`] = `
         onClick={[Function]}
         type="button"
       >
-        Back
+        Booking.Back
       </button>
       <button
         className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition-all duration-300"
         onClick={[Function]}
         type="button"
       >
-        Submit
+        Booking.SubmitBtn
       </button>
     </div>
   </div>
