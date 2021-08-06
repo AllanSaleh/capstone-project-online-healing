@@ -13,6 +13,7 @@ const QuestionComponent = ({ question, choices, setParentAnswer }) => {
     //   event.target.className =
     //     'inline-block my-4 p-4 lg:p-6 text-md lg:text-paragraph hover:cursor-pointer bg-white border border-black border-opacity-20 rounded-lg';
     // }
+    event.preventDefault();
     setParentAnswer(event.target.innerText);
   };
   return (

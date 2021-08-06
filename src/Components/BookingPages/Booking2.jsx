@@ -21,17 +21,28 @@ const questionData = {
 export default function Booking2() {
   window.scrollTo(0, 0);
   const history = useHistory();
-  const [answer, setAnswer] = useState('');
+  const [userAnswer, setUserAnswer] = useState('');
   const handleSetAnswer = (childAnswer) => {
-    setAnswer(childAnswer);
-    console.log(answer);
+    setUserAnswer(childAnswer);
+    console.log(userAnswer);
   };
+  const booking = JSON.parse(localStorage.getItem('userBooking'));
   const PrevPage = () => {
-    // Put firestore code here!
+    booking.choices.pop();
+    localStorage.setItem('userBooking', JSON.stringify(booking));
     history.push('/Booking1');
   };
   const NextPage = () => {
-    // Put firestore code here!
+    if (!userAnswer) {
+      alert('Please choose an answer');
+      return;
+    }
+    const choice = {
+      question: questionData.question,
+      answer: userAnswer,
+    };
+    booking.choices.push(choice);
+    localStorage.setItem('userBooking', JSON.stringify(booking));
     history.push('/Booking3');
   };
 

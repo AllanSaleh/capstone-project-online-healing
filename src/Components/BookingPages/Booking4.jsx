@@ -3,42 +3,56 @@ import { useHistory } from 'react-router-dom';
 
 export default function Booking4() {
   window.scrollTo(0, 0);
-  const choices = [
-    {
-      id: 1,
-      content: 'I prefer a Male counselor',
-    },
-    {
-      id: 2,
-      content: 'I prefer a Female counselor',
-    },
-    {
-      id: 3,
-      content: 'I prefer an Older(45+) counselor',
-    },
-    {
-      id: 4,
-      content: 'I prefer a Non-Religious counselor',
-    },
-    {
-      id: 5,
-      content: 'I prefer a Younger(30-) counselor',
-    },
-  ];
+  const questionData = {
+    question: 'Are there any specific quality that you would prefer in a counselor?',
+    choices: [
+      {
+        id: 1,
+        content: 'I prefer a Male counselor',
+      },
+      {
+        id: 2,
+        content: 'I prefer a Female counselor',
+      },
+      {
+        id: 3,
+        content: 'I prefer an Older(45+) counselor',
+      },
+      {
+        id: 4,
+        content: 'I prefer a Non-Religious counselor',
+      },
+      {
+        id: 5,
+        content: 'I prefer a Younger(30-) counselor',
+      },
+    ],
+  };
 
   const history = useHistory();
-  const [answer, setAnswer] = useState('');
+  const [userAnswer, setUserAnswer] = useState('');
   const handleRadioChange = (event) => {
-    setAnswer(event.target.value);
+    setUserAnswer(event.target.value);
   };
-  console.log(answer);
+  console.log(userAnswer);
 
+  const booking = JSON.parse(localStorage.getItem('userBooking'));
   const PrevPage = () => {
-    // Put firestore code here!
-    history.push('/Booking3');
+    booking.choices.pop();
+    localStorage.setItem('userBooking', JSON.stringify(booking));
+    history.push('/Booking2');
   };
   const NextPage = () => {
-    // Put firestore code here!
+    if (!userAnswer) {
+      alert('Please choose an answer');
+      return;
+    }
+    const choice = {
+      question: questionData.question,
+      answer: userAnswer,
+    };
+    booking.choices.push(choice);
+    localStorage.setItem('userBooking', JSON.stringify(booking));
     history.push('/Booking5');
   };
 
@@ -54,13 +68,11 @@ export default function Booking4() {
       </h3>
 
       <div className="flex flex-col justify-evenly w-full md:max-w-md lg:max-w-2xl my-16 mx-auto px-8 py-4 shadow-md">
-        <div className="text-md lg:text-subtitle">
-          Are there any specific quality that you would prefer in a counselor?
-        </div>
+        <div className="text-md lg:text-subtitle">{questionData.question}</div>
 
         <div className="flex flex-col justify-around my-8">
-          {choices.map((choice, index) => (
-            <div className="flex items-center my-2" key={index}>
+          {questionData.choices.map((choice) => (
+            <div className="flex items-center my-2" key={choice.id}>
               <input
                 type="radio"
                 id={choice.id}
