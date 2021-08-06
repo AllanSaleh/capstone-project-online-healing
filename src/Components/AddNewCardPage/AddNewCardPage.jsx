@@ -103,7 +103,7 @@ export default function AddNewCardPage({ loginStatus }) {
         });
       history.push({
         pathname: '/ThankYou',
-        state: [t('AddNewCard.ThankYou1'), t('AddNewCard.ThankYou1')],
+        state: [t('AddNewCard.CardThankYou1'), t('AddNewCard.CardThankYou2')],
       });
     }
   };
@@ -111,9 +111,9 @@ export default function AddNewCardPage({ loginStatus }) {
   return (
     <div className="my-4 flex flex-col justify-evenly px-sides pt-navbar lg:h-firstsection">
       <div>
-        <div className="text-3xl lg:text-title uppercase">{t('AddNewCard.Title')}</div>
+        <div className="text-3xl lg:text-title uppercase">{t('AddNewCard.AddNew')}</div>
         <div className="text-lg lg:text-subtitle lg:mt-4 text-gray-700">
-          {t('AddNewCard.Subtitle')}
+          {t('AddNewCard.CardSure')}
         </div>
       </div>
 
@@ -228,7 +228,7 @@ export default function AddNewCardPage({ loginStatus }) {
         type="submit"
         className="uppercase self-center h-12 w-32 lg:w-48 text-lg lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
       >
-        {t('AddNewCard.Add')}
+        {t('AddNewCard.AddCard')}
       </button>
     </div>
   );

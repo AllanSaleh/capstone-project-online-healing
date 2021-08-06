@@ -4,25 +4,26 @@
   "About": "Hakkımızda",
   "ContactUs": "Bize Ulaşın",
   "Login": "Giriş Yap",
+  "SignUp": "Üye Ol",
   "Story": "Hikayemiz",
   "Team": "Takımımız",
   "Careers": "Açık Meslekler",
   "Settings": "Ayarlar",
   "Logout": "Çıkış Yap!",
   "Delete": "Silmek",
+  "ThankYou": "Teşekkürler!",
 
-	"Footer": {
-		"Subscribe": "Katılmak",
-		"Spam": "Size spam göndermeye veya e-postanızı paylaşmaya çalışmayacağız",
+  "Footer": {
+    "Subscribe": "Katılmak",
+    "Spam": "Size spam göndermeye veya e-postanızı paylaşmaya çalışmayacağız",
     "Enter": "E-postanızı giriniz",
-    "Language": "Diller",
-    "Select": "Seç"
-	},
+    "Language": "Diller"
+  },
 
   "AboutPage": {
-    "Subtitle": "We are here to HELP!",
+    "WeAreHere": "We are here to HELP!",
     "Description": "At Healing, wedd believe there is a better way to do things. A more valuable way where customers are earned rather than bought. We're obsessively passionate about it, and our mission is to help people achieve it. We focus on search engine optimization. It's one of understood and least transparent aspects of great marketing, and we see that as an opportunity. We're excited to simplify SEO for everyone through our software, education, and community.",
-    "Title": "Our Founding",
+    "Our": "Our Founding",
     "Founding": "Healing was founded by Payam Abubakr in 2021. It was called Healing Online, and started as a blog and an online community where some of the world's therapists shared their research and ideas. We launched the Beginner's Guide to Therapy and our first study, and that hub of industry expertise transformed into a small consulting firm and led us to create the Online Therapist of today!"
   },
 
@@ -33,10 +34,10 @@
     "NameAlert": "Incorrect Card Name Format",
     "ZipAlert": "Incorrect ZIP Code Format",
     "AddressAlert": "Incorrect Address Format",
-    "ThankYou1": "Your new payment method is under review, you will receive an email soon when your card is confirmed.",
-    "ThankYou2": "Otherwise you will get a notification telling you what went wrong and how to add a new card.",
-    "Title": "ADD CARD DETAILS",
-    "Subtitle": "Please make sure all of the info you enter are the same as your card registration info.",
+    "CardThankYou1": "Your new payment method is under review, you will receive an email soon when your card is confirmed.",
+    "CardThankYou2": "Otherwise you will get a notification telling you what went wrong and how to add a new card.",
+    "AddNew": "ADD CARD DETAILS",
+    "CardSure": "Please make sure all of the info you enter are the same as your card registration info.",
     "Supported": "Supported Card Types",
     "Number": "Card Number",
     "Date": "Expiry Date",
@@ -46,15 +47,15 @@
     "Zip": "ZIP Code",
     "City": "City",
     "Address": "Address",
-    "Add": "Add Card"
+    "AddCard": "Add Card"
   },
 
   "Recommend": {
-    "ThankYou": "You email has been added to the mailing list successfully!",
-    "EmailAlert": "Please enter a valid E-Mail!",
+    "ThankYouSub": "You email has been added to the mailing list successfully!",
+    "SubEmailAlert": "Please enter a valid E-Mail!",
     "BlogApology": "Sorry, seems like the blog can't be found!",
-    "title": "Sign Up For The Healing Blog",
-    "Subtitle": "Weekly, Ad-Free Blogs That Help You Stay In The Know!",
+    "SubSign": "Sign Up For The Healing Blog",
+    "Weekly": "Weekly, Ad-Free Blogs That Help You Stay In The Know!",
     "ForYou": "recommended for you"
   },
 
@@ -151,5 +152,45 @@
     "Choice5": "I'm a registered counselor and I need support.",
     "Choice6": "I'm interested in Healing Online for my organization.",
     "Choice7": "I have a billing related question."
+  },
+
+  "Edit": {
+    "Alert": "Please fill all the fields with correct and valid details to complete your profile.",
+    "Payment": "Payment Methods & Tickets",
+    "Cards": "crads added",
+    "Tickets": "tickets remaining",
+    "Save": "save changes",
+    "Delete": "delete account",
+    "Cancel": "cancel",
+    "Show": "show cards",
+    "Buy": "buy tickets",
+    "Info": "Profile Info",
+    "FullName": "full name",
+    "Education": "education level",
+    "Members": "family members",
+    "Gender": "gender",
+    "Male": "Male",
+    "Female": "Female",
+    "Other": "Other",
+    "Birth": "birth date",
+    "Phone": "phone number",
+    "Security": "security",
+    "Pass": "password",
+    "confirm": "confirm"
+  },
+
+  "HomePage": {
+    "Tickets": "Tickets",
+    "LoginAlert": "Please Login First!",
+    "CardAlert": "Please Add a Payment Method in Profile Settings First!",
+    "CompleteAlert": "Please Complete Your Profile in Profile Settings First!",
+
+    "Comm": "we can communicate through",
+    "Call": "voice call",
+    "CallText": "Feeling ready to start a conversation? Give your therapist a voice call and talk your heart out!",
+    "Chat": "chat",
+    "ChatText": "Need to talk to someone? Come have a chat with your therapist!",
+    "Video": "video call",
+    "VideoText": "For better experience therapists recommend video calls, but always remember that its a choice!"
   }
 }

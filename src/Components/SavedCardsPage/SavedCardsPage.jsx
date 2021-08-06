@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import firebase from '../../firebase';
 
 import Next from './Images/Next.svg';
@@ -8,6 +9,7 @@ import CreditCard from '../CreditCard/CreditCard';
 
 export default function SavedCardsPage({ loginStatus }) {
   window.scrollTo(0, 0);
+  const { t } = useTranslation();
   let count = 0;
 
   const [cards, setCards] = useState([
@@ -35,10 +37,8 @@ export default function SavedCardsPage({ loginStatus }) {
   return (
     <div className="flex flex-col justify-evenly lg:h-firstsection pt-navbar px-sides">
       <div>
-        <div className="text-3xl lg:text-title">YOUR SAVED CARDS</div>
-        <div className="text-xl lg:text-subtitle text-gray-700">
-          We only support cards as a payment method at the moment!
-        </div>
+        <div className="text-3xl lg:text-title">{t('Cards.Saved')}</div>
+        <div className="text-xl lg:text-subtitle text-gray-700">{t('Cards.Support')}</div>
       </div>
 
       <div className="flex justify-between items-center">
@@ -105,7 +105,7 @@ export default function SavedCardsPage({ loginStatus }) {
           type="button"
           className="mt-8 w-64 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
         >
-          ADD NEW CARD+
+          {t('Cards.Add')}
         </button>
       </Link>
     </div>

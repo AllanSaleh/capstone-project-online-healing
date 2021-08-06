@@ -28,7 +28,7 @@ import SignUpPage from './Components/SignUpPage/SignUpPage';
 import TeamPage from './Components/TeamPage/TeamPage';
 import ThankYouPage from './Components/ThankYouPage/ThankYouPage';
 import TherapistCreatePage from './Components/TherapistCreatePage/TherapistCreatePage';
-import TherapistProfilePage from './Components/TherapistProfilePage/TherapistProfilePage';
+// import TherapistProfilePage from './Components/TherapistProfilePage/TherapistProfilePage';
 
 function App() {
   // This controls the direction of the page for RTL languages
@@ -120,9 +120,6 @@ function App() {
         </Route>
         <Route path="/TherapistCreate">
           <TherapistCreatePage />
-        </Route>
-        <Route path="/TherapistProfile">
-          <TherapistProfilePage />
         </Route>
       </Switch>
       <Footer />

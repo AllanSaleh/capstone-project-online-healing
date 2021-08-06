@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import firebase from '../../firebase';
 
 import Next from './Images/Next.svg';
@@ -9,6 +10,7 @@ import CreditCard from '../CreditCard/CreditCard';
 export default function PurchasePage({ loginStatus }) {
   const location = useLocation();
   const history = useHistory();
+  const { t } = useTranslation();
 
   let count = 0;
 
@@ -62,10 +64,8 @@ export default function PurchasePage({ loginStatus }) {
   return (
     <div className="flex flex-col justify-evenly h-firstsection pt-navbar px-sides">
       <div>
-        <div className="text-3xl lg:text-title">SELECT CARD</div>
-        <div className="text-xl lg:text-subtitle text-gray-700">
-          Please select the card you want to buy the tickets with
-        </div>
+        <div className="text-3xl lg:text-title">{t('Purchase.Select')}</div>
+        <div className="text-xl lg:text-subtitle text-gray-700">{t('Purchase.Subtitle')}</div>
       </div>
 
       <div className="flex justify-between items-center">
@@ -129,7 +129,7 @@ export default function PurchasePage({ loginStatus }) {
 
       <div className="text-center self-center">
         <div className="text-xl lg:text-subtitle self-center">
-          Click confirm to use the selected card to purchase {location.state.ticket} tickets for{' '}
+          {t('Purchase.Confirm1')} {location.state.ticket} {t('Purchase.Confirm2')}{' '}
           {location.state.price}
         </div>
 
@@ -141,7 +141,7 @@ export default function PurchasePage({ loginStatus }) {
           type="button"
           className="mt-8 w-52 lg:w-72 h-12 text-lg lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
         >
-          CONFIRM PURCHASE
+          {t('Purchase.ConfirmBtn')}
         </button>
       </div>
     </div>

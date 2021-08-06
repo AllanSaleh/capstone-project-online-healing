@@ -15,9 +15,9 @@ export default function Recommended({ blog1, blog2 }) {
       window.scrollTo(0, 0);
       history.push({
         pathname: '/ThankYou',
-        state: t('Recommend.ThankYou'),
+        state: t('Recommend.ThankYouSub'),
       });
-    } else alert(t('Recommend.EmailAlert'));
+    } else alert(t('Recommend.SubEmailAlert'));
   };
 
   const OpenBlog = (blogID) => {
@@ -32,8 +32,8 @@ export default function Recommended({ blog1, blog2 }) {
     <div className="px-sides lg:h-section flex flex-col justify-around">
       <div className="flex flex-col justify-between items-start lg:h-40">
         <div>
-          <div className="text-3xl lg:text-title leading-tight">{t('Recommend.Title')}</div>
-          <div className="text-lg lg:text-paragraph text-gray-700">{t('Recommend.Subtitle')}</div>
+          <div className="text-3xl lg:text-title leading-tight">{t('Recommend.SubSign')}</div>
+          <div className="text-lg lg:text-paragraph text-gray-700">{t('Recommend.Weekly')}</div>
         </div>
         <div className="flex  border-2 border-gray-600 h-12 rounded-lg">
           <input
