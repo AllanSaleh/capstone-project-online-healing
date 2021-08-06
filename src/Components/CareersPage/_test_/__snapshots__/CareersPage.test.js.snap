@@ -12,30 +12,30 @@ exports[`Careers renders correctly 1`] = `
         <div
           className="text-3xl lg:text-title"
         >
-          CAREERS AT HEALING
+          Open.Title
         </div>
         <div
           className="text-xl lg:text-subtitle text-gray-600 mt-4"
         >
-          Be a part of making people feel better.
+          Open.Subtitle
         </div>
       </div>
       <div
         className="text-lg lg:text-paragraph text-gray-600 mt-4 text-justify"
       >
-        Our SEO software cuts through mountains of data to surface critical insights. We build and maintain systems that process massive amounts of data (we're talking 36 trillion records per day and multiple petabytes of storage.) We model transparent and empathetic marketing for the world. We educate our community, making every effort to help them improve their skill. And we do it all by fostering a culture that encourages accountability, empathy, and transparency.
+        Open.Intro
       </div>
       <div
         className="self-center lg:self-auto text-lg lg:text-paragraph text-gray-600 mt-4"
       >
-        What role will you play?
+        Open.Question
       </div>
       <button
-        className="transition-all duration-300 self-center lg:self-auto w-52 lg:w-64 h-12 text-xl lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+        className="uppercase transition-all duration-300 self-center lg:self-auto w-52 lg:w-64 h-12 text-xl lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
         onClick={[Function]}
         type="button"
       >
-        SEE OUR OPEN LIST
+        Careers.Btn
       </button>
     </div>
     <div
@@ -44,12 +44,12 @@ exports[`Careers renders correctly 1`] = `
       <div
         className="text-3xl lg:text-title"
       >
-        OUR HIRING PHILOSOPHY
+        Open.Hiring
       </div>
       <div
         className="text-xl lg:text-subtitle text-gray-600 mt-4 text-justify"
       >
-        To build the very best SEO tools, we need a workforce that reflects the diversity of our communities and customers. We want Online Therapy to be a place where everyone feels welcome and engaged, bar none. It's our mission and promise to interview a diverse and representative slate of candidates before making an offer for our open roles.
+        Open.HiringIntro
       </div>
     </div>
   </div>
@@ -61,12 +61,12 @@ exports[`Careers renders correctly 1`] = `
       <div
         className="text-3xl lg:text-title"
       >
-        CURRENT OPEN POSITIONS
+        Open.Positions
       </div>
       <div
         className="text-xl lg:text-subtitle text-gray-700"
       >
-        Please send us an email with the application title as the subject with an attached CV in PDF format at:
+        Open.Instruct
       </div>
       <a
         className="text-xl lg:text-subtitle text-blue-dark hover:underline"

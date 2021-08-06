@@ -6,14 +6,14 @@ exports[`Add New Card renders correctly 1`] = `
 >
   <div>
     <div
-      className="text-3xl lg:text-title"
+      className="text-3xl lg:text-title uppercase"
     >
-      ADD CARD DETAILS
+      AddNewCard.AddNew
     </div>
     <div
       className="text-lg lg:text-subtitle lg:mt-4 text-gray-700"
     >
-      Please make sure all of the info you enter are the same as your card registration info.
+      AddNewCard.CardSure
     </div>
   </div>
   <div
@@ -28,7 +28,7 @@ exports[`Add New Card renders correctly 1`] = `
         <div
           className="text-paragraph text-gray-700"
         >
-          Supported Card Types
+          AddNewCard.Supported
         </div>
         <div
           className="flex"
@@ -51,7 +51,7 @@ exports[`Add New Card renders correctly 1`] = `
         <div
           className="text-paragraph text-gray-700"
         >
-          Card Number
+          AddNewCard.Number
         </div>
         <input
           className="w-72 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
@@ -66,7 +66,7 @@ exports[`Add New Card renders correctly 1`] = `
           <div
             className="text-paragraph text-gray-700"
           >
-            Expiry Date
+            AddNewCard.Date
           </div>
           <input
             className="w-36 h-12 mr-1 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
@@ -78,7 +78,7 @@ exports[`Add New Card renders correctly 1`] = `
           <div
             className="text-paragraph text-gray-700"
           >
-            CVV Code
+            AddNewCard.Cvv
           </div>
           <input
             className="w-36 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
@@ -93,7 +93,7 @@ exports[`Add New Card renders correctly 1`] = `
         <div
           className="w-72 text-paragraph text-gray-700"
         >
-          Name on Card
+          AddNewCard.Name
         </div>
         <input
           className="w-72 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
@@ -111,7 +111,7 @@ exports[`Add New Card renders correctly 1`] = `
         <div
           className="text-paragraph text-gray-700"
         >
-          Country
+          AddNewCard.Country
         </div>
         <select
           className="w-72 h-12 p-2 border-gray-700 border-2 rounded-lg"
@@ -124,7 +124,7 @@ exports[`Add New Card renders correctly 1`] = `
         <div
           className="text-paragraph text-gray-700"
         >
-          ZIP Code
+          AddNewCard.Zip
         </div>
         <input
           className="w-72 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
@@ -138,7 +138,7 @@ exports[`Add New Card renders correctly 1`] = `
         <div
           className="text-paragraph text-gray-700"
         >
-          City
+          AddNewCard.City
         </div>
         <select
           className="w-72 h-12 p-2 border-gray-700 border-2 rounded-lg"
@@ -151,7 +151,7 @@ exports[`Add New Card renders correctly 1`] = `
         <div
           className="text-paragraph text-gray-700"
         >
-          Address
+          AddNewCard.Address
         </div>
         <input
           className="w-72 h-12 text-paragraph text-gray-700 border-2 border-gray-700 p-2 rounded-lg"
@@ -176,11 +176,11 @@ exports[`Add New Card renders correctly 1`] = `
     </div>
   </div>
   <button
-    className="self-center h-12 w-32 lg:w-48 text-lg lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+    className="uppercase self-center h-12 w-32 lg:w-48 text-lg lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
     onClick={[Function]}
     type="submit"
   >
-    ADD CARD
+    AddNewCard.AddCard
   </button>
 </div>
 `;

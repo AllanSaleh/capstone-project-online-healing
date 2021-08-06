@@ -2,17 +2,17 @@
 
 exports[`Booking3 renders correctly 1`] = `
 <div
-  className="h-firstsection px-sides pt-navbar"
+  className="lg:h-firstsection px-sides pt-navbar"
 >
   <h1
     className="text-3xl lg:text-title uppercase my-8"
   >
-    let’s match you with the right therapist
+    Booking.Title1
   </h1>
   <h3
     className="text-md lg:text-subtitle opacity-50 text-justify"
   >
-    Please fill out this short questionnaire to provide some general and anonymous background about you and the issues you'd like to deal with in online therapy. It would help us match you with the most suitable therapist for you.
+    Booking.Subtitle1
   </h3>
   <div
     className="flex flex-col justify-between w-full md:max-w-md lg:max-w-2xl my-16 mx-auto px-8 py-4 shadow-md"
@@ -21,20 +21,22 @@ exports[`Booking3 renders correctly 1`] = `
       <h1
         className="text-lg lg:text-subtitle"
       >
-        Have you ever been in therapy before?
+        Booking.Q3
       </h1>
-      <li
-        className="my-4 p-4 lg:p-6 text-md lg:text-paragraph cursor-pointer bg-blue-dark text-white rounded-lg "
-        value={1}
+      <button
+        className="w-full my-4 p-4 lg:p-6 text-left text-md lg:text-paragraph hover:cursor-pointer bg-white border border-black border-opacity-20 rounded-lg"
+        onClick={[Function]}
+        type="button"
       >
-        Yes
-      </li>
-      <li
-        className="my-4 p-4 lg:p-6 text-md lg:text-paragraph cursor-pointer bg-white border border-black border-opacity-20 rounded-lg "
-        value={2}
+        Booking.Choice31
+      </button>
+      <button
+        className="w-full my-4 p-4 lg:p-6 text-left text-md lg:text-paragraph hover:cursor-pointer bg-white border border-black border-opacity-20 rounded-lg"
+        onClick={[Function]}
+        type="button"
       >
-        No
-      </li>
+        Booking.Choice32
+      </button>
     </ul>
     <div
       className="flex justify-between mt-16"
@@ -44,14 +46,14 @@ exports[`Booking3 renders correctly 1`] = `
         onClick={[Function]}
         type="button"
       >
-        back
+        Booking.Back
       </button>
       <button
         className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition-all duration-300"
         onClick={[Function]}
         type="button"
       >
-        next
+        Booking.Next
       </button>
     </div>
   </div>
