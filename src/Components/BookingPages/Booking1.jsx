@@ -7,6 +7,7 @@ import QuestionComponent from './QuestionComponent';
 
 export default function Booking1() {
   window.scrollTo(0, 0);
+  localStorage.removeItem('booking');
   const history = useHistory();
   const [userAnswer, setUserAnswer] = useState('');
   const { t } = useTranslation();

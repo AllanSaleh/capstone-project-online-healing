@@ -7,7 +7,7 @@ export default function Booking4() {
   const { t } = useTranslation();
 
   const questionData = {
-    question: t('Booking.Subtitle1'),
+    question: t('Booking.Q4'),
     choices: [
       {
         id: 1,
@@ -62,10 +62,10 @@ export default function Booking4() {
   return (
     <div className="lg:h-firstsection px-sides pt-navbar">
       <h1 className="text-3xl lg:text-title uppercase my-8">{t('Booking.Title1')}</h1>
-      <h3 className="text-md lg:text-subtitle opacity-50 text-justify">{questionData.question}</h3>
+      <h3 className="text-md lg:text-subtitle opacity-50 text-justify">{t('Booking.Subtitle1')}</h3>
 
       <div className="flex flex-col justify-evenly w-full md:max-w-md lg:max-w-2xl my-16 mx-auto px-8 py-4 shadow-md">
-        <div className="text-md lg:text-subtitle">{t('Booking.Q4')}</div>
+        <div className="text-md lg:text-subtitle">{questionData.question}</div>
 
         <div className="flex flex-col justify-around my-8">
           {questionData.choices.map((choice) => (

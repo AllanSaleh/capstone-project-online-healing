@@ -6,45 +6,59 @@ const Booking5 = () => {
   window.scrollTo(0, 0);
   const { t } = useTranslation();
 
-  const choices = [
-    {
-      id: 1,
-      content: t('Booking.Choice51'),
-    },
-    {
-      id: 2,
-      content: t('Booking.Choice52'),
-    },
-    {
-      id: 3,
-      content: t('Booking.Choice53'),
-    },
-    {
-      id: 4,
-      content: t('Booking.Choice54'),
-    },
-    {
-      id: 5,
-      content: t('Booking.Choice55'),
-    },
-    {
-      id: 6,
-      content: t('Booking.Choice56'),
-    },
-  ];
+  const questionData = {
+    question: t('Booking.Q5'),
+    choices: [
+      {
+        id: 1,
+        content: t('Booking.Choice51'),
+      },
+      {
+        id: 2,
+        content: t('Booking.Choice52'),
+      },
+      {
+        id: 3,
+        content: t('Booking.Choice53'),
+      },
+      {
+        id: 4,
+        content: t('Booking.Choice54'),
+      },
+      {
+        id: 5,
+        content: t('Booking.Choice55'),
+      },
+      {
+        id: 6,
+        content: t('Booking.Choice56'),
+      },
+    ],
+  };
 
   const history = useHistory();
-  const [answer, setAnswer] = useState('');
+  const [userAnswer, setUserAnswer] = useState('');
   const handleRadioChange = (event) => {
-    setAnswer(event.target.value);
+    setUserAnswer(event.target.value);
   };
-  console.log(answer);
+  console.log(userAnswer);
+  const booking = JSON.parse(localStorage.getItem('userBooking'));
   const PrevPage = () => {
-    // Put firestore code here!
-    history.push('/Booking4');
+    booking.choices.pop();
+    localStorage.setItem('userBooking', JSON.stringify(booking));
+    history.push('/Booking2');
   };
   const NextPage = () => {
-    // Put firestore code here!
+    if (!userAnswer) {
+      alert(t('Booking.ChoiceAlert'));
+      return;
+    }
+    const choice = {
+      question: questionData.question,
+      answer: userAnswer,
+    };
+    booking.choices.push(choice);
+    localStorage.setItem('userBooking', JSON.stringify(booking));
     history.push('/Booking6');
   };
 
@@ -54,10 +68,10 @@ const Booking5 = () => {
       <h3 className="text-md lg:text-subtitle opacity-50 text-justify">{t('Booking.Subtitle1')}</h3>
 
       <div className="flex flex-col justify-evenly w-full md:max-w-md lg:max-w-2xl my-16 mx-auto px-8 py-4 shadow-md">
-        <div className="text-md lg:text-subtitle">{t('Booking.Q5')}</div>
+        <div className="text-md lg:text-subtitle">{questionData.question}</div>
 
         <div className="h-1/2 flex flex-col justify-around my-8">
-          {choices.map((choice) => (
+          {questionData.choices.map((choice) => (
             <div className="flex items-center" key={choice.id}>
               <input
                 type="radio"
