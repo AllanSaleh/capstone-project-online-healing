@@ -7,6 +7,7 @@ export default function Booking() {
   window.scrollTo(0, 0);
   const { t } = useTranslation();
   const bookingsRef = firebase.firestore().collection('bookings');
+
   const history = useHistory();
   const booking = JSON.parse(localStorage.getItem('userBooking'));
   const PrevPage = () => {

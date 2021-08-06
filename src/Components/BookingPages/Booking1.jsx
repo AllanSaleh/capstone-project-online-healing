@@ -10,6 +10,7 @@ export default function Booking1() {
   localStorage.removeItem('booking');
   const history = useHistory();
   const [userAnswer, setUserAnswer] = useState('');
+  
   const { t } = useTranslation();
 
   const questionData = {
