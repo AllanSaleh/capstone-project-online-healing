@@ -3,15 +3,7 @@ import { useHistory } from 'react-router-dom';
 import firebase from 'firebase';
 import { useTranslation } from 'react-i18next';
 
-export default function Card({
-  title,
-  content,
-  showIcon,
-  icon,
-  buttonText,
-  showButton,
-  user,
-}) {
+export default function Card({ title, content, showIcon, icon, buttonText, showButton, user }) {
   const history = useHistory();
   const { t } = useTranslation();
   const GoToRoute = (user) => {

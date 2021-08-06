@@ -28,12 +28,16 @@ export default function Booking() {
             onClick={() => PrevPage()}
             type="button"
             className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition duration-300"
-          >{t('Booking.Back')}</button>
+          >
+            {t('Booking.Back')}
+          </button>
           <button
             onClick={() => NextPage()}
             type="button"
             className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition-all duration-300"
-          >{t('Booking.SubmitBtn')}</button>
+          >
+            {t('Booking.SubmitBtn')}
+          </button>
         </div>
       </div>
     </div>

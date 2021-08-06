@@ -35,7 +35,9 @@ export default function RadioButtons({ choiceCheck }) {
     <div className="h-firstsection pt-navbar px-sides flex flex-col justify-evenly w-full">
       <div>
         <div className="text-2xl sm:text-title sm:mb-0 mb-3">{t('Contact.Title')}</div>
-        <div className="sm:text-subtitle sm:mb-0 mb-10  text-gray-700 md:text-sm lg:text-xl lg:text-gray-700 lg:text-subtitle md:mt-5 md:flex-col md:justify-evenly md:flex">{t('Contact.Subtitle')}</div>
+        <div className="sm:text-subtitle sm:mb-0 mb-10  text-gray-700 md:text-sm lg:text-xl lg:text-gray-700 lg:text-subtitle md:mt-5 md:flex-col md:justify-evenly md:flex">
+          {t('Contact.Subtitle')}
+        </div>
       </div>
 
       <div className="flex justify-between sm:flex-row flex-col">

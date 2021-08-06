@@ -1,9 +1,9 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
+import { useTranslation } from 'react-i18next';
 import HpIllustration from './Images/HP_illustration.svg';
 import Background from './Images/Background.svg';
-import { useTranslation } from 'react-i18next';
 
 export default function Landing({ user }) {
   const history = useHistory();
@@ -32,7 +32,9 @@ export default function Landing({ user }) {
               onClick={GoToRoute}
               type="button"
               className="transition-all duration-300 mt-6 ml-4 py-2 px-6 lg:py-4 lg:px-6 lg:text-subtitle text-base rounded-md bg-blue-dark border hover:bg-white hover:text-blue-dark hover:border-blue-dark"
-            >{t('HomePage.Book')}</button>
+            >
+              {t('HomePage.Book')}
+            </button>
           </div>
         </div>
         <div className="transform -translate-y-72 w-64 lg:-translate-y-0 lg:w-auto lg:ml-0 ml-16">

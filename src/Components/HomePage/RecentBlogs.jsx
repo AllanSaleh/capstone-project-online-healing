@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import firebase from 'firebase';
 import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import Prev from './Images/Prev.svg';
 import Next from './Images/Next.svg';
-import Img from '../BlogPage/Images/BlogImg.svg';
 
 export default function RecentBlogs({ blogs, setBlogs }) {
   const history = useHistory();

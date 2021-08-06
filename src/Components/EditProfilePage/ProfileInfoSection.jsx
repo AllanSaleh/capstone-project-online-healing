@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 
 import ProfileInputField from './ProfileInputField';
 import BirthDateIcon from './Images/BirthDateIcon.svg';
-import Plus from './Images/Plus.svg';
 
 export default function ProfileInfoSection({ userProfile }) {
   const { t } = useTranslation();
@@ -22,7 +21,9 @@ export default function ProfileInfoSection({ userProfile }) {
         <label
           htmlFor="education-level"
           className="text-sm md:text-lg lg:text-subtitle capitalize inline-block w-1/3"
-        >{t('Edit.Education')}</label>
+        >
+          {t('Edit.Education')}
+        </label>
         <div className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg px-6 py-2">
           <select
             id="education-level"
@@ -42,7 +43,9 @@ export default function ProfileInfoSection({ userProfile }) {
         <label
           htmlFor="family-members"
           className="text-sm md:text-lg lg:text-subtitle capitalize inline-block w-1/3"
-        >{t('Edit.Members')}</label>
+        >
+          {t('Edit.Members')}
+        </label>
         <div className="w-2/12 lg:w-1/12 inline-flex items-center border border-black border-opacity-20 rounded-lg px-4">
           <input
             type="text"
@@ -59,7 +62,9 @@ export default function ProfileInfoSection({ userProfile }) {
         <label
           htmlFor="gender"
           className="sm:text-sm md:text-lg lg:text-subtitle capitalize inline-block w-1/3"
-        >{t('Edit.Gender')}</label>
+        >
+          {t('Edit.Gender')}
+        </label>
         <div className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg px-6 py-2">
           <select id="gender" name="gender" className="w-full h-full outline-none py-1">
             <option value="1">{t('Edit.Male')}</option>

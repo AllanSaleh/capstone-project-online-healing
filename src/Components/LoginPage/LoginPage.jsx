@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import firebase from '../../firebase';
 
 import HpIllustration from './Images/HP_illustration.svg';
 import Facebook from './Images/Facebook.svg';
 import Google from './Images/Google.svg';
 import Or from './Images/or.svg';
-import { useTranslation } from 'react-i18next';
 
 export default function LoginPage({ setLoginStatus }) {
   window.scroll(0, 0);
 
   const history = useHistory();
-  const {t}=useTranslation();
+  const { t } = useTranslation();
 
   const usersRef = firebase.firestore().collection('users');
   const [fields, setFields] = useState({ email: '', password: '' });
@@ -80,12 +80,16 @@ export default function LoginPage({ setLoginStatus }) {
               onClick={Login}
               type="button"
               className="transition-all duration-300 w-full lg:w-40 h-12 lg:text-subtitle text-base rounded-lg bg-blue-dark border border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
-            >{t('Login')}</button>
+            >
+              {t('Login')}
+            </button>
             <Link className="lg:w-40" to="/SignUp">
               <button
                 type="button"
                 className="transition-all duration-300 w-full h-12 lg:text-subtitle text-base rounded-lg text-blue-dark bg-white border border-blue-dark hover:bg-blue-dark hover:text-black hover:border-transparent"
-              >{t('SignUp')}</button>
+              >
+                {t('SignUp')}
+              </button>
             </Link>
           </div>
         </div>

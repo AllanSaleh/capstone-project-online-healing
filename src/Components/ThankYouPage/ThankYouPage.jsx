@@ -22,7 +22,9 @@ export default function ThankYouPage() {
           <button
             type="button"
             className="w-64 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
-          >{t('Booking.BackHome')}</button>
+          >
+            {t('Booking.BackHome')}
+          </button>
         </Link>
       </div>
     </div>

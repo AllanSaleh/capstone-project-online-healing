@@ -1,14 +1,14 @@
 import React from 'react';
 
+import { useTranslation } from 'react-i18next';
 import Card from './Card';
 
 import PhoneCell from './Images/phone-cell.svg';
 import ChatIcon from './Images/chat-icon.svg';
 import VideoCallIcon from './Images/video-call-icon.svg';
-import { useTranslation } from 'react-i18next';
 
 export default function CommunicationSection() {
-  const {t}=useTranslation();
+  const { t } = useTranslation();
   return (
     <div className=" md:h-section flex flex-col justify-evenly px-sides">
       <h1 className="sm:text-xl md:text-4xl xl:text-title pb-2 uppercase mb-2">

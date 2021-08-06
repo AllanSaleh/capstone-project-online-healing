@@ -18,8 +18,12 @@ export default function CareersPage() {
             <div className="text-3xl lg:text-title">{t('Open.Title')}</div>
             <div className="text-xl lg:text-subtitle text-gray-600 mt-4">{t('Open.Subtitle')}</div>
           </div>
-          <div className="text-lg lg:text-paragraph text-gray-600 mt-4 text-justify">{t('Open.Intro')}</div>
-          <div className="self-center lg:self-auto text-lg lg:text-paragraph text-gray-600 mt-4">{t('Open.Question')}</div>
+          <div className="text-lg lg:text-paragraph text-gray-600 mt-4 text-justify">
+            {t('Open.Intro')}
+          </div>
+          <div className="self-center lg:self-auto text-lg lg:text-paragraph text-gray-600 mt-4">
+            {t('Open.Question')}
+          </div>
           <button
             onClick={() => {
               const y =
@@ -30,7 +34,9 @@ export default function CareersPage() {
             }}
             type="button"
             className="uppercase transition-all duration-300 self-center lg:self-auto w-52 lg:w-64 h-12 text-xl lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
-          >{t('Careers.Btn')}</button>
+          >
+            {t('Careers.Btn')}
+          </button>
         </div>
         <Hiring />
       </div>

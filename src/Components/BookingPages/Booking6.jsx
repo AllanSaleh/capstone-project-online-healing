@@ -21,7 +21,9 @@ export default function Booking6() {
     <div className="flex flex-col justify-evenly lg:h-firstsection px-sides pt-navbar">
       <div>
         <h1 className="text-3xl lg:text-title uppercase my-8">{t('Booking.Title2')}</h1>
-        <h3 className="text-md lg:text-subtitle opacity-50 text-justify">{t('Booking.Subtitle2')}</h3>
+        <h3 className="text-md lg:text-subtitle opacity-50 text-justify">
+          {t('Booking.Subtitle2')}
+        </h3>
       </div>
 
       <textarea
@@ -36,12 +38,16 @@ export default function Booking6() {
           onClick={() => PrevPage()}
           type="button"
           className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition duration-300"
-        >{t('Booking.Back')}</button>
+        >
+          {t('Booking.Back')}
+        </button>
         <button
           onClick={() => NextPage()}
           type="button"
           className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition-all duration-300"
-        >{t('Booking.Next')}</button>
+        >
+          {t('Booking.Next')}
+        </button>
       </div>
     </div>
   );
