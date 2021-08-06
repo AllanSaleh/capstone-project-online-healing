@@ -48,7 +48,7 @@ export default function OpeningSection() {
     <div id="Openings" className="h-section flex flex-col justify-around px-sides py-8">
       <div>
         <div className="text-3xl lg:text-title">{t('Open.Positions')}</div>
-        <div className="text-xl lg:text-subtitle text-gray-700">{t('Open.Instruct')}</div>
+        <div className="text-xl lg:text-subtitle text-gray-700 mt-4">{t('Open.Instruct')}</div>
         <a
           className="text-xl lg:text-subtitle text-blue-dark hover:underline"
           href="mailto:recruitment@healing.com"

@@ -10,9 +10,9 @@ import VideoCallIcon from './Images/video-call-icon.svg';
 export default function CommunicationSection() {
   const { t } = useTranslation();
   return (
-    <div className=" md:h-section flex flex-col justify-evenly px-sides">
+    <div className="mt-4 lg:mt-0 md:h-section flex flex-col justify-evenly px-sides">
       <h1 className="sm:text-xl md:text-4xl xl:text-title pb-2 uppercase mb-2">
-        we can communicate through
+        {t('HomePage.Comm')}
       </h1>
       <div className="flex flex-col md:flex-row items-center md:items-start md:justify-around">
         <Card

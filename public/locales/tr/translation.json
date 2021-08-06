@@ -41,7 +41,7 @@
     "CardSure": "Lütfen girdiğiniz tüm bilgilerin kart kayıt bilgilerinizle aynı olduğundan emin olun.",
     "Supported": "Desteklenen kart türleri",
     "Number": "Kart numarası",
-    "Date": "Son kullanma tarihi",
+    "Date": "Son Tarih",
     "Cvv": "CVV kodu",
     "Name": "Kartta isim",
     "Country": "Ülke",
@@ -179,7 +179,7 @@
     "Phone":"telefon numarası",
     "Security":"güvenlik",
     "Pass":"parola",
-    "confirm": "onaylamak"
+    "Confirm": "onaylamak"
   },
 
   "HomePage": {
@@ -214,7 +214,10 @@
     "Subtitle": "Lütfen bilet almak istediğiniz kartı seçin",
     "Confirm1": "Seçilen kartı satın almak için Onayla'yı tıklayın",
     "Confirm2": "Biletler",
-    "ConfirmBtn": "Satın almayı onayla"
+    "ConfirmBtn": "Satın almayı onayla",
+    "Thanks1": "Satın alma işleminiz gönderildi, sadece satın aldınız",
+    "Thanks2":"Kart numarası ile biletler",
+    "Thanks3": "Yakında makbuz ile bir e-posta almalısınız."
   },
 
   "Require": {
@@ -264,6 +267,11 @@
     "Title": "Hesap aç",
     "Create": "Sunmak",
     "Thanks1": "İyileşme ile çalışmaya ilgi duyduğunuz için teşekkür ederiz, başvurunuzu aldık.",
-    "Thanks2": "Bilgileriniz gözden geçirildikten hemen sonra bir sonraki adımlar için size rehberlik eden bir e-posta alacaksınız."
+    "Thanks2": "Bilgileriniz gözden geçirildikten hemen sonra bir sonraki adımlar için size rehberlik eden bir e-posta alacaksınız.",
+    "Name": "Kullanıcı adı",
+    "License":"Lisans numarası",
+    "Pass":"parola",
+    "Confirm": "Şifreyi Onayla",
+    "ConfirmPlace": "parolanızı yeniden yazın"
   }
 }

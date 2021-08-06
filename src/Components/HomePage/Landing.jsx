@@ -11,8 +11,8 @@ export default function Landing({ user }) {
 
   const GoToRoute = () => {
     if (user.login && user.complete) history.push('/Booking1');
-    else if (!user.login) alert('Please LogIn First!');
-    else alert('Please Complete Your Profile in Profile Settings First!');
+    else if (!user.login) alert(t('HomePage.LoginAlert'));
+    else alert(t('HomePage.CompleteAlert'));
   };
 
   return (

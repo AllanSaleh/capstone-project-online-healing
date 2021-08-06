@@ -6,22 +6,23 @@ import { useTranslation } from 'react-i18next';
 export default function Card({ title, content, showIcon, icon, buttonText, showButton, user }) {
   const history = useHistory();
   const { t } = useTranslation();
-  const GoToRoute = (user) => {
+  const GoToRoute = () => {
     let cardsNo;
-    firebase
-      .firestore()
-      .collection('users')
-      .doc(user.user_id)
-      .get()
-      .then((doc) => {
-        cardsNo = doc.data().cards.length;
-      });
-    if (user.login && user.complete && cardsNo !== 0)
+
+    if (user.login && user.complete && cardsNo !== 0) {
+      firebase
+        .firestore()
+        .collection('users')
+        .doc(user.user_id)
+        .get()
+        .then((doc) => {
+          cardsNo = doc.data().cards.length;
+        });
       history.push({
         pathname: '/Purchase',
         state: { ticket: title, price: content },
       });
-    else if (!user.login) alert(t('HomePage.LoginAlert'));
+    } else if (!user.login) alert(t('HomePage.LoginAlert'));
     else if (cardsNo === 0) alert(t('HomePage.CardAlert'));
     else alert(t('HomePage.CompleteAlert'));
   };
@@ -37,7 +38,7 @@ export default function Card({ title, content, showIcon, icon, buttonText, showB
       </p>
       {showButton && (
         <button
-          onClick={() => GoToRoute(user)}
+          onClick={() => GoToRoute()}
           type="button"
           className="bg-blue-dark py-2 px-4 uppercase text-paragraph border text-black hover:bg-transparent hover:border-blue-dark hover:text-blue-dark  transition-all duration-200 rounded-md"
         >

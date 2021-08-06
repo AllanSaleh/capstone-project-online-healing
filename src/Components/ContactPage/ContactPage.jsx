@@ -4,7 +4,6 @@ import RadioButtons from './RadioButtons';
 import Form from './Form';
 
 export default function ContactPage({ loginStatus }) {
-  window.scrollTo(0, 0);
   const [selectedChoice, setChoice] = useState('');
 
   return (
