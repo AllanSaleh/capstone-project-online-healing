@@ -101,7 +101,7 @@ export default function Footer() {
             className="w-24 p-1 border-gray-700 border-2 rounded-lg"
           >
             <option value="en" className="py-1 text-paragraph text-gray-700" selected>
-              Default
+              {t('Footer.Select')}
             </option>
             <option value="en" className="py-1 text-paragraph text-gray-700">
               English

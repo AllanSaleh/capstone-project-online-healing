@@ -17,37 +17,38 @@
     "Subscribe": "Katılmak",
     "Spam": "Size spam göndermeye veya e-postanızı paylaşmaya çalışmayacağız",
     "Enter": "E-postanızı giriniz",
-    "Language": "Diller"
+    "Language": "Diller",
+    "Select": "Seçme"
   },
 
   "AboutPage": {
-    "WeAreHere": "We are here to HELP!",
-    "Description": "At Healing, wedd believe there is a better way to do things. A more valuable way where customers are earned rather than bought. We're obsessively passionate about it, and our mission is to help people achieve it. We focus on search engine optimization. It's one of understood and least transparent aspects of great marketing, and we see that as an opportunity. We're excited to simplify SEO for everyone through our software, education, and community.",
-    "Our": "Our Founding",
-    "Founding": "Healing was founded by Payam Abubakr in 2021. It was called Healing Online, and started as a blog and an online community where some of the world's therapists shared their research and ideas. We launched the Beginner's Guide to Therapy and our first study, and that hub of industry expertise transformed into a small consulting firm and led us to create the Online Therapist of today!"
+    "WeAreHere": "Yardım etmek için buradayız!",
+    "Description": "Şifada, Wedd, işleri yapmanın daha iyi bir yolu olduğuna inanıyor.Müşterilerin satın alınmasından çok kazanıldığı daha değerli bir yol.Biz o konuda takıntılı tutkulu ve misyonumuz insanların bunu başarmasına yardımcı olmaktır.Arama motoru optimizasyonuna odaklanıyoruz.Büyük pazarlamanın anlaşılacağı ve en az şeffaf yönlerinden biridir ve bunu bir fırsat olarak görüyoruz.Yazılım, eğitimimiz ve topluluğumuzda herkes için SEO'yu basitleştirmek için heyecanlıyız.",
+    "Our": "Kuruluşumuz",
+    "Founding": "İyileşme, 2021'de Payam Abubakr tarafından kuruldu. Online İyileşme olarak adlandırıldı ve bir blog olarak başladı ve dünyanın terapistlerinden bazılarının araştırma ve fikirlerini paylaştığı bir blog ve çevrimiçi bir topluluk olarak başladı.Yeni başlayanların terapisine ve ilk çalışmamıza yönelik rehberini başlattık ve bu endüstri uzmanlığının merkezi küçük bir danışmanlık firmasına dönüştü ve bugünün çevrimiçi terapisti yaratmamızı sağladı!"
   },
 
   "AddNewCard": {
-    "NumberAlert": "Incorrect Card Number Format",
-    "DateAlert": "Incorrect Card Date Format",
-    "CvvAlert": "Incorrect CVV Number Format",
-    "NameAlert": "Incorrect Card Name Format",
-    "ZipAlert": "Incorrect ZIP Code Format",
-    "AddressAlert": "Incorrect Address Format",
-    "CardThankYou1": "Your new payment method is under review, you will receive an email soon when your card is confirmed.",
-    "CardThankYou2": "Otherwise you will get a notification telling you what went wrong and how to add a new card.",
-    "AddNew": "ADD CARD DETAILS",
-    "CardSure": "Please make sure all of the info you enter are the same as your card registration info.",
-    "Supported": "Supported Card Types",
-    "Number": "Card Number",
-    "Date": "Expiry Date",
-    "Cvv": "CVV Code",
-    "Name": "Name on Card",
-    "Country": "Country",
-    "Zip": "ZIP Code",
-    "City": "City",
-    "Address": "Address",
-    "AddCard": "Add Card"
+    "NumberAlert": "Yanlış kart numarası formatı",
+    "DateAlert": "Yanlış Kart Tarihi Formatı",
+    "CvvAlert": "Yanlış CVV numarası formatı",
+    "NameAlert": "Yanlış kart adı formatı",
+    "ZipAlert": "Yanlış posta kodu formatı",
+    "AddressAlert": "Yanlış adres biçimi",
+    "CardThankYou1": "Yeni ödeme yönteminiz incelendiğinde, kartınız onaylandığında yakında bir e-posta alacaksınız.",
+    "CardThankYou2": "Aksi takdirde, size neyin yanlış gittiğini ve yeni bir kart ekleneceğini söyleyen bir bildirim alacaksınız.",
+    "AddNew": "Kart detayları ekle",
+    "CardSure": "Lütfen girdiğiniz tüm bilgilerin kart kayıt bilgilerinizle aynı olduğundan emin olun.",
+    "Supported": "Desteklenen kart türleri",
+    "Number": "Kart numarası",
+    "Date": "Son kullanma tarihi",
+    "Cvv": "CVV kodu",
+    "Name": "Kartta isim",
+    "Country": "Ülke",
+    "Zip": "Posta kodu",
+    "City": "Şehir",
+    "Address": "Adres",
+    "AddCard": "Kart ekle"
   },
 
   "Recommend": {
