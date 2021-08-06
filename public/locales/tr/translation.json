@@ -52,218 +52,218 @@
   },
 
   "Recommend": {
-    "ThankYouSub": "You email has been added to the mailing list successfully!",
-    "SubEmailAlert": "Please enter a valid E-Mail!",
-    "BlogApology": "Sorry, seems like the blog can't be found!",
-    "SubSign": "Sign Up For The Healing Blog",
-    "Weekly": "Weekly, Ad-Free Blogs That Help You Stay In The Know!",
-    "ForYou": "recommended for you"
+    "ThankYouSub": "E-postanız Mail Listesine başarıyla eklendi!",
+    "SubEmailAlert": "Lütfen geçerli eposta adresini giriniz!",
+    "BlogApology": "Üzgünüz, blog bulunamadı gibi görünüyor!",
+    "SubSign": "Şifa bloguna kaydolun",
+    "Weekly": "Haftalık, bilmek için kalmanıza yardımcı olan reklamsız bloglar!",
+    "ForYou": "sizin için tavsiye edilen"
   },
 
   "Booking": {
-    "Title1": "let’s match you with the right therapist",
-    "Subtitle1": "Please fill out this short questionnaire to provide some general and anonymous background about you and the issues you'd like to deal with in online therapy. It would help us match you with the most suitable therapist for you.",
+    "Title1": "Sizinle doğru terapistle eşleşalım",
+    "Subtitle1": "Lütfen, sizinle ilgili genel ve anonim bir arka plan sağlamak için bu kısa anketi doldurun ve çevrimiçi terapide başa çıkmak istediğiniz sorunlar.Sizin için en uygun terapistle eşleşmemize yardımcı olur.",
 
-    "Title2": "What brings you here?",
-    "Subtitle2": "Please specify (in a few sentences) why you'd like counseling. This will give your counselor a good understanding of where to start.",
+    "Title2": "Seni buraya ne getirdi?",
+    "Subtitle2": "Lütfen (birkaç cümle içinde) neden danışmanlık isteyeceğinizi belirtin.Bu, danışmanınıza nereye başlayacağınızı iyi bir anlayacaktır.",
 
-    "Title3": "Submit your appointment",
-    "Subtitle3": "Click Submit if you are sure of all your choices.",
+    "Title3": "Randevunuzu gönderin",
+    "Subtitle3": "Tüm seçimlerinizden eminseniz Gönder'i tıklayın.",
 
-    "Title4": "your request has been submitted!",
-    "Subtitle4": "You will receive an email guiding you to book a date and time soon.",
+    "Title4": "İsteğiniz sunulmuştur!",
+    "Subtitle4": "Yakında bir tarih ve saat rezervasyonu için size rehberlik eden bir e-posta alacaksınız.",
 
-    "Next": "Next",
-    "Back": "Back",
+    "Next": "Sonraki",
+    "Back": "Geri",
 
-    "Q1": "What type of counseling are you looking for?",
-    "Choice11": "Individual counseling",
-    "Choice12": "Teen counseling (for my child)",
+    "Q1": "Ne tür bir danışma arıyorsunuz?",
+    "Choice11": "Bireysel danışma",
+    "Choice12": "Teen danışmanlığı (çocuğum için)",
 
-    "Q2": "What is your relationship status?",
-    "Choice21": "Single",
-    "Choice22": "Married",
-    "Choice23": "Divorced",
+    "Q2": "İlişki durumun nedir?",
+    "Choice21": "Bekar",
+    "Choice22": "Evli",
+    "Choice23": "Boşanmış",
 
-    "Q3": "Have you ever been in therapy before?",
-    "Choice31": "Yes",
-    "Choice32": "No",
+    "Q3": "Daha önce hiç terapide bulundun mu?",
+    "Choice31": "Evet",
+    "Choice32": "Numara",
 
-    "Q4": "Are there any specific quality that you would prefer in a counselor?",
-    "Choice41": "I prefer a Male counselor",
-    "Choice42": "I prefer a Female counselor",
-    "Choice43": "I prefer an Older(45+) counselor",
-    "Choice44": "I prefer a Non-Religious counselor",
-    "Choice45": "I prefer a Younger(30-) counselor",
+    "Q4": "Bir danışmanda tercih ettiğiniz belirli bir kalite var mı?",
+    "Choice41": "Bir erkek danışmanı tercih ederim",
+    "Choice42": "Kadın bir danışman tercih ederim",
+    "Choice43": "Daha eski (45+) danışmanı tercih ederim",
+    "Choice44": "Dinsiz bir danışman tercih ederim",
+    "Choice45": "Daha genç (30-) bir danışman tercih ederim",
 
-    "Q5": "Are there any issue that you would like to focus on?",
-    "Choice51": "Depression",
-    "Choice52": "Stress and Anxiety",
-    "Choice53": "Relationship Issues",
-    "Choice54": "Family Conflicts",
-    "Choice55": "Trauma and Abuse",
-    "Choice56": "Eating Disorders",
+    "Q5": "Odaklanmak istediğiniz herhangi bir sorun var mı?",
+    "Choice51": "Depresyon",
+    "Choice52": "Stres ve Anksiyete",
+    "Choice53": "İlişki sorunları",
+    "Choice54": "Aile çatışmaları",
+    "Choice55": "Travma ve istismar",
+    "Choice56": "Yeme bozuklukları",
 
-    "Explain": "Please explain here...",
+    "Explain": "Lütfen burada açıkla...",
 
-    "Submit": "submit appointment?",
-    "Aware": "Please be aware that this action will cost you a ticket!",
-    "SubmitBtn": "Submit",
+    "Submit": "Randevu gönder?",
+    "Aware": "Lütfen bu işlemin size bir bilet mal olmayacağını unutmayın!",
+    "SubmitBtn": "Göndermek",
 
-    "Submitted": "reqeuest submitted",
-    "Notice": "you will receive a confirmation email soon. please keep an eye on your mail.",
-    "BackHome": "back to home",
+    "Submitted": "Talep gönderildi",
+    "Notice": "Yakında bir onay e-postası alacaksınız. Lütfen postanıza göz atın.",
+    "BackHome": "eve geri dön",
 
-    "ChoiceAlert": "Please choose an answer"
+    "ChoiceAlert": "Lütfen bir cevap seçin"
   },
 
   "Open": {
-    "Title": "CAREERS AT HEALING",
-    "Subtitle": "Be a part of making people feel better.",
-    "Intro": "Our SEO software cuts through mountains of data to surface critical insights. We build and maintain systems that process massive amounts of data (we're talking 36 trillion records per day and multiple petabytes of storage.) We model transparent and empathetic marketing for the world. We educate our community, making every effort to help them improve their skill. And we do it all by fostering a culture that encourages accountability, empathy, and transparency.",
-    "Question": "What role will you play?",
-    "Btn": "SEE OUR OPEN LIST",
+    "Title": "İyileşme kariyerleri",
+    "Subtitle": "İnsanların daha iyi hissetmenin bir parçası olun.",
+    "Intro": "SEO yazılımımız, kritik öngörülere kadar veri dağlarıyla keser. Muazzam miktarda veri işleyen sistemler inşa ediyoruz ve koruyoruz (günde 36 trilyon kayıt konuşuyoruz.) Şeffaf ve empatik pazarlamayı modelliyoruz.Dünya. Topluluğumuzu eğitiyoruz, becerilerini geliştirmelerine yardımcı olmak için her türlü çabayı gösteriyoruz. Ve hepsini hesap verebilirliği, empati ve şeffaflığı teşvik eden bir kültürü geliştirerek yapıyoruz. ",
+    "Question": "Hangi rol oynayacaksın?",
+    "Btn": "Açık listemizi görün",
 
-    "Hiring": "OUR HIRING PHILOSOPHY",
-    "HiringIntro": "To build the very best SEO tools, we need a workforce that reflects the diversity of our communities and customers. We want Online Therapy to be a place where everyone feels welcome and engaged, bar none. It's our mission and promise to interview a diverse and representative slate of candidates before making an offer for our open roles.",
+    "Hiring": "Kiralama felsefemiz",
+    "HiringIntro": "En iyi SEO araçlarını oluşturmak için, topluluklarımızın ve müşterilerimizin çeşitliliğini yansıtan bir işgücüne ihtiyacımız var.Çevrimiçi terapinin herkesin hoş geldiniz ve nişanlandığı bir yer olmasını istiyoruz.Bizim görevimiz ve açık rollerimiz için bir teklif yapmadan önce adayların çeşitli ve temsili bir şekilde görüşme sözü. ",
 
-    "Positions": "CURRENT OPEN POSITIONS",
-    "Instruct": "Please send us an email with the application title as the subject with an attached CV in PDF format at:"
+    "Positions": "Geçerli açık pozisyonlar",
+    "Instruct": "Lütfen bize PDF formatında bir CV ekli bir CV içeren konu olarak bize bir e-posta gönderin: "
   },
 
   "Contact": {
-    "ChioceAlert": "Please choose a type of contact!",
-    "NameAlert": "Incorrect Name Format",
-    "EmailAlert": "Incorrect E-Mail Format",
-    "DetailsAlert": "Please provide details!",
+    "ChioceAlert":"Lütfen bir tür temas seçiniz!",
+    "NameAlert":"Yanlış Adı Biçimi",
+    "EmailAlert":"Yanlış e-posta formatı",
+    "DetailsAlert": "Lütfen detayları sağlayın!",
 
-    "ThankYou": "Your request has been sent, a member of the support team will get in contact with you through the email you provided as soon as possible.",
+    "ThankYou": "İsteğiniz gönderildi, destek ekibinin bir üyesi, mümkün olan en kısa sürede verdiğiniz e-posta yoluyla sizinle iletişime geçecektir.",
 
-    "Name": "Full Name:",
-    "Email": "E-Mail:",
-    "Details": "Details:",
-    "Find": "Find Us At:",
+    "Name": "Ad Soyad:",
+    "Email": "E-posta:",
+    "Details": "Detaylar:",
+    "Find": "Bizi:",
 
-    "Title": "SEND US YOUR REQUEST!",
-    "Subtitle": "Do you have a question, concern, idea, feedback, or problem? If you need assistance, please fill out the form below and we'd be happy to help!",
-    "Type": "Type of Contact",
+    "Title":"Bize isteğinizi gönderin!",
+    "Subtitle": "Bir sorunuz, endişeniz, fikir, geri bildirim veya probleminiz var mı? Yardıma ihtiyacınız olursa, lütfen aşağıdaki formu doldurunuz ve yardım etmekten mutluluk duyarız!",
+    "Type": "Temas türü",
 
-    "Choice1": "I have a question about the service.",
-    "Choice2": "I'm a registered client and I need support.",
-    "Choice3": "I'm a counselor interested in joining.",
-    "Choice4": "I'm a counselor interested in joining.",
-    "Choice5": "I'm a registered counselor and I need support.",
-    "Choice6": "I'm interested in Healing Online for my organization.",
-    "Choice7": "I have a billing related question."
+    "Choice1": "Hizmet hakkında bir sorum var.",
+    "Choice2": "Ben kayıtlı bir müşteriyim ve desteğe ihtiyacım var.",
+    "Choice3":"Ben katılarak ilgilenen bir danışmanım.",
+    "Choice4": "Ben katılarak ilgilenen bir danışmanım.",
+    "Choice5": "Ben kayıtlı bir danışmanım ve desteğe ihtiyacım var.",
+    "Choice6": "Bizim organizasyonum için çevrimiçi şifa ile ilgileniyorum.",
+    "Choice7":"Fatura ile ilgili bir sorunuz var."
   },
 
   "Edit": {
-    "Alert": "Please fill all the fields with correct and valid details to complete your profile.",
-    "Payment": "Payment Methods & Tickets",
-    "Cards": "crads added",
-    "Tickets": "tickets remaining",
-    "Save": "save changes",
-    "Delete": "delete account",
-    "Cancel": "cancel",
-    "Show": "show cards",
-    "Buy": "buy tickets",
-    "Info": "Profile Info",
-    "FullName": "full name",
-    "Education": "education level",
-    "Members": "family members",
-    "Gender": "gender",
-    "Male": "Male",
-    "Female": "Female",
-    "Other": "Other",
-    "Birth": "birth date",
-    "Phone": "phone number",
-    "Security": "security",
-    "Pass": "password",
-    "confirm": "confirm"
+    "Alert":"Lütfen profilinizi tamamlamak için tüm alanları doğru ve geçerli ayrıntılarla doldurunuz.",
+    "Payment": "Ödeme yöntemleri ve biletler",
+    "Cards":"Kartlar eklendi",
+    "Tickets":"Kalan biletler",
+    "Save": "değişiklikleri Kaydet",
+    "Delete": "Hesabı sil",
+    "Cancel":"iptal",
+    "Show": "kartları göster",
+    "Buy": "bilet satın al",
+    "Info": "Profil bilgisi",
+    "FullName": "Ad Soyad",
+    "Education": "Eğitim Seviyesi",
+    "Members": "aile üyeleri",
+    "Gender": "cinsiyet",
+    "Male": "Erkek",
+    "Female":"Dişi",
+    "Other":"Diğer",
+    "Birth": "doğum günü",
+    "Phone":"telefon numarası",
+    "Security":"güvenlik",
+    "Pass":"parola",
+    "confirm": "onaylamak"
   },
 
   "HomePage": {
-    "Tickets": "Tickets",
-    "LoginAlert": "Please Login First!",
-    "CardAlert": "Please Add a Payment Method in Profile Settings First!",
-    "CompleteAlert": "Please Complete Your Profile in Profile Settings First!",
+    "Tickets": "Biletler",
+    "LoginAlert": "Lütfen önce giriş yapın!",
+    "CardAlert":"Lütfen önce profil ayarlarında bir ödeme yöntemi ekleyin!",
+    "CompleteAlert": "Lütfen profilinizi önce profil ayarlarında tamamlayın!",
 
-    "Comm": "we can communicate through",
-    "Call": "voice call",
-    "CallText": "Feeling ready to start a conversation? Give your therapist a voice call and talk your heart out!",
-    "Chat": "chat",
-    "ChatText": "Need to talk to someone? Come have a chat with your therapist!",
-    "Video": "video call",
-    "VideoText": "For better experience therapists recommend video calls, but always remember that its a choice!",
+    "Comm": "Biz iletişim kurabiliriz",
+    "Call": "sesli arama",
+    "CallText": "Bir konuşmaya başlamaya hazır hissetmek? Terapistinize sesli bir arama yapın ve kalbinizden konuşun!",
+    "Chat": "sohbet etmek",
+    "ChatText": "Biriyle konuşmanız gerekiyor mu? Gelin terapistinle sohbet et!",
+    "Video": "görüntülü arama",
+    "VideoText": "Daha iyi bir deneyim için terapistler video aramaları önerir, ancak her zaman bir seçim olduğunu hatırlayın!",
 
-    "Therapist": "Professional, licensed, and vetted therapists that you can trust",
-    "TherapistInfo": "Tap into the world's largest network of licensed, accredited, and experienced therapists who can help you with a range of issues including depression, anxiety, relationships, trauma, grief, and more. with our therapists, you get the same professionalism and quality you would expect from an in-office therapist, but with the ability to communicate whenever and however you want.",
-    "Book": "BOOK AN APPOINTMENT",
-    "Recent": "Recent Blogs",
+    "Therapist": "Güvenebileceğiniz profesyonel, lisanslı ve müthiş terapistler",
+    "TherapistInfo": "Depresyon, anksiyete, ilişkiler, travma, keder ve daha fazlasını içeren bir dizi konuda size yardımcı olabilecek dünyanın en büyük lisanslı, akredite ve deneyimli terapist ağına dokunun. Terapistlerimizle aynı profesyonellik ve kaliteyi elde edersinizOfis içi bir terapistten beklerdi, ancak ne zaman ve istediğiniz zaman iletişim kurma yeteneğiyle. ",
+    "Book": "Randevu ayırtın",
+    "Recent": "Son Bloglar",
 
-    "Buy": "Purchase tickets",
-    "Explain": "purchase tickets that can be used to book appointments!",
-    "Purchase": "Purchase",
-    "Counselor": "are you a counselor?",
-    "Interest": "Interested in joining our mental health platform? You decide your schedule and how much you want to work, we’ll take care of the client referrals and billing details!",
-    "Learn": "learn more"
+    "Buy": "Bilet satın alın",
+    "Explain": "Randevuları gidermek için kullanılabilecek bilet satın alın!",
+    "Purchase": "Satın almak",
+    "Counselor": "Bir danışman mısın?",
+    "Interest": "Akıl sağlığı platformumuza katılmakla ilgileniyor musunuz? Programınıza ve ne kadar çalışmak istediğine karar verirseniz, müşteri yönergelerine ve fatura detaylarına dikkat edeceğiz!",
+    "Learn": "daha fazla bilgi edin"
   },
 
   "Purchase": {
-    "Select": "SELECT CARD",
-    "Subtitle": "Please select the card you want to buy the tickets with",
-    "Confirm1": "Click confirm to use the selected card to purchase",
-    "Confirm2": "tickets for",
-    "ConfirmBtn": "CONFIRM PURCHASE"
+    "Select": "Kart Seç",
+    "Subtitle": "Lütfen bilet almak istediğiniz kartı seçin",
+    "Confirm1": "Seçilen kartı satın almak için Onayla'yı tıklayın",
+    "Confirm2": "Biletler",
+    "ConfirmBtn": "Satın almayı onayla"
   },
 
   "Require": {
-    "Why": "Why work with Healing?",
-    "Income": "Reliable Income",
-    "Explain": "Over 10,000 people sign up on Healing every day looking for a counselor to help with life’s challenges. Healing can be your main source of income (full time) or a supplement to your current work.",
-    "Focus": "Focus on Counseling",
-    "Worry": "No need to worry about costs from acquiring clients, billing, support or operations. Let us handle the fees and paperwork so you can focus on what you do best!",
-    "Require": "Requirements",
-    "License": "Licensed by a State Board to provide counseling",
-    "Exp": "Experience in counseling for adults, couples, and/or teens",
-    "Skill": "Excellent writing skills",
-    "Internet": "Reliable Internet connection",
-    "Irq": "Currently residing in Iraq",
-    "Start": "Get Started"
+    "Why": "Neden iyileşme ile çalışıyorsun?",
+    "Income": "Güvenilir Gelir ",
+    "Explain": "10.000'den fazla insan, hayatın zorluğuna yardımcı olmak için her gün bir danışman arayan her gün iyileşmeye kaydoldu. İyileştirme, ana gelir kaynağınız (tam zamanlı) veya mevcut işinize bir ek olabilir.",
+    "Focus":"Danışmanlığa odaklanın",
+    "Worry": "Müşterileri, faturalandırma, destek veya operasyonları elde etmenin maliyetleri hakkında endişelenmenize gerek yok. Ücretleri ve evrakları ele alalım, böylece en iyisini yaptığınız şeye odaklanabilirsiniz!",
+    "Require": "Gereksinimler",
+    "License": "Danışmanlık sağlamak için bir devlet kurulunun lisansı",
+    "Exp": "Yetişkinler, çiftler ve / veya gençler için danışmanlık deneyimi",
+    "Skill": "Mükemmel yazma becerileri",
+    "Internet":"Güvenilir İnternet Bağlantısı",
+    "Irq": "Şu anda Irak'ta oturuyor",
+    "Start": "Başlamak"
   },
 
   "Cards": {
-    "Saved": "YOUR SAVED CARDS",
-    "Support": "We only support cards as a payment method at the moment!",
-    "Add": "ADD NEW CARD+"
+    "Saved":"Kayıtlı kartların",
+    "Support":"Kartları sadece şu anda bir ödeme yöntemi olarak destekliyoruz!",
+    "Add": "Yeni kart ekle+"
   },
 
   "SignUpPage": {
-    "SignUp": "SIGN UP NOW",
-    "FName": "First Name",
-    "LName": "Last Name",
-    "Confirm": "Confirm",
-    "Birth": "Birth Date:",
+    "SignUp":"ŞİMDİ KAYIT OL",
+    "FName": "İlk adı",
+    "LName":"Soy isim",
+    "Confirm":"Onaylamak",
+    "Birth": "Doğum günü:",
 
-    "NameAlert": "is not valid it should only be letters, please try again",
-    "EmailAlert": "is not valid, it should follow this pattern 'someone@something.something",
-    "ConfirmEAlert": "does not match your email, please try again!",
-    "PassAlert": "is not valid, it should contain at least one capital letter and one number, please try again!",
-    "ConfirmPAlert": "does not match your password, please try again!",
+    "NameAlert": "Geçerli değil, sadece harf olmalı, lütfen tekrar deneyin",
+    "EmailAlert":"Geçerli değil, bu kalıbı 'birine@something.something'i takip etmelidir",
+    "ConfirmEAlert": "E-postanızla eşleşmiyor, lütfen tekrar deneyin!",
+    "PassAlert": "Geçerli değil, en az bir büyük harf ve bir numara içermelidir, lütfen tekrar deneyin!",
+    "ConfirmPAlert": "Şifrenizle eşleşmiyor, lütfen tekrar deneyin!",
 
-    "Thanks1": "Your Sign Up request has been received, you will soon receive a confirmation email.",
-    "Thanks2": "Please follow the steps in the email to complete and activate your account."
+    "Thanks1": "Kayıt isteğiniz alındı, yakında bir onay e-postası alacaksınız.",
+    "Thanks2": "Lütfen hesabınızı tamamlamak ve etkinleştirmek için e-postadaki adımları izleyin."
   },
 
   "TeamPage": {
-    "Title": "we are healing, nice to meet you!",
-    "Subtitle": "Meet the Team!"
+    "Title": "İyileşiyoruz, tanıştığımıza memnun oldum!",
+    "Subtitle": "Takımla tanış!"
   },
 
   "Create": {
-    "Title": "Open An Account",
-    "Create": "submit",
-    "Thanks1": "Thank you for your interest in working with Healing, we have recieved your application.",
-    "Thanks2": "You will receive an email guiding you for the next steps soon after your information is reviewed."
+    "Title": "Hesap aç",
+    "Create": "Sunmak",
+    "Thanks1": "İyileşme ile çalışmaya ilgi duyduğunuz için teşekkür ederiz, başvurunuzu aldık.",
+    "Thanks2": "Bilgileriniz gözden geçirildikten hemen sonra bir sonraki adımlar için size rehberlik eden bir e-posta alacaksınız."
   }
 }
