@@ -1,19 +1,22 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
+import firebase from '../../firebase';
 
 export default function Booking() {
   window.scrollTo(0, 0);
   const { t } = useTranslation();
-
+  const bookingsRef = firebase.firestore().collection('bookings');
   const history = useHistory();
-
+  const booking = JSON.parse(localStorage.getItem('userBooking'));
   const PrevPage = () => {
-    // Put firestore code here!
+    booking.choices.pop();
+    localStorage.setItem('userBooking', JSON.stringify(booking));
     history.push('/Booking6');
   };
   const NextPage = () => {
     // Put firestore code here!
+    bookingsRef.doc(booking.booking_id).set(booking);
     history.push('/Booking8');
   };
   return (
