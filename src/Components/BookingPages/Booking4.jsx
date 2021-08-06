@@ -1,30 +1,33 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
 
 export default function Booking4() {
   window.scrollTo(0, 0);
+  const { t } = useTranslation();
+
   const questionData = {
-    question: 'Are there any specific quality that you would prefer in a counselor?',
+    question: t('Booking.Subtitle1'),
     choices: [
       {
         id: 1,
-        content: 'I prefer a Male counselor',
+        content: t('Booking.Choice41'),
       },
       {
         id: 2,
-        content: 'I prefer a Female counselor',
+        content: t('Booking.Choice42'),
       },
       {
         id: 3,
-        content: 'I prefer an Older(45+) counselor',
+        content: t('Booking.Choice43'),
       },
       {
         id: 4,
-        content: 'I prefer a Non-Religious counselor',
+        content: t('Booking.Choice44'),
       },
       {
         id: 5,
-        content: 'I prefer a Younger(30-) counselor',
+        content: t('Booking.Choice45'),
       },
     ],
   };
@@ -58,17 +61,11 @@ export default function Booking4() {
 
   return (
     <div className="lg:h-firstsection px-sides pt-navbar">
-      <h1 className="text-3xl lg:text-title uppercase my-8">
-        let’s match you with the right therapist
-      </h1>
-      <h3 className="text-md lg:text-subtitle opacity-50 text-justify">
-        Please fill out this short questionnaire to provide some general and anonymous background
-        about you and the issues you'd like to deal with in online therapy. It would help us match
-        you with the most suitable therapist for you.
-      </h3>
+      <h1 className="text-3xl lg:text-title uppercase my-8">{t('Booking.Title1')}</h1>
+      <h3 className="text-md lg:text-subtitle opacity-50 text-justify">{questionData.question}</h3>
 
       <div className="flex flex-col justify-evenly w-full md:max-w-md lg:max-w-2xl my-16 mx-auto px-8 py-4 shadow-md">
-        <div className="text-md lg:text-subtitle">{questionData.question}</div>
+        <div className="text-md lg:text-subtitle">{t('Booking.Q4')}</div>
 
         <div className="flex flex-col justify-around my-8">
           {questionData.choices.map((choice) => (
@@ -92,14 +89,14 @@ export default function Booking4() {
             type="button"
             className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition duration-300"
           >
-            back
+            {t('Booking.Back')}
           </button>
           <button
             onClick={() => NextPage()}
             type="button"
             className="uppercase bg-blue-dark h-12 w-32 text-md lg:text-subtitle rounded-lg border hover:bg-transparent hover:border-blue-dark hover:text-blue-dark transition-all duration-300"
           >
-            next
+            {t('Booking.Next')}
           </button>
         </div>
       </div>

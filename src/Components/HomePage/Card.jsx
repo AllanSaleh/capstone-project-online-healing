@@ -1,10 +1,11 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import firebase from 'firebase';
+import { useTranslation } from 'react-i18next';
 
 export default function Card({ title, content, showIcon, icon, buttonText, showButton, user }) {
   const history = useHistory();
-
+  const { t } = useTranslation();
   const GoToRoute = (user) => {
     let cardsNo;
     firebase
@@ -20,16 +21,16 @@ export default function Card({ title, content, showIcon, icon, buttonText, showB
         pathname: '/Purchase',
         state: { ticket: title, price: content },
       });
-    else if (!user.login) alert('Please LogIn First!');
-    else if (cardsNo === 0) alert('Please Add a Payment Method in Profile Settings First!');
-    else alert('Please Complete Your Profile in Profile Settings First!');
+    else if (!user.login) alert(t('HomePage.LoginAlert'));
+    else if (cardsNo === 0) alert(t('HomePage.CardAlert'));
+    else alert(t('HomePage.CompleteAlert'));
   };
 
   return (
     <div className="h-full w-full my-4 flex flex-col items-center justify-evenly shadow-lg rounded-lg md:w-1/4 p-4">
       {showIcon && <img src={icon} alt="" className="flex-initial mb-4" />}
       <h3 className="text-center text-xl lg:text-3xl 2xl:text-title pb-1 capitalize">
-        {title} {showButton && 'Tickets'}
+        {title} {showButton && t('HomePage.Tickets')}
       </h3>
       <p className="text-opacity-50 text-black text-center text-sm md:text-md lg:text-paragraph py-4">
         {content}

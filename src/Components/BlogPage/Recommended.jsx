@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
 
 import Send from '../Footer/Images/Send.svg';
 
 export default function Recommended({ blog1, blog2 }) {
   const history = useHistory();
+  const { t } = useTranslation();
 
   const [email, setEmail] = useState('');
 
@@ -13,13 +15,13 @@ export default function Recommended({ blog1, blog2 }) {
       window.scrollTo(0, 0);
       history.push({
         pathname: '/ThankYou',
-        state: 'You email has been added to the mailing list successfully!',
+        state: t('Recommend.ThankYouSub'),
       });
-    } else alert('Please enter a valid E-Mail!');
+    } else alert(t('Recommend.SubEmailAlert'));
   };
 
   const OpenBlog = (blogID) => {
-    if (blogID === '') alert("Sorry, seems like the blog can't be found!");
+    if (blogID === '') alert(t('Recommend.BlogApology'));
     else {
       history.push({ pathname: '/Blog', state: blogID });
       window.location.reload();
@@ -30,10 +32,8 @@ export default function Recommended({ blog1, blog2 }) {
     <div className="px-sides lg:h-section flex flex-col justify-around">
       <div className="flex flex-col justify-between items-start lg:h-40">
         <div>
-          <div className="text-3xl lg:text-title leading-tight">Sign Up For The Healing Blog</div>
-          <div className="text-lg lg:text-paragraph text-gray-700">
-            Weekly, Ad-Free Blogs That Help You Stay In The Know!
-          </div>
+          <div className="text-3xl lg:text-title leading-tight">{t('Recommend.SubSign')}</div>
+          <div className="text-lg lg:text-paragraph text-gray-700">{t('Recommend.Weekly')}</div>
         </div>
         <div className="flex  border-2 border-gray-600 h-12 rounded-lg">
           <input
@@ -53,7 +53,7 @@ export default function Recommended({ blog1, blog2 }) {
       </div>
       <div>
         <div className="uppercase text-xl lg:text-subtitle mt-8 lg:mt-0 lg:mb-8">
-          recommended for you
+          {t('Recommend.ForYou')}
         </div>
         <div className="h-96 lg:h-auto flex flex-col lg:flex-row justify-evenly lg:justify-between">
           <img

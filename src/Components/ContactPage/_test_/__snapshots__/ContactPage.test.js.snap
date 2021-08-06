@@ -9,12 +9,12 @@ Array [
       <div
         className="text-2xl sm:text-title sm:mb-0 mb-3"
       >
-        SEND US YOUR REQUEST!
+        Contact.Title
       </div>
       <div
         className="sm:text-subtitle sm:mb-0 mb-10  text-gray-700 md:text-sm lg:text-xl lg:text-gray-700 lg:text-subtitle md:mt-5 md:flex-col md:justify-evenly md:flex"
       >
-        Do you have a question, concern, idea, feedback, or problem? If you need assistance, please fill out the form below and we'd be happy to help!
+        Contact.Subtitle
       </div>
     </div>
     <div
@@ -24,7 +24,7 @@ Array [
         <div
           className="text-subtitle mb-4 text-sm sm:text-lg"
         >
-          Type of Contact
+          Contact.Type
         </div>
         <div
           className="flex flex-col justify-between"
@@ -42,7 +42,7 @@ Array [
             <div
               className="text-paragraph sm:text-lg text-xm"
             >
-              I have a question about the service.
+              Contact.Choice1
             </div>
           </div>
           <div
@@ -58,7 +58,7 @@ Array [
             <div
               className="text-paragraph sm:text-lg text-xm"
             >
-              I'm a registered client and I need support.
+              Contact.Choice2
             </div>
           </div>
           <div
@@ -74,7 +74,7 @@ Array [
             <div
               className="text-paragraph sm:text-lg text-xm"
             >
-              I'm a counselor interested in joining.
+              Contact.Choice3
             </div>
           </div>
           <div
@@ -90,7 +90,7 @@ Array [
             <div
               className="text-paragraph sm:text-lg text-xm"
             >
-              I'm a counselor interested in joining.
+              Contact.Choice4
             </div>
           </div>
           <div
@@ -106,7 +106,7 @@ Array [
             <div
               className="text-paragraph sm:text-lg text-xm"
             >
-              I'm a registered counselor and I need support.
+              Contact.Choice5
             </div>
           </div>
           <div
@@ -122,7 +122,7 @@ Array [
             <div
               className="text-paragraph sm:text-lg text-xm"
             >
-              I'm interested in Healing Online for my organization.
+              Contact.Choice6
             </div>
           </div>
           <div
@@ -138,7 +138,7 @@ Array [
             <div
               className="text-paragraph sm:text-lg text-xm"
             >
-              I have a billing related question.
+              Contact.Choice7
             </div>
           </div>
         </div>
@@ -162,7 +162,7 @@ Array [
         <label
           className="mb-2  block text-paragraph"
         >
-          Full Name:
+          Contact.Name
         </label>
         <input
           className="p-2 w-3/4 text-paragraph text-gray-700 rounded-lg border-2 border-gray-400 shadow-lg"
@@ -176,7 +176,7 @@ Array [
         <label
           className="mb-2 block text-paragraph"
         >
-          Email:
+          Contact.Email
         </label>
         <input
           className="p-2 w-3/4 text-paragraph text-gray-700 rounded-lg border-2 border-gray-400 shadow-lg"
@@ -190,7 +190,7 @@ Array [
         <label
           className="mb-2 block text-paragraph"
         >
-          Details:
+          Contact.Details
         </label>
         <textarea
           className="p-2 w-3/4 h-52 text-paragraph text-gray-700 rounded-lg border-2 border-gray-400 shadow-lg"
@@ -203,7 +203,7 @@ Array [
         onClick={[Function]}
         type="button"
       >
-        Submit
+        Booking.SubmitBtn
       </button>
     </form>
     <div
@@ -215,7 +215,7 @@ Array [
         <div
           className="text-subtitle mb-4"
         >
-          Find Us At:
+          Contact.Find
         </div>
         <div
           className="text-paragraph text-gray-700"

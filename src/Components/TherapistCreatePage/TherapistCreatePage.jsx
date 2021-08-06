@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
 
 import InputField from './InputField';
@@ -6,6 +7,7 @@ import InputField from './InputField';
 export default function TherapistCreatePage() {
   window.scrollTo(0, 0);
   const history = useHistory();
+  const { t } = useTranslation();
 
   const GoToThankYou = () => {
     // Code to validate inputs
@@ -14,16 +16,13 @@ export default function TherapistCreatePage() {
 
     history.push({
       pathname: '/ThankYou',
-      state: [
-        'Thank you for your interest in working with Healing, we have recieved your application.',
-        'You will receive an email guiding you for the next steps soon after your information is reviewed.',
-      ],
+      state: [t('Create.Thanks1'), t('Create.Thanks2')],
     });
   };
 
   return (
     <div className="px-sides pt-navbar">
-      <h1 className="text-xl md:text-title md:py-4 uppercase">create an account</h1>
+      <h1 className="text-xl md:text-title md:py-4 uppercase">{t('Create.title')}</h1>
       <form className="flex flex-col md:w-10/12 md:mx-auto lg:w-2/5 lg:m-0">
         <InputField id="user-name" title="user name" inputType="text" placeholder="Exp: John" />
         <InputField
@@ -39,12 +38,7 @@ export default function TherapistCreatePage() {
           inputType="text"
           placeholder="Exp: 123456789"
         />
-        <InputField
-          id="password"
-          title="password"
-          inputType="password"
-          placeholder="type your password"
-        />
+        <InputField id="password" title="password" inputType="password" placeholder="Password" />
         <InputField
           id="confirm-password"
           title="confirm password"
@@ -56,7 +50,7 @@ export default function TherapistCreatePage() {
           type="button"
           className="text-subtitle bg-blue-dark px-4 py-2 my-16 w-full md:w-48 md:mx-auto border rounded-lg uppercase hover:bg-transparent hover:border-blue-dark hover:text-blue-dark hover:shadow-lg transition-all duration-300"
         >
-          create
+          {t('Create.Create')}
         </button>
       </form>
     </div>

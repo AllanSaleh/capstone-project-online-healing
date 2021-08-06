@@ -17,7 +17,7 @@ const ProfileInputField = ({ title, id, type, icon, value }) => (
         placeholder={value}
       />
       {icon && (
-        <button className="w-5 h-5 mr-2">
+        <button type="button" className="w-5 h-5 mr-2">
           <img src={icon} alt="icon" />
         </button>
       )}

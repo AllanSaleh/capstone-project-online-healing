@@ -1,8 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Position from './Position';
 
 export default function OpeningSection() {
+  const { t } = useTranslation();
+
   const positions = [
     {
       title1: 'Senior Software Developer | Backend | Remote in the USA',
@@ -44,11 +47,8 @@ export default function OpeningSection() {
   return (
     <div id="Openings" className="h-section flex flex-col justify-around px-sides py-8">
       <div>
-        <div className="text-3xl lg:text-title">CURRENT OPEN POSITIONS</div>
-        <div className="text-xl lg:text-subtitle text-gray-700">
-          Please send us an email with the application title as the subject with an attached CV in
-          PDF format at:
-        </div>
+        <div className="text-3xl lg:text-title">{t('Open.Positions')}</div>
+        <div className="text-xl lg:text-subtitle text-gray-700">{t('Open.Instruct')}</div>
         <a
           className="text-xl lg:text-subtitle text-blue-dark hover:underline"
           href="mailto:recruitment@healing.com"

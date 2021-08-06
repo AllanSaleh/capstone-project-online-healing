@@ -1,6 +1,7 @@
 import React from 'react';
 import firebase from 'firebase';
 
+import { useTranslation } from 'react-i18next';
 import C1 from './Images/C1.svg';
 import C2 from './Images/C2.svg';
 import C3 from './Images/C3.svg';
@@ -19,6 +20,8 @@ export default function CreditCard({
   deletable,
   loginStatus,
 }) {
+  const { t } = useTranslation();
+
   const DeleteCard = (cardID) => {
     let selectedCard;
     firebase
@@ -74,7 +77,7 @@ export default function CreditCard({
           type="button"
           className="absolute bottom-7 right-4 h-6 w-12 lg:bottom-9 lg:right-4 lg:h-12 lg:w-28 text-xs lg:text-subtitle text-white bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
         >
-          DELETE
+          {t('Delete')}
         </button>
       )}
     </div>

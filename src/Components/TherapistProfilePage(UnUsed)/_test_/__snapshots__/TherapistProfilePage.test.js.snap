@@ -38,7 +38,7 @@ exports[`Therapist Profile Page renders correctly 1`] = `
         className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg pl-4"
       >
         <input
-          className="w-11/12 h-full outline-none py-3"
+          className="w-11/12 h-full outline-none py-3 placeholder-black"
           id="full-name"
           name="full-name"
           type="text"
@@ -77,13 +77,14 @@ exports[`Therapist Profile Page renders correctly 1`] = `
         className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg pl-4"
       >
         <input
-          className="w-11/12 h-full outline-none py-3"
+          className="w-11/12 h-full outline-none py-3 placeholder-black"
           id="birth-date"
           name="birth-date"
           type="text"
         />
         <button
           className="w-5 h-5 mr-2"
+          type="button"
         >
           <img
             alt="icon"
@@ -105,7 +106,7 @@ exports[`Therapist Profile Page renders correctly 1`] = `
         className="w-2/3 inline-flex items-center border border-black border-opacity-20 rounded-lg pl-4"
       >
         <input
-          className="w-11/12 h-full outline-none py-3"
+          className="w-11/12 h-full outline-none py-3 placeholder-black"
           id="phone-number"
           name="phone-number"
           type="text"

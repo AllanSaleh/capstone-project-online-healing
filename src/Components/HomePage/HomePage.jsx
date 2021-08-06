@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import Landing from './Landing';
@@ -11,6 +11,7 @@ const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeig
 
 export default function HomePage({ loginStatus }) {
   const location = useLocation();
+  const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
     if (location.state === true) {
@@ -27,7 +28,7 @@ export default function HomePage({ loginStatus }) {
       <Landing user={loginStatus} />
       <Description user={loginStatus} />
       <CommunicationSection />
-      <RecentBlogs />
+      <RecentBlogs blogs={blogs} setBlogs={(blogs) => setBlogs(blogs)} />
       <TicketSection user={loginStatus} />
     </>
   );

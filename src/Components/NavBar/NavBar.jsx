@@ -109,7 +109,7 @@ export default function NavBar({ loginStatus }) {
             to="/Contact"
             className="ml-8 hover:text-yellow-primary hover:underline text-paragraph"
           >
-            {t('Contact')}
+            {t('ContactUs')}
           </Link>
 
           {loginStatus.login ? (
@@ -270,7 +270,7 @@ export default function NavBar({ loginStatus }) {
           </div>
 
           <Link to="/Contact" className="hover:text-yellow-primary hover:underline text-paragraph">
-            {t('Contact')}
+            {t('ContactUs')}
           </Link>
           <div />
         </div>
