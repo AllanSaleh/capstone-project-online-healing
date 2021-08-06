@@ -47,7 +47,7 @@ export default function Booking4() {
   };
   const NextPage = () => {
     if (!userAnswer) {
-      alert('Please choose an answer');
+      alert(t('Booking.ChoiceAlert'));
       return;
     }
     const choice = {

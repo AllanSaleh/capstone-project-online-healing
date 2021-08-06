@@ -31,10 +31,9 @@ export default function Booking1() {
   const NextPage = () => {
     const loginStatus = JSON.parse(localStorage.getItem('loginStatus'));
     if (loginStatus === null) {
-      console.log('please login in order to book an appointment');
       history.replace('/Login');
     } else if (!userAnswer) {
-      alert('Please choose an answer');
+      alert(t('Booking.ChoiceAlert'));
       localStorage.removeItem('userBooking');
       return;
     }
