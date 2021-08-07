@@ -114,7 +114,8 @@
     "Notice": "Yakında bir onay e-postası alacaksınız. Lütfen postanıza göz atın.",
     "BackHome": "eve geri dön",
 
-    "ChoiceAlert": "Lütfen bir cevap seçin"
+    "ChoiceAlert": "Lütfen bir cevap seçin",
+    "AnswerAlert": "Lütfen bir cevap ver"
   },
 
   "Open": {

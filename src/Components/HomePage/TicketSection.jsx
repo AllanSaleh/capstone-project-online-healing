@@ -18,8 +18,8 @@ export default function TicketSection({ user }) {
       <div className="flex flex-col md:flex-row items-center justify-around w-full lg:h-1/3">
         <Card
           showIcon={false}
-          title="5"
-          content="10$"
+          title="3"
+          content="30$"
           showButton
           buttonText={t('HomePage.Purchase')}
           user={user}
@@ -27,8 +27,8 @@ export default function TicketSection({ user }) {
 
         <Card
           showIcon={false}
-          title="25"
-          content="40$"
+          title="15"
+          content="120$"
           showButton
           buttonText={t('HomePage.Purchase')}
           user={user}
@@ -36,8 +36,8 @@ export default function TicketSection({ user }) {
 
         <Card
           showIcon={false}
-          title="50"
-          content="70$"
+          title="30"
+          content="250$"
           showButton
           buttonText={t('HomePage.Purchase')}
           user={user}

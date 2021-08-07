@@ -12,19 +12,23 @@ export default function Booking2() {
     question: t('Booking.Q3'),
     choices: [
       {
+        id: 0,
         content: t('Booking.Choice31'),
       },
       {
+        id: 1,
         content: t('Booking.Choice32'),
       },
     ],
   };
 
   const history = useHistory();
+
+  const [select, setSelect] = useState([false, false]);
+
   const [userAnswer, setUserAnswer] = useState('');
   const handleSetAnswer = (childAnswer) => {
     setUserAnswer(childAnswer);
-    console.log(userAnswer);
   };
 
   const booking = JSON.parse(localStorage.getItem('userBooking'));
@@ -53,7 +57,9 @@ export default function Booking2() {
       <h3 className="text-md lg:text-subtitle opacity-50 text-justify">{t('Booking.Subtitle1')}</h3>
 
       <div className="flex flex-col justify-between w-full md:max-w-md lg:max-w-2xl my-16 mx-auto px-8 py-4 shadow-md">
-        <QuestionComponent
+      <QuestionComponent
+          select={select}
+          setSelect={(id) => setSelect(id)}
           question={questionData.question}
           choices={questionData.choices}
           setParentAnswer={handleSetAnswer}

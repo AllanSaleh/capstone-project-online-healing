@@ -114,7 +114,8 @@
     "Notice": "you will receive a confirmation email soon. please keep an eye on your mail.",
     "BackHome": "back to home",
 
-    "ChoiceAlert": "Please choose an answer"
+    "ChoiceAlert": "Please choose an answer",
+    "AnswerAlert": "Please provide an answer"
   },
 
   "Open": {
