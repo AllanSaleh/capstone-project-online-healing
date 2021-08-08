@@ -243,7 +243,7 @@ export default function SignUpPage() {
                 className="transition-all duration-300 w-full h-12 lg:text-subtitle text-base rounded-lg text-blue-dark bg-white border border-blue-dark hover:bg-blue-dark hover:text-black hover:border-transparent"
               >
                 {t('Login')}
-              </button>{' '}
+              </button>
             </Link>
 
             <button

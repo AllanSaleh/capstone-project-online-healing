@@ -35,6 +35,7 @@ export default function Booking6() {
     <div className="flex flex-col justify-evenly lg:h-firstsection px-sides pt-navbar">
       <div>
         <h1 className="text-3xl lg:text-title uppercase my-8">{question}</h1>
+
         <h3 className="text-md lg:text-subtitle opacity-50 text-justify">
           {t('Booking.Subtitle2')}
         </h3>
