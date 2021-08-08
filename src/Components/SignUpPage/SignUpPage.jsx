@@ -122,7 +122,7 @@ export default function SignUpPage() {
   // return the component
   return (
     <div className=" flex flex-col lg:flex lg:flex-row items-center justify-evenly max-h-full lg:h-firstsection mt-navbar lg:m-0">
-      <div className="lg:w-auto w-48">
+      <div className="my-4 lg:w-auto w-48">
         <img src={SignupImage} alt="SignupImage" />
       </div>
       <div className="lg:w-auto w-72">
@@ -236,26 +236,26 @@ export default function SignUpPage() {
               />
             </div>
           </div>
-          <div className="lg:flex lg:flex-row lg:justify-evenly flex flex-col">
-            <Link to="/Login">
+          <div className="h-28 lg:h-auto flex flex-col lg:flex-row justify-evenly my-8">
+            <Link className="lg:w-40" to="/Login">
               <button
                 type="button"
-                className="lg:w-40 w-auto h-12 text-subtitle rounded-lg border text-blue-dark border-blue-dark hover:bg-blue-dark hover:text-black hover:border-transparent mt-4 transition-all duration-300"
+                className="transition-all duration-300 w-full h-12 lg:text-subtitle text-base rounded-lg text-blue-dark bg-white border border-blue-dark hover:bg-blue-dark hover:text-black hover:border-transparent"
               >
                 {t('Login')}
               </button>
             </Link>
+
             <button
-              type="button"
-              className="shadow-xl lg:w-40 w-auto h-12 text-subtitle bg-blue-dark rounded-lg border border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark mt-4
-              transition-all duration-300"
               onClick={handleSignup}
+              type="button"
+              className="transition-all duration-300 w-full lg:w-40 h-12 lg:text-subtitle text-base rounded-lg bg-blue-dark border border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
             >
               {t('SignUp')}
             </button>
           </div>
         </div>
-        <div className="flex flex-col mt-10">
+        <div className="flex flex-col my-10">
           <img src={Or} alt="Or" />
           <div className="flex items-center justify-evenly px-16 mt-4">
             <button type="button">

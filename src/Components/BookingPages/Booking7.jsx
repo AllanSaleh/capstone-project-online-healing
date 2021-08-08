@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
 import firebase from '../../firebase';
@@ -7,16 +8,35 @@ export default function Booking() {
   window.scrollTo(0, 0);
   const { t } = useTranslation();
   const bookingsRef = firebase.firestore().collection('bookings');
-
   const history = useHistory();
+
   const booking = JSON.parse(localStorage.getItem('userBooking'));
+
   const PrevPage = () => {
     booking.choices.pop();
     localStorage.setItem('userBooking', JSON.stringify(booking));
     history.push('/Booking6');
   };
+
+  const [tickets, setTickets] = useState(0);
+  useEffect(() => {
+    firebase
+      .firestore()
+      .collection('users')
+      .doc(booking.user_id)
+      .get()
+      .then((doc) => {
+        setTickets(parseInt(doc.data().tickets));
+      });
+  }, []);
+
   const NextPage = () => {
-    // Put firestore code here!
+    firebase
+      .firestore()
+      .collection('users')
+      .doc(booking.user_id)
+      .update({ tickets: tickets - 1 });
+
     bookingsRef.doc(booking.booking_id).set(booking);
     history.push('/Booking8');
   };

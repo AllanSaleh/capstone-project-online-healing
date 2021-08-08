@@ -33,9 +33,9 @@ export default function CareersPage() {
               window.scrollTo({ top: y, behavior: 'smooth' });
             }}
             type="button"
-            className="uppercase transition-all duration-300 self-center lg:self-auto w-52 lg:w-64 h-12 text-xl lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+            className="uppercase transition-all duration-300 self-center lg:self-auto w-56 lg:w-72 h-12 text-xl lg:text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
           >
-            {t('Careers.Btn')}
+            {t('Open.Btn')}
           </button>
         </div>
         <Hiring />

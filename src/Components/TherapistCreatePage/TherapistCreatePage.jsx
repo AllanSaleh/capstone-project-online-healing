@@ -22,9 +22,9 @@ export default function TherapistCreatePage() {
 
   return (
     <div className="px-sides pt-navbar">
-      <h1 className="text-xl md:text-title md:py-4 uppercase">{t('Create.title')}</h1>
+      <h1 className="text-xl md:text-title md:py-4 uppercase">{t('Create.Title')}</h1>
       <form className="flex flex-col md:w-10/12 md:mx-auto lg:w-2/5 lg:m-0">
-        <InputField id="user-name" title="user name" inputType="text" placeholder="Exp: John" />
+        <InputField id="user-name" title={t('Create.Name')} inputType="text" placeholder="Exp: John" />
         <InputField
           id="email"
           title="email"
@@ -34,16 +34,16 @@ export default function TherapistCreatePage() {
         <InputField id="city" title="city" inputType="text" placeholder="Exp: Erbil" />
         <InputField
           id="license"
-          title="license number"
+          title={t('Create.License')}
           inputType="text"
           placeholder="Exp: 123456789"
         />
-        <InputField id="password" title="password" inputType="password" placeholder="Password" />
+        <InputField id="password" title={t('Create.Pass')} inputType="password" placeholder={t('Create.Pass')} />
         <InputField
           id="confirm-password"
-          title="confirm password"
+          title={t('Create.Confirm')}
           inputType="password"
-          placeholder="re-type your password"
+          placeholder={t('Create.ConfirmPlace')}
         />
         <button
           onClick={() => GoToThankYou()}

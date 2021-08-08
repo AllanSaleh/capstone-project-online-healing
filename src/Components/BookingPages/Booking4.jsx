@@ -37,7 +37,6 @@ export default function Booking4() {
   const handleRadioChange = (event) => {
     setUserAnswer(event.target.value);
   };
-  console.log(userAnswer);
 
   const booking = JSON.parse(localStorage.getItem('userBooking'));
   const PrevPage = () => {

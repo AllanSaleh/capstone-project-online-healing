@@ -52,7 +52,7 @@
   },
 
   "Recommend": {
-    "ThankYouSub": "You email has been added to the mailing list successfully!",
+    "ThankYouSub": "Your email has been added to the mailing list successfully!",
     "SubEmailAlert": "Please enter a valid E-Mail!",
     "BlogApology": "Sorry, seems like the blog can't be found!",
     "SubSign": "Sign Up For The Healing Blog",
@@ -114,7 +114,8 @@
     "Notice": "you will receive a confirmation email soon. please keep an eye on your mail.",
     "BackHome": "back to home",
 
-    "ChoiceAlert": "Please choose an answer"
+    "ChoiceAlert": "Please choose an answer",
+    "AnswerAlert": "Please provide an answer"
   },
 
   "Open": {
@@ -179,7 +180,7 @@
     "Phone": "phone number",
     "Security": "security",
     "Pass": "password",
-    "confirm": "confirm"
+    "Confirm": "confirm"
   },
 
   "HomePage": {
@@ -214,7 +215,10 @@
     "Subtitle": "Please select the card you want to buy the tickets with",
     "Confirm1": "Click confirm to use the selected card to purchase",
     "Confirm2": "tickets for",
-    "ConfirmBtn": "CONFIRM PURCHASE"
+    "ConfirmBtn": "CONFIRM PURCHASE",
+    "Thanks1": "Your purchase has been submitted, You just bought",
+    "Thanks2": "Tickets with card number",
+    "Thanks3": "you should receive an email with the receipt soon."
   },
 
   "Require": {
@@ -264,6 +268,11 @@
     "Title": "Open An Account",
     "Create": "submit",
     "Thanks1": "Thank you for your interest in working with Healing, we have recieved your application.",
-    "Thanks2": "You will receive an email guiding you for the next steps soon after your information is reviewed."
+    "Thanks2": "You will receive an email guiding you for the next steps soon after your information is reviewed.",
+    "Name": "user name",
+    "License": "license number",
+    "Pass": "password",
+    "Confirm": "confirm password",
+    "ConfirmPlace": "re-type your password"
   }
 }

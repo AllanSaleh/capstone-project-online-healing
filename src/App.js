@@ -68,25 +68,25 @@ function App() {
           <BookingPage1 loginStatus={loginStatus} />
         </Route>
         <Route path="/Booking2">
-          <BookingPage2 loginStatus={loginStatus} />
+          <BookingPage2 />
         </Route>
         <Route path="/Booking3">
-          <BookingPage3 loginStatus={loginStatus} />
+          <BookingPage3 />
         </Route>
         <Route path="/Booking4">
-          <BookingPage4 loginStatus={loginStatus} />
+          <BookingPage4 />
         </Route>
         <Route path="/Booking5">
-          <BookingPage5 loginStatus={loginStatus} />
+          <BookingPage5 />
         </Route>
         <Route path="/Booking6">
-          <BookingPage6 loginStatus={loginStatus} />
+          <BookingPage6 />
         </Route>
         <Route path="/Booking7">
-          <BookingPage7 loginStatus={loginStatus} />
+          <BookingPage7 />
         </Route>
         <Route path="/Booking8">
-          <BookingPage8 loginStatus={loginStatus} />
+          <BookingPage8 />
         </Route>
         <Route path="/Careers">
           <CareersPage />

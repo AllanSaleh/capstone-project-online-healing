@@ -20,7 +20,7 @@ export default function Booking6() {
   };
   const NextPage = () => {
     if (!userAnswer) {
-      alert('please provide an answer');
+      alert(t('Booking.AnswerAlert'));
       return;
     }
     const choice = {

@@ -55,8 +55,8 @@ export default function PurchasePage({ loginStatus }) {
     history.push({
       pathname: '/ThankYou',
       state: [
-        `Your purchase has been submitted, You just bought ${ticketsBought} Tickets with card number ${selected}`,
-        'you should receive an email with the receipt soon.',
+        `${t('Purchase.Thanks1')} ${ticketsBought} ${t('Purchase.Thanks2')} ${selected}`,
+        t('Purchase.Thanks3'),
       ],
     });
   };

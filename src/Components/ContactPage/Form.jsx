@@ -57,7 +57,7 @@ export default function Form({ selectedChoice, loginStatus }) {
   };
 
   return (
-    <div className="flex flex-col px-sides sm:mt-0 mt-20 h-section items-center sm:flex-row w-full">
+    <div className="flex flex-col px-sides sm:mt-0 mt-20 lg:h-section items-center sm:flex-row w-full">
       <form className="flex flex-col sm:w-1/2 w-full">
         <div className="mb-8">
           <label className="mb-2  block text-paragraph">{t('Contact.Name')}</label>
@@ -79,19 +79,19 @@ export default function Form({ selectedChoice, loginStatus }) {
           <label className="mb-2 block text-paragraph">{t('Contact.Details')}</label>
           <textarea
             onBlur={(e) => setInputs({ ...inputs, details: e.target.value })}
-            className="p-2 w-3/4 h-52 text-paragraph text-gray-700 rounded-lg border-2 border-gray-400 shadow-lg"
+            className="h-80 resize-none p-2 w-3/4 h-52 text-paragraph text-gray-700 rounded-lg border-2 border-gray-400 shadow-lg"
             placeholder="Enter your details here..."
           />
         </div>
         <button
           onClick={() => GoToRoute()}
-          className="w-32 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+          className="w-48 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
           type="button"
         >
           {t('Booking.SubmitBtn')}
         </button>
       </form>
-      <div className="sm:w-1/2 w-full flex justify-center ">
+      <div className="sm:w-1/2 w-full my-8">
         <div className="bg-blue-light rounded-lg p-6 sm:w-72 w-56 h-64  ">
           <div className="text-subtitle mb-4">{t('Contact.Find')}</div>
           <div className="text-paragraph text-gray-700">Nergiz Plaza</div>

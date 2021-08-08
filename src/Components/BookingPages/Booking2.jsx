@@ -12,23 +12,29 @@ export default function Booking2() {
     question: t('Booking.Q2'),
     choices: [
       {
+        id: 0,
         content: t('Booking.Choice21'),
       },
       {
+        id: 1,
         content: t('Booking.Choice22'),
       },
       {
+        id: 2,
         content: t('Booking.Choice23'),
       },
     ],
   };
 
   const history = useHistory();
+
+  const [select, setSelect] = useState([false, false, false]);
   const [userAnswer, setUserAnswer] = useState('');
+
   const handleSetAnswer = (childAnswer) => {
     setUserAnswer(childAnswer);
-    console.log(userAnswer);
   };
+
   const booking = JSON.parse(localStorage.getItem('userBooking'));
   const PrevPage = () => {
     booking.choices.pop();
@@ -56,6 +62,8 @@ export default function Booking2() {
 
       <div className="flex flex-col justify-between w-full md:max-w-md lg:max-w-2xl my-16 mx-auto p-8 shadow-md">
         <QuestionComponent
+          select={select}
+          setSelect={(id) => setSelect(id)}
           question={questionData.question}
           choices={questionData.choices}
           setParentAnswer={handleSetAnswer}

@@ -103,7 +103,7 @@ export default function SavedCardsPage({ loginStatus }) {
       <Link to="/AddNewCard">
         <button
           type="button"
-          className="mt-8 w-64 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
+          className="my-8 w-64 h-12 text-subtitle bg-blue-dark rounded-lg border-2 border-transparent hover:bg-white hover:text-blue-dark hover:border-blue-dark"
         >
           {t('Cards.Add')}
         </button>
