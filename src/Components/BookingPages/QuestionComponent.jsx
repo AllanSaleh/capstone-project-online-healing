@@ -4,6 +4,7 @@ const QuestionComponent = ({ question, choices, setParentAnswer }) => {
   // const [selected, setSelected] = useState(false);
 
   const handleChoiceClick = (event) => {
+    event.preventDefault();
     setParentAnswer(event.target.innerText);
   };
   return (

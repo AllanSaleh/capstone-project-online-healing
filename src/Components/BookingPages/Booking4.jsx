@@ -6,42 +6,56 @@ export default function Booking4() {
   window.scrollTo(0, 0);
   const { t } = useTranslation();
 
-  const choices = [
-    {
-      id: 1,
-      content: t('Booking.Choice41'),
-    },
-    {
-      id: 2,
-      content: t('Booking.Choice42'),
-    },
-    {
-      id: 3,
-      content: t('Booking.Choice43'),
-    },
-    {
-      id: 4,
-      content: t('Booking.Choice44'),
-    },
-    {
-      id: 5,
-      content: t('Booking.Choice45'),
-    },
-  ];
+  const questionData = {
+    question: t('Booking.Q4'),
+    choices: [
+      {
+        id: 1,
+        content: t('Booking.Choice41'),
+      },
+      {
+        id: 2,
+        content: t('Booking.Choice42'),
+      },
+      {
+        id: 3,
+        content: t('Booking.Choice43'),
+      },
+      {
+        id: 4,
+        content: t('Booking.Choice44'),
+      },
+      {
+        id: 5,
+        content: t('Booking.Choice45'),
+      },
+    ],
+  };
 
   const history = useHistory();
-  const [answer, setAnswer] = useState('');
+  const [userAnswer, setUserAnswer] = useState('');
   const handleRadioChange = (event) => {
-    setAnswer(event.target.value);
+    setUserAnswer(event.target.value);
   };
-  console.log(answer);
+  console.log(userAnswer);
 
+  const booking = JSON.parse(localStorage.getItem('userBooking'));
   const PrevPage = () => {
-    // Put firestore code here!
-    history.push('/Booking3');
+    booking.choices.pop();
+    localStorage.setItem('userBooking', JSON.stringify(booking));
+    history.push('/Booking2');
   };
   const NextPage = () => {
-    // Put firestore code here!
+    if (!userAnswer) {
+      alert(t('Booking.ChoiceAlert'));
+      return;
+    }
+    const choice = {
+      question: questionData.question,
+      answer: userAnswer,
+    };
+    booking.choices.push(choice);
+    localStorage.setItem('userBooking', JSON.stringify(booking));
     history.push('/Booking5');
   };
 
@@ -51,11 +65,11 @@ export default function Booking4() {
       <h3 className="text-md lg:text-subtitle opacity-50 text-justify">{t('Booking.Subtitle1')}</h3>
 
       <div className="flex flex-col justify-evenly w-full md:max-w-md lg:max-w-2xl my-16 mx-auto px-8 py-4 shadow-md">
-        <div className="text-md lg:text-subtitle">{t('Booking.Q4')}</div>
+        <div className="text-md lg:text-subtitle">{questionData.question}</div>
 
         <div className="flex flex-col justify-around my-8">
-          {choices.map((choice, index) => (
-            <div className="flex items-center my-2" key={index}>
+          {questionData.choices.map((choice) => (
+            <div className="flex items-center my-2" key={choice.id}>
               <input
                 type="radio"
                 id={choice.id}

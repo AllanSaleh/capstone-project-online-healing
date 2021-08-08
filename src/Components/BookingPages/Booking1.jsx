@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 import QuestionComponent from './QuestionComponent';
 
 export default function Booking1() {
   window.scrollTo(0, 0);
+  localStorage.removeItem('booking');
   const history = useHistory();
+  const [userAnswer, setUserAnswer] = useState('');
+  
   const { t } = useTranslation();
 
   const questionData = {
@@ -21,14 +25,33 @@ export default function Booking1() {
     ],
   };
 
-  const [answer, setAnswer] = useState('');
   const handleSetAnswer = (childAnswer) => {
-    setAnswer(childAnswer);
-    console.log(answer);
+    setUserAnswer(childAnswer);
+    console.log(userAnswer);
   };
-  console.log(answer);
+  console.log(userAnswer);
   const NextPage = () => {
-    // Put firestore code here!
+    const loginStatus = JSON.parse(localStorage.getItem('loginStatus'));
+    if (loginStatus === null) {
+      history.replace('/Login');
+    } else if (!userAnswer) {
+      alert(t('Booking.ChoiceAlert'));
+      localStorage.removeItem('userBooking');
+      return;
+    }
+    const bookingID = uuidv4();
+    const booking = {
+      booking_id: bookingID,
+      user_id: loginStatus.user_id,
+      choices: [
+        {
+          question: questionData.question,
+          answer: userAnswer,
+        },
+      ],
+    };
+    console.log(JSON.stringify(booking));
+    localStorage.setItem('userBooking', JSON.stringify(booking));
     history.push('/Booking2');
   };
 

@@ -17,7 +17,8 @@
     "Subscribe": "Subscribe",
     "Spam": "We'll never try to spam you or share your e-mail",
     "Enter": "Enter your e-mail",
-    "Language": "Language"
+    "Language": "Language",
+    "Select": "Select"
   },
 
   "AboutPage": {
@@ -111,7 +112,9 @@
 
     "Submitted": "reqeuest submitted",
     "Notice": "you will receive a confirmation email soon. please keep an eye on your mail.",
-    "BackHome": "back to home"
+    "BackHome": "back to home",
+
+    "ChoiceAlert": "Please choose an answer"
   },
 
   "Open": {
