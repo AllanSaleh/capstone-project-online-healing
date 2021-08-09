@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import Logo from './Images/Logo.svg';
 import ProfileImage from './Images/Avatar.png';
 
 export default function NavBar({ loginStatus }) {
+  const history = useHistory();
   const Avatar = ProfileImage;
   const [OpenAbout, setOpenAbout] = useState(false);
   const [OpenProfile, setOpenProfile] = useState(false);
 
   const LogOut = () => {
     localStorage.clear();
-    window.location.reload();
+    history.push('/');
   };
 
   const { t } = useTranslation();
@@ -29,7 +30,9 @@ export default function NavBar({ loginStatus }) {
         {/* HamburgerButton */}
         <div className="lg:hidden flex items-center">
           <button
-            onClick={() => document.getElementById('mobile-menu').classList.toggle('hidden')}
+            onClick={() =>
+              document.getElementById('mobile-menu').classList.toggle('hidden')
+            }
             type="button"
             className="outline-none mobile-menu-button"
           >
@@ -49,7 +52,10 @@ export default function NavBar({ loginStatus }) {
         </div>
 
         <div className="hidden lg:flex justify-between items-center flex-no-wrap">
-          <Link to="/" className="ml-8 hover:text-yellow-primary hover:underline text-paragraph">
+          <Link
+            to="/"
+            className="ml-8 hover:text-yellow-primary hover:underline text-paragraph"
+          >
             {t('Home')}
           </Link>
 
@@ -120,7 +126,11 @@ export default function NavBar({ loginStatus }) {
               className="ml-8 relative"
             >
               <div className="flex items-center justify-between my-2">
-                <img className="mr-2 w-10 rounded-full" src={Avatar} alt="Profile" />
+                <img
+                  className="mr-2 w-10 rounded-full"
+                  src={Avatar}
+                  alt="Profile"
+                />
                 <Link
                   to="/EditProfile"
                   className="hover:text-yellow-primary hover:underline text-paragraph"
@@ -165,9 +175,14 @@ export default function NavBar({ loginStatus }) {
       </div>
 
       {/* MobileNav */}
-      <div id="mobile-menu" className="hidden flex justify-end transition duration-500">
+      <div
+        id="mobile-menu"
+        className="hidden flex justify-end transition duration-500"
+      >
         <div
-          onClick={() => document.getElementById('mobile-menu').classList.toggle('hidden')}
+          onClick={() =>
+            document.getElementById('mobile-menu').classList.toggle('hidden')
+          }
           className="fixed inset-0 opacity-75 bg-black z-10"
         />
         <div className="fixed w-3/4 h-screen flex flex-col justify-evenly items-center mt-navbar bg-white py-4 z-20">
@@ -179,7 +194,11 @@ export default function NavBar({ loginStatus }) {
               }}
             >
               <div className="flex items-center justify-between my-2">
-                <img className="mr-2 w-10 rounded-full" src={Avatar} alt="Profile" />
+                <img
+                  className="mr-2 w-10 rounded-full"
+                  src={Avatar}
+                  alt="Profile"
+                />
                 <Link
                   to="/EditProfile"
                   className="hover:text-yellow-primary hover:underline text-paragraph"
@@ -216,11 +235,17 @@ export default function NavBar({ loginStatus }) {
               </button>
             </Link>
           )}
-          <Link to="/" className="hover:text-yellow-primary hover:underline text-paragraph">
+          <Link
+            to="/"
+            className="hover:text-yellow-primary hover:underline text-paragraph"
+          >
             {t('Home')}
           </Link>
 
-          <Link to="/Blog" className="hover:text-yellow-primary hover:underline text-paragraph">
+          <Link
+            to="/Blog"
+            className="hover:text-yellow-primary hover:underline text-paragraph"
+          >
             {t('Blog')}
           </Link>
 
@@ -269,7 +294,10 @@ export default function NavBar({ loginStatus }) {
             )}
           </div>
 
-          <Link to="/Contact" className="hover:text-yellow-primary hover:underline text-paragraph">
+          <Link
+            to="/Contact"
+            className="hover:text-yellow-primary hover:underline text-paragraph"
+          >
             {t('ContactUs')}
           </Link>
           <div />
